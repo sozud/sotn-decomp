@@ -3072,7 +3072,26 @@ bool func_800FDC94(s32 arg0) {
 // https://decomp.me/scratch/5ufgy
 INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800FDCE0);
 
-INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800FDD44);
+s32 func_800FDD44(s32 arg0) {
+    s32 temp_s0;
+    u8 temp_s1;
+    u8 temp_v0;
+
+    temp_s0 = player_equip_head[arg0];
+    temp_s1 = D_800A4B1D[player_equip_head[arg0] * 0x34];
+    if (func_800FD7C0(0x54, 4) == false) {
+        if (temp_s1 != 0) {
+            temp_v0 = D_8009798A[temp_s0];
+            if (temp_v0 == 0) {
+                player_equip_head[arg0] = 0;
+                func_800F53A4();
+                return 1;
+            }
+            D_8009798A[temp_s0]--;
+        }
+    }
+    return 0;
+}
 
 void func_800FDE00(void) {
     D_80137960 = 0;
