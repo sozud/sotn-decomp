@@ -227,7 +227,20 @@ void func_800E376C(void) {
 // mips to c doesn't support this function very well
 INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800E385C);
 
-INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800E38CC);
+void func_800E38CC(void) {
+    if (D_800A015C != 0) {
+        if ((u32)D_800A0158 >= 0x24U) {
+            D_801390D4->buf.disp.screen.x = 0;
+            PutDispEnv(&D_801390D4->buf.disp);
+            return;
+        }
+        D_801390D4->buf.disp.screen.x =
+            (s16) * (&D_80136308 + ((D_800A0158 + D_800A04F8)));
+        PutDispEnv(&D_801390D4->buf.disp);
+        D_800A0158 += 1;
+        SetRCnt(0xF2000001U, 6U, 0x1000);
+    }
+}
 
 void entrypoint_sotn(void) {
     s32 i;
