@@ -3003,31 +3003,29 @@ s32 func_800FD77C(s32 context, s32 arg1) {
 
 extern s32 D_80097C14;
 extern s32 D_80097C18;
-extern s32 player_equip_body;
+extern u32 player_equip_body;
 extern s32 player_equip_cloak;
 extern s32 player_equip_ring1;
 
-// INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800FD7C0);
+u32 func_800FD7C0(u32 itemNum, u32 compareType) {
+    u32 var_v0;
 
-s32 func_800FD7C0(s32 arg0, u32 arg1) {
-    s32 var_v0;
-
-    var_v0 = (u32) arg1 < 5;
+    var_v0 = (u32) compareType < 5;
     if (var_v0 != false) {
-        switch (arg1) {
+        switch (compareType) {
         case 0:
-            return ((player_equip_head[0] == arg0) + (player_equip_head[3] == arg0));
+            return (player_equip_head[0] == itemNum) + (player_equip_body == itemNum);
         case 1:
-            return (player_equip_cloak ^ arg0) == 0;
+            return player_equip_cloak == itemNum;
         case 2:
-            return (player_equip_ring1 ^ arg0) == 0;
+            return player_equip_ring1 == itemNum;
         case 3:
-            return (player_equip_ring2 ^ arg0) == 0;
+            return player_equip_ring2 == itemNum;
         case 4:
-            var_v0 = (D_80097C14 == arg0) + (D_80097C18 == arg0);
+            return (D_80097C14 == itemNum) + (D_80097C18 == itemNum);
         }
     }
-    return var_v0;
+    // seems to require missing return
 }
 
 
