@@ -3001,7 +3001,35 @@ s32 func_800FD77C(s32 context, s32 arg1) {
     return *(&D_800A7718 + (arg1 << 3));
 }
 
-INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800FD7C0);
+extern s32 D_80097C14;
+extern s32 D_80097C18;
+extern s32 player_equip_body;
+extern s32 player_equip_cloak;
+extern s32 player_equip_ring1;
+
+// INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800FD7C0);
+
+s32 func_800FD7C0(s32 arg0, u32 arg1) {
+    s32 var_v0;
+
+    var_v0 = (u32) arg1 < 5;
+    if (var_v0 != false) {
+        switch (arg1) {
+        case 0:
+            return ((player_equip_head[0] == arg0) + (player_equip_head[3] == arg0));
+        case 1:
+            return (player_equip_cloak ^ arg0) == 0;
+        case 2:
+            return (player_equip_ring1 ^ arg0) == 0;
+        case 3:
+            return (player_equip_ring2 ^ arg0) == 0;
+        case 4:
+            var_v0 = (D_80097C14 == arg0) + (D_80097C18 == arg0);
+        }
+    }
+    return var_v0;
+}
+
 
 #ifndef NON_EQUIVALENT
 INCLUDE_ASM("asm/dra/nonmatchings/42398", func_800FD874);
