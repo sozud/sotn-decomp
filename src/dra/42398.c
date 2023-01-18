@@ -3010,7 +3010,7 @@ extern s32 player_equip_ring1;
 u32 func_800FD7C0(u32 itemNum, u32 compareType) {
     u32 var_v0;
 
-    var_v0 = (u32) compareType < 5;
+    var_v0 = compareType < 5;
     if (var_v0 != false) {
         switch (compareType) {
         case 0:
