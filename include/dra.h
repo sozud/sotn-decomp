@@ -1208,7 +1208,7 @@ s32 func_800FD6C4(s32);
 u8* func_800FD744(s32 arg0);
 u8* func_800FD760(s32 arg0);
 s32 func_800FD77C(s32 arg0, s32 arg1);
-bool func_800FD7C0(s32, s32);
+// bool func_800FD7C0(s32, s32);/
 void func_800FD874(u16 arg0, s32 arg1);
 s16 func_800FDB18(s32, s32);
 void func_800FDCE0(s32);
