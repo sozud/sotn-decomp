@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 517
-Number of undecompiled duplicates found: 607
+Number of decompiled duplicates found: 511
+Number of undecompiled duplicates found: 605
 Number of overall exact duplicates found: 155
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -829,15 +829,6 @@ ref. - RWRP - func_80195990 - found 8 matches total:
 1.00 - NZ0  - func_801CA0D0 - (decompiled)
 1.00 - ST0  - func_801BD860 - (decompiled)
 1.00 - WRP  - func_80193A10 - (decompiled)
-
-ref. - CEN  - EntityUnkId08 - found 7 matches total:
-0.99 - DRE  - EntityRoomForeground - (decompiled)
-0.99 - NO3  - EntityRoomForeground - (decompiled)
-0.99 - NP3  - EntityRoomForeground - (decompiled)
-0.99 - NZ0  - EntityRoomForeground - (decompiled)
-0.99 - ST0  - EntityRoomForeground - (decompiled)
-0.99 - WRP  - EntityRoomForeground - (decompiled)
-0.99 - RWRP - func_80194DD4
 
 ref. - CEN  - func_80191178 - found 7 matches total:
 0.99 - DRE  - func_801972BC
