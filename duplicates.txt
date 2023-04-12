@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 511
-Number of undecompiled duplicates found: 605
+Number of decompiled duplicates found: 513
+Number of undecompiled duplicates found: 595
 Number of overall exact duplicates found: 155
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -435,7 +435,7 @@ ref. - CEN  - func_80198680 - found 8 matches total:
 0.99 - MAD  - func_80195C38
 0.99 - NO3  - func_801C9080
 0.99 - NP3  - func_801C08F0 - (decompiled)
-0.99 - NZ0  - func_801C0D08
+0.99 - NZ0  - func_801C0D08 - (decompiled)
 0.99 - ST0  - func_801B8108
 0.99 - WRP  - func_8018FA1C
 0.99 - RWRP - func_8019199C
@@ -575,7 +575,7 @@ ref. - DRE  - func_801A2580 - found 8 matches total:
 1.00 - MAD  - func_80199508
 1.00 - NO3  - func_8019C43C - (decompiled)
 1.00 - NP3  - func_801D24A0
-1.00 - NZ0  - func_801C9E98
+1.00 - NZ0  - func_801C9E98 - (decompiled)
 1.00 - ST0  - func_801BD628 - (decompiled)
 1.00 - WRP  - func_801937D8 - (decompiled)
 1.00 - RWRP - func_80195758
@@ -1235,12 +1235,6 @@ ref. - NO3  - EntityTransparentWater - found 1 matches total:
 ref. - NO3  - EntityUnkId1C - found 1 matches total:
 0.99 - NP3  - func_801B3704
 
-ref. - NO3  - EntityUnkId4D - found 1 matches total:
-0.99 - NP3  - EntityUnkId4D
-
-ref. - NO3  - EntityZombie - found 1 matches total:
-0.99 - NP3  - EntityZombie
-
 ref. - NO3  - func_801B94F0 - found 1 matches total:
 0.99 - NP3  - func_801B3D24
 
@@ -1256,14 +1250,8 @@ ref. - NO3  - func_801D0A2C - found 1 matches total:
 ref. - NP3  - EntitySwitch - found 1 matches total:
 0.99 - NO3  - EntitySwitch - (decompiled)
 
-ref. - NP3  - func_801B8CC0 - found 1 matches total:
-0.99 - NZ0  - func_801B69E8
-
 ref. - NP3  - func_801C7880 - found 1 matches total:
 0.99 - NO3  - EntityMediumWaterSplash - (decompiled)
-
-ref. - NP3  - func_801C9F98 - found 1 matches total:
-0.99 - NZ0  - EntityBloodSplatter
 
 ref. - NP3  - func_801CA498 - found 1 matches total:
 0.99 - NZ0  - func_801C53AC - (decompiled)
