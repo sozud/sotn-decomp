@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 513
-Number of undecompiled duplicates found: 595
+Number of decompiled duplicates found: 518
+Number of undecompiled duplicates found: 590
 Number of overall exact duplicates found: 155
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -84,8 +84,8 @@ ref. - CEN  - func_80192DD4 - found 17 matches total:
 0.99 - NO3  - func_801C3A88
 0.99 - NP3  - func_801BB044
 0.99 - NP3  - func_801BB2F8
-0.99 - NZ0  - func_801BB45C
-0.99 - NZ0  - func_801BB710
+0.99 - NZ0  - func_801BB45C - (decompiled)
+0.99 - NZ0  - func_801BB710 - (decompiled)
 0.99 - ST0  - func_801B3478
 0.99 - ST0  - func_801B372C
 0.99 - WRP  - func_8018A170
@@ -140,8 +140,8 @@ ref. - CEN  - func_80192ED0 - found 16 matches total:
 0.99 - NO3  - func_801C3B84
 0.99 - NP3  - func_801BB140
 0.99 - NP3  - func_801BB3F4
-0.99 - NZ0  - func_801BB558
-0.99 - NZ0  - func_801BB80C
+0.99 - NZ0  - func_801BB558 - (decompiled)
+0.99 - NZ0  - func_801BB80C - (decompiled)
 0.99 - ST0  - func_801B3574
 0.99 - ST0  - func_801B3828
 0.99 - WRP  - func_8018A26C
@@ -834,7 +834,7 @@ ref. - CEN  - func_80191178 - found 7 matches total:
 0.99 - DRE  - func_801972BC
 0.99 - NO3  - func_801C1B78
 0.99 - NP3  - func_801B93E8
-0.99 - NZ0  - func_801B9800
+0.99 - NZ0  - func_801B9800 - (decompiled)
 0.99 - ST0  - func_801B1B98
 0.99 - WRP  - func_80188514 - (decompiled)
 0.99 - RWRP - func_8018A494
