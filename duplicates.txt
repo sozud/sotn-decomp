@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 518
-Number of undecompiled duplicates found: 590
+Number of decompiled duplicates found: 520
+Number of undecompiled duplicates found: 588
 Number of overall exact duplicates found: 155
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -59,8 +59,8 @@ ref. - CEN  - func_80192B00 - found 17 matches total:
 0.99 - CEN  - func_80192C18
 0.99 - DRE  - func_80198C44
 0.99 - DRE  - func_80198D5C
-0.99 - MAD  - func_80190608
-0.99 - MAD  - func_80190720
+0.99 - MAD  - CreateEntityWhenInVerticalRange - (decompiled)
+0.99 - MAD  - CreateEntityWhenInHorizontalRange - (decompiled)
 0.99 - NO3  - func_801C3500
 0.99 - NO3  - func_801C3618
 0.99 - NP3  - func_801BAD70
