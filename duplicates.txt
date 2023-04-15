@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 524
-Number of undecompiled duplicates found: 584
+Number of decompiled duplicates found: 512
+Number of undecompiled duplicates found: 578
 Number of overall exact duplicates found: 155
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -73,25 +73,6 @@ ref. - CEN  - func_80192DD4 - found 17 matches total:
 0.99 - WRP  - func_8018A424 - (decompiled)
 0.99 - RWRP - func_8018C0F0
 0.99 - RWRP - func_8018C3A4
-
-ref. - NO3  - func_801C3500 - found 17 matches total:
-0.99 - CEN  - CreateEntityWhenInVerticalRange - (decompiled)
-0.99 - CEN  - CreateEntityWhenInHorizontalRange - (decompiled)
-0.99 - DRE  - CreateEntityWhenInVerticalRange - (decompiled)
-0.99 - DRE  - CreateEntityWhenInHorizontalRange - (decompiled)
-0.99 - MAD  - CreateEntityWhenInVerticalRange - (decompiled)
-0.99 - MAD  - CreateEntityWhenInHorizontalRange - (decompiled)
-0.99 - NO3  - func_801C3618
-0.99 - NP3  - func_801BAD70
-0.99 - NP3  - func_801BAE88
-0.99 - NZ0  - CreateEntityWhenInVerticalRange - (decompiled)
-0.99 - NZ0  - CreateEntityWhenInHorizontalRange - (decompiled)
-0.99 - ST0  - CreateEntityWhenInVerticalRange - (decompiled)
-0.99 - ST0  - CreateEntityWhenInHorizontalRange - (decompiled)
-0.99 - WRP  - CreateEntityWhenInVerticalRange - (decompiled)
-0.99 - WRP  - CreateEntityWhenInHorizontalRange - (decompiled)
-0.99 - RWRP - func_8018BE1C
-0.99 - RWRP - func_8018BF34
 
 ref. - NP3  - func_801BAFA0 - found 17 matches total:
 0.99 - CEN  - func_80192D30 - (decompiled)
