@@ -76,13 +76,7 @@ us/st/np3/nonmatchings/49BC8/func_801D24A0.s                        41          
 us/st/rwrp/nonmatchings/8DF0/func_80195758.s                        41           9
 us/dra/nonmatchings/75F54/func_80118810.s                           42           5          https://decomp.me/scratch/25GsE (Scraped 0.911)
 us/ric/nonmatchings/22380/func_8015F96C.s                           42           5
-us/st/cen/nonmatchings/D600/func_80195714.s                         42           5          https://decomp.me/scratch/w79ZF (Scraped 1.0)
-us/st/mad/nonmatchings/D8C8/func_8019344C.s                         42           5
-us/st/no3/nonmatchings/3E134/func_801C6114.s                        42           5          https://decomp.me/scratch/q46jJ (Scraped 1.0)
-us/st/np3/nonmatchings/3246C/func_801BD984.s                        42           5          https://decomp.me/scratch/o5o6b (Scraped 1.0)
-us/st/nz0/nonmatchings/30958/func_801BDD9C.s                        42           5          https://decomp.me/scratch/y8ndw (Scraped 1.0)
 us/st/rwrp/nonmatchings/8DF0/func_8018E024.s                        42           5
-us/st/rwrp/nonmatchings/8DF0/func_8018EA30.s                        42           5
 us/ric/nonmatchings/20920/func_8015D1D0.s                           42           6
 us/st/np3/nonmatchings/49BC8/func_801CDC80.s                        42           6
 us/dra/nonmatchings/62D70/func_8010EA54.s                           42           8          https://decomp.me/scratch/9jKqU
