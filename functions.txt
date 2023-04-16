@@ -215,8 +215,6 @@ us/st/sel/nonmatchings/2D260/func_801B2E5C.s                        72          
 us/st/cen/nonmatchings/D600/EntityExplosion.s                       72           9
 us/st/rwrp/nonmatchings/8DF0/func_8018F814.s                        72           9
 us/st/sel/nonmatchings/38D24/MDEC_rest.s                            72           9
-us/st/cen/nonmatchings/D600/func_80192DD4.s                         73           9          https://decomp.me/scratch/a8NoG (Scraped 1.0)
-us/st/cen/nonmatchings/D600/func_80193088.s                         73           9          https://decomp.me/scratch/36Vd9 (Scraped 1.0)
 us/st/dre/nonmatchings/14214/func_80198F18.s                        73           9
 us/st/dre/nonmatchings/14214/func_801991CC.s                        73           9
 us/st/mad/nonmatchings/D8C8/func_801908DC.s                         73           9
