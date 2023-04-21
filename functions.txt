@@ -576,7 +576,7 @@ us/dra/nonmatchings/75F54/func_80117AC0.s                          175          
 us/ric/nonmatchings/22380/func_8015F680.s                          176          28
 us/dra/nonmatchings/75F54/EntitySubwpnCrashCrossParticles.s        178          26
 us/dra/nonmatchings/62D70/func_801112AC.s                          178          32  Yes
-us/st/nz0/nonmatchings/30958/func_801B3294.s                       181          15          https://decomp.me/scratch/Swhgi (Scraped 0.996)
+us/st/nz0/nonmatchings/30958/EntityFloorSpikes.s                   181          15
 us/dra/nonmatchings/75F54/func_80133960.s                          181          21  Yes     https://decomp.me/scratch/7xexM (Scraped 0.045)
 us/ric/nonmatchings/22380/func_80169470.s                          182          20  Yes
 us/dra/nonmatchings/75F54/func_8013136C.s                          182          23  Yes     https://decomp.me/scratch/cu30D
