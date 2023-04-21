@@ -37,7 +37,7 @@ us/st/rwrp/nonmatchings/8DF0/func_8018C300.s                        27          
 us/st/st0/nonmatchings/27D64/func_801B3688.s                        27           4
 us/st/np3/nonmatchings/49BC8/func_801CDA6C.s                        28           3
 us/dra/nonmatchings/62D70/func_8010E334.s                           29           4          https://decomp.me/scratch/YvoMU
-us/dra/nonmatchings/4F45C/func_800F1868.s                           30           3          https://decomp.me/scratch/3yclG (Scraped 0.367)
+us/dra/nonmatchings/4F45C/func_800F1868.s                           30           3          https://decomp.me/scratch/3yclG (Scraped 0.359)
 us/dra/nonmatchings/627C4/func_80102D08.s                           32           2          https://decomp.me/scratch/NNXbc
 us/st/rwrp/nonmatchings/8DF0/func_8018DE98.s                        32           3
 us/st/np3/nonmatchings/3246C/func_801BCF20.s                        32           6
@@ -102,10 +102,10 @@ us/st/cen/nonmatchings/D600/func_801965F4.s                         48          
 us/st/rwrp/nonmatchings/8DF0/func_8018F910.s                        48           3
 us/st/cen/nonmatchings/D600/func_80195B68.s                         48           8
 us/st/rwrp/nonmatchings/8DF0/func_8018EE84.s                        48           8
-us/dra/nonmatchings/5298C/func_800F5AE4.s                           49           4          https://decomp.me/scratch/p4iaX (Scraped 0.498)
+us/dra/nonmatchings/5298C/func_800F5AE4.s                           49           4          https://decomp.me/scratch/p4iaX (Scraped 1.0)
 us/st/no3/nonmatchings/3E134/func_801BE7BC.s                        50           2
 us/st/cen/nonmatchings/D600/func_8019040C.s                         50           3
-us/st/np3/nonmatchings/49BC8/func_801CD78C.s                        50           4          https://decomp.me/scratch/Y4dmx (Scraped 0.858)
+us/st/np3/nonmatchings/49BC8/func_801CD78C.s                        50           4          https://decomp.me/scratch/Y4dmx (Scraped 0.901)
 us/dra/nonmatchings/47BB8/func_800EAF28.s                           50           8          https://decomp.me/scratch/jlkEF (Scraped 0.76)
 us/st/cen/nonmatchings/D600/func_8018E180.s                         51           2
 us/st/dre/nonmatchings/14214/func_801949E8.s                        51           2
@@ -467,7 +467,6 @@ us/st/no3/nonmatchings/46684/func_801C9C78.s                       131          
 us/st/np3/nonmatchings/3DEF4/func_801C14E8.s                       131          17
 us/st/rwrp/nonmatchings/8DF0/func_80192594.s                       131          17
 us/dra/nonmatchings/5298C/func_800FA60C.s                          132          17
-us/st/nz0/nonmatchings/30958/func_801B12E8.s                       133          15          https://decomp.me/scratch/K4Esm (Scraped 0.999)
 us/dra/nonmatchings/5298C/func_800F72BC.s                          133          18
 us/ric/nonmatchings/1AC60/func_8015A7D0.s                          133          21          https://decomp.me/scratch/1JWA0
 us/st/np3/nonmatchings/49BC8/func_801CE4CC.s                       133          26
@@ -870,14 +869,14 @@ us/st/rwrp/nonmatchings/8DF0/func_80192D4C.s                       460          
 us/st/st0/nonmatchings/36358/func_801B94B8.s                       460           9
 us/st/wrp/nonmatchings/D020/func_80190DCC.s                        460           9
 us/ric/nonmatchings/32324/func_80170F64.s                          461          44  Yes
-us/st/cen/nonmatchings/D600/EntityNumericDamage.s                  466          47
-us/st/dre/nonmatchings/14214/EntityNumericDamage.s                 466          47
-us/st/mad/nonmatchings/D8C8/EntityNumericDamage.s                  466          47
-us/st/no3/nonmatchings/3E134/EntityNumericDamage.s                 466          47
-us/st/np3/nonmatchings/3246C/EntityNumericDamage.s                 466          47
-us/st/nz0/nonmatchings/30958/EntityNumericDamage.s                 466          47
+us/st/cen/nonmatchings/D600/EntityNumericDamage.s                  466          47          https://decomp.me/scratch/RAEjF (Scraped 0.548)
+us/st/dre/nonmatchings/14214/EntityNumericDamage.s                 466          47          https://decomp.me/scratch/RAEjF (Scraped 0.548)
+us/st/mad/nonmatchings/D8C8/EntityNumericDamage.s                  466          47          https://decomp.me/scratch/RAEjF (Scraped 0.548)
+us/st/no3/nonmatchings/3E134/EntityNumericDamage.s                 466          47          https://decomp.me/scratch/RAEjF (Scraped 0.548)
+us/st/np3/nonmatchings/3246C/EntityNumericDamage.s                 466          47          https://decomp.me/scratch/RAEjF (Scraped 0.548)
+us/st/nz0/nonmatchings/30958/EntityNumericDamage.s                 466          47          https://decomp.me/scratch/RAEjF (Scraped 0.548)
 us/st/rwrp/nonmatchings/8DF0/func_8018B6B4.s                       466          47
-us/st/st0/nonmatchings/27D64/EntityNumericDamage.s                 466          47
+us/st/st0/nonmatchings/27D64/EntityNumericDamage.s                 466          47          https://decomp.me/scratch/RAEjF (Scraped 0.548)
 us/st/wrp/nonmatchings/6FD0/EntityNumericDamage.s                  466          47          https://decomp.me/scratch/m0PKE
 us/dra/nonmatchings/75F54/func_8012F178.s                          467          35
 us/dra/nonmatchings/75F54/EntityHitByLightning.s                   468          56
