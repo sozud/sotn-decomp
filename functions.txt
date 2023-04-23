@@ -96,7 +96,6 @@ us/st/sel/nonmatchings/2D260/func_801B2700.s                        47          
 us/st/cen/nonmatchings/D600/func_8019C4B8.s                         47           9
 us/st/dre/nonmatchings/1C7DC/func_801A25FC.s                        47           9          https://decomp.me/scratch/IIvQX
 us/st/rwrp/nonmatchings/8DF0/func_801957D4.s                        47           9
-us/st/sel/nonmatchings/38D24/func_801B9698.s                        48           1          https://decomp.me/scratch/UylIw (Scraped 1.0)
 us/st/cen/nonmatchings/D600/func_801965F4.s                         48           3
 us/st/rwrp/nonmatchings/8DF0/func_8018F910.s                        48           3
 us/st/cen/nonmatchings/D600/func_80195B68.s                         48           8
