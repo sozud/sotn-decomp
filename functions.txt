@@ -529,7 +529,6 @@ us/st/no3/nonmatchings/377D4/EntityDeathSkySwirl.s                 151          
 us/st/dre/nonmatchings/1C7DC/func_801A2A58.s                       152           4
 us/dra/nonmatchings/62D70/func_8010D800.s                          152          10
 us/ric/nonmatchings/202A8/func_8015C4AC.s                          152          15
-us/dra/nonmatchings/75F54/func_80132A04.s                          153          18          https://decomp.me/scratch/0X5YL
 us/dra/nonmatchings/47BB8/func_800ECBF8.s                          154          23          https://decomp.me/scratch/jHLlG (Scraped 0.989)
 us/ric/nonmatchings/202A8/func_8015C6D4.s                          155          11
 us/dra/nonmatchings/62D70/func_80110DF8.s                          155          28  Yes
