@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 513
-Number of undecompiled duplicates found: 566
+Number of decompiled duplicates found: 514
+Number of undecompiled duplicates found: 565
 Number of overall exact duplicates found: 148
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -168,17 +168,6 @@ ref. - CEN  - EntityUnkId0E - found 9 matches total:
 0.99 - RWRP - func_80189E9C
 0.99 - RWRP - func_80190E44
 
-ref. - CEN  - func_801942D0 - found 9 matches total:
-0.99 - DRA  - func_801065F4 - (decompiled)
-0.99 - DRE  - DestroyEntityFromIndex - (decompiled)
-0.99 - MAD  - DestroyEntityFromIndex - (decompiled)
-0.99 - NO3  - DestroyEntityFromIndex - (decompiled)
-0.99 - NP3  - DestroyEntityFromIndex - (decompiled)
-0.99 - NZ0  - DestroyEntityFromIndex - (decompiled)
-0.99 - ST0  - DestroyEntityFromIndex - (decompiled)
-0.99 - WRP  - DestroyEntityFromIndex - (decompiled)
-0.99 - RWRP - func_8018D5EC
-
 ref. - CEN  - func_80194394 - found 9 matches total:
 0.99 - DRE  - AnimateEntity - (decompiled)
 0.99 - MAD  - AnimateEntity - (decompiled)
@@ -200,6 +189,17 @@ ref. - RWRP - func_8018C8D0 - found 9 matches total:
 1.00 - WRP  - func_8018A950 - (decompiled)
 0.99 - MAD  - func_801910A8 - (decompiled)
 0.99 - NZ0  - func_801C7CF0 - (decompiled)
+
+ref. - RWRP - func_8018D5EC - found 9 matches total:
+0.99 - DRA  - func_801065F4 - (decompiled)
+0.99 - CEN  - func_801942D0 - (decompiled)
+0.99 - DRE  - DestroyEntityFromIndex - (decompiled)
+0.99 - MAD  - DestroyEntityFromIndex - (decompiled)
+0.99 - NO3  - DestroyEntityFromIndex - (decompiled)
+0.99 - NP3  - DestroyEntityFromIndex - (decompiled)
+0.99 - NZ0  - DestroyEntityFromIndex - (decompiled)
+0.99 - ST0  - DestroyEntityFromIndex - (decompiled)
+0.99 - WRP  - DestroyEntityFromIndex - (decompiled)
 
 ref. - CEN  - AllocEntity - found 8 matches total:
 0.99 - DRE  - AllocEntity - (decompiled)
