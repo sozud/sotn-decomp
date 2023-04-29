@@ -496,7 +496,6 @@ us/st/sel/nonmatchings/3642C/func_801B8518.s                       140          
 us/dra/nonmatchings/75F54/func_80133290.s                          140          16  Yes
 us/dra/nonmatchings/42398/func_800E3278.s                          140          41          https://decomp.me/scratch/y3otf
 us/dra/nonmatchings/75F54/func_80116208.s                          142          24
-us/dra/nonmatchings/75F54/func_80132C2C.s                          143          10          https://decomp.me/scratch/soO8j (Scraped 0.68)
 us/st/np3/nonmatchings/4A654/func_801CAE0C.s                       143          18
 us/dra/nonmatchings/5298C/func_800F84CC.s                          144          11
 us/dra/nonmatchings/75F54/func_8012E7A4.s                          144          15
