@@ -1019,7 +1019,7 @@ us/st/np3/nonmatchings/4A654/func_801CC2E0.s                      1298         2
 us/dra/nonmatchings/75F54/EntityMist.s                            1393         130  Yes
 us/st/no3/nonmatchings/46684/EntityStrongWarg.s                   1410         285  Yes
 us/st/np3/nonmatchings/3246C/func_801B78BC.s                      1410         287  Yes
-us/dra/nonmatchings/47BB8/func_800EDEDC.s                         1434          80  Yes     https://decomp.me/scratch/kJ7IE (Scraped 0.874)
+us/dra/nonmatchings/47BB8/func_800EDEDC.s                         1434          80  Yes     https://decomp.me/scratch/V3zNP (Scraped 0.874)
 us/dra/nonmatchings/5298C/func_800FBC24.s                         1622         352  Yes     https://decomp.me/scratch/5KKhG (Scraped 0.001)
 us/dra/nonmatchings/62D70/UpdateEntityAlucard.s                   1830         350  Yes
 us/st/dre/nonmatchings/11A64/EntityMother.s                       1854         367  Yes
