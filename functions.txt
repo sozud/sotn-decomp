@@ -79,7 +79,6 @@ us/st/np3/nonmatchings/4A654/func_801CDC80.s                        42          
 us/dra/nonmatchings/62D70/func_8010EA54.s                           42           8          https://decomp.me/scratch/9jKqU
 us/st/np3/nonmatchings/4A654/func_801CDD80.s                        44           5
 us/st/np3/nonmatchings/4A654/func_801CDE88.s                        45           5
-us/st/cen/nonmatchings/D600/EntityMaria.s                           45           6
 us/st/cen/nonmatchings/D600/func_80194EE0.s                         45           6
 us/st/np3/nonmatchings/3246C/func_801BD150.s                        45           6
 us/st/rwrp/nonmatchings/8DF0/func_8018E1FC.s                        45           6
