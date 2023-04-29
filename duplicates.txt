@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 515
-Number of undecompiled duplicates found: 564
+Number of decompiled duplicates found: 516
+Number of undecompiled duplicates found: 563
 Number of overall exact duplicates found: 148
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -1034,11 +1034,6 @@ ref. - MAIN - SetIR123 - found 4 matches total:
 0.99 - MAIN - SetRii
 0.99 - MAIN - SetMAC123
 
-ref. - CEN  - EntityBackgroundBlock - found 3 matches total:
-0.99 - DRE  - EntityUnkId11 - (decompiled)
-0.99 - WRP  - func_80186FD0 - (decompiled)
-0.99 - RWRP - func_80188DF0
-
 ref. - MAIN - SetVideoMode - found 3 matches total:
 0.99 - MAIN - CdSyncCallback - (decompiled)
 0.99 - MAIN - CdReadyCallback - (decompiled)
@@ -1048,6 +1043,11 @@ ref. - NO3  - EntityUnkId5C - found 3 matches total:
 0.99 - RIC  - func_8016DF74
 0.99 - RIC  - func_8016F6F0
 0.99 - NP3  - func_801B5790
+
+ref. - RWRP - func_80188DF0 - found 3 matches total:
+0.99 - CEN  - EntityBackgroundBlock - (decompiled)
+0.99 - DRE  - EntityUnkId11 - (decompiled)
+0.99 - WRP  - func_80186FD0 - (decompiled)
 
 ref. - CEN  - EntityPrizeDrop - found 2 matches total:
 0.99 - DRE  - EntityPrizeDrop

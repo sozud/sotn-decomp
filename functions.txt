@@ -153,7 +153,6 @@ us/st/rwrp/nonmatchings/8DF0/func_8018EC90.s                        62          
 us/dra/nonmatchings/62D70/func_8010DA70.s                           62           8          https://decomp.me/scratch/8WgKB (Scraped 0.719)
 us/dra/nonmatchings/62D70/func_8010EC8C.s                           62          10          https://decomp.me/scratch/N8Srk
 us/st/np3/nonmatchings/3DEF4/func_801C7880.s                        62          13
-us/st/cen/nonmatchings/D600/EntityBackgroundBlock.s                 63           6
 us/st/np3/nonmatchings/4A654/func_801CD83C.s                        63           6
 us/st/rwrp/nonmatchings/8DF0/func_80188DF0.s                        63           6
 us/dra/nonmatchings/75F54/func_80134E64.s                           64           3
