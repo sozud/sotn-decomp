@@ -57,7 +57,6 @@ us/st/st0/nonmatchings/27D64/CollectGold.s                          36          
 us/st/np3/nonmatchings/4A654/func_801CE258.s                        36           5
 us/dra/nonmatchings/42398/func_800E385C.s                           36           6          https://decomp.me/scratch/Ocshz
 us/ric/nonmatchings/22380/func_8015F9F0.s                           37           7
-us/st/cen/nonmatchings/D600/func_801958F4.s                         38           4
 us/st/np3/nonmatchings/3246C/CollectHeart.s                         38           4
 us/st/np3/nonmatchings/4A654/func_801CDE10.s                        38           4
 us/st/rwrp/nonmatchings/8DF0/func_8018C8D0.s                        38           4

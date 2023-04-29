@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 514
-Number of undecompiled duplicates found: 565
+Number of decompiled duplicates found: 515
+Number of undecompiled duplicates found: 564
 Number of overall exact duplicates found: 148
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -905,14 +905,6 @@ ref. - CEN  - func_80194EE0 - found 6 matches total:
 0.99 - WRP  - func_8018C27C - (decompiled)
 0.99 - RWRP - func_8018E1FC
 
-ref. - CEN  - func_801958F4 - found 6 matches total:
-0.99 - DRE  - func_8019BA38 - (decompiled)
-0.99 - NO3  - CollectHeart - (decompiled)
-0.99 - NP3  - CollectHeart
-0.99 - NZ0  - CollectHeart - (decompiled)
-0.99 - WRP  - CollectHeart - (decompiled)
-0.99 - RWRP - func_8018EC10
-
 ref. - CEN  - func_80195A50 - found 6 matches total:
 0.99 - DRE  - func_8019BB94
 0.99 - NO3  - CollectSubweapon
@@ -960,6 +952,14 @@ ref. - NO3  - EntityUnkId2F - found 6 matches total:
 0.99 - NZ0  - EntityBossRoomBlock
 0.99 - ST0  - EntityStageTitleFadeout
 0.99 - TT_000 - func_80174038
+
+ref. - NP3  - CollectHeart - found 6 matches total:
+0.99 - CEN  - CollectHeart - (decompiled)
+0.99 - DRE  - func_8019BA38 - (decompiled)
+0.99 - NO3  - CollectHeart - (decompiled)
+0.99 - NZ0  - CollectHeart - (decompiled)
+0.99 - WRP  - CollectHeart - (decompiled)
+0.99 - RWRP - func_8018EC10
 
 ref. - RWRP - func_80190D1C - found 6 matches total:
 0.99 - CEN  - EntityHeartDrop - (decompiled)
