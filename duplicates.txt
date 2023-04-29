@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 511
-Number of undecompiled duplicates found: 568
+Number of decompiled duplicates found: 513
+Number of undecompiled duplicates found: 566
 Number of overall exact duplicates found: 148
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -112,8 +112,8 @@ ref. - RWRP - func_8018DF84 - found 17 matches total:
 0.99 - WRP  - func_8018C198 - (decompiled)
 0.99 - RWRP - func_8018E118
 
-ref. - CEN  - func_80192ED0 - found 16 matches total:
-0.99 - CEN  - func_80193184
+ref. - CEN  - func_80193184 - found 16 matches total:
+0.99 - CEN  - func_80192ED0 - (decompiled)
 0.99 - DRE  - func_80199014
 0.99 - DRE  - func_801992C8
 0.99 - MAD  - func_80190C78
@@ -168,17 +168,6 @@ ref. - CEN  - EntityUnkId0E - found 9 matches total:
 0.99 - RWRP - func_80189E9C
 0.99 - RWRP - func_80190E44
 
-ref. - CEN  - func_801935B4 - found 9 matches total:
-1.00 - DRE  - func_801996F8 - (decompiled)
-1.00 - NO3  - func_801C3FB4 - (decompiled)
-1.00 - NP3  - func_801BB824 - (decompiled)
-1.00 - NZ0  - func_801BBC3C - (decompiled)
-1.00 - ST0  - func_801B3C58 - (decompiled)
-1.00 - WRP  - func_8018A950 - (decompiled)
-1.00 - RWRP - func_8018C8D0
-0.99 - MAD  - func_801910A8 - (decompiled)
-0.99 - NZ0  - func_801C7CF0 - (decompiled)
-
 ref. - CEN  - func_801942D0 - found 9 matches total:
 0.99 - DRA  - func_801065F4 - (decompiled)
 0.99 - DRE  - DestroyEntityFromIndex - (decompiled)
@@ -200,6 +189,17 @@ ref. - CEN  - func_80194394 - found 9 matches total:
 0.99 - ST0  - AnimateEntity - (decompiled)
 0.99 - WRP  - AnimateEntity - (decompiled)
 0.99 - RWRP - func_8018D6B0
+
+ref. - RWRP - func_8018C8D0 - found 9 matches total:
+1.00 - CEN  - func_801935B4 - (decompiled)
+1.00 - DRE  - func_801996F8 - (decompiled)
+1.00 - NO3  - func_801C3FB4 - (decompiled)
+1.00 - NP3  - func_801BB824 - (decompiled)
+1.00 - NZ0  - func_801BBC3C - (decompiled)
+1.00 - ST0  - func_801B3C58 - (decompiled)
+1.00 - WRP  - func_8018A950 - (decompiled)
+0.99 - MAD  - func_801910A8 - (decompiled)
+0.99 - NZ0  - func_801C7CF0 - (decompiled)
 
 ref. - CEN  - AllocEntity - found 8 matches total:
 0.99 - DRE  - AllocEntity - (decompiled)
@@ -605,7 +605,7 @@ ref. - RWRP - func_8018D8BC - found 8 matches total:
 1.00 - CEN  - func_801945A0 - (decompiled)
 1.00 - DRE  - func_8019A6E4 - (decompiled)
 1.00 - NO3  - func_801C4FA0 - (decompiled)
-1.00 - NP3  - func_801BC810 - (decompiled)
+1.00 - NP3  - GetPlayerDistanceY - (decompiled)
 1.00 - NZ0  - GetPlayerDistanceY - (decompiled)
 1.00 - ST0  - func_801B4C44 - (decompiled)
 1.00 - WRP  - func_8018B93C - (decompiled)
@@ -615,7 +615,7 @@ ref. - RWRP - func_8018D8F0 - found 8 matches total:
 1.00 - CEN  - func_801945D4 - (decompiled)
 1.00 - DRE  - func_8019A718 - (decompiled)
 1.00 - NO3  - func_801C4FD4 - (decompiled)
-1.00 - NP3  - func_801BC844 - (decompiled)
+1.00 - NP3  - GetPlayerSide - (decompiled)
 1.00 - NZ0  - GetPlayerSide - (decompiled)
 1.00 - ST0  - func_801B4C78 - (decompiled)
 1.00 - WRP  - func_8018B970 - (decompiled)
