@@ -1,5 +1,5 @@
 Number of decompiled duplicates found: 516
-Number of undecompiled duplicates found: 563
+Number of undecompiled duplicates found: 562
 Number of overall exact duplicates found: 148
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -1081,10 +1081,6 @@ ref. - MAIN - SetVertex0 - found 2 matches total:
 0.99 - MAIN - SetVertex1
 0.99 - MAIN - SetVertex2
 
-ref. - NO3  - EntityBoneScimitar - found 2 matches total:
-0.99 - NP3  - EntityBoneScimitar
-0.99 - NZ0  - EntityBoneScimitar
-
 ref. - NO3  - func_801BEA20 - found 2 matches total:
 0.99 - NZ0  - func_801B79A8
 0.99 - ST0  - func_801A8E60
@@ -1166,6 +1162,9 @@ ref. - NO3  - EntityAlucardWaterEffect - found 1 matches total:
 
 ref. - NO3  - EntityBackgroundBushes - found 1 matches total:
 0.99 - NP3  - func_801B32A8
+
+ref. - NO3  - EntityBoneScimitar - found 1 matches total:
+0.99 - NP3  - EntityBoneScimitar
 
 ref. - NO3  - EntityLargeUpwardsSplash - found 1 matches total:
 0.99 - NP3  - func_801C4DCC
