@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 516
-Number of undecompiled duplicates found: 562
+Number of decompiled duplicates found: 517
+Number of undecompiled duplicates found: 561
 Number of overall exact duplicates found: 148
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -200,16 +200,6 @@ ref. - RWRP - func_8018D5EC - found 9 matches total:
 0.99 - NZ0  - DestroyEntityFromIndex - (decompiled)
 0.99 - ST0  - DestroyEntityFromIndex - (decompiled)
 0.99 - WRP  - DestroyEntityFromIndex - (decompiled)
-
-ref. - CEN  - AllocEntity - found 8 matches total:
-0.99 - DRE  - AllocEntity - (decompiled)
-0.99 - MAD  - AllocEntity - (decompiled)
-0.99 - NO3  - AllocEntity - (decompiled)
-0.99 - NP3  - AllocEntity - (decompiled)
-0.99 - NZ0  - AllocEntity - (decompiled)
-0.99 - ST0  - AllocEntity - (decompiled)
-0.99 - WRP  - AllocEntity - (decompiled)
-0.99 - RWRP - func_8018DDF0
 
 ref. - CEN  - EntityAbsorbOrb - found 8 matches total:
 0.99 - DRE  - EntityAbsorbOrb
@@ -640,6 +630,16 @@ ref. - RWRP - func_8018D964 - found 8 matches total:
 1.00 - ST0  - FallEntity - (decompiled)
 1.00 - WRP  - FallEntity - (decompiled)
 0.99 - MAD  - FallEntity - (decompiled)
+
+ref. - RWRP - func_8018DDF0 - found 8 matches total:
+0.99 - CEN  - AllocEntity - (decompiled)
+0.99 - DRE  - AllocEntity - (decompiled)
+0.99 - MAD  - AllocEntity - (decompiled)
+0.99 - NO3  - AllocEntity - (decompiled)
+0.99 - NP3  - AllocEntity - (decompiled)
+0.99 - NZ0  - AllocEntity - (decompiled)
+0.99 - ST0  - AllocEntity - (decompiled)
+0.99 - WRP  - AllocEntity - (decompiled)
 
 ref. - RWRP - func_8018DE50 - found 8 matches total:
 1.00 - WRP  - func_8018BED0 - (decompiled)
