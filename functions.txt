@@ -75,7 +75,6 @@ us/st/np3/nonmatchings/4A654/func_801CDC80.s                        42          
 us/dra/nonmatchings/62D70/func_8010EA54.s                           42           8          https://decomp.me/scratch/9jKqU
 us/st/np3/nonmatchings/4A654/func_801CDD80.s                        44           5
 us/st/np3/nonmatchings/4A654/func_801CDE88.s                        45           5
-us/st/cen/nonmatchings/D600/func_80194EE0.s                         45           6
 us/st/np3/nonmatchings/3246C/func_801BD150.s                        45           6
 us/st/rwrp/nonmatchings/8DF0/func_8018E1FC.s                        45           6
 us/st/sel/nonmatchings/38D24/func_801B9B7C.s                        46           3
@@ -656,7 +655,7 @@ us/ric/nonmatchings/22380/func_80169F04.s                          236          
 us/st/no3/nonmatchings/377D4/EntityTransparentWater.s              236          28
 us/st/np3/nonmatchings/3246C/func_801B39CC.s                       236          28
 us/st/sel/nonmatchings/38D24/func_801BABA4.s                       236          35
-us/dra/nonmatchings/5D6C4/func_800FF128.s                          236          38          https://decomp.me/scratch/6I0bu (Scraped 0.964)
+us/dra/nonmatchings/5D6C4/func_800FF128.s                          236          38          https://decomp.me/scratch/6I0bu (Scraped 0.961)
 us/dra/nonmatchings/62D70/func_8010BFFC.s                          238          28
 us/dra/nonmatchings/75F54/func_8012DBBC.s                          238          48
 us/ric/nonmatchings/32324/func_8017161C.s                          239          20
