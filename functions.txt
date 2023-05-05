@@ -1,7 +1,7 @@
 Filename                                                        Length    Branches  Jtbl    Decomp.me WIP
 ------------------------------------------------------------  --------  ----------  ------  -----------------------------------------------
 us/st/np3/nonmatchings/4A654/func_801CF778.s                        15           1          https://decomp.me/scratch/Rjk3N (Scraped 0.14)
-us/st/rwrp/nonmatchings/8DF0/func_8018DE50.s                        16           1          https://decomp.me/scratch/9ubkQ (Scraped 0.182)
+us/st/rwrp/nonmatchings/8DF0/func_8018DE50.s                        16           1          https://decomp.me/scratch/5mTHN (Scraped 1.0)
 us/st/rwrp/nonmatchings/8DF0/func_80195990.s                        16           1
 us/st/st0/nonmatchings/27D64/func_801A8E34.s                        16           1
 us/st/rwrp/nonmatchings/8DF0/func_8018E38C.s                        16           2
@@ -119,7 +119,7 @@ us/st/cen/nonmatchings/D600/func_80193410.s                         54          
 us/st/np3/nonmatchings/3246C/func_801BB680.s                        54          11
 us/st/rwrp/nonmatchings/8DF0/func_8018C72C.s                        54          11
 us/st/np3/nonmatchings/4A654/func_801CDF1C.s                        55           6
-us/st/cen/nonmatchings/D600/func_80194394.s                         55           7
+us/st/cen/nonmatchings/D600/func_80194394.s                         55           7          https://decomp.me/scratch/uVgur (Scraped 0.973)
 us/st/cen/nonmatchings/D600/func_8019565C.s                         55           7
 us/st/rwrp/nonmatchings/8DF0/func_8018D6B0.s                        55           7
 us/st/rwrp/nonmatchings/8DF0/func_8018E978.s                        55           7
@@ -470,7 +470,7 @@ us/st/nz0/nonmatchings/30958/func_801BCF74.s                       135          
 us/st/rwrp/nonmatchings/8DF0/func_8018DC08.s                       135          16
 us/st/st0/nonmatchings/27D64/func_801B51E4.s                       135          16
 us/st/wrp/nonmatchings/6FD0/func_8018BC88.s                        135          16
-us/st/cen/nonmatchings/D600/func_8019A130.s                        136           9
+us/st/cen/nonmatchings/D600/func_8019A130.s                        136           9          https://decomp.me/scratch/R4Q2V (Scraped 1.0)
 us/st/dre/nonmatchings/1C7DC/func_801A0274.s                       136           9
 us/st/mad/nonmatchings/139E0/func_801978A4.s                       136           9
 us/st/no3/nonmatchings/46684/func_801CAB30.s                       136           9
