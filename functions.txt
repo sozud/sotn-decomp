@@ -656,7 +656,6 @@ us/dra/nonmatchings/5D6C4/func_800FF128.s                          236          
 us/dra/nonmatchings/62D70/func_8010BFFC.s                          238          28
 us/dra/nonmatchings/75F54/func_8012DBBC.s                          238          48
 us/ric/nonmatchings/32324/func_8017161C.s                          239          20
-us/dra/nonmatchings/42398/func_800E2B00.s                          242          20          https://decomp.me/scratch/aMvL7 (Scraped 0.995)
 us/st/sel/nonmatchings/2D260/func_801B3A94.s                       243          38  Yes
 us/st/np3/nonmatchings/4A654/func_801CF254.s                       243          44  Yes
 us/st/no3/nonmatchings/46684/EntitySidewaysWaterDroplets.s         244          23
@@ -974,7 +973,7 @@ us/st/st0/nonmatchings/27D64/func_801B1CA0.s                       953         1
 us/ric/nonmatchings/32324/func_8016F6F0.s                          956          56  Yes
 us/st/np3/nonmatchings/4A654/func_801CF94C.s                       962         184  Yes
 us/st/np3/nonmatchings/4A654/func_801D0D40.s                      1001         202  Yes
-us/dra/nonmatchings/62D70/func_80108448.s                         1022         202  Yes
+us/dra/nonmatchings/62D70/func_80108448.s                         1022         202  Yes     https://decomp.me/scratch/bHWF5 (Scraped 0.941)
 us/dra/nonmatchings/75F54/EntityStopWatch.s                       1027          98  Yes
 us/st/st0/nonmatchings/27D64/EntityDracula.s                      1033         178  Yes
 us/st/np3/nonmatchings/4A654/func_801CB018.s                      1057         214  Yes
