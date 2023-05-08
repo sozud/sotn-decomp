@@ -1,6 +1,6 @@
-Number of decompiled duplicates found: 518
-Number of undecompiled duplicates found: 560
-Number of overall exact duplicates found: 148
+Number of decompiled duplicates found: 494
+Number of undecompiled duplicates found: 557
+Number of overall exact duplicates found: 133
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
 0.99 - MAIN - InitHeap - (decompiled)
@@ -561,16 +561,6 @@ ref. - NP3  - func_801D2470 - found 8 matches total:
 1.00 - WRP  - func_801937A8 - (decompiled)
 1.00 - RWRP - func_80195728
 
-ref. - RWRP - func_8018A168 - found 8 matches total:
-1.00 - CEN  - Random - (decompiled)
-1.00 - DRE  - Random - (decompiled)
-1.00 - NO3  - Random - (decompiled)
-1.00 - NP3  - Random - (decompiled)
-1.00 - NZ0  - Random - (decompiled)
-1.00 - ST0  - Random - (decompiled)
-1.00 - WRP  - Random - (decompiled)
-0.99 - MAD  - Random - (decompiled)
-
 ref. - RWRP - func_8018C7E0 - found 8 matches total:
 0.99 - CEN  - CreateEntityFromCurrentEntity - (decompiled)
 0.99 - DRE  - CreateEntityFromCurrentEntity - (decompiled)
@@ -621,16 +611,6 @@ ref. - RWRP - func_8018D934 - found 8 matches total:
 1.00 - WRP  - MoveEntity - (decompiled)
 0.99 - MAD  - MoveEntity - (decompiled)
 
-ref. - RWRP - func_8018D964 - found 8 matches total:
-1.00 - CEN  - func_80194648 - (decompiled)
-1.00 - DRE  - FallEntity - (decompiled)
-1.00 - NO3  - FallEntity - (decompiled)
-1.00 - NP3  - FallEntity - (decompiled)
-1.00 - NZ0  - FallEntity - (decompiled)
-1.00 - ST0  - FallEntity - (decompiled)
-1.00 - WRP  - FallEntity - (decompiled)
-0.99 - MAD  - FallEntity - (decompiled)
-
 ref. - RWRP - func_8018DDF0 - found 8 matches total:
 0.99 - CEN  - AllocEntity - (decompiled)
 0.99 - DRE  - AllocEntity - (decompiled)
@@ -640,16 +620,6 @@ ref. - RWRP - func_8018DDF0 - found 8 matches total:
 0.99 - NZ0  - AllocEntity - (decompiled)
 0.99 - ST0  - AllocEntity - (decompiled)
 0.99 - WRP  - AllocEntity - (decompiled)
-
-ref. - RWRP - func_8018DE50 - found 8 matches total:
-1.00 - WRP  - func_8018BED0 - (decompiled)
-0.99 - CEN  - func_80194B34 - (decompiled)
-0.99 - DRE  - func_8019AC78 - (decompiled)
-0.99 - MAD  - func_80192860 - (decompiled)
-0.99 - NO3  - func_801C5534 - (decompiled)
-0.99 - NP3  - func_801BCDA4 - (decompiled)
-0.99 - NZ0  - func_801BD1BC - (decompiled)
-0.99 - ST0  - func_801B542C - (decompiled)
 
 ref. - RWRP - func_8018DE98 - found 8 matches total:
 0.99 - CEN  - func_80194B7C - (decompiled)

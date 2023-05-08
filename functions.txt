@@ -1,14 +1,11 @@
 Filename                                                        Length    Branches  Jtbl    Decomp.me WIP
 ------------------------------------------------------------  --------  ----------  ------  -----------------------------------------------
 us/st/np3/nonmatchings/4A654/func_801CF778.s                        15           1          https://decomp.me/scratch/Rjk3N (Scraped 0.14)
-us/st/rwrp/nonmatchings/8DF0/func_8018DE50.s                        16           1          https://decomp.me/scratch/5mTHN (Scraped 1.0)
 us/st/rwrp/nonmatchings/8DF0/func_80195990.s                        16           1
 us/st/st0/nonmatchings/27D64/func_801A8E34.s                        16           1
 us/st/rwrp/nonmatchings/8DF0/func_8018E38C.s                        16           2
-us/st/rwrp/nonmatchings/8DF0/func_8018A168.s                        17           1
 us/st/rwrp/nonmatchings/8DF0/func_8018D934.s                        17           1
 us/st/sel/nonmatchings/3642C/func_801B881C.s                        17           1
-us/st/rwrp/nonmatchings/8DF0/func_8018D964.s                        17           2
 us/st/rwrp/nonmatchings/8DF0/func_8018E0B0.s                        17           2
 us/st/np3/nonmatchings/4A654/func_801CE228.s                        18           2          https://decomp.me/scratch/7DXGX (Scraped 1.0)
 us/st/np3/nonmatchings/4A654/func_801D0B40.s                        19           1
@@ -659,7 +656,7 @@ us/dra/nonmatchings/5D6C4/func_800FF128.s                          236          
 us/dra/nonmatchings/62D70/func_8010BFFC.s                          238          28
 us/dra/nonmatchings/75F54/func_8012DBBC.s                          238          48
 us/ric/nonmatchings/32324/func_8017161C.s                          239          20
-us/dra/nonmatchings/42398/func_800E2B00.s                          242          20
+us/dra/nonmatchings/42398/func_800E2B00.s                          242          20          https://decomp.me/scratch/aMvL7 (Scraped 0.995)
 us/st/sel/nonmatchings/2D260/func_801B3A94.s                       243          38  Yes
 us/st/np3/nonmatchings/4A654/func_801CF254.s                       243          44  Yes
 us/st/no3/nonmatchings/46684/EntitySidewaysWaterDroplets.s         244          23
@@ -712,7 +709,7 @@ us/dra/nonmatchings/5298C/func_800F4FD0.s                          267          
 us/st/cen/nonmatchings/D600/func_8018DB18.s                        267          31
 us/st/mad/nonmatchings/D8C8/func_8018E1D4.s                        268          32
 us/st/mad/nonmatchings/139E0/func_80198BC8.s                       269          22
-us/st/nz0/nonmatchings/4672C/EntitySpittleBoneSpit.s               269          31  Yes     https://decomp.me/scratch/q3LZY (Scraped 0.917)
+us/st/nz0/nonmatchings/4672C/EntitySpittleBoneSpit.s               269          31  Yes     https://decomp.me/scratch/Crxwn (Scraped 0.979)
 us/st/np3/nonmatchings/3246C/func_801B6084.s                       269          43
 us/dra/nonmatchings/62D70/func_80109594.s                          271          37
 us/servant/tt_000/nonmatchings/10E8/func_80174210.s                272          42          https://decomp.me/scratch/WEF2F (Scraped 0.985)
