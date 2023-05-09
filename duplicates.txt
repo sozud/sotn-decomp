@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 514
-Number of undecompiled duplicates found: 527
+Number of decompiled duplicates found: 521
+Number of undecompiled duplicates found: 520
 Number of overall exact duplicates found: 133
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -202,13 +202,13 @@ ref. - RWRP - func_8018D5EC - found 9 matches total:
 0.99 - WRP  - DestroyEntityFromIndex - (decompiled)
 
 ref. - CEN  - ClutLerp - found 8 matches total:
-1.00 - DRE  - ClutLerp
-1.00 - NO3  - ClutLerp
-1.00 - NP3  - ClutLerp
-1.00 - NZ0  - ClutLerp
-1.00 - ST0  - ClutLerp
-1.00 - WRP  - ClutLerp
-1.00 - RWRP - ClutLerp
+1.00 - DRE  - ClutLerp - (decompiled)
+1.00 - NO3  - ClutLerp - (decompiled)
+1.00 - NP3  - ClutLerp - (decompiled)
+1.00 - NZ0  - ClutLerp - (decompiled)
+1.00 - ST0  - ClutLerp - (decompiled)
+1.00 - WRP  - ClutLerp - (decompiled)
+1.00 - RWRP - ClutLerp - (decompiled)
 0.99 - MAD  - func_801978A4
 
 ref. - CEN  - EntityAbsorbOrb - found 8 matches total:
