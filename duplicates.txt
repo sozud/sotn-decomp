@@ -201,6 +201,16 @@ ref. - RWRP - func_8018D5EC - found 9 matches total:
 0.99 - ST0  - DestroyEntityFromIndex - (decompiled)
 0.99 - WRP  - DestroyEntityFromIndex - (decompiled)
 
+ref. - CEN  - ClutLerp - found 8 matches total:
+1.00 - DRE  - ClutLerp
+1.00 - NO3  - ClutLerp
+1.00 - NP3  - ClutLerp
+1.00 - NZ0  - ClutLerp
+1.00 - ST0  - ClutLerp
+1.00 - WRP  - ClutLerp
+1.00 - RWRP - ClutLerp
+0.99 - MAD  - func_801978A4
+
 ref. - CEN  - EntityAbsorbOrb - found 8 matches total:
 0.99 - DRE  - EntityAbsorbOrb
 0.99 - MAD  - EntityAbsorbOrb
@@ -480,16 +490,6 @@ ref. - CEN  - func_80199A30 - found 8 matches total:
 0.99 - ST0  - func_801B94B8
 0.99 - WRP  - func_80190DCC
 0.99 - RWRP - func_80192D4C
-
-ref. - CEN  - func_8019A130 - found 8 matches total:
-1.00 - DRE  - func_801A0274
-1.00 - NO3  - func_801CAB30
-1.00 - NP3  - func_801C23A0
-1.00 - NZ0  - func_801C27B8
-1.00 - ST0  - func_801B9BB8
-1.00 - WRP  - func_801914CC
-1.00 - RWRP - func_8019344C
-0.99 - MAD  - func_801978A4
 
 ref. - CEN  - func_8019A328 - found 8 matches total:
 0.99 - DRE  - func_801A046C
