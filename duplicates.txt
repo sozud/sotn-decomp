@@ -1,5 +1,5 @@
 Number of decompiled duplicates found: 521
-Number of undecompiled duplicates found: 520
+Number of undecompiled duplicates found: 519
 Number of overall exact duplicates found: 133
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -816,15 +816,6 @@ ref. - CEN  - func_8019BBA4 - found 7 matches total:
 0.99 - WRP  - func_80192F40
 0.99 - RWRP - func_80194EC0
 
-ref. - DRE  - EntityFadeToWhite1 - found 7 matches total:
-0.99 - DRE  - EntityFadeToWhite2
-0.99 - NO3  - EntityWargExplosionPuffOpaque
-0.99 - NO3  - EntityStrongWargWaveAttack
-0.99 - NP3  - func_801B65FC
-0.99 - NZ0  - func_801B3C38
-0.99 - NZ0  - EntitySpittleBoneSpit
-0.99 - ST0  - EntitySecretButton
-
 ref. - RWRP - func_8018E160 - found 7 matches total:
 0.99 - CEN  - func_80194E44 - (decompiled)
 0.99 - DRE  - func_8019AF88 - (decompiled)
@@ -906,6 +897,14 @@ ref. - CEN  - func_8019A420 - found 6 matches total:
 0.99 - NZ0  - func_801C8ADC
 0.99 - WRP  - func_801917BC
 0.99 - RWRP - func_8019373C
+
+ref. - DRE  - EntityFadeToWhite1 - found 6 matches total:
+0.99 - DRE  - EntityFadeToWhite2
+0.99 - NO3  - EntityWargExplosionPuffOpaque
+0.99 - NO3  - EntityStrongWargWaveAttack
+0.99 - NP3  - func_801B65FC
+0.99 - NZ0  - func_801B3C38
+0.99 - ST0  - EntitySecretButton
 
 ref. - NO3  - EntityUnkId2F - found 6 matches total:
 0.99 - RIC  - func_80162C84
