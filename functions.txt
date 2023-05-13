@@ -500,7 +500,6 @@ us/ric/nonmatchings/22380/func_8015F414.s                          173          
 us/dra/nonmatchings/75F54/func_8012EF2C.s                          174          34  Yes
 us/dra/nonmatchings/4F45C/func_800F0940.s                          175          13  Yes
 us/dra/nonmatchings/953A0/func_80135D8C.s                          175          16
-us/dra/nonmatchings/4F45C/func_800F0608.s                          175          23  Yes
 us/st/cen/nonmatchings/D600/EntityUnkId01.s                        175          25
 us/dra/nonmatchings/75F54/func_80117AC0.s                          175          31
 us/ric/nonmatchings/22380/func_8015F680.s                          176          28
