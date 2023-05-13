@@ -308,7 +308,6 @@ us/st/wrp/nonmatchings/D020/func_80193658.s                         93          
 us/dra/nonmatchings/75F54/func_80123788.s                           93          11
 us/st/sel/nonmatchings/2D260/func_801B3E2C.s                        93          11
 us/dra/nonmatchings/5298C/func_800FA9DC.s                           93          14
-us/dra/nonmatchings/cd/func_80107C6C.s                              93          14
 us/dra/nonmatchings/692E8/func_8010E570.s                           93          16
 us/ric/nonmatchings/22380/func_801682B4.s                           95          10
 us/dra/nonmatchings/47BB8/func_800E7BB8.s                           96          10  Yes     https://decomp.me/scratch/8VUus (Scraped 0.85)
