@@ -291,7 +291,6 @@ us/dra/nonmatchings/75F54/func_80134D14.s                           89          
 us/dra/nonmatchings/692E8/func_80110394.s                           89           9          https://decomp.me/scratch/Akstc
 us/dra/nonmatchings/692E8/func_8010EB5C.s                           89          19
 us/st/sel/nonmatchings/3642C/func_801B78BC.s                        89          27
-us/dra/nonmatchings/cd/func_80107DB4.s                              90           9
 us/dra/nonmatchings/75F54/func_8012DF04.s                           91          16
 us/st/sel/nonmatchings/2D260/func_801AED48.s                        92          14
 us/dra/nonmatchings/75F54/func_801349F4.s                           93           4
