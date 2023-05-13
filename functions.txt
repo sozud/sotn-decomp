@@ -684,7 +684,6 @@ us/st/np3/nonmatchings/3246C/func_801B32A8.s                       299          
 us/dra/nonmatchings/627C4/func_801028AC.s                          300          43  Yes
 us/st/dre/nonmatchings/14214/EntityUnkId21.s                       301          46  Yes
 us/st/st0/nonmatchings/36358/EntityClockTower3D.s                  307           0
-us/dra/nonmatchings/46FD4/func_800E768C.s                          309          82
 us/dra/nonmatchings/75F54/EntitySummonSpirit.s                     311          34
 us/st/nz0/nonmatchings/30958/func_801B0AA4.s                       311          43
 us/dra/nonmatchings/75F54/EntitySubwpnCrashCross.s                 315          32  Yes
