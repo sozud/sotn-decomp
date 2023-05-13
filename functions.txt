@@ -345,7 +345,6 @@ us/st/dre/nonmatchings/1C7DC/func_801A2C9C.s                       104          
 us/st/sel/nonmatchings/3642C/func_801B76F0.s                       105           7
 us/st/st0/nonmatchings/27D64/func_801B101C.s                       105           7
 us/dra/nonmatchings/5298C/func_800F8C98.s                          106           9
-us/dra/nonmatchings/cd/func_80107750.s                             106          12
 us/dra/nonmatchings/4F45C/func_800F2288.s                          108          12
 us/st/st0/nonmatchings/27D64/EntityDraculaMegaFireball.s           108          18
 us/dra/nonmatchings/5298C/func_800F5904.s                          109          11          https://decomp.me/scratch/DP2LU (Scraped 0.751)
