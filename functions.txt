@@ -475,7 +475,6 @@ us/st/st0/nonmatchings/27D64/EntityDraculaRainAttack.s             155          
 us/st/no3/nonmatchings/46684/EntityUnkId2F.s                       157          20  Yes
 us/dra/nonmatchings/75F54/func_801327B4.s                          158          12
 us/dra/nonmatchings/5298C/func_800FA3C4.s                          159          16
-us/dra/nonmatchings/cd/func_801078C4.s                             159          16
 us/dra/nonmatchings/692E8/func_80110BC8.s                          159          27  Yes
 us/st/dre/nonmatchings/11A64/EntitySuccubusPetal.s                 160          30
 us/st/st0/nonmatchings/27D64/func_801ADB10.s                       161          12
