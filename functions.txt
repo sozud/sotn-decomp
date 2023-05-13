@@ -255,7 +255,6 @@ us/dra/nonmatchings/4F45C/SetNextRoomToLoad.s                       80          
 us/st/sel/nonmatchings/38D24/MDEC_print_error.s                     81           4
 us/dra/nonmatchings/75F54/func_80134B48.s                           81          10
 us/st/np3/nonmatchings/3246C/EntitySwitch.s                         81          11          https://decomp.me/scratch/BQjDQ (Scraped 0.995)
-us/dra/nonmatchings/5298C/func_800FA8C4.s                           81          12
 us/dra/nonmatchings/692E8/func_8010A4A4.s                           81          12
 us/ric/nonmatchings/1AC60/func_80156CCC.s                           81          12
 us/dra/nonmatchings/4F45C/func_800F2120.s                           81          13
