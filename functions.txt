@@ -323,7 +323,6 @@ us/dra/nonmatchings/75F54/func_8011BBE0.s                          100          
 us/st/rwrp/nonmatchings/8DF0/func_8018E4DC.s                       100          13
 us/st/no3/nonmatchings/377D4/func_801B94F0.s                       100          15
 us/st/np3/nonmatchings/3246C/func_801B3D24.s                       100          15
-us/dra/nonmatchings/4F45C/func_800F0334.s                          101           9
 us/dra/nonmatchings/cd/func_80107B04.s                             101          10
 us/dra/nonmatchings/5D6C4/AddToInventory.s                         101          14          https://decomp.me/scratch/OZSKF (Scraped 0.976)
 us/dra/nonmatchings/75F54/func_8012D28C.s                          101          19
