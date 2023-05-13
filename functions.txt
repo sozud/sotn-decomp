@@ -817,7 +817,6 @@ us/dra/nonmatchings/62D70/func_80106A28.s                          495          
 us/ric/nonmatchings/22380/func_8016A974.s                          497          50
 us/st/cen/nonmatchings/D600/EntityPlatform.s                       497          68  Yes
 us/st/sel/nonmatchings/3642C/func_801B79D4.s                       498          61
-us/dra/nonmatchings/4F45C/func_800EFBF8.s                          500          35          https://decomp.me/scratch/658kX (Scraped 0.739)
 us/dra/nonmatchings/4F45C/func_800F0CD8.s                          501          53          https://decomp.me/scratch/BvVma (Scraped 0.822)
 us/st/no3/nonmatchings/3C4EC/EntityBackgroundPineTrees.s           503          43
 us/servant/tt_000/nonmatchings/10E8/func_80172C30.s                506          58
