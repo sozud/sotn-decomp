@@ -857,7 +857,7 @@ us/st/st0/nonmatchings/27D64/func_801ABBBC.s                       621          
 us/dra/nonmatchings/75F54/func_8011E4BC.s                          624          79  Yes
 us/st/no3/nonmatchings/46684/EntityLargeUpwardsSplash.s            633          82
 us/st/np3/nonmatchings/3DEF4/func_801C4DCC.s                       633          82
-us/dra/nonmatchings/42398/func_800E4A14.s                          635         108  Yes
+us/dra/nonmatchings/42398/func_800E4A14.s                          635         108  Yes     https://decomp.me/scratch/7xeZk (Scraped 0.931)
 us/ric/nonmatchings/22380/func_80164444.s                          659          62
 us/st/no3/nonmatchings/3E134/EntityUnkId5A.s                       664         123  Yes
 us/st/sel/nonmatchings/2C048/func_801AC174.s                       678          55
