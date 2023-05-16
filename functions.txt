@@ -292,7 +292,6 @@ us/dra/nonmatchings/692E8/func_8010EB5C.s                           89          
 us/st/sel/nonmatchings/3642C/func_801B78BC.s                        89          27
 us/dra/nonmatchings/75F54/func_8012DF04.s                           91          16
 us/st/sel/nonmatchings/2D260/func_801AED48.s                        92          14
-us/dra/nonmatchings/75F54/func_801349F4.s                           93           4
 us/st/no3/nonmatchings/46684/func_801CC5A4.s                        93           5
 us/st/no3/nonmatchings/46684/func_801CF438.s                        93           5
 us/st/cen/nonmatchings/D600/func_8019C2BC.s                         93           7
