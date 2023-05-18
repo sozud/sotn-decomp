@@ -654,7 +654,6 @@ us/st/cen/nonmatchings/D600/func_8018DB18.s                        267          
 us/st/mad/nonmatchings/D8C8/func_8018E1D4.s                        268          32
 us/st/mad/nonmatchings/139E0/func_80198BC8.s                       269          22
 us/st/np3/nonmatchings/3246C/func_801B6084.s                       269          43
-us/dra/nonmatchings/692E8/func_80109594.s                          271          37
 us/servant/tt_000/nonmatchings/10E8/func_80174210.s                272          42          https://decomp.me/scratch/WEF2F (Scraped 0.985)
 us/dra/nonmatchings/47BB8/func_800EB758.s                          274          24
 us/ric/nonmatchings/22380/func_80162870.s                          276          25
