@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 521
-Number of undecompiled duplicates found: 519
+Number of decompiled duplicates found: 522
+Number of undecompiled duplicates found: 518
 Number of overall exact duplicates found: 133
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -521,16 +521,6 @@ ref. - CEN  - func_8019C2BC - found 8 matches total:
 0.99 - WRP  - func_80193658
 0.99 - RWRP - func_801955D8
 
-ref. - CEN  - func_8019C4B8 - found 8 matches total:
-0.99 - DRE  - func_801A25FC
-0.99 - MAD  - func_80199584 - (decompiled)
-0.99 - NO3  - func_801D6E64 - (decompiled)
-0.99 - NP3  - func_801D251C - (decompiled)
-0.99 - NZ0  - func_801C9F14 - (decompiled)
-0.99 - ST0  - func_801BD6A4 - (decompiled)
-0.99 - WRP  - func_80193854 - (decompiled)
-0.99 - RWRP - func_801957D4
-
 ref. - DRE  - func_801A2580 - found 8 matches total:
 1.00 - CEN  - func_8019C43C - (decompiled)
 1.00 - MAD  - func_80199508
@@ -540,6 +530,16 @@ ref. - DRE  - func_801A2580 - found 8 matches total:
 1.00 - ST0  - func_801BD628 - (decompiled)
 1.00 - WRP  - func_801937D8 - (decompiled)
 1.00 - RWRP - func_80195758
+
+ref. - DRE  - func_801A25FC - found 8 matches total:
+0.99 - CEN  - func_8019C4B8 - (decompiled)
+0.99 - MAD  - func_80199584 - (decompiled)
+0.99 - NO3  - func_801D6E64 - (decompiled)
+0.99 - NP3  - func_801D251C - (decompiled)
+0.99 - NZ0  - func_801C9F14 - (decompiled)
+0.99 - ST0  - func_801BD6A4 - (decompiled)
+0.99 - WRP  - func_80193854 - (decompiled)
+0.99 - RWRP - func_801957D4
 
 ref. - RWRP - func_8018C7E0 - found 8 matches total:
 0.99 - CEN  - CreateEntityFromCurrentEntity - (decompiled)
