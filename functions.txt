@@ -461,7 +461,7 @@ us/st/no3/nonmatchings/377D4/EntityDeathSkySwirl.s                 151          
 us/st/dre/nonmatchings/1C7DC/func_801A2A58.s                       152           4
 us/dra/nonmatchings/692E8/func_8010D800.s                          152          10
 us/ric/nonmatchings/202A8/func_8015C4AC.s                          152          15
-us/dra/nonmatchings/47BB8/func_800ECBF8.s                          154          23          https://decomp.me/scratch/jHLlG (Scraped 0.989)
+us/dra/nonmatchings/47BB8/func_800ECBF8.s                          154          23          https://decomp.me/scratch/p2NB5 (Scraped 0.996)
 us/ric/nonmatchings/202A8/func_8015C6D4.s                          155          11
 us/dra/nonmatchings/692E8/func_80110DF8.s                          155          28  Yes
 us/st/st0/nonmatchings/27D64/EntityDraculaRainAttack.s             155          36
@@ -485,7 +485,7 @@ us/st/cen/nonmatchings/D600/func_80194674.s                        170          
 us/st/dre/nonmatchings/14214/func_8019A7B8.s                       170          19
 us/st/mad/nonmatchings/D8C8/func_80192190.s                        170          19
 us/st/no3/nonmatchings/3E134/func_801C5074.s                       170          19
-us/st/np3/nonmatchings/3246C/func_801BC8E4.s                       170          19          https://decomp.me/scratch/Pf52e (Scraped 0.73)
+us/st/np3/nonmatchings/3246C/func_801BC8E4.s                       170          19          https://decomp.me/scratch/Bnanu (Scraped 0.743)
 us/st/nz0/nonmatchings/30958/func_801BCCFC.s                       170          19
 us/st/rwrp/nonmatchings/8DF0/func_8018D990.s                       170          19
 us/st/st0/nonmatchings/27D64/func_801B4D5C.s                       170          19
@@ -879,7 +879,7 @@ us/st/np3/nonmatchings/4B018/func_801CE69C.s                       806         1
 us/st/st0/nonmatchings/27D64/func_801B0464.s                       816          90  Yes
 us/st/no3/nonmatchings/46684/EntityMerman.s                        821         166  Yes
 us/st/np3/nonmatchings/3DEF4/EntityMerman.s                        821         166  Yes
-us/ric/nonmatchings/1AC60/UpdateEntityRichter.s                    841         155  Yes
+us/ric/nonmatchings/1AC60/UpdateEntityRichter.s                    841         155  Yes     https://decomp.me/scratch/ct7K5 (Scraped 0.737)
 us/st/mad/nonmatchings/D8C8/EntityRedDoor.s                        846         105  Yes
 us/dra/nonmatchings/62D70/func_80103238.s                          848         141
 us/st/cen/nonmatchings/D600/EntityStageNamePopup.s                 853          74  Yes
