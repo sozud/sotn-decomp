@@ -511,7 +511,6 @@ us/dra/nonmatchings/47BB8/DecompressData.s                         185          
 us/st/no3/nonmatchings/3E134/func_801BEA20.s                       186          20
 us/st/nz0/nonmatchings/36DE4/func_801B79A8.s                       186          20
 us/st/st0/nonmatchings/27D64/func_801A8E60.s                       186          20
-us/dra/nonmatchings/75F54/func_80115F54.s                          186          21
 us/st/sel/nonmatchings/2D260/func_801AE6D0.s                       187          15
 us/st/nz0/nonmatchings/30958/func_801B2FD8.s                       187          18
 us/dra/nonmatchings/75F54/func_8012C600.s                          187          21
