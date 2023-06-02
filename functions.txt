@@ -153,7 +153,6 @@ us/dra/nonmatchings/5298C/func_800F9F40.s                           69          
 us/st/cen/nonmatchings/D600/EntityUnkId15.s                         69           6
 us/st/np3/nonmatchings/4B018/func_801CD91C.s                        69           6
 us/st/rwrp/nonmatchings/8DF0/func_801918A8.s                        69           6
-us/dra/nonmatchings/75F54/func_80118894.s                           69          13
 us/ric/nonmatchings/22380/func_8015FDB0.s                           70           4
 us/st/cen/nonmatchings/D600/func_80198084.s                         70           7
 us/st/cen/nonmatchings/D600/func_801988B0.s                         70           7
