@@ -283,7 +283,7 @@ us/dra/nonmatchings/75F54/func_8012DF04.s                           91          
 us/st/sel/nonmatchings/2D260/func_801AED48.s                        92          14
 us/st/no3/nonmatchings/46684/func_801CC5A4.s                        93           5
 us/st/no3/nonmatchings/46684/func_801CF438.s                        93           5
-us/st/cen/nonmatchings/D600/func_8019C2BC.s                         93           7
+us/st/cen/nonmatchings/1B274/func_8019C2BC.s                        93           7
 us/st/dre/nonmatchings/1C7DC/func_801A2400.s                        93           7
 us/st/mad/nonmatchings/139E0/func_80199388.s                        93           7
 us/st/no3/nonmatchings/564B0/func_801D6C68.s                        93           7
@@ -559,7 +559,7 @@ us/st/st0/nonmatchings/27D64/func_801AF380.s                       220          
 us/ric/nonmatchings/22380/func_8015E484.s                          220          24
 us/dra/nonmatchings/75F54/func_801182F8.s                          221          37
 us/ric/nonmatchings/22380/func_8015FEA8.s                          222          25
-us/st/cen/nonmatchings/D600/func_8019BBA4.s                        223          17
+us/st/cen/nonmatchings/1B274/func_8019BBA4.s                       223          17
 us/st/dre/nonmatchings/1C7DC/func_801A1CE8.s                       223          17
 us/st/no3/nonmatchings/46684/func_801D06FC.s                       223          17
 us/st/np3/nonmatchings/3DEF4/func_801C3E14.s                       223          17
@@ -599,7 +599,6 @@ us/st/np3/nonmatchings/4B018/func_801CF254.s                       243          
 us/st/no3/nonmatchings/46684/EntitySidewaysWaterDroplets.s         244          23
 us/st/np3/nonmatchings/3DEF4/func_801C5BC4.s                       244          23
 us/dra/nonmatchings/62D70/func_80105078.s                          244          26
-us/st/cen/nonmatchings/D600/EntityAbsorbOrb.s                      246          27          https://decomp.me/scratch/b63VQ (Scraped 0.999)
 us/st/dre/nonmatchings/1C7DC/EntityAbsorbOrb.s                     246          27          https://decomp.me/scratch/b63VQ (Scraped 0.999)
 us/st/mad/nonmatchings/139E0/EntityAbsorbOrb.s                     246          27          https://decomp.me/scratch/b63VQ (Scraped 0.999)
 us/st/no3/nonmatchings/46684/EntityAbsorbOrb.s                     246          27          https://decomp.me/scratch/b63VQ (Scraped 0.999)
@@ -615,7 +614,7 @@ us/dra/nonmatchings/5298C/func_800F7F64.s                          248          
 us/st/mad/nonmatchings/D8C8/func_8018D8C8.s                        249          45  Yes     https://decomp.me/scratch/35BJG (Scraped 0.028)
 us/st/sel/nonmatchings/2D260/func_801B2108.s                       254          33
 us/dra/nonmatchings/5298C/func_800FA034.s                          254          39  Yes
-us/st/cen/nonmatchings/D600/func_8019BED4.s                        255           0
+us/st/cen/nonmatchings/1B274/func_8019BED4.s                       255           0
 us/st/dre/nonmatchings/1C7DC/func_801A2018.s                       255           0
 us/st/mad/nonmatchings/139E0/func_80198FA0.s                       255           0
 us/st/no3/nonmatchings/564B0/func_801D6880.s                       255           0
@@ -703,7 +702,7 @@ us/st/cen/nonmatchings/D600/EntityElevatorStationary.s             364          
 us/ric/nonmatchings/1AC60/func_801590A0.s                          366          69
 us/dra/nonmatchings/75F54/func_8012E040.s                          366          76
 us/st/nz0/nonmatchings/36DE4/func_801B8F94.s                       367          75  Yes
-us/dra/nonmatchings/75F54/func_80117DEC.s                          370          80
+us/dra/nonmatchings/75F54/func_80117DEC.s                          370          80          https://decomp.me/scratch/bgt0g (Scraped 0.826)
 us/ric/nonmatchings/22380/func_801684D8.s                          371          52  Yes
 us/ric/nonmatchings/1AC60/func_80159670.s                          372          67  Yes
 us/dra/nonmatchings/75F54/EntitySubwpnBible.s                      373          41
