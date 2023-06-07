@@ -488,7 +488,6 @@ us/dra/nonmatchings/75F54/func_8012EF2C.s                          174          
 us/dra/nonmatchings/5087C/func_800F0940.s                          175          13  Yes
 us/dra/nonmatchings/953A0/func_80135D8C.s                          175          16
 us/st/cen/nonmatchings/D600/EntityUnkId01.s                        175          25
-us/dra/nonmatchings/75F54/func_80117AC0.s                          175          31
 us/ric/nonmatchings/22380/func_8015F680.s                          176          28
 us/dra/nonmatchings/75F54/EntitySubwpnCrashCrossParticles.s        178          26
 us/dra/nonmatchings/692E8/func_801112AC.s                          178          32  Yes
@@ -701,7 +700,7 @@ us/st/cen/nonmatchings/D600/EntityElevatorStationary.s             364          
 us/ric/nonmatchings/1AC60/func_801590A0.s                          366          69
 us/dra/nonmatchings/75F54/func_8012E040.s                          366          76
 us/st/nz0/nonmatchings/36DE4/func_801B8F94.s                       367          75  Yes
-us/dra/nonmatchings/75F54/func_80117DEC.s                          370          80          https://decomp.me/scratch/bgt0g (Scraped 0.826)
+us/dra/nonmatchings/75F54/func_80117DEC.s                          370          80          https://decomp.me/scratch/bgt0g (Scraped 0.838)
 us/ric/nonmatchings/22380/func_801684D8.s                          371          52  Yes
 us/ric/nonmatchings/1AC60/func_80159670.s                          372          67  Yes
 us/dra/nonmatchings/75F54/EntitySubwpnBible.s                      373          41
