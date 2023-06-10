@@ -9,7 +9,6 @@ on:
       - '**/*.md'
   pull_request_target:
     paths-ignore:
-      - '.github/workflows/**'
       - '*.md'
       - '**/*.md'
   workflow_dispatch:
