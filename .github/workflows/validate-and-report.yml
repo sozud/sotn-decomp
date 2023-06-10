@@ -21,8 +21,6 @@ jobs:
   build-and-test-saturn:
     runs-on: ubuntu-latest
     steps:
-      - name: Install requirements
-        run: sudo apt-get install gcc-mipsel-linux-gnu
       - name: Clone main repo (PR)
         if: github.event_name == 'pull_request_target'
         uses: actions/checkout@v3
@@ -41,11 +39,16 @@ jobs:
           repository: sozud/saturn-splitter-deps
           token: ${{ secrets.ACCESS_TOKEN }}
           path: 'disks'
-      - name: debug
-        run: ls disks
-      # - name: Extract dependencies
-      #   run: make extract_saturn
-
+      - name: Extract Saturn disk
+        run: make extract_disk_saturn
+      - name: Extract dependencies
+        run: make extract_saturn
+      - name: Saturn toolchain
+        run: make build_saturn_toolchain
+      - name: Build saturn binaries
+        run: make build_saturn
+      - name: Build saturn binaries
+        run: make check_saturn
   # build-and-test:
   #   strategy:
   #     matrix:
