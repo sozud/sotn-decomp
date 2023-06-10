@@ -42,9 +42,9 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           path: 'disks'
       - name: debug
-        run: ls
-      - name: Extract dependencies
-        run: make extract_saturn
+        run: ls disks
+      # - name: Extract dependencies
+      #   run: make extract_saturn
 
   # build-and-test:
   #   strategy:
