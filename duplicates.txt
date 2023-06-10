@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 508
-Number of undecompiled duplicates found: 512
+Number of decompiled duplicates found: 507
+Number of undecompiled duplicates found: 504
 Number of overall exact duplicates found: 133
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -491,16 +491,6 @@ ref. - CEN  - func_8019C2BC - found 8 matches total:
 0.99 - ST0  - func_801BD4A8
 0.99 - WRP  - func_80193658
 0.99 - RWRP - func_801955D8
-
-ref. - DRE  - EntityAbsorbOrb - found 8 matches total:
-0.99 - CEN  - EntityAbsorbOrb - (decompiled)
-0.99 - MAD  - EntityAbsorbOrb
-0.99 - NO3  - EntityAbsorbOrb
-0.99 - NP3  - EntityAbsorbOrb
-0.99 - NZ0  - EntityAbsorbOrb
-0.99 - ST0  - EntityAbsorbOrb
-0.99 - WRP  - EntityAbsorbOrb
-0.99 - RWRP - func_80194590
 
 ref. - DRE  - func_801A2580 - found 8 matches total:
 1.00 - CEN  - func_8019C43C - (decompiled)
