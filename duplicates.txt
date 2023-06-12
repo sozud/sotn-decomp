@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 507
-Number of undecompiled duplicates found: 504
+Number of decompiled duplicates found: 521
+Number of undecompiled duplicates found: 507
 Number of overall exact duplicates found: 133
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -111,7 +111,24 @@ ref. - CEN  - func_80193184 - found 16 matches total:
 0.99 - RWRP - func_8018C1EC
 0.99 - RWRP - func_8018C4A0
 
-ref. - CEN  - EntityRedDoor - found 12 matches total:
+ref. - MAIN - PadStop - found 15 matches total:
+0.99 - MAIN - CdFlush - (decompiled)
+0.99 - MAIN - CdSync - (decompiled)
+0.99 - MAIN - CdReady - (decompiled)
+0.99 - MAIN - func_800199F4 - (decompiled)
+0.99 - MAIN - func_8001C300 - (decompiled)
+0.99 - MAIN - SsQuit - (decompiled)
+0.99 - MAIN - func_800206E8 - (decompiled)
+0.99 - MAIN - func_80021F0C - (decompiled)
+0.99 - MAIN - SpuInit - (decompiled)
+0.99 - DRA  - func_801027A4 - (decompiled)
+0.99 - DRA  - func_801072BC - (decompiled)
+0.99 - SEL  - func_801B1D68 - (decompiled)
+0.99 - SEL  - func_801BA648 - (decompiled)
+0.99 - SEL  - func_801BA668 - (decompiled)
+0.99 - SEL  - func_801BA688 - (decompiled)
+
+ref. - CEN  - EntityRedDoor - found 13 matches total:
 0.99 - RIC  - func_8017091C
 0.99 - RIC  - func_80170F64
 0.99 - DRE  - EntityRedDoor
@@ -122,6 +139,7 @@ ref. - CEN  - EntityRedDoor - found 12 matches total:
 0.99 - NZ0  - EntityMagicallySealedDoor
 0.99 - NZ0  - EntityLifeUpSpawn
 0.99 - ST0  - EntityRedDoor
+0.99 - ST0  - func_801BD8F0
 0.99 - WRP  - EntityRedDoor
 0.99 - RWRP - func_8018C948
 
@@ -956,11 +974,11 @@ ref. - CEN  - func_8018E6C4 - found 4 matches total:
 0.99 - NZ0  - func_801B7C54
 0.99 - ST0  - func_801A910C
 
-ref. - MAIN - PadStop - found 4 matches total:
-0.99 - MAIN - CdSync - (decompiled)
-0.99 - MAIN - CdReady - (decompiled)
-0.99 - MAIN - SsQuit - (decompiled)
-0.99 - MAIN - SpuInit - (decompiled)
+ref. - MAIN - GetVideoMode - found 4 matches total:
+0.99 - MAIN - GetGraphType - (decompiled)
+0.99 - MAIN - GetGraphDebug - (decompiled)
+0.99 - DRA  - .L8010B5CC - (decompiled)
+0.99 - DRA  - func_80131F28 - (decompiled)
 
 ref. - MAIN - SetGeomScreen - found 4 matches total:
 0.99 - MAIN - SetIR0
@@ -974,7 +992,8 @@ ref. - MAIN - SetIR123 - found 4 matches total:
 0.99 - MAIN - SetRii
 0.99 - MAIN - SetMAC123
 
-ref. - MAIN - SetVideoMode - found 3 matches total:
+ref. - MAIN - SetVideoMode - found 4 matches total:
+0.99 - MAIN - func_800194F0 - (decompiled)
 0.99 - MAIN - CdSyncCallback - (decompiled)
 0.99 - MAIN - CdReadyCallback - (decompiled)
 0.99 - MAIN - CdReadCallback - (decompiled)
@@ -1000,10 +1019,6 @@ ref. - DRA  - func_80132F60 - found 2 matches total:
 ref. - MAIN - DMA_memclr - found 2 matches total:
 1.00 - MAIN - memclr
 1.00 - MAIN - VSync_memclr
-
-ref. - MAIN - GetVideoMode - found 2 matches total:
-0.99 - MAIN - GetGraphType - (decompiled)
-0.99 - MAIN - GetGraphDebug - (decompiled)
 
 ref. - MAIN - ReadColorMatrix - found 2 matches total:
 0.99 - MAIN - func_80017BF8
@@ -1087,6 +1102,9 @@ ref. - MAIN - GsClearVcount - found 1 matches total:
 
 ref. - MAIN - RotMatrix - found 1 matches total:
 0.99 - MAIN - RotMatrixYXZ
+
+ref. - MAIN - ScaleMatrix - found 1 matches total:
+0.99 - MAIN - func_80017994
 
 ref. - MAIN - SetBackColor - found 1 matches total:
 0.99 - MAIN - SetFarColor
