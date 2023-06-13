@@ -1127,14 +1127,14 @@ ref. - NO3  - EntityLargeWaterSplash - found 1 matches total:
 ref. - NO3  - EntityMerman - found 1 matches total:
 0.99 - NP3  - EntityMerman
 
-ref. - NO3  - EntityMerman2 - found 1 matches total:
-0.99 - NP3  - EntityMerman2 - (decompiled)
-
 ref. - NO3  - EntityMerman3 - found 1 matches total:
-0.99 - NP3  - func_801C6564
+0.99 - NP3  - EntityMerman2
 
 ref. - NO3  - EntityMermanExplosion - found 1 matches total:
 0.99 - NP3  - EntityMermanExplosion - (decompiled)
+
+ref. - NO3  - EntityMermanSpawner - found 1 matches total:
+0.99 - NP3  - EntityMermanSpawner - (decompiled)
 
 ref. - NO3  - EntityShuttingWindow - found 1 matches total:
 0.99 - NP3  - EntityShuttingWindow
@@ -1163,11 +1163,11 @@ ref. - NO3  - func_801CC5A4 - found 1 matches total:
 ref. - NO3  - func_801D0A2C - found 1 matches total:
 0.99 - NP3  - func_801C4144
 
+ref. - NP3  - EntityGurkha - found 1 matches total:
+0.99 - NP3  - EntityHammer
+
 ref. - NP3  - EntitySwitch - found 1 matches total:
 0.99 - NO3  - EntitySwitch - (decompiled)
-
-ref. - NP3  - func_801CE69C - found 1 matches total:
-0.99 - NP3  - func_801CF94C
 
 ref. - RIC  - func_8015D1D0 - found 1 matches total:
 1.00 - DRA  - func_8010EADC - (decompiled)
