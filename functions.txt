@@ -193,7 +193,6 @@ us/st/dre/nonmatchings/14214/func_80194FF4.s                        76          
 us/st/no3/nonmatchings/3E134/func_801BEDAC.s                        76           7
 us/st/nz0/nonmatchings/36DE4/func_801B7C54.s                        76           7
 us/st/st0/nonmatchings/27D64/func_801A910C.s                        76           7
-us/dra/nonmatchings/5298C/DrawMenuStr.s                             76          10          https://decomp.me/scratch/S4Dzb
 us/st/cen/nonmatchings/D600/func_8019A328.s                         76          12
 us/st/dre/nonmatchings/1C7DC/func_801A046C.s                        76          12
 us/st/mad/nonmatchings/139E0/func_80197A9C.s                        76          12
@@ -726,7 +725,7 @@ us/st/nz0/nonmatchings/3E30C/func_801C1AD8.s                       388          
 us/st/rwrp/nonmatchings/8DF0/func_8019276C.s                       388          11
 us/st/st0/nonmatchings/36358/func_801B8ED8.s                       388          11
 us/st/wrp/nonmatchings/D020/func_801907EC.s                        388          11
-us/dra/nonmatchings/75F54/func_80128C2C.s                          388          49  Yes
+us/dra/nonmatchings/75F54/func_80128C2C.s                          388          49  Yes     https://decomp.me/scratch/39AEo (Scraped 0.65)
 us/dra/nonmatchings/71830/func_80112BB0.s                          392          68  Yes
 us/dra/nonmatchings/73AAC/func_80114DF4.s                          393          70
 us/st/st0/nonmatchings/27D64/EntityStageTitleCard.s                403          36  Yes
@@ -798,7 +797,7 @@ us/dra/nonmatchings/75F54/EntitySubwpnThrownDagger.s               517          
 us/st/st0/nonmatchings/36358/EntityClouds.s                        519          37
 us/dra/nonmatchings/5298C/func_800FB23C.s                          521          80
 us/dra/nonmatchings/gameover/HandleGameOver.s                      524          95  Yes
-us/dra/nonmatchings/5298C/func_800F8F28.s                          525          81  Yes     https://decomp.me/scratch/C2Af8 (Scraped 0.012)
+us/dra/nonmatchings/5298C/func_800F8F28.s                          525          81  Yes     https://decomp.me/scratch/iHlVl (Scraped 0.669)
 us/ric/nonmatchings/32324/func_8016E9E4.s                          528          50  Yes
 us/dra/nonmatchings/75F54/EntityGuardText.s                        533          46  Yes
 us/st/sel/nonmatchings/38D24/func_801B9C80.s                       533          97
