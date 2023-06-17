@@ -76,7 +76,6 @@ us/st/rwrp/nonmatchings/8DF0/func_8018EE84.s                        48          
 us/st/no3/nonmatchings/3E134/func_801BE7BC.s                        50           2
 us/st/cen/nonmatchings/D600/func_8019040C.s                         50           3
 us/st/np3/nonmatchings/4B018/func_801CD78C.s                        50           4          https://decomp.me/scratch/Y4dmx (Scraped 0.901)
-us/dra/nonmatchings/47BB8/func_800EAF28.s                           50           8          https://decomp.me/scratch/jlkEF (Scraped 0.76)
 us/st/cen/nonmatchings/D600/func_8018E180.s                         51           2
 us/st/dre/nonmatchings/14214/func_801949E8.s                        51           2
 us/st/nz0/nonmatchings/36DE4/func_801B7740.s                        51           2          https://decomp.me/scratch/JLOIf (Scraped 0.622)
@@ -420,7 +419,6 @@ us/st/mad/nonmatchings/139E0/func_801978A4.s                       136          
 us/dra/nonmatchings/47BB8/func_800EB314.s                          136          19
 us/servant/tt_000/nonmatchings/10E8/func_80174038.s                137          29  Yes
 us/dra/nonmatchings/cd/func_80107EF0.s                             138          14
-us/st/nz0/nonmatchings/43F9C/func_801C3F9C.s                       138          15          https://decomp.me/scratch/oDgqZ (Scraped 0.999)
 us/st/dre/nonmatchings/1C7DC/func_801A2848.s                       139           4
 us/dra/nonmatchings/75F54/func_8012CCE4.s                          139          20
 us/dra/nonmatchings/47BB8/func_800E930C.s                          140          15
@@ -433,7 +431,6 @@ us/dra/nonmatchings/75F54/func_8012E7A4.s                          144          
 us/dra/nonmatchings/5087C/func_800F14CC.s                          145          23
 us/dra/nonmatchings/75F54/func_8012ED30.s                          145          25
 us/ric/nonmatchings/22380/func_80162C84.s                          148          21  Yes     https://decomp.me/scratch/9HPI1 (Scraped 0.889)
-us/st/nz0/nonmatchings/30958/EntityCannonLever.s                   148          22          https://decomp.me/scratch/7ce8a
 us/ric/nonmatchings/22380/func_8015FB84.s                          149           8
 us/dra/nonmatchings/5D6C4/func_800FDE20.s                          149          17          https://decomp.me/scratch/75gxt (Scraped 0.779)
 us/st/sel/nonmatchings/2D260/func_801B3694.s                       149          25          https://decomp.me/scratch/KHDQT (Scraped 0.964)
@@ -489,7 +486,6 @@ us/st/cen/nonmatchings/D600/EntityUnkId01.s                        175          
 us/ric/nonmatchings/22380/func_8015F680.s                          176          28
 us/dra/nonmatchings/75F54/EntitySubwpnCrashCrossParticles.s        178          26
 us/dra/nonmatchings/692E8/func_801112AC.s                          178          32  Yes
-us/st/nz0/nonmatchings/30958/EntityFloorSpikes.s                   181          15
 us/dra/nonmatchings/75F54/func_80133960.s                          181          21  Yes     https://decomp.me/scratch/7xexM (Scraped 0.045)
 us/ric/nonmatchings/22380/func_80169470.s                          182          20  Yes
 us/dra/nonmatchings/75F54/func_8013136C.s                          182          23  Yes     https://decomp.me/scratch/cu30D
@@ -616,7 +612,6 @@ us/st/rwrp/nonmatchings/8DF0/func_801951F0.s                       258          
 us/st/st0/nonmatchings/36358/func_801BD0C0.s                       258          14
 us/st/wrp/nonmatchings/D020/func_80193270.s                        258          14          https://decomp.me/scratch/77bcs (Scraped 0.008)
 us/dra/nonmatchings/75F54/func_80121F58.s                          258          22
-us/dra/nonmatchings/62D70/DrawEntitiesHitbox.s                     258          23          https://decomp.me/scratch/QFSeC
 us/dra/nonmatchings/5298C/func_800F4994.s                          258          24          https://decomp.me/scratch/bXnUC (Scraped 0.991)
 us/dra/nonmatchings/75F54/func_80130618.s                          258          28  Yes
 us/ric/nonmatchings/22380/func_8016DF74.s                          258          29  Yes
