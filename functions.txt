@@ -878,7 +878,7 @@ us/st/st0/nonmatchings/36358/EntityCutscenePhotograph.s            904          
 us/st/no3/nonmatchings/46684/EntityWarg.s                          929         168  Yes
 us/dra/nonmatchings/692E8/func_8010EDB8.s                          932         157  Yes
 us/st/nz0/nonmatchings/33FCC/EntitySlogra.s                        934         217          https://decomp.me/scratch/vaRJR (Scraped 0.997)
-us/dra/nonmatchings/73AAC/func_8011405C.s                          937         168  Yes
+us/dra/nonmatchings/73AAC/func_8011405C.s                          937         168  Yes     https://decomp.me/scratch/y3YA5 (Scraped 0.801)
 us/st/nz0/nonmatchings/47CF0/EntityMagicallySealedDoor.s           940         113  Yes     https://decomp.me/scratch/NlnlG (Scraped 0.002)
 us/st/st0/nonmatchings/27D64/func_801B1CA0.s                       953         133
 us/ric/nonmatchings/32324/func_8016F6F0.s                          956          56  Yes
