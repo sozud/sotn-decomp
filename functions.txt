@@ -418,7 +418,6 @@ us/st/cen/nonmatchings/D600/ClutLerp.s                             136          
 us/st/mad/nonmatchings/139E0/func_801978A4.s                       136           9
 us/dra/nonmatchings/47BB8/func_800EB314.s                          136          19
 us/servant/tt_000/nonmatchings/10E8/func_80174038.s                137          29  Yes
-us/dra/nonmatchings/cd/func_80107EF0.s                             138          14
 us/st/dre/nonmatchings/1C7DC/func_801A2848.s                       139           4
 us/dra/nonmatchings/75F54/func_8012CCE4.s                          139          20
 us/dra/nonmatchings/47BB8/func_800E930C.s                          140          15
@@ -792,7 +791,7 @@ us/dra/nonmatchings/75F54/EntitySubwpnThrownDagger.s               517          
 us/st/st0/nonmatchings/36358/EntityClouds.s                        519          37
 us/dra/nonmatchings/5298C/func_800FB23C.s                          521          80
 us/dra/nonmatchings/gameover/HandleGameOver.s                      524          95  Yes
-us/dra/nonmatchings/5298C/func_800F8F28.s                          525          81  Yes     https://decomp.me/scratch/iHlVl (Scraped 0.94)
+us/dra/nonmatchings/5298C/func_800F8F28.s                          525          81  Yes     https://decomp.me/scratch/iHlVl (Scraped 0.961)
 us/ric/nonmatchings/32324/func_8016E9E4.s                          528          50  Yes
 us/dra/nonmatchings/75F54/EntityGuardText.s                        533          46  Yes
 us/st/sel/nonmatchings/38D24/func_801B9C80.s                       533          97
