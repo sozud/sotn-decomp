@@ -1,5 +1,5 @@
 Number of decompiled duplicates found: 522
-Number of undecompiled duplicates found: 502
+Number of undecompiled duplicates found: 501
 Number of overall exact duplicates found: 126
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -895,14 +895,6 @@ ref. - DRE  - EntityFadeToWhite1 - found 6 matches total:
 0.99 - NZ0  - func_801B3C38
 0.99 - ST0  - EntitySecretButton
 
-ref. - NO3  - EntityUnkId2F - found 6 matches total:
-0.99 - RIC  - func_80162C84
-0.99 - RIC  - func_80169704
-0.99 - RIC  - func_801705EC
-0.99 - NZ0  - EntityBossRoomBlock
-0.99 - ST0  - EntityStageTitleFadeout
-0.99 - TT_000 - func_80174038
-
 ref. - RWRP - func_8018E1FC - found 6 matches total:
 0.99 - CEN  - func_80194EE0 - (decompiled)
 0.99 - DRE  - func_8019B024 - (decompiled)
@@ -947,6 +939,13 @@ ref. - MAIN - InterruptCallback - found 5 matches total:
 0.99 - MAIN - VSyncCallbacks - (decompiled)
 0.99 - MAIN - StopCallback - (decompiled)
 0.99 - MAIN - RestartCallback - (decompiled)
+
+ref. - NO3  - EntityUnkId2F - found 5 matches total:
+0.99 - RIC  - func_80162C84
+0.99 - RIC  - func_80169704
+0.99 - RIC  - func_801705EC
+0.99 - NZ0  - EntityBossRoomBlock
+0.99 - ST0  - EntityStageTitleFadeout
 
 ref. - RWRP - func_8018908C - found 5 matches total:
 0.99 - DRE  - EntityBreakable - (decompiled)

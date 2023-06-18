@@ -413,7 +413,6 @@ us/st/st0/nonmatchings/27D64/func_801B51E4.s                       135          
 us/st/wrp/nonmatchings/6FD0/func_8018BC88.s                        135          16
 us/st/mad/nonmatchings/139E0/func_801978A4.s                       136           9
 us/dra/nonmatchings/47BB8/func_800EB314.s                          136          19
-us/servant/tt_000/nonmatchings/10E8/func_80174038.s                137          29  Yes
 us/st/dre/nonmatchings/1C7DC/func_801A2848.s                       139           4
 us/dra/nonmatchings/75F54/func_8012CCE4.s                          139          20
 us/dra/nonmatchings/47BB8/func_800E930C.s                          140          15
