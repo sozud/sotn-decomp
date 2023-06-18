@@ -1,6 +1,6 @@
-Number of decompiled duplicates found: 521
-Number of undecompiled duplicates found: 505
-Number of overall exact duplicates found: 133
+Number of decompiled duplicates found: 522
+Number of undecompiled duplicates found: 502
+Number of overall exact duplicates found: 126
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
 0.99 - MAIN - InitHeap - (decompiled)
@@ -199,16 +199,6 @@ ref. - RWRP - func_8018D5EC - found 9 matches total:
 0.99 - NZ0  - DestroyEntityFromIndex - (decompiled)
 0.99 - ST0  - DestroyEntityFromIndex - (decompiled)
 0.99 - WRP  - DestroyEntityFromIndex - (decompiled)
-
-ref. - CEN  - ClutLerp - found 8 matches total:
-1.00 - DRE  - ClutLerp - (decompiled)
-1.00 - NO3  - ClutLerp - (decompiled)
-1.00 - NP3  - ClutLerp - (decompiled)
-1.00 - NZ0  - ClutLerp - (decompiled)
-1.00 - ST0  - ClutLerp - (decompiled)
-1.00 - WRP  - ClutLerp - (decompiled)
-1.00 - RWRP - ClutLerp - (decompiled)
-0.99 - MAD  - func_801978A4
 
 ref. - CEN  - EntityExplosion - found 8 matches total:
 0.99 - DRE  - EntityExplosion - (decompiled)
@@ -529,6 +519,16 @@ ref. - DRE  - func_801A25FC - found 8 matches total:
 0.99 - ST0  - func_801BD6A4 - (decompiled)
 0.99 - WRP  - func_80193854 - (decompiled)
 0.99 - RWRP - func_801957D4
+
+ref. - MAD  - func_801978A4 - found 8 matches total:
+0.99 - CEN  - ClutLerp - (decompiled)
+0.99 - DRE  - ClutLerp - (decompiled)
+0.99 - NO3  - ClutLerp - (decompiled)
+0.99 - NP3  - ClutLerp - (decompiled)
+0.99 - NZ0  - ClutLerp - (decompiled)
+0.99 - ST0  - ClutLerp - (decompiled)
+0.99 - WRP  - ClutLerp - (decompiled)
+0.99 - RWRP - ClutLerp - (decompiled)
 
 ref. - RWRP - func_8018C7E0 - found 8 matches total:
 0.99 - CEN  - CreateEntityFromCurrentEntity - (decompiled)
@@ -1123,9 +1123,6 @@ ref. - NO3  - EntityLargeWaterSplash - found 1 matches total:
 
 ref. - NO3  - EntityMerman - found 1 matches total:
 0.99 - NP3  - EntityMerman
-
-ref. - NO3  - EntityMerman3 - found 1 matches total:
-0.99 - NP3  - EntityMerman2
 
 ref. - NO3  - EntityMermanExplosion - found 1 matches total:
 0.99 - NP3  - EntityMermanExplosion - (decompiled)
