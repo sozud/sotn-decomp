@@ -667,7 +667,6 @@ us/st/no3/nonmatchings/377D4/EntityCastleDoor.s                    346          
 us/dra/nonmatchings/75F54/func_80130E94.s                          348          46  Yes
 us/st/st0/nonmatchings/27D64/EntityStageTitleFadeout.s             351          26  Yes
 us/ric/nonmatchings/22380/func_8016C1BC.s                          351          42
-us/servant/tt_000/nonmatchings/10E8/func_801719E0.s                352          46
 us/dra/nonmatchings/5D6C4/func_800FE97C.s                          355          62
 us/st/sel/nonmatchings/2D260/func_801B3164.s                       358          63  Yes
 us/ric/nonmatchings/22380/func_80169704.s                          359          47  Yes
