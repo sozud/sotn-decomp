@@ -1,5 +1,5 @@
 Number of decompiled duplicates found: 522
-Number of undecompiled duplicates found: 501
+Number of undecompiled duplicates found: 500
 Number of overall exact duplicates found: 126
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -940,13 +940,6 @@ ref. - MAIN - InterruptCallback - found 5 matches total:
 0.99 - MAIN - StopCallback - (decompiled)
 0.99 - MAIN - RestartCallback - (decompiled)
 
-ref. - NO3  - EntityUnkId2F - found 5 matches total:
-0.99 - RIC  - func_80162C84
-0.99 - RIC  - func_80169704
-0.99 - RIC  - func_801705EC
-0.99 - NZ0  - EntityBossRoomBlock
-0.99 - ST0  - EntityStageTitleFadeout
-
 ref. - RWRP - func_8018908C - found 5 matches total:
 0.99 - DRE  - EntityBreakable - (decompiled)
 0.99 - MAD  - EntityBreakable - (decompiled)
@@ -996,6 +989,12 @@ ref. - MAIN - SetVideoMode - found 4 matches total:
 0.99 - MAIN - CdSyncCallback - (decompiled)
 0.99 - MAIN - CdReadyCallback - (decompiled)
 0.99 - MAIN - CdReadCallback - (decompiled)
+
+ref. - NO3  - EntityUnkId2F - found 4 matches total:
+0.99 - RIC  - func_80162C84
+0.99 - RIC  - func_80169704
+0.99 - RIC  - func_801705EC
+0.99 - ST0  - EntityStageTitleFadeout
 
 ref. - NO3  - EntityUnkId5C - found 3 matches total:
 0.99 - RIC  - func_8016DF74

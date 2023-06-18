@@ -340,7 +340,6 @@ us/st/sel/nonmatchings/3642C/func_801B675C.s                       110          
 us/st/st0/nonmatchings/27D64/func_801A8CB0.s                       110          13
 us/dra/nonmatchings/47BB8/SetRoomForegroundLayer.s                 111           5          https://decomp.me/scratch/7788z (Scraped 0.739)
 us/dra/nonmatchings/75F54/func_80133604.s                          111          18
-us/st/nz0/nonmatchings/33FCC/EntityBossRoomBlock.s                 111          19  Yes     https://decomp.me/scratch/p7RIb (Scraped 0.999)
 us/dra/nonmatchings/75F54/func_80133488.s                          111          20
 us/dra/nonmatchings/692E8/func_801106A4.s                          111          21
 us/dra/nonmatchings/953A0/func_80135484.s                          112           4
@@ -870,7 +869,6 @@ us/st/sel/nonmatchings/3642C/func_801B69F8.s                       892          
 us/st/st0/nonmatchings/36358/EntityCutscenePhotograph.s            904          68  Yes
 us/st/no3/nonmatchings/46684/EntityWarg.s                          929         168  Yes
 us/dra/nonmatchings/692E8/func_8010EDB8.s                          932         157  Yes
-us/st/nz0/nonmatchings/33FCC/EntitySlogra.s                        934         217          https://decomp.me/scratch/vaRJR (Scraped 0.997)
 us/dra/nonmatchings/73AAC/func_8011405C.s                          937         168  Yes     https://decomp.me/scratch/y3YA5 (Scraped 0.801)
 us/st/nz0/nonmatchings/47CF0/EntityMagicallySealedDoor.s           940         113  Yes     https://decomp.me/scratch/NlnlG (Scraped 0.002)
 us/st/st0/nonmatchings/27D64/func_801B1CA0.s                       953         133
