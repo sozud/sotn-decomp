@@ -1,5 +1,5 @@
 Number of decompiled duplicates found: 522
-Number of undecompiled duplicates found: 500
+Number of undecompiled duplicates found: 498
 Number of overall exact duplicates found: 126
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -1118,9 +1118,6 @@ ref. - NO3  - EntityLargeUpwardsSplash - found 1 matches total:
 
 ref. - NO3  - EntityLargeWaterSplash - found 1 matches total:
 0.99 - NP3  - func_801C7954
-
-ref. - NO3  - EntityMerman - found 1 matches total:
-0.99 - NP3  - EntityMerman
 
 ref. - NO3  - EntityMermanExplosion - found 1 matches total:
 0.99 - NP3  - EntityMermanExplosion - (decompiled)
