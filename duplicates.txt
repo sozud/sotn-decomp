@@ -1,5 +1,5 @@
 Number of decompiled duplicates found: 522
-Number of undecompiled duplicates found: 498
+Number of undecompiled duplicates found: 496
 Number of overall exact duplicates found: 126
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -990,12 +990,6 @@ ref. - MAIN - SetVideoMode - found 4 matches total:
 0.99 - MAIN - CdReadyCallback - (decompiled)
 0.99 - MAIN - CdReadCallback - (decompiled)
 
-ref. - NO3  - EntityUnkId2F - found 4 matches total:
-0.99 - RIC  - func_80162C84
-0.99 - RIC  - func_80169704
-0.99 - RIC  - func_801705EC
-0.99 - ST0  - EntityStageTitleFadeout
-
 ref. - NO3  - EntityUnkId5C - found 3 matches total:
 0.99 - RIC  - func_8016DF74
 0.99 - RIC  - func_8016F6F0
@@ -1033,6 +1027,10 @@ ref. - MAIN - SetColorMatrix - found 2 matches total:
 ref. - MAIN - SetVertex0 - found 2 matches total:
 0.99 - MAIN - SetVertex1
 0.99 - MAIN - SetVertex2
+
+ref. - NO3  - EntityUnkId2F - found 2 matches total:
+0.99 - RIC  - func_80169704
+0.99 - ST0  - EntityStageTitleFadeout
 
 ref. - NO3  - func_801BEA20 - found 2 matches total:
 0.99 - NZ0  - func_801B79A8
