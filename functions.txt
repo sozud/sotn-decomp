@@ -425,7 +425,6 @@ us/dra/nonmatchings/5D6C4/func_800FDE20.s                          149          
 us/st/sel/nonmatchings/2D260/func_801B3694.s                       149          25          https://decomp.me/scratch/KHDQT (Scraped 0.964)
 us/st/mad/nonmatchings/D8C8/func_80192408.s                        150          20
 us/st/st0/nonmatchings/30030/func_801B4FD4.s                       150          20
-us/dra/nonmatchings/5298C/func_800F4D38.s                          151          19          https://decomp.me/scratch/tpwGd (Scraped 0.972)
 us/st/cen/nonmatchings/D600/func_80198680.s                        151          19
 us/st/dre/nonmatchings/1C7DC/func_8019E7C4.s                       151          19
 us/st/mad/nonmatchings/139E0/func_80195C38.s                       151          19
