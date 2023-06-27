@@ -813,13 +813,13 @@ void EntitySoulStealOrb(Entity* self) {
         }
         self->ext.soulStealOrb.unk80 = 0x400;
         self->ext.soulStealOrb.unk7E = 0;
-        self->unk3C = 0;
+        self->hitboxState = 0;
         break;
 
     case 1:
         self->ext.soulStealOrb.unk82++;
         if (self->ext.soulStealOrb.unk82 == 16) {
-            self->unk3C = 1;
+            self->hitboxState = 1;
         }
         if (self->unk48 != 0) {
             if (g_Player.unk56 == 0) {
@@ -882,7 +882,7 @@ void EntityEnemyBlood(Entity* self) {
             self->firstPolygonIndex = i;
             self->animSet = 0;
             subId = self->subId;
-            self->unk3C = 1;
+            self->hitboxState = 1;
             self->ext.generic.unk7C.s = 48;
             self->hitboxHeight = 8;
             self->zPriority = 0xC0;
@@ -948,7 +948,7 @@ void EntityEnemyBlood(Entity* self) {
             break;
         }
 
-        if (self->unk3C != 0) {
+        if (self->hitboxState != 0) {
             if (g_Player.unk0C & 0x02000000) {
                 posX = self->posX.i.hi;
                 self->accelerationX += self->ext.generic.unk80.modeS32;
@@ -966,7 +966,7 @@ void EntityEnemyBlood(Entity* self) {
                     self->hitboxHeight =
                         (self->ext.generic.unk7E.modeU16 / 4) + 8;
                 } else {
-                    self->unk3C = 0;
+                    self->hitboxState = 0;
                 }
 
                 if (self->unk48 != 0) {
@@ -978,10 +978,10 @@ void EntityEnemyBlood(Entity* self) {
                         }
                     }
                     g_Player.unk10++;
-                    self->unk3C = 0;
+                    self->hitboxState = 0;
                 }
             } else {
-                self->unk3C = 0;
+                self->hitboxState = 0;
             }
         }
 
@@ -1238,7 +1238,7 @@ void EntityExplosion2(Entity* entity, s32 arg1) {
     if (entity->step == 0) {
         InitializeEntity(D_80180B48);
         entity->animCurFrame = 0;
-        entity->unk3C = 0;
+        entity->hitboxState = 0;
         entity->zPriority += 4;
         if (entity->subId != 0) {
             firstPolygonIndex = g_api.AllocPrimitives(4, 2);
@@ -1324,7 +1324,7 @@ void EntityFallingObject2(Entity* self) {
     if (self->step == 0) {
         InitializeEntity(D_80180B48);
         self->animCurFrame = 0;
-        self->unk3C = 0;
+        self->hitboxState = 0;
         self->flags |= 0x2000;
         self->zPriority += 4;
     }
@@ -1402,7 +1402,7 @@ void EntityLargeFallingObject(Entity* self) {
         InitializeEntity(D_80180B48);
         self->animCurFrame = 13;
         self->ext.generic.unk84.S8.unk0 = 0x20;
-        self->unk3C = 0;
+        self->hitboxState = 0;
         self->accelerationY = 0x1000;
         self->palette = self->subId + 0xE;
         self->unk6C = 0x80;
@@ -1475,7 +1475,7 @@ void EntityFallingObject(Entity* arg0) {
     if (arg0->step == 0) {
         InitializeEntity(D_80180B60);
         arg0->animCurFrame = 0;
-        arg0->unk3C = 0;
+        arg0->hitboxState = 0;
         arg0->zPriority += 4;
         arg0->flags |= 0x2000;
     }
