@@ -419,7 +419,6 @@ us/dra/nonmatchings/5298C/func_800F84CC.s                          144          
 us/dra/nonmatchings/75F54/func_8012E7A4.s                          144          15          https://decomp.me/scratch/SEI0w (Scraped 0.912)
 us/dra/nonmatchings/5087C/func_800F14CC.s                          145          23
 us/dra/nonmatchings/75F54/func_8012ED30.s                          145          25
-us/ric/nonmatchings/22380/func_8015FB84.s                          149           8          https://decomp.me/scratch/Nr4kA (Scraped 0.983)
 us/dra/nonmatchings/5D6C4/func_800FDE20.s                          149          17          https://decomp.me/scratch/75gxt (Scraped 0.779)
 us/st/sel/nonmatchings/2D260/func_801B3694.s                       149          25          https://decomp.me/scratch/KHDQT (Scraped 0.964)
 us/st/mad/nonmatchings/D8C8/func_80192408.s                        150          20
@@ -523,7 +522,7 @@ us/ric/nonmatchings/1F348/func_8015B898.s                          209          
 us/st/mad/nonmatchings/D8C8/func_8018DC28.s                        211          29
 us/st/cen/nonmatchings/D600/func_80190E7C.s                        211          34
 us/st/rwrp/nonmatchings/8DF0/Update.s                              211          34
-us/ric/nonmatchings/22380/func_801603C4.s                          212          29          https://decomp.me/scratch/FE9wj (Scraped 0.866)
+us/ric/nonmatchings/22380/func_801603C4.s                          212          29          https://decomp.me/scratch/FE9wj (Scraped 0.946)
 us/dra/nonmatchings/71830/func_801119C4.s                          215          26
 us/st/no3/nonmatchings/377D4/EntityShuttingWindow.s                215          32
 us/st/no3/nonmatchings/3C4EC/EntityForegroundTree.s                215          32          https://decomp.me/scratch/0twue (Scraped 0.805)
@@ -565,7 +564,7 @@ us/ric/nonmatchings/26C84/func_80169F04.s                          236          
 us/st/no3/nonmatchings/377D4/EntityTransparentWater.s              236          28
 us/st/np3/nonmatchings/3246C/func_801B39CC.s                       236          28
 us/st/sel/nonmatchings/38D24/func_801BABA4.s                       236          35
-us/dra/nonmatchings/5D6C4/func_800FF128.s                          236          38          https://decomp.me/scratch/gvuqT (Scraped 0.983)
+us/dra/nonmatchings/5D6C4/func_800FF128.s                          236          38          https://decomp.me/scratch/SUjpR (Scraped 0.997)
 us/dra/nonmatchings/692E8/func_8010BFFC.s                          238          28
 us/dra/nonmatchings/75F54/func_8012DBBC.s                          238          48
 us/ric/nonmatchings/345EC/func_8017161C.s                          239          20
