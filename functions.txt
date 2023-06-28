@@ -564,7 +564,6 @@ us/ric/nonmatchings/26C84/func_80169F04.s                          236          
 us/st/no3/nonmatchings/377D4/EntityTransparentWater.s              236          28
 us/st/np3/nonmatchings/3246C/func_801B39CC.s                       236          28
 us/st/sel/nonmatchings/38D24/func_801BABA4.s                       236          35
-us/dra/nonmatchings/5D6C4/func_800FF128.s                          236          38          https://decomp.me/scratch/SUjpR (Scraped 0.999)
 us/dra/nonmatchings/692E8/func_8010BFFC.s                          238          28
 us/dra/nonmatchings/75F54/func_8012DBBC.s                          238          48
 us/ric/nonmatchings/345EC/func_8017161C.s                          239          20
