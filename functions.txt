@@ -307,15 +307,8 @@ us/dra/nonmatchings/75F54/func_8012D28C.s                          101          
 us/dra/nonmatchings/5298C/func_800F6A70.s                          102          11
 us/dra/nonmatchings/5298C/func_800FBAC4.s                          102          11
 us/dra/nonmatchings/5087C/func_800F24F4.s                          102          21
-us/st/cen/nonmatchings/D600/func_80193298.s                        103           9
-us/st/dre/nonmatchings/14214/func_801993DC.s                       103           9
-us/st/mad/nonmatchings/D8C8/InitRoomEntities.s                     103           9          https://decomp.me/scratch/KvWhQ (Scraped 1.0)
-us/st/no3/nonmatchings/3E134/InitRoomEntities.s                    103           9          https://decomp.me/scratch/KvWhQ (Scraped 1.0)
 us/st/np3/nonmatchings/390BC/InitRoomEntities.s                    103           9          https://decomp.me/scratch/KvWhQ (Scraped 1.0)
-us/st/nz0/nonmatchings/36DE4/func_801BB920.s                       103           9
 us/st/rwrp/nonmatchings/8DF0/func_8018C5B4.s                       103           9
-us/st/st0/nonmatchings/30030/InitRoomEntities.s                    103           9          https://decomp.me/scratch/KvWhQ (Scraped 1.0)
-us/st/wrp/nonmatchings/6FD0/InitRoomEntities.s                     103           9          https://decomp.me/scratch/KvWhQ (Scraped 1.0)
 us/st/sel/nonmatchings/2C048/func_801ACFBC.s                       103          12          https://decomp.me/scratch/CKNSB (Scraped 0.666)
 us/st/dre/nonmatchings/1C7DC/func_801A2C9C.s                       104           4
 us/st/sel/nonmatchings/3642C/func_801B76F0.s                       105           7

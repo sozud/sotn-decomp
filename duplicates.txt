@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 515
-Number of undecompiled duplicates found: 485
+Number of decompiled duplicates found: 522
+Number of undecompiled duplicates found: 478
 Number of overall exact duplicates found: 119
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -290,16 +290,6 @@ ref. - CEN  - func_80192A3C - found 8 matches total:
 0.99 - WRP  - CreateEntityFromLayout - (decompiled)
 0.99 - RWRP - func_8018BD58
 
-ref. - CEN  - func_80193298 - found 8 matches total:
-0.99 - DRE  - func_801993DC
-0.99 - MAD  - InitRoomEntities
-0.99 - NO3  - InitRoomEntities
-0.99 - NP3  - InitRoomEntities
-0.99 - NZ0  - func_801BB920
-0.99 - ST0  - InitRoomEntities
-0.99 - WRP  - InitRoomEntities
-0.99 - RWRP - func_8018C5B4
-
 ref. - CEN  - func_80193410 - found 8 matches total:
 0.99 - DRE  - func_80199554 - (decompiled)
 0.99 - MAD  - func_80190F04 - (decompiled)
@@ -519,6 +509,16 @@ ref. - MAD  - func_801978A4 - found 8 matches total:
 0.99 - ST0  - ClutLerp - (decompiled)
 0.99 - WRP  - ClutLerp - (decompiled)
 0.99 - RWRP - ClutLerp - (decompiled)
+
+ref. - NP3  - InitRoomEntities - found 8 matches total:
+0.99 - CEN  - InitRoomEntities - (decompiled)
+0.99 - DRE  - InitRoomEntities - (decompiled)
+0.99 - MAD  - InitRoomEntities - (decompiled)
+0.99 - NO3  - InitRoomEntities - (decompiled)
+0.99 - NZ0  - InitRoomEntities - (decompiled)
+0.99 - ST0  - InitRoomEntities - (decompiled)
+0.99 - WRP  - InitRoomEntities - (decompiled)
+0.99 - RWRP - func_8018C5B4
 
 ref. - RWRP - func_8018C7E0 - found 8 matches total:
 0.99 - CEN  - CreateEntityFromCurrentEntity - (decompiled)
