@@ -241,7 +241,6 @@ us/st/np3/nonmatchings/3246C/EntitySwitch.s                         81          
 us/dra/nonmatchings/692E8/func_8010A4A4.s                           81          12
 us/ric/nonmatchings/1AC60/func_80156CCC.s                           81          12
 us/dra/nonmatchings/5087C/func_800F2120.s                           81          13
-us/dra/nonmatchings/75F54/func_8011A9D8.s                           82          11          https://decomp.me/scratch/8HGed (Scraped 0.999)
 us/st/mad/nonmatchings/139E0/EntityHeartDrop.s                      82          11          https://decomp.me/scratch/h3CVU
 us/dra/nonmatchings/5298C/ApplyJosephsCloakPalette.s                83           7          https://decomp.me/scratch/xMSIm (Scraped 0.517)
 us/st/cen/nonmatchings/D600/func_80198284.s                         84           5
