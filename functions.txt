@@ -53,7 +53,6 @@ us/st/dre/nonmatchings/1C7DC/func_801A2580.s                        41          
 us/st/mad/nonmatchings/139E0/func_80199508.s                        41           9
 us/st/rwrp/nonmatchings/8DF0/func_80195758.s                        41           9
 us/st/rwrp/nonmatchings/8DF0/func_8018E024.s                        42           5
-us/ric/nonmatchings/20920/func_8015D1D0.s                           42           6
 us/st/np3/nonmatchings/4B018/func_801CDC80.s                        42           6
 us/st/np3/nonmatchings/4B018/func_801CDD80.s                        44           5
 us/dra/nonmatchings/627C4/jpt_80102810.s                            45           4  Yes
@@ -499,7 +498,7 @@ us/st/np3/nonmatchings/3DEF4/func_801BEEF0.s                       197          
 us/st/nz0/nonmatchings/3E30C/func_801BF308.s                       197          26
 us/st/rwrp/nonmatchings/8DF0/func_8018FF9C.s                       197          26
 us/st/wrp/nonmatchings/D020/func_8018E01C.s                        197          26
-us/st/st0/nonmatchings/27D64/EntitySecretButton.s                  197          34  Yes
+us/st/st0/nonmatchings/27D64/EntitySecretButton.s                  197          34  Yes     https://decomp.me/scratch/9i4ue (Scraped 0.97)
 us/st/cen/nonmatchings/D600/func_8018E3E8.s                        198          20
 us/dra/nonmatchings/75F54/func_8011EDA8.s                          198          27
 us/dra/nonmatchings/42398/func_800E2824.s                          200          29
@@ -605,7 +604,7 @@ us/ric/nonmatchings/26C84/func_80167EC4.s                          277          
 us/dra/nonmatchings/5298C/DrawSpellMenu.s                          278          35          https://decomp.me/scratch/6Q2wF (Scraped 0.965)
 us/st/dre/nonmatchings/11A64/EntityUnkId1C.s                       283          44  Yes
 us/st/no3/nonmatchings/46684/EntityUnkId31.s                       283          46
-us/st/st0/nonmatchings/27D64/EntitySecretStairsChunk.s             287          39  Yes
+us/st/st0/nonmatchings/27D64/EntitySecretStairsChunk.s             287          39  Yes     https://decomp.me/scratch/Fzdnv (Scraped 0.859)
 us/dra/nonmatchings/47BB8/func_800E7E08.s                          287          57  Yes     https://decomp.me/scratch/g2A7S (Scraped 0.974)
 us/st/no3/nonmatchings/46684/EntityLargeWaterSplash.s              288          28
 us/st/np3/nonmatchings/44DCC/func_801C7954.s                       288          28
