@@ -1,5 +1,5 @@
 Number of decompiled duplicates found: 521
-Number of undecompiled duplicates found: 477
+Number of undecompiled duplicates found: 475
 Number of overall exact duplicates found: 118
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -156,17 +156,6 @@ ref. - RWRP - func_8018D580 - found 11 matches total:
 1.00 - TT_000 - DestroyEntity - (decompiled)
 0.99 - MAD  - DestroyEntity - (decompiled)
 
-ref. - CEN  - EntityUnkId0E - found 9 matches total:
-0.99 - DRE  - EntityUnkId0E
-0.99 - NO3  - EntityUnkId0E
-0.99 - NP3  - EntityUnkId0E
-0.99 - NZ0  - EntityUnkId0E
-0.99 - ST0  - EntitySecretStairsChunk
-0.99 - WRP  - EntityWarpSmallRocks
-0.99 - WRP  - EntityUnkId0E
-0.99 - RWRP - func_80189E9C
-0.99 - RWRP - func_80190E44
-
 ref. - CEN  - func_80194394 - found 9 matches total:
 0.99 - DRE  - AnimateEntity - (decompiled)
 0.99 - MAD  - AnimateEntity - (decompiled)
@@ -249,6 +238,16 @@ ref. - CEN  - EntityRelicOrb - found 8 matches total:
 0.99 - ST0  - EntityEquipItemDrop
 0.99 - WRP  - EntityRelicOrb
 0.99 - RWRP - func_8019024C
+
+ref. - CEN  - EntityUnkId0E - found 8 matches total:
+0.99 - DRE  - EntityUnkId0E
+0.99 - NO3  - EntityUnkId0E
+0.99 - NP3  - EntityUnkId0E
+0.99 - NZ0  - EntityUnkId0E
+0.99 - WRP  - EntityWarpSmallRocks
+0.99 - WRP  - EntityUnkId0E
+0.99 - RWRP - func_80189E9C
+0.99 - RWRP - func_80190E44
 
 ref. - CEN  - EntityUnkId15 - found 8 matches total:
 0.99 - DRE  - EntityUnkId15 - (decompiled)
@@ -867,14 +866,6 @@ ref. - CEN  - func_8019A420 - found 6 matches total:
 0.99 - WRP  - func_801917BC
 0.99 - RWRP - func_8019373C
 
-ref. - DRE  - EntityFadeToWhite1 - found 6 matches total:
-0.99 - DRE  - EntityFadeToWhite2
-0.99 - NO3  - EntityWargExplosionPuffOpaque
-0.99 - NO3  - EntityStrongWargWaveAttack
-0.99 - NP3  - func_801B65FC
-0.99 - NZ0  - func_801B3C38
-0.99 - ST0  - EntitySecretButton
-
 ref. - RWRP - func_8018E1FC - found 6 matches total:
 0.99 - CEN  - func_80194EE0 - (decompiled)
 0.99 - DRE  - func_8019B024 - (decompiled)
@@ -912,6 +903,13 @@ ref. - CEN  - func_8018E238 - found 5 matches total:
 0.99 - NZ0  - func_801B77F8
 0.99 - SEL  - func_801B675C
 0.99 - ST0  - func_801A8CB0
+
+ref. - DRE  - EntityFadeToWhite1 - found 5 matches total:
+0.99 - DRE  - EntityFadeToWhite2
+0.99 - NO3  - EntityWargExplosionPuffOpaque
+0.99 - NO3  - EntityStrongWargWaveAttack
+0.99 - NP3  - func_801B65FC
+0.99 - NZ0  - func_801B3C38
 
 ref. - MAIN - InterruptCallback - found 5 matches total:
 0.99 - MAIN - ResetCallback - (decompiled)
