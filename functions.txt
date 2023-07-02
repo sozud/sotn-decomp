@@ -332,7 +332,7 @@ us/dra/nonmatchings/75F54/func_801238CC.s                          115          
 us/dra/nonmatchings/692E8/func_8010DBFC.s                          117          14
 us/st/mad/nonmatchings/D8C8/func_8018DF0C.s                        117          16          https://decomp.me/scratch/Iz0E6 (Scraped 1.0)
 us/st/no3/nonmatchings/46684/EntityUnkId4B.s                       117          23
-us/st/st0/nonmatchings/27D64/EntityLockCamera.s                    118          13
+us/st/st0/nonmatchings/27D64/EntityLockCamera.s                    118          13          https://decomp.me/scratch/4kLOZ (Scraped 0.95)
 us/ric/nonmatchings/345EC/func_801706C0.s                          118          14
 us/st/no3/nonmatchings/46684/EntityUnkId30.s                       119          18
 us/st/cen/nonmatchings/D600/func_8018DF60.s                        120           5
