@@ -485,7 +485,7 @@ us/dra/nonmatchings/692E8/func_8010D010.s                          195          
 us/st/rwrp/nonmatchings/8DF0/func_80189E9C.s                       195          33  Yes     https://decomp.me/scratch/4UdLD (Scraped 0.996)
 us/st/wrp/nonmatchings/6FD0/EntityWarpSmallRocks.s                 195          33  Yes
 us/ric/nonmatchings/21250/func_8015D3CC.s                          195          34  Yes
-us/st/st0/nonmatchings/27D64/func_801A805C.s                       196          28
+us/st/st0/nonmatchings/27D64/func_801A805C.s                       196          28          https://decomp.me/scratch/Zd7jX (Scraped 0.86)
 us/dra/nonmatchings/692E8/func_8010D2C8.s                          196          33
 us/st/cen/nonmatchings/D600/func_80196C80.s                        197          26
 us/st/dre/nonmatchings/1C7DC/func_8019CDC4.s                       197          26
@@ -498,7 +498,6 @@ us/st/cen/nonmatchings/D600/func_8018E3E8.s                        198          
 us/dra/nonmatchings/75F54/func_8011EDA8.s                          198          27
 us/dra/nonmatchings/42398/func_800E2824.s                          200          29
 us/st/cen/nonmatchings/D600/EntityRoomDarkness.s                   202          17
-us/st/st0/nonmatchings/27D64/func_801A8328.s                       203          25
 us/dra/nonmatchings/75F54/EntityPlayerPinkEffect.s                 206          36  Yes
 us/st/cen/nonmatchings/D600/EntityMovingElevator.s                 208          26
 us/ric/nonmatchings/1F348/func_8015B898.s                          209          37          https://decomp.me/scratch/eIPhn (Scraped 0.546)
