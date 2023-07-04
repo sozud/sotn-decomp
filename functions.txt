@@ -497,7 +497,7 @@ us/dra/nonmatchings/71830/func_801119C4.s                          215          
 us/st/no3/nonmatchings/377D4/EntityShuttingWindow.s                215          32
 us/st/no3/nonmatchings/3C4EC/EntityForegroundTree.s                215          32          https://decomp.me/scratch/0twue (Scraped 0.805)
 us/st/np3/nonmatchings/3246C/EntityShuttingWindow.s                215          32
-us/dra/nonmatchings/75F54/func_80119F70.s                          217          25          https://decomp.me/scratch/jc0Dm (Scraped 0.993)
+us/dra/nonmatchings/75F54/func_80119F70.s                          217          25          https://decomp.me/scratch/e4Ov8 (Scraped 0.994)
 us/st/dre/nonmatchings/14214/EntityUnkId23.s                       217          30  Yes
 us/st/st0/nonmatchings/2C564/func_801AF380.s                       220           4
 us/ric/nonmatchings/22380/func_8015E484.s                          220          24
