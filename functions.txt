@@ -72,8 +72,8 @@ us/st/dre/nonmatchings/14214/func_801949E8.s                        51          
 us/st/nz0/nonmatchings/36DE4/func_801B7740.s                        51           2          https://decomp.me/scratch/9iyBi (Scraped 0.716)
 us/st/sel/nonmatchings/3642C/func_801B66A4.s                        51           2
 us/st/st0/nonmatchings/28BF8/func_801A8BF8.s                        51           2
-us/st/mad/nonmatchings/D8C8/CollectHeart.s                          51           4          https://decomp.me/scratch/9z9Vp (Scraped 0.987)
-us/st/st0/nonmatchings/30030/CollectHeart.s                         51           4          https://decomp.me/scratch/9z9Vp (Scraped 0.987)
+us/st/mad/nonmatchings/D8C8/CollectHeart.s                          51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
+us/st/st0/nonmatchings/30030/CollectHeart.s                         51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
 us/dra/nonmatchings/75F54/func_8011B480.s                           51           6          https://decomp.me/scratch/vljJJ (Scraped 0.766)
 us/st/mad/nonmatchings/D8C8/func_8018E090.s                         51           6
 us/st/cen/nonmatchings/D600/func_801991C0.s                         53           7
@@ -298,7 +298,7 @@ us/st/sel/nonmatchings/2C048/func_801ACFBC.s                       103          
 us/st/dre/nonmatchings/1C7DC/func_801A2C9C.s                       104           4
 us/st/sel/nonmatchings/3642C/func_801B76F0.s                       105           7
 us/st/st0/nonmatchings/30030/func_801B101C.s                       105           7
-us/dra/nonmatchings/5298C/func_800F8C98.s                          106           9
+us/dra/nonmatchings/5298C/func_800F8C98.s                          106           9          https://decomp.me/scratch/BleAQ (Scraped 0.952)
 us/dra/nonmatchings/5087C/func_800F2288.s                          108          12
 us/dra/nonmatchings/5298C/func_800F5904.s                          109          11          https://decomp.me/scratch/DP2LU (Scraped 0.751)
 us/dra/nonmatchings/5D6C4/func_800FDB18.s                          109          14  Yes     https://decomp.me/scratch/lFwhP (Scraped 1.0)
@@ -310,7 +310,7 @@ us/st/no3/nonmatchings/3E134/func_801BE870.s                       110          
 us/st/nz0/nonmatchings/36DE4/func_801B77F8.s                       110          13
 us/st/sel/nonmatchings/3642C/func_801B675C.s                       110          13
 us/st/st0/nonmatchings/28BF8/func_801A8CB0.s                       110          13
-us/dra/nonmatchings/47BB8/SetRoomForegroundLayer.s                 111           5          https://decomp.me/scratch/7788z (Scraped 0.739)
+us/dra/nonmatchings/47BB8/SetRoomForegroundLayer.s                 111           5          https://decomp.me/scratch/mBa0S (Scraped 0.959)
 us/dra/nonmatchings/75F54/func_80133604.s                          111          18
 us/dra/nonmatchings/75F54/func_80133488.s                          111          20
 us/dra/nonmatchings/692E8/func_801106A4.s                          111          21
@@ -358,7 +358,7 @@ us/st/mad/nonmatchings/139E0/func_801969EC.s                       131          
 us/st/no3/nonmatchings/46684/func_801C9C78.s                       131          17
 us/st/rwrp/nonmatchings/8DF0/func_80192594.s                       131          17
 us/dra/nonmatchings/5298C/func_800FA60C.s                          132          17
-us/dra/nonmatchings/5298C/func_800F72BC.s                          133          18
+us/dra/nonmatchings/5298C/func_800F72BC.s                          133          18          https://decomp.me/scratch/z2LZu (Scraped 0.653)
 us/ric/nonmatchings/1AC60/func_8015A7D0.s                          133          21          https://decomp.me/scratch/1JWA0
 us/st/np3/nonmatchings/4B018/func_801CE4CC.s                       133          26
 us/st/np3/nonmatchings/4B018/func_801D0B78.s                       133          34
