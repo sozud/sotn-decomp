@@ -72,8 +72,8 @@ us/st/dre/nonmatchings/14214/func_801949E8.s                        51          
 us/st/nz0/nonmatchings/36DE4/func_801B7740.s                        51           2          https://decomp.me/scratch/9iyBi (Scraped 0.716)
 us/st/sel/nonmatchings/3642C/func_801B66A4.s                        51           2
 us/st/st0/nonmatchings/28BF8/func_801A8BF8.s                        51           2
-us/st/mad/nonmatchings/D8C8/CollectHeart.s                          51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
-us/st/st0/nonmatchings/30030/CollectHeart.s                         51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
+us/st/mad/nonmatchings/D8C8/CollectHeart.s                          51           4          https://decomp.me/scratch/9z9Vp (Scraped 0.987)
+us/st/st0/nonmatchings/30030/CollectHeart.s                         51           4          https://decomp.me/scratch/9z9Vp (Scraped 0.987)
 us/dra/nonmatchings/75F54/func_8011B480.s                           51           6          https://decomp.me/scratch/vljJJ (Scraped 0.766)
 us/st/mad/nonmatchings/D8C8/func_8018E090.s                         51           6
 us/st/cen/nonmatchings/D600/func_801991C0.s                         53           7
@@ -847,7 +847,7 @@ us/st/np3/nonmatchings/4B018/func_801CC2E0.s                      1298         2
 us/dra/nonmatchings/75F54/EntityMist.s                            1393         130  Yes
 us/st/no3/nonmatchings/46684/EntityStrongWarg.s                   1410         285  Yes
 us/st/np3/nonmatchings/36990/EntityGaibon.s                       1410         287  Yes     https://decomp.me/scratch/QGtpG (Scraped 0.99)
-us/dra/nonmatchings/47BB8/RenderPrimitives.s                      1434          80  Yes     https://decomp.me/scratch/N53OY (Scraped 0.935)
+us/dra/nonmatchings/47BB8/RenderPrimitives.s                      1434          80  Yes     https://decomp.me/scratch/geI8L (Scraped 0.942)
 us/dra/nonmatchings/5298C/func_800FBC24.s                         1622         352  Yes     https://decomp.me/scratch/5KKhG (Scraped 0.001)
 us/dra/nonmatchings/692E8/EntityAlucard.s                         1830         350  Yes
 us/st/dre/nonmatchings/11A64/EntityMother.s                       1854         367  Yes
