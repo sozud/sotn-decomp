@@ -23,11 +23,8 @@ us/st/rwrp/nonmatchings/8DF0/func_8019593C.s                        26          
 us/st/st0/nonmatchings/30030/func_801B0414.s                        26           4
 us/st/np3/nonmatchings/4B018/func_801CDA14.s                        27           3
 us/st/np3/nonmatchings/4B018/func_801CDA6C.s                        28           3
-us/dra/nonmatchings/692E8/func_8010E334.s                           29           4          https://decomp.me/scratch/YvoMU
-us/dra/nonmatchings/627C4/func_80102D08.s                           32           2          https://decomp.me/scratch/NNXbc
 us/st/rwrp/nonmatchings/8DF0/func_8018DE98.s                        32           3
 us/st/rwrp/nonmatchings/8DF0/func_8018DFCC.s                        32           6
-us/dra/nonmatchings/5D6C4/func_800FDCE0.s                           33           5          https://decomp.me/scratch/5ufgy
 us/st/rwrp/nonmatchings/8DF0/func_8018DDF0.s                        33           6
 us/st/rwrp/nonmatchings/8DF0/func_8018C7E0.s                        34           2
 us/st/rwrp/nonmatchings/8DF0/func_8018D580.s                        34           4
@@ -308,7 +305,6 @@ us/st/no3/nonmatchings/3E134/func_801BE870.s                       110          
 us/st/nz0/nonmatchings/36DE4/func_801B77F8.s                       110          13
 us/st/sel/nonmatchings/3642C/func_801B675C.s                       110          13
 us/st/st0/nonmatchings/28BF8/func_801A8CB0.s                       110          13
-us/dra/nonmatchings/47BB8/SetRoomForegroundLayer.s                 111           5          https://decomp.me/scratch/mBa0S (Scraped 0.985)
 us/dra/nonmatchings/75F54/func_80133604.s                          111          18
 us/dra/nonmatchings/75F54/func_80133488.s                          111          20
 us/dra/nonmatchings/692E8/func_801106A4.s                          111          21
