@@ -143,7 +143,6 @@ us/st/rwrp/nonmatchings/8DF0/func_80191BCC.s                        70          
 us/st/sel/nonmatchings/3642C/func_801B690C.s                        70           7
 us/st/cen/nonmatchings/D600/EntityUnkId1B.s                         70          11
 us/dra/nonmatchings/5087C/func_800F1954.s                           70          12          https://decomp.me/scratch/HuM2x (Scraped 0.805)
-us/dra/nonmatchings/75F54/func_80119E78.s                           71           5          https://decomp.me/scratch/sVV3a (Scraped 0.971)
 us/st/no3/nonmatchings/46684/EntityMermanExplosion.s                71           7
 us/st/no3/nonmatchings/46684/func_801CC820.s                        71          17
 us/st/sel/nonmatchings/2D260/func_801B2E5C.s                        72           7
@@ -309,7 +308,7 @@ us/st/no3/nonmatchings/3E134/func_801BE870.s                       110          
 us/st/nz0/nonmatchings/36DE4/func_801B77F8.s                       110          13
 us/st/sel/nonmatchings/3642C/func_801B675C.s                       110          13
 us/st/st0/nonmatchings/28BF8/func_801A8CB0.s                       110          13
-us/dra/nonmatchings/47BB8/SetRoomForegroundLayer.s                 111           5          https://decomp.me/scratch/mBa0S (Scraped 0.959)
+us/dra/nonmatchings/47BB8/SetRoomForegroundLayer.s                 111           5          https://decomp.me/scratch/mBa0S (Scraped 0.985)
 us/dra/nonmatchings/75F54/func_80133604.s                          111          18
 us/dra/nonmatchings/75F54/func_80133488.s                          111          20
 us/dra/nonmatchings/692E8/func_801106A4.s                          111          21
@@ -377,7 +376,7 @@ us/st/no3/nonmatchings/3E134/func_801C52EC.s                       135          
 us/st/np3/nonmatchings/390BC/func_801BCB5C.s                       135          16
 us/st/nz0/nonmatchings/36DE4/func_801BCF74.s                       135          16
 us/st/rwrp/nonmatchings/8DF0/func_8018DC08.s                       135          16
-us/st/st0/nonmatchings/30030/func_801B51E4.s                       135          16
+us/st/st0/nonmatchings/30030/func_801B51E4.s                       135          16          https://decomp.me/scratch/hfaO0 (Scraped 0.853)
 us/st/wrp/nonmatchings/6FD0/func_8018BC88.s                        135          16
 us/st/mad/nonmatchings/139E0/func_801978A4.s                       136           9
 us/dra/nonmatchings/47BB8/func_800EB314.s                          136          19
@@ -441,7 +440,6 @@ us/dra/nonmatchings/5087C/func_800F0940.s                          175          
 us/dra/nonmatchings/953A0/func_80135D8C.s                          175          16
 us/st/cen/nonmatchings/D600/EntityUnkId01.s                        175          25
 us/ric/nonmatchings/22380/func_8015F680.s                          176          28
-us/dra/nonmatchings/75F54/EntitySubwpnCrashCrossParticles.s        178          26          https://decomp.me/scratch/ceC2d (Scraped 0.878)
 us/dra/nonmatchings/692E8/func_801112AC.s                          178          32  Yes
 us/dra/nonmatchings/75F54/func_80133960.s                          181          21  Yes     https://decomp.me/scratch/7xexM (Scraped 0.045)
 us/ric/nonmatchings/26C84/func_80169470.s                          182          20  Yes
@@ -569,7 +567,7 @@ us/st/nz0/nonmatchings/43F9C/func_801C4198.s                       260          
 us/dra/nonmatchings/62D70/func_80103ED4.s                          260          55  Yes
 us/st/np3/nonmatchings/4B018/func_801CBF18.s                       262          23
 us/dra/nonmatchings/75F54/func_80130264.s                          263          30  Yes
-us/dra/nonmatchings/75F54/func_8011A4D0.s                          263          44          https://decomp.me/scratch/x26Kl (Scraped 0.942)
+us/dra/nonmatchings/75F54/func_8011A4D0.s                          263          44          https://decomp.me/scratch/p2nwC (Scraped 0.995)
 us/ric/nonmatchings/22380/func_80161FF0.s                          266          27
 us/st/no3/nonmatchings/46684/EntityStrongWargWaveAttack.s          266          32  Yes
 us/dra/nonmatchings/5298C/func_800F4FD0.s                          267          23          https://decomp.me/scratch/LyVUC (Scraped 0.682)
@@ -839,14 +837,14 @@ us/st/nz0/nonmatchings/36DE4/TestCollisions.s                     1197         1
 us/st/rwrp/nonmatchings/8DF0/func_8018A59C.s                      1197         178
 us/st/wrp/nonmatchings/6FD0/TestCollisions.s                      1197         178          https://decomp.me/scratch/Nq66t
 us/dra/nonmatchings/62D70/func_80105428.s                         1202         231
-us/st/st0/nonmatchings/2C564/EntityDraculaFinalForm.s             1284         245  Yes     https://decomp.me/scratch/kUpoj (Scraped 0.946)
+us/st/st0/nonmatchings/2C564/EntityDraculaFinalForm.s             1284         245  Yes     https://decomp.me/scratch/kUpoj (Scraped 0.959)
 us/ric/nonmatchings/26C84/func_80162EF8.s                         1290         137  Yes
 us/st/nz0/nonmatchings/33FCC/EntityGaibon.s                       1298         267  Yes     https://decomp.me/scratch/QGtpG (Scraped 0.99)
 us/st/np3/nonmatchings/4B018/func_801CC2E0.s                      1298         270  Yes
 us/dra/nonmatchings/75F54/EntityMist.s                            1393         130  Yes
 us/st/no3/nonmatchings/46684/EntityStrongWarg.s                   1410         285  Yes
 us/st/np3/nonmatchings/36990/EntityGaibon.s                       1410         287  Yes     https://decomp.me/scratch/QGtpG (Scraped 0.99)
-us/dra/nonmatchings/47BB8/RenderPrimitives.s                      1434          80  Yes     https://decomp.me/scratch/geI8L (Scraped 0.942)
+us/dra/nonmatchings/47BB8/RenderPrimitives.s                      1434          80  Yes     https://decomp.me/scratch/geI8L (Scraped 0.941)
 us/dra/nonmatchings/5298C/func_800FBC24.s                         1622         352  Yes     https://decomp.me/scratch/5KKhG (Scraped 0.001)
 us/dra/nonmatchings/692E8/EntityAlucard.s                         1830         350  Yes
 us/st/dre/nonmatchings/11A64/EntityMother.s                       1854         367  Yes
