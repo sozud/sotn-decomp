@@ -146,7 +146,6 @@ us/dra/nonmatchings/5087C/func_800F1954.s                           70          
 us/dra/nonmatchings/75F54/func_80119E78.s                           71           5          https://decomp.me/scratch/sVV3a (Scraped 0.971)
 us/st/no3/nonmatchings/46684/EntityMermanExplosion.s                71           7
 us/st/no3/nonmatchings/46684/func_801CC820.s                        71          17
-us/dra/nonmatchings/5298C/func_800FB9BC.s                           72           2          https://decomp.me/scratch/MkUi2 (Scraped 0.462)
 us/st/sel/nonmatchings/2D260/func_801B2E5C.s                        72           7
 us/st/cen/nonmatchings/D600/EntityExplosion.s                       72           9
 us/st/rwrp/nonmatchings/8DF0/func_8018F814.s                        72           9
