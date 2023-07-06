@@ -562,7 +562,6 @@ us/st/nz0/nonmatchings/43F9C/func_801C4198.s                       260          
 us/dra/nonmatchings/62D70/func_80103ED4.s                          260          55  Yes
 us/st/np3/nonmatchings/4B018/func_801CBF18.s                       262          23
 us/dra/nonmatchings/75F54/func_80130264.s                          263          30  Yes
-us/dra/nonmatchings/75F54/func_8011A4D0.s                          263          44          https://decomp.me/scratch/p2nwC (Scraped 0.995)
 us/ric/nonmatchings/22380/func_80161FF0.s                          266          27
 us/st/no3/nonmatchings/46684/EntityStrongWargWaveAttack.s          266          32  Yes
 us/dra/nonmatchings/5298C/func_800F4FD0.s                          267          23          https://decomp.me/scratch/LyVUC (Scraped 0.682)
