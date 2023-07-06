@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 522
-Number of undecompiled duplicates found: 467
+Number of decompiled duplicates found: 523
+Number of undecompiled duplicates found: 466
 Number of overall exact duplicates found: 118
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -1040,7 +1040,7 @@ ref. - DRE  - func_80194F14 - found 1 matches total:
 0.99 - NO3  - func_801BECCC - (decompiled)
 
 ref. - MAD  - CollectHeart - found 1 matches total:
-0.99 - ST0  - CollectHeart
+0.99 - ST0  - CollectHeart - (decompiled)
 
 ref. - MAD  - CollectSubweapon - found 1 matches total:
 0.99 - ST0  - CollectSubweapon - (decompiled)

@@ -70,7 +70,6 @@ us/st/nz0/nonmatchings/36DE4/func_801B7740.s                        51          
 us/st/sel/nonmatchings/3642C/func_801B66A4.s                        51           2
 us/st/st0/nonmatchings/28BF8/func_801A8BF8.s                        51           2
 us/st/mad/nonmatchings/D8C8/CollectHeart.s                          51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
-us/st/st0/nonmatchings/30030/CollectHeart.s                         51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
 us/dra/nonmatchings/75F54/func_8011B480.s                           51           6          https://decomp.me/scratch/vljJJ (Scraped 0.766)
 us/st/mad/nonmatchings/D8C8/func_8018E090.s                         51           6
 us/st/cen/nonmatchings/D600/func_801991C0.s                         53           7
