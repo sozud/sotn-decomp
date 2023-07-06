@@ -179,7 +179,7 @@ ref. - RWRP - func_8018C8D0 - found 9 matches total:
 0.99 - NZ0  - func_801C7CF0 - (decompiled)
 
 ref. - RWRP - func_8018D5EC - found 9 matches total:
-0.99 - DRA  - func_801065F4 - (decompiled)
+0.99 - DRA  - DestroyEntities - (decompiled)
 0.99 - CEN  - func_801942D0 - (decompiled)
 0.99 - DRE  - DestroyEntityFromIndex - (decompiled)
 0.99 - MAD  - DestroyEntityFromIndex - (decompiled)
