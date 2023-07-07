@@ -177,7 +177,7 @@ us/st/np3/nonmatchings/3DEF4/func_801C2598.s                        76          
 us/st/nz0/nonmatchings/3E30C/func_801C29B0.s                        76          12          https://decomp.me/scratch/Cxlhx
 us/st/rwrp/nonmatchings/8DF0/func_80193644.s                        76          12
 us/st/st0/nonmatchings/36358/func_801B9DB0.s                        76          12
-us/st/wrp/nonmatchings/D020/func_801916C4.s                         76          12          https://decomp.me/scratch/gGYGn (Scraped 0.698)
+us/st/wrp/nonmatchings/D020/func_801916C4.s                         76          12          https://decomp.me/scratch/TvUxs (Scraped 1.0)
 us/dra/nonmatchings/5298C/func_800F8E18.s                           77           6
 us/st/no3/nonmatchings/46684/func_801D0A2C.s                        77          11
 us/st/np3/nonmatchings/3DEF4/func_801C4144.s                        77          11
@@ -341,15 +341,7 @@ us/st/rwrp/nonmatchings/8DF0/func_8019373C.s                       134          
 us/st/wrp/nonmatchings/D020/func_801917BC.s                        134          20
 us/dra/nonmatchings/692E8/func_801104D0.s                          134          28
 us/dra/nonmatchings/953A0/func_80136010.s                          135          14
-us/st/cen/nonmatchings/D600/func_801948EC.s                        135          16
-us/st/dre/nonmatchings/14214/func_8019AA30.s                       135          16
-us/st/mad/nonmatchings/D8C8/func_80192618.s                        135          16
-us/st/no3/nonmatchings/3E134/func_801C52EC.s                       135          16
-us/st/np3/nonmatchings/390BC/func_801BCB5C.s                       135          16
-us/st/nz0/nonmatchings/36DE4/func_801BCF74.s                       135          16
-us/st/rwrp/nonmatchings/8DF0/func_8018DC08.s                       135          16
-us/st/st0/nonmatchings/30030/func_801B51E4.s                       135          16          https://decomp.me/scratch/1Zkmd (Scraped 0.998)
-us/st/wrp/nonmatchings/6FD0/func_8018BC88.s                        135          16
+us/st/st0/nonmatchings/30030/func_801B51E4.s                       135          16          https://decomp.me/scratch/ZBMcb (Scraped 0.998)
 us/st/mad/nonmatchings/139E0/func_801978A4.s                       136           9
 us/dra/nonmatchings/47BB8/func_800EB314.s                          136          19
 us/st/dre/nonmatchings/1C7DC/func_801A2848.s                       139           4
