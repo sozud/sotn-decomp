@@ -344,7 +344,7 @@ us/dra/nonmatchings/5298C/func_800F6DC8.s                          127          
 us/dra/nonmatchings/692E8/func_801093C4.s                          127          13
 us/st/no3/nonmatchings/3C4EC/EntityUnkId55.s                       127          14          https://decomp.me/scratch/703Cu (Scraped 0.912)
 us/ric/nonmatchings/1AC60/func_80157894.s                          128          26
-us/dra/nonmatchings/692E8/UpdateAnim.s                             129          13          https://decomp.me/scratch/GpbCh (Scraped 0.649)
+us/dra/nonmatchings/692E8/UpdateAnim.s                             129          13          https://decomp.me/scratch/GpbCh (Scraped 0.985)
 us/st/cen/nonmatchings/D600/func_80199278.s                        131          17
 us/st/dre/nonmatchings/1C7DC/func_8019F3BC.s                       131          17          https://decomp.me/scratch/Hfk9n
 us/st/mad/nonmatchings/139E0/func_801969EC.s                       131          17
@@ -475,7 +475,7 @@ us/st/rwrp/nonmatchings/8DF0/func_8018FF9C.s                       197          
 us/st/wrp/nonmatchings/D020/func_8018E01C.s                        197          26
 us/st/cen/nonmatchings/D600/func_8018E3E8.s                        198          20
 us/dra/nonmatchings/75F54/func_8011EDA8.s                          198          27
-us/dra/nonmatchings/42398/func_800E2824.s                          200          29
+us/dra/nonmatchings/42398/func_800E2824.s                          200          29          https://decomp.me/scratch/vbKu6 (Scraped 0.998)
 us/st/cen/nonmatchings/D600/EntityRoomDarkness.s                   202          17
 us/dra/nonmatchings/75F54/EntityPlayerPinkEffect.s                 206          36  Yes
 us/st/cen/nonmatchings/D600/EntityMovingElevator.s                 208          26
