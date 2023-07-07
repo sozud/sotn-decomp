@@ -209,7 +209,6 @@ us/st/np3/nonmatchings/3DEF4/func_801C04F4.s                        84          
 us/st/nz0/nonmatchings/3E30C/func_801C090C.s                        84           5          https://decomp.me/scratch/0VI4v
 us/st/rwrp/nonmatchings/8DF0/func_801915A0.s                        84           5
 us/st/st0/nonmatchings/36358/func_801B7D0C.s                        84           5
-us/st/wrp/nonmatchings/D020/func_8018F620.s                         84           5
 us/dra/nonmatchings/75F54/func_8011E390.s                           84           7          https://decomp.me/scratch/dSjFV (Scraped 0.391)
 us/st/sel/nonmatchings/2D260/func_801B1FD8.s                        84           8
 us/dra/nonmatchings/75F54/func_80133810.s                           84           9

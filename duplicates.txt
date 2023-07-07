@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 534
-Number of undecompiled duplicates found: 437
+Number of decompiled duplicates found: 535
+Number of undecompiled duplicates found: 436
 Number of overall exact duplicates found: 118
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -336,7 +336,7 @@ ref. - CEN  - func_80198284 - found 8 matches total:
 0.99 - NP3  - func_801C04F4
 0.99 - NZ0  - func_801C090C
 0.99 - ST0  - func_801B7D0C
-0.99 - WRP  - func_8018F620
+0.99 - WRP  - func_8018F620 - (decompiled)
 0.99 - RWRP - func_801915A0
 
 ref. - CEN  - func_801983B4 - found 8 matches total:
