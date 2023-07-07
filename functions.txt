@@ -323,13 +323,7 @@ us/dra/nonmatchings/5298C/func_800F72BC.s                          133          
 us/ric/nonmatchings/1AC60/func_8015A7D0.s                          133          21          https://decomp.me/scratch/1JWA0
 us/st/np3/nonmatchings/4B018/func_801CE4CC.s                       133          26
 us/st/np3/nonmatchings/4B018/func_801D0B78.s                       133          34
-us/st/cen/nonmatchings/D600/func_8019A420.s                        134          20
-us/st/dre/nonmatchings/1C7DC/func_801A0564.s                       134          20
-us/st/no3/nonmatchings/46684/func_801CAE20.s                       134          20
-us/st/np3/nonmatchings/3DEF4/func_801C2690.s                       134          20
-us/st/nz0/nonmatchings/48ADC/func_801C8ADC.s                       134          20
 us/st/rwrp/nonmatchings/8DF0/func_8019373C.s                       134          20
-us/st/wrp/nonmatchings/D020/func_801917BC.s                        134          20
 us/dra/nonmatchings/692E8/func_801104D0.s                          134          28
 us/dra/nonmatchings/953A0/func_80136010.s                          135          14
 us/st/st0/nonmatchings/30030/func_801B51E4.s                       135          16          https://decomp.me/scratch/ZBMcb (Scraped 0.998)
@@ -511,7 +505,7 @@ us/st/np3/nonmatchings/4B018/func_801CBF18.s                       262          
 us/dra/nonmatchings/75F54/func_80130264.s                          263          30  Yes
 us/ric/nonmatchings/22380/func_80161FF0.s                          266          27
 us/st/no3/nonmatchings/46684/EntityStrongWargWaveAttack.s          266          32  Yes
-us/dra/nonmatchings/5298C/func_800F4FD0.s                          267          23          https://decomp.me/scratch/zy5Kr (Scraped 0.827)
+us/dra/nonmatchings/5298C/func_800F4FD0.s                          267          23          https://decomp.me/scratch/zy5Kr (Scraped 0.818)
 us/st/mad/nonmatchings/D8C8/func_8018E1D4.s                        268          32
 us/st/mad/nonmatchings/139E0/func_80198BC8.s                       269          22
 us/st/np3/nonmatchings/3246C/func_801B6084.s                       269          43

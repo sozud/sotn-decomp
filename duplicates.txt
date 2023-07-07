@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 551
-Number of undecompiled duplicates found: 420
+Number of decompiled duplicates found: 557
+Number of undecompiled duplicates found: 414
 Number of overall exact duplicates found: 118
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -840,14 +840,6 @@ ref. - CEN  - func_80196C80 - found 6 matches total:
 0.99 - WRP  - func_8018E01C
 0.99 - RWRP - func_8018FF9C
 
-ref. - CEN  - func_8019A420 - found 6 matches total:
-0.99 - DRE  - func_801A0564
-0.99 - NO3  - func_801CAE20
-0.99 - NP3  - func_801C2690
-0.99 - NZ0  - func_801C8ADC
-0.99 - WRP  - func_801917BC
-0.99 - RWRP - func_8019373C
-
 ref. - RWRP - func_8018E1FC - found 6 matches total:
 0.99 - CEN  - func_80194EE0 - (decompiled)
 0.99 - DRE  - func_8019B024 - (decompiled)
@@ -871,6 +863,14 @@ ref. - RWRP - func_80190D1C - found 6 matches total:
 0.99 - NP3  - EntityHeartDrop - (decompiled)
 0.99 - NZ0  - EntityHeartDrop - (decompiled)
 0.99 - WRP  - EntityHeartDrop - (decompiled)
+
+ref. - RWRP - func_8019373C - found 6 matches total:
+0.99 - CEN  - func_8019A420 - (decompiled)
+0.99 - DRE  - func_801A0564 - (decompiled)
+0.99 - NO3  - func_801CAE20 - (decompiled)
+0.99 - NP3  - func_801C2690 - (decompiled)
+0.99 - NZ0  - func_801C8ADC - (decompiled)
+0.99 - WRP  - func_801917BC - (decompiled)
 
 ref. - CEN  - func_8018E180 - found 5 matches total:
 0.99 - DRE  - func_801949E8
