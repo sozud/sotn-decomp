@@ -27,7 +27,7 @@ us/st/rwrp/nonmatchings/8DF0/func_8018DE98.s                        32          
 us/st/rwrp/nonmatchings/8DF0/func_8018DFCC.s                        32           6
 us/st/rwrp/nonmatchings/8DF0/func_8018DDF0.s                        33           6
 us/st/rwrp/nonmatchings/8DF0/func_8018C7E0.s                        34           2
-us/st/rwrp/nonmatchings/8DF0/func_8018D580.s                        34           4
+us/st/rwrp/nonmatchings/8DF0/DestroyEntity.s                        34           4
 us/st/rwrp/nonmatchings/8DF0/func_801959BC.s                        34           5
 us/st/rwrp/nonmatchings/8DF0/func_8018E160.s                        34           6
 us/st/np3/nonmatchings/4B018/func_801CDFD8.s                        35           4
@@ -184,7 +184,6 @@ us/st/wrp/nonmatchings/D020/func_801916C4.s                         76          
 us/dra/nonmatchings/5298C/func_800F8E18.s                           77           6
 us/st/no3/nonmatchings/46684/func_801D0A2C.s                        77          11
 us/st/np3/nonmatchings/3DEF4/func_801C4144.s                        77          11
-us/st/mad/nonmatchings/D8C8/CollectSubweapon.s                      78           9          https://decomp.me/scratch/GsS0m
 us/dra/nonmatchings/75F54/func_8012E9C0.s                           78          10
 us/st/rwrp/nonmatchings/8DF0/func_80191490.s                        78          11
 us/st/cen/nonmatchings/D600/func_8019444C.s                         79           8
@@ -198,20 +197,13 @@ us/st/st0/nonmatchings/30030/func_801B4AF0.s                        79          
 us/st/wrp/nonmatchings/6FD0/func_8018B7E8.s                         79           8          https://decomp.me/scratch/EfbPc (Scraped 0.802)
 us/st/sel/nonmatchings/2D260/func_801B27A8.s                        80           5          https://decomp.me/scratch/QbZCn (Scraped 0.901)
 us/st/cen/nonmatchings/D600/func_80193184.s                         80          10
-us/st/cen/nonmatchings/D600/func_80195A50.s                         80          10
 us/st/dre/nonmatchings/14214/func_80199014.s                        80          10
 us/st/dre/nonmatchings/14214/func_801992C8.s                        80          10
-us/st/dre/nonmatchings/14214/func_8019BB94.s                        80          10
 us/st/mad/nonmatchings/D8C8/func_80190C78.s                         80          10
-us/st/no3/nonmatchings/3E134/CollectSubweapon.s                     80          10          https://decomp.me/scratch/Oblvj (Scraped 0.997)
 us/st/no3/nonmatchings/3E134/func_801C38D0.s                        80          10
 us/st/no3/nonmatchings/3E134/func_801C3B84.s                        80          10
-us/st/np3/nonmatchings/390BC/CollectSubweapon.s                     80          10          https://decomp.me/scratch/Oblvj (Scraped 0.997)
-us/st/nz0/nonmatchings/36DE4/CollectSubweapon.s                     80          10          https://decomp.me/scratch/gto6i
 us/st/rwrp/nonmatchings/8DF0/func_8018C1EC.s                        80          10
 us/st/rwrp/nonmatchings/8DF0/func_8018C4A0.s                        80          10
-us/st/rwrp/nonmatchings/8DF0/func_8018ED6C.s                        80          10
-us/st/wrp/nonmatchings/6FD0/CollectSubweapon.s                      80          10          https://decomp.me/scratch/Oblvj (Scraped 0.997)
 us/st/wrp/nonmatchings/6FD0/func_8018A26C.s                         80          10
 us/dra/nonmatchings/5087C/func_800F1EB0.s                           80          13
 us/dra/nonmatchings/5087C/SetNextRoomToLoad.s                       80          14          https://decomp.me/scratch/SulYc (Scraped 0.812)

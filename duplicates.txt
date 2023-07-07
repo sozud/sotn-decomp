@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 523
-Number of undecompiled duplicates found: 466
+Number of decompiled duplicates found: 522
+Number of undecompiled duplicates found: 458
 Number of overall exact duplicates found: 118
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -143,7 +143,7 @@ ref. - CEN  - EntityRedDoor - found 13 matches total:
 0.99 - WRP  - EntityRedDoor
 0.99 - RWRP - func_8018C948
 
-ref. - RWRP - func_8018D580 - found 11 matches total:
+ref. - RWRP - DestroyEntity - found 11 matches total:
 1.00 - RIC  - func_80156C60 - (decompiled)
 1.00 - CEN  - DestroyEntity - (decompiled)
 1.00 - DRE  - DestroyEntity - (decompiled)
@@ -826,14 +826,6 @@ ref. - CEN  - func_80191280 - found 6 matches total:
 0.99 - WRP  - TestCollisions
 0.99 - RWRP - func_8018A59C
 
-ref. - CEN  - func_80195A50 - found 6 matches total:
-0.99 - DRE  - func_8019BB94
-0.99 - NO3  - CollectSubweapon
-0.99 - NP3  - CollectSubweapon
-0.99 - NZ0  - CollectSubweapon
-0.99 - WRP  - CollectSubweapon
-0.99 - RWRP - func_8018ED6C
-
 ref. - CEN  - func_80195B68 - found 6 matches total:
 0.99 - DRE  - CollectHeartVessel - (decompiled)
 0.99 - NO3  - CollectHeartVessel - (decompiled)
@@ -1041,9 +1033,6 @@ ref. - DRE  - func_80194F14 - found 1 matches total:
 
 ref. - MAD  - CollectHeart - found 1 matches total:
 0.99 - ST0  - CollectHeart - (decompiled)
-
-ref. - MAD  - CollectSubweapon - found 1 matches total:
-0.99 - ST0  - CollectSubweapon - (decompiled)
 
 ref. - MAD  - EntityRelicOrb - found 1 matches total:
 0.99 - ST0  - func_801B7308
