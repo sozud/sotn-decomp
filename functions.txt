@@ -503,7 +503,6 @@ us/st/rwrp/nonmatchings/8DF0/func_801951F0.s                       258          
 us/st/st0/nonmatchings/36358/func_801BD0C0.s                       258          14
 us/st/wrp/nonmatchings/D020/func_80193270.s                        258          14          https://decomp.me/scratch/77bcs (Scraped 0.008)
 us/dra/nonmatchings/75F54/func_80121F58.s                          258          22
-us/dra/nonmatchings/5298C/func_800F4994.s                          258          24          https://decomp.me/scratch/bXnUC (Scraped 0.991)
 us/dra/nonmatchings/75F54/func_80130618.s                          258          28  Yes
 us/ric/nonmatchings/26C84/func_8016DF74.s                          258          29  Yes
 us/st/nz0/nonmatchings/43F9C/func_801C4198.s                       260          24          https://decomp.me/scratch/7soIb (Scraped 0.819)
