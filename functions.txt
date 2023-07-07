@@ -193,7 +193,6 @@ us/st/no3/nonmatchings/3E134/func_801C38D0.s                        80          
 us/st/no3/nonmatchings/3E134/func_801C3B84.s                        80          10
 us/st/rwrp/nonmatchings/8DF0/func_8018C1EC.s                        80          10
 us/st/rwrp/nonmatchings/8DF0/func_8018C4A0.s                        80          10
-us/st/wrp/nonmatchings/6FD0/func_8018A26C.s                         80          10
 us/dra/nonmatchings/5087C/func_800F1EB0.s                           80          13
 us/dra/nonmatchings/5087C/SetNextRoomToLoad.s                       80          14          https://decomp.me/scratch/SulYc (Scraped 0.812)
 us/st/sel/nonmatchings/38D24/MDEC_print_error.s                     81           4
@@ -375,7 +374,6 @@ us/st/mad/nonmatchings/139E0/func_80195C38.s                       151          
 us/st/no3/nonmatchings/46684/func_801C9080.s                       151          19
 us/st/rwrp/nonmatchings/8DF0/func_8019199C.s                       151          19
 us/st/st0/nonmatchings/36358/func_801B8108.s                       151          19
-us/st/wrp/nonmatchings/D020/func_8018FA1C.s                        151          19
 us/st/no3/nonmatchings/377D4/EntityDeathSkySwirl.s                 151          21
 us/st/dre/nonmatchings/1C7DC/func_801A2A58.s                       152           4
 us/dra/nonmatchings/692E8/func_8010D800.s                          152          10
