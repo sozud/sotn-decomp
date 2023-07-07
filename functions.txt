@@ -151,7 +151,6 @@ us/st/no3/nonmatchings/3E134/func_801C37D4.s                        73          
 us/st/no3/nonmatchings/3E134/func_801C3A88.s                        73           9
 us/st/rwrp/nonmatchings/8DF0/func_8018C0F0.s                        73           9
 us/st/rwrp/nonmatchings/8DF0/func_8018C3A4.s                        73           9
-us/st/wrp/nonmatchings/6FD0/func_8018A170.s                         73           9          https://decomp.me/scratch/MvBMN (Scraped 0.921)
 us/st/sel/nonmatchings/2D260/func_801B4C68.s                        74           4
 us/dra/nonmatchings/5087C/func_800F2014.s                           74           7
 us/st/cen/nonmatchings/D600/EntityIntenseExplosion.s                74           9
