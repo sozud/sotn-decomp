@@ -184,15 +184,6 @@ us/st/no3/nonmatchings/46684/func_801D0A2C.s                        77          
 us/st/np3/nonmatchings/3DEF4/func_801C4144.s                        77          11
 us/dra/nonmatchings/75F54/func_8012E9C0.s                           78          10
 us/st/rwrp/nonmatchings/8DF0/func_80191490.s                        78          11
-us/st/cen/nonmatchings/D600/func_8019444C.s                         79           8
-us/st/dre/nonmatchings/14214/func_8019A590.s                        79           8
-us/st/mad/nonmatchings/D8C8/func_80191F24.s                         79           8
-us/st/no3/nonmatchings/3E134/func_801C4E4C.s                        79           8
-us/st/np3/nonmatchings/390BC/func_801BC6BC.s                        79           8
-us/st/nz0/nonmatchings/36DE4/func_801BCAD4.s                        79           8
-us/st/rwrp/nonmatchings/8DF0/func_8018D768.s                        79           8
-us/st/st0/nonmatchings/30030/func_801B4AF0.s                        79           8          https://decomp.me/scratch/2ry2z
-us/st/wrp/nonmatchings/6FD0/func_8018B7E8.s                         79           8          https://decomp.me/scratch/EfbPc (Scraped 0.802)
 us/st/sel/nonmatchings/2D260/func_801B27A8.s                        80           5          https://decomp.me/scratch/QbZCn (Scraped 0.901)
 us/st/cen/nonmatchings/D600/func_80193184.s                         80          10
 us/st/dre/nonmatchings/14214/func_80199014.s                        80          10
