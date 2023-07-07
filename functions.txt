@@ -395,15 +395,7 @@ us/dra/nonmatchings/692E8/func_8010D59C.s                          168          
 us/dra/nonmatchings/5087C/func_800F1B08.s                          168          28
 us/dra/nonmatchings/75F54/func_8012EAD0.s                          169          26
 us/dra/nonmatchings/75F54/func_8012E550.s                          169          38
-us/st/cen/nonmatchings/D600/func_80194674.s                        170          19
-us/st/dre/nonmatchings/14214/func_8019A7B8.s                       170          19
-us/st/mad/nonmatchings/D8C8/func_80192190.s                        170          19
-us/st/no3/nonmatchings/3E134/func_801C5074.s                       170          19
-us/st/np3/nonmatchings/390BC/func_801BC8E4.s                       170          19          https://decomp.me/scratch/Bnanu (Scraped 0.743)
-us/st/nz0/nonmatchings/36DE4/func_801BCCFC.s                       170          19
 us/st/rwrp/nonmatchings/8DF0/func_8018D990.s                       170          19
-us/st/st0/nonmatchings/30030/func_801B4D5C.s                       170          19
-us/st/wrp/nonmatchings/6FD0/func_8018BA10.s                        170          19          https://decomp.me/scratch/TDhWs (Scraped 0.998)
 us/dra/nonmatchings/692E8/func_80110968.s                          172          28  Yes
 us/ric/nonmatchings/22380/func_8015F414.s                          173          27
 us/dra/nonmatchings/75F54/func_8012EF2C.s                          174          34  Yes
