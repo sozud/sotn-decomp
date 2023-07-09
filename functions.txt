@@ -316,7 +316,6 @@ us/st/mad/nonmatchings/139E0/func_801969EC.s                       131          
 us/st/no3/nonmatchings/46684/func_801C9C78.s                       131          17
 us/st/rwrp/nonmatchings/8DF0/func_80192594.s                       131          17
 us/dra/nonmatchings/5298C/func_800FA60C.s                          132          17
-us/dra/nonmatchings/5298C/func_800F72BC.s                          133          18          https://decomp.me/scratch/z2LZu (Scraped 0.997)
 us/ric/nonmatchings/1AC60/func_8015A7D0.s                          133          21          https://decomp.me/scratch/1JWA0
 us/st/np3/nonmatchings/4B018/func_801CE4CC.s                       133          26
 us/st/np3/nonmatchings/4B018/func_801D0B78.s                       133          34
