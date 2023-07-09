@@ -259,7 +259,7 @@ us/st/sel/nonmatchings/2C048/func_801ACFBC.s                       103          
 us/st/dre/nonmatchings/1C7DC/func_801A2C9C.s                       104           4
 us/st/sel/nonmatchings/3642C/func_801B76F0.s                       105           7
 us/st/st0/nonmatchings/30030/func_801B101C.s                       105           7
-us/dra/nonmatchings/5298C/func_800F8C98.s                          106           9          https://decomp.me/scratch/BleAQ (Scraped 0.952)
+us/dra/nonmatchings/5298C/func_800F8C98.s                          106           9          https://decomp.me/scratch/BleAQ (Scraped 0.951)
 us/dra/nonmatchings/5087C/func_800F2288.s                          108          12
 us/dra/nonmatchings/5298C/func_800F5904.s                          109          11          https://decomp.me/scratch/DP2LU (Scraped 0.751)
 us/dra/nonmatchings/5D6C4/func_800FDB18.s                          109          14  Yes     https://decomp.me/scratch/lFwhP (Scraped 1.0)
