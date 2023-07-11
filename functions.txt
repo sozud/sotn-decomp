@@ -416,7 +416,6 @@ us/st/cen/nonmatchings/D600/func_8018E3E8.s                        198          
 us/dra/nonmatchings/75F54/func_8011EDA8.s                          198          27
 us/dra/nonmatchings/42398/func_800E2824.s                          200          29          https://decomp.me/scratch/vbKu6 (Scraped 0.998)
 us/dra/nonmatchings/75F54/EntityPlayerPinkEffect.s                 206          36  Yes
-us/st/cen/nonmatchings/D600/EntityMovingElevator.s                 208          26          https://decomp.me/scratch/R2vIX (Scraped 0.995)
 us/ric/nonmatchings/1F348/func_8015B898.s                          209          37          https://decomp.me/scratch/eIPhn (Scraped 0.546)
 us/st/mad/nonmatchings/D8C8/func_8018DC28.s                        211          29
 us/st/cen/nonmatchings/D600/func_80190E7C.s                        211          34
@@ -554,7 +553,6 @@ us/st/sel/nonmatchings/2D260/func_801B3164.s                       358          
 us/ric/nonmatchings/26C84/func_80169704.s                          359          47  Yes
 us/st/nz0/nonmatchings/33FCC/EntityCloseBossRoom.s                 362          55          https://decomp.me/scratch/bqgN9
 us/ric/nonmatchings/26C84/func_8016C734.s                          363          42  Yes
-us/st/cen/nonmatchings/D600/EntityElevatorStationary.s             364          58          https://decomp.me/scratch/UA8ev (Scraped 0.994)
 us/ric/nonmatchings/1AC60/func_801590A0.s                          366          69
 us/dra/nonmatchings/75F54/func_8012E040.s                          366          76
 us/st/nz0/nonmatchings/36DE4/func_801B8F94.s                       367          75  Yes
