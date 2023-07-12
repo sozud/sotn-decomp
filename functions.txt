@@ -67,7 +67,7 @@ us/st/cen/nonmatchings/D600/func_8018E180.s                         51          
 us/st/dre/nonmatchings/14214/func_801949E8.s                        51           2
 us/st/nz0/nonmatchings/36DE4/func_801B7740.s                        51           2          https://decomp.me/scratch/9iyBi (Scraped 0.716)
 us/st/sel/nonmatchings/3642C/func_801B66A4.s                        51           2
-us/st/st0/nonmatchings/28BF8/func_801A8BF8.s                        51           2          https://decomp.me/scratch/U3zGU (Scraped 0.991)
+us/st/st0/nonmatchings/28BF8/func_801A8BF8.s                        51           2          https://decomp.me/scratch/aG1bx (Scraped 0.991)
 us/st/mad/nonmatchings/D8C8/CollectHeart.s                          51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
 us/dra/nonmatchings/75F54/func_8011B480.s                           51           6          https://decomp.me/scratch/vljJJ (Scraped 0.766)
 us/st/mad/nonmatchings/D8C8/func_8018E090.s                         51           6
@@ -84,7 +84,6 @@ us/st/cen/nonmatchings/D600/func_80194394.s                         55          
 us/st/cen/nonmatchings/D600/func_8019565C.s                         55           7
 us/st/rwrp/nonmatchings/8DF0/func_8018D6B0.s                        55           7
 us/st/rwrp/nonmatchings/8DF0/func_8018E978.s                        55           7
-us/dra/nonmatchings/692E8/func_8010DB38.s                           56           3          https://decomp.me/scratch/w4uUF (Scraped 0.996)
 us/dra/nonmatchings/47BB8/LoadStageTileset.s                        56           7          https://decomp.me/scratch/yxn6F (Scraped 0.947)
 us/st/cen/nonmatchings/D600/func_801990F8.s                         57           4
 us/st/rwrp/nonmatchings/8DF0/func_80192414.s                        57           4
