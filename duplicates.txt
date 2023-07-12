@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 557
-Number of undecompiled duplicates found: 414
+Number of decompiled duplicates found: 560
+Number of undecompiled duplicates found: 411
 Number of overall exact duplicates found: 118
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -876,7 +876,7 @@ ref. - CEN  - func_8018E180 - found 5 matches total:
 0.99 - DRE  - func_801949E8
 0.99 - NZ0  - func_801B7740
 0.99 - SEL  - func_801B66A4
-0.99 - ST0  - func_801A8BF8
+0.99 - ST0  - func_801A8BF8 - (decompiled)
 0.99 - NO3  - func_801BE7BC
 
 ref. - CEN  - func_8018E238 - found 5 matches total:
@@ -884,7 +884,7 @@ ref. - CEN  - func_8018E238 - found 5 matches total:
 0.99 - NO3  - func_801BE870
 0.99 - NZ0  - func_801B77F8
 0.99 - SEL  - func_801B675C
-0.99 - ST0  - func_801A8CB0
+0.99 - ST0  - func_801A8CB0 - (decompiled)
 
 ref. - DRE  - EntityFadeToWhite1 - found 5 matches total:
 0.99 - DRE  - EntityFadeToWhite2
@@ -917,7 +917,7 @@ ref. - CEN  - func_8018E6C4 - found 4 matches total:
 0.99 - DRE  - func_80194FF4
 0.99 - NO3  - func_801BEDAC
 0.99 - NZ0  - func_801B7C54
-0.99 - ST0  - func_801A910C
+0.99 - ST0  - func_801A910C - (decompiled)
 
 ref. - MAIN - GetVideoMode - found 4 matches total:
 0.99 - MAIN - GetGraphType - (decompiled)

@@ -67,7 +67,6 @@ us/st/cen/nonmatchings/D600/func_8018E180.s                         51          
 us/st/dre/nonmatchings/14214/func_801949E8.s                        51           2
 us/st/nz0/nonmatchings/36DE4/func_801B7740.s                        51           2          https://decomp.me/scratch/9iyBi (Scraped 0.716)
 us/st/sel/nonmatchings/3642C/func_801B66A4.s                        51           2
-us/st/st0/nonmatchings/28BF8/func_801A8BF8.s                        51           2          https://decomp.me/scratch/aG1bx (Scraped 0.991)
 us/st/mad/nonmatchings/D8C8/CollectHeart.s                          51           4          https://decomp.me/scratch/DlOhh (Scraped 0.987)
 us/dra/nonmatchings/75F54/func_8011B480.s                           51           6          https://decomp.me/scratch/vljJJ (Scraped 0.766)
 us/st/mad/nonmatchings/D8C8/func_8018E090.s                         51           6
@@ -166,7 +165,6 @@ us/st/cen/nonmatchings/D600/func_8018E6C4.s                         76          
 us/st/dre/nonmatchings/14214/func_80194FF4.s                        76           7
 us/st/no3/nonmatchings/3E134/func_801BEDAC.s                        76           7
 us/st/nz0/nonmatchings/36DE4/func_801B7C54.s                        76           7
-us/st/st0/nonmatchings/28BF8/func_801A910C.s                        76           7
 us/st/rwrp/nonmatchings/8DF0/func_80193644.s                        76          12
 us/st/no3/nonmatchings/46684/func_801D0A2C.s                        77          11
 us/st/np3/nonmatchings/3DEF4/func_801C4144.s                        77          11
@@ -268,7 +266,6 @@ us/st/dre/nonmatchings/14214/func_80194AA0.s                       110          
 us/st/no3/nonmatchings/3E134/func_801BE870.s                       110          13
 us/st/nz0/nonmatchings/36DE4/func_801B77F8.s                       110          13
 us/st/sel/nonmatchings/3642C/func_801B675C.s                       110          13
-us/st/st0/nonmatchings/28BF8/func_801A8CB0.s                       110          13          https://decomp.me/scratch/fKrZZ (Scraped 0.936)
 us/dra/nonmatchings/75F54/func_80133604.s                          111          18
 us/dra/nonmatchings/75F54/func_80133488.s                          111          20
 us/dra/nonmatchings/692E8/func_801106A4.s                          111          21
