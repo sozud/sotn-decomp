@@ -229,7 +229,7 @@ us/st/wrp/nonmatchings/D020/func_80193658.s                         93          
 us/dra/nonmatchings/75F54/func_80123788.s                           93          11
 us/st/sel/nonmatchings/2D260/func_801B3E2C.s                        93          11
 us/dra/nonmatchings/5298C/func_800FA9DC.s                           93          14
-us/dra/nonmatchings/692E8/func_8010E570.s                           93          16
+us/dra/nonmatchings/692E8/func_8010E570.s                           93          16          https://decomp.me/scratch/Cxq6C (Scraped 0.587)
 us/ric/nonmatchings/26C84/func_801682B4.s                           95          10
 us/dra/nonmatchings/47BB8/func_800E7BB8.s                           96          10  Yes     https://decomp.me/scratch/0bvjl (Scraped 0.85)
 us/dra/nonmatchings/47BB8/func_800EA5E4.s                           96          14
@@ -730,7 +730,7 @@ us/dra/nonmatchings/75F54/func_80116B0C.s                          885         1
 us/st/sel/nonmatchings/3642C/func_801B69F8.s                       892          96  Yes
 us/st/st0/nonmatchings/36358/EntityCutscenePhotograph.s            904          68  Yes
 us/st/no3/nonmatchings/46684/EntityWarg.s                          929         168  Yes
-us/dra/nonmatchings/692E8/func_8010EDB8.s                          932         157  Yes     https://decomp.me/scratch/CsGcF (Scraped 0.002)
+us/dra/nonmatchings/692E8/func_8010EDB8.s                          932         157  Yes     https://decomp.me/scratch/G7vpg (Scraped 0.501)
 us/dra/nonmatchings/73AAC/AlucardHandleDamage.s                    937         168  Yes     https://decomp.me/scratch/eKFtd (Scraped 0.796)
 us/st/nz0/nonmatchings/47CF0/EntityMagicallySealedDoor.s           940         113  Yes     https://decomp.me/scratch/NlnlG (Scraped 0.002)
 us/st/st0/nonmatchings/30030/func_801B1CA0.s                       953         133
