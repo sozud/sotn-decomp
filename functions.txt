@@ -193,7 +193,6 @@ us/st/dre/nonmatchings/1C7DC/func_8019E3C8.s                        84          
 us/st/mad/nonmatchings/139E0/func_8019583C.s                        84           5
 us/st/no3/nonmatchings/46684/func_801C8C84.s                        84           5          https://decomp.me/scratch/M5ZeL (Scraped 0.938)
 us/st/np3/nonmatchings/3DEF4/func_801C04F4.s                        84           5
-us/st/nz0/nonmatchings/3E30C/func_801C090C.s                        84           5          https://decomp.me/scratch/0VI4v
 us/st/rwrp/nonmatchings/8DF0/func_801915A0.s                        84           5
 us/st/st0/nonmatchings/36358/func_801B7D0C.s                        84           5
 us/dra/nonmatchings/75F54/func_8011E390.s                           84           7          https://decomp.me/scratch/dSjFV (Scraped 0.391)
