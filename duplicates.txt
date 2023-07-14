@@ -1,5 +1,5 @@
-Number of decompiled duplicates found: 561
-Number of undecompiled duplicates found: 410
+Number of decompiled duplicates found: 562
+Number of undecompiled duplicates found: 409
 Number of overall exact duplicates found: 118
 
 ref. - MAIN - ChangeClearRCnt - found 51 matches total:
@@ -983,7 +983,7 @@ ref. - MAIN - SetVertex0 - found 2 matches total:
 
 ref. - NO3  - func_801BEA20 - found 2 matches total:
 0.99 - NZ0  - func_801B79A8
-0.99 - ST0  - func_801A8E60
+0.99 - ST0  - func_801A8E60 - (decompiled)
 
 ref. - CEN  - EntityEquipItemDrop - found 1 matches total:
 0.99 - RWRP - func_8018F9B4

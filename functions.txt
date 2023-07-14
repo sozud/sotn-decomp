@@ -376,7 +376,6 @@ us/st/np3/nonmatchings/44DCC/func_801C61B4.s                       185          
 us/dra/nonmatchings/47BB8/DecompressData.s                         185          48  Yes
 us/st/no3/nonmatchings/3E134/func_801BEA20.s                       186          20
 us/st/nz0/nonmatchings/36DE4/func_801B79A8.s                       186          20
-us/st/st0/nonmatchings/28BF8/func_801A8E60.s                       186          20          https://decomp.me/scratch/CJ6Gy (Scraped 0.996)
 us/st/sel/nonmatchings/2D260/func_801AE6D0.s                       187          15
 us/st/nz0/nonmatchings/30958/func_801B2FD8.s                       187          18          https://decomp.me/scratch/2pQT4 (Scraped 0.844)
 us/dra/nonmatchings/75F54/func_8012C600.s                          187          21
