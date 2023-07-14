@@ -36,5 +36,4 @@ __asm__(".include \"macro.inc\"\n");
 #define INCLUDE_ASM_NO_ALIGN(FOLDER, NAME, LABEL)
 #endif
 
-
 #endif
