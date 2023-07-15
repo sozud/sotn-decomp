@@ -763,7 +763,7 @@ us/st/np3/nonmatchings/36990/EntityGaibon.s                       1410         2
 us/dra/nonmatchings/47BB8/RenderPrimitives.s                      1434          80  Yes     https://decomp.me/scratch/geI8L (Scraped 0.941)
 us/dra/nonmatchings/5298C/func_800FBC24.s                         1622         352  Yes     https://decomp.me/scratch/5KKhG (Scraped 0.001)
 us/dra/nonmatchings/692E8/EntityAlucard.s                         1830         350  Yes
-us/st/dre/nonmatchings/11A64/EntitySuccubus.s                     1854         367  Yes     https://decomp.me/scratch/87q3U (Scraped 0.948)
+us/st/dre/nonmatchings/11A64/EntitySuccubus.s                     1854         367  Yes     https://decomp.me/scratch/R2L4x (Scraped 0.984)
 us/dra/nonmatchings/75F54/EntityPlayerBlinkWhite.s                1975         219  Yes
 us/dra/nonmatchings/5298C/func_800F298C.s                         2100         334  Yes     https://decomp.me/scratch/bHBeu (Scraped 0.001)
 us/st/sel/nonmatchings/2D260/Update.s                             2784         653  Yes
