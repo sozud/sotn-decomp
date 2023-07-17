@@ -386,7 +386,7 @@ us/st/dre/nonmatchings/14214/EntityFadeToWhite2.s                  190          
 us/dra/nonmatchings/692E8/func_80111018.s                          190          33  Yes
 us/st/dre/nonmatchings/14214/func_80194C50.s                       192          20
 us/ric/nonmatchings/1AC60/func_8015885C.s                          192          24
-us/st/no3/nonmatchings/377D4/EntityUnkId1C.s                       193          23          https://decomp.me/scratch/xbzYf (Scraped 0.976)
+us/st/no3/nonmatchings/377D4/EntityUnkId1C.s                       193          23          https://decomp.me/scratch/Y8O08 (Scraped 0.976)
 us/st/np3/nonmatchings/3246C/func_801B3704.s                       193          23
 us/st/nz0/nonmatchings/30958/EntityBreakable.s                     194          21          https://decomp.me/scratch/0tv5m
 us/st/nz0/nonmatchings/30958/func_801B2D08.s                       195          18          https://decomp.me/scratch/ixW6j
@@ -673,7 +673,6 @@ us/st/st0/nonmatchings/2B0C8/func_801ABBBC.s                       621          
 us/dra/nonmatchings/75F54/func_8011E4BC.s                          624          79  Yes
 us/st/no3/nonmatchings/46684/EntityLargeUpwardsSplash.s            633          82
 us/st/np3/nonmatchings/44DCC/func_801C4DCC.s                       633          82
-us/dra/nonmatchings/play/HandlePlay.s                              635         108  Yes
 us/st/st0/nonmatchings/36358/EntityBackgroundVortex.s              639          76
 us/ric/nonmatchings/26C84/func_80164444.s                          659          62
 us/st/no3/nonmatchings/3E134/EntityUnkId5A.s                       664         123  Yes
