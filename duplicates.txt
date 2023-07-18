@@ -1108,6 +1108,9 @@ ref. - NP3  - EntitySwitch - found 1 matches total:
 ref. - SEL  - MDEC_in_sync - found 1 matches total:
 0.99 - SEL  - MDEC_out_sync
 
+ref. - SEL  - MemcardFormat - found 1 matches total:
+0.99 - DRA  - MemcardFormat - (decompiled)
+
 ref. - SEL  - func_801B3F94 - found 1 matches total:
 0.99 - DRA  - func_80102E04 - (decompiled)
 
@@ -1116,7 +1119,4 @@ ref. - SEL  - func_801B69F8 - found 1 matches total:
 
 ref. - SEL  - func_801B881C - found 1 matches total:
 0.99 - DRA  - func_800E9610 - (decompiled)
-
-ref. - SEL  - func_801B8D24 - found 1 matches total:
-0.99 - DRA  - func_800E9B18 - (decompiled)
 
