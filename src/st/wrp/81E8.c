@@ -1,3 +1,4 @@
+#if 0
 #include "wrp.h"
 
 extern s8 c_HeartPrizes[];
@@ -21,3 +22,4 @@ extern LayoutEntity* g_pStObjLayout[];
 #include "../update.h"
 
 #include "../update_stage_entities.h"
+#endif
