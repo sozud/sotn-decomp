@@ -48,7 +48,7 @@ void __attribute__((section(".inject-func"))) InjectMain(void) {
     // Now we say to 'entrypoint_sotn' to call our main every frame
     *InjectPoint = JAL(MainLoop);
 }
-void Dummy(Entity*) {}
+void Dummy(Entity* entity_ptr) {}
 
 bool g_Init = false;
 void Init(void);
