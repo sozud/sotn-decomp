@@ -9,4 +9,5 @@ python3 ../../tools/maspsx/maspsx.py --no-macro-inc --expand-div ./out/three.s >
 mipsel-linux-gnu-as ./out/one_m.s -o ./out/one.o
 mipsel-linux-gnu-as ./out/two_m.s -o ./out/two.o
 mipsel-linux-gnu-as ./out/three_m.s -o ./out/three.o
-mipsel-linux-gnu-ld -Map ./out/split.map -o ./out/split.elf ./out/one.o ./out/two.o ./out/three.o
+mipsel-linux-gnu-ld -T split.ld -Map ./out/split.map -o ./out/split.elf ./out/one.o ./out/two.o ./out/three.o
+mipsel-linux-gnu-objdump -M -march=mips3000 -D  ./out/split.elf > ./out/split.s
