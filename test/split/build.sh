@@ -1,8 +1,11 @@
 rm -rf out
 mkdir -p out
-../../bin/cc1-psx-26 -O2 -mcpu=3000 -fgnu-linker -mgas -gcoff one.c -o ./out/one.s
-../../bin/cc1-psx-26 -O2 -mcpu=3000 -fgnu-linker -mgas -gcoff two.c -o ./out/two.s
-../../bin/cc1-psx-26 -O2 -mcpu=3000 -fgnu-linker -mgas -gcoff three.c -o ./out/three.s
+cpp one.c ./out/one.c
+cpp two.c ./out/two.c
+cpp three.c ./out/three.c
+../../bin/cc1-psx-26 -O2 -mcpu=3000 -fgnu-linker -mgas -gcoff ./out/one.c -o ./out/one.s
+../../bin/cc1-psx-26 -O2 -mcpu=3000 -fgnu-linker -mgas -gcoff ./out/two.c -o ./out/two.s
+../../bin/cc1-psx-26 -O2 -mcpu=3000 -fgnu-linker -mgas -gcoff ./out/three.c -o ./out/three.s
 python3 ../../tools/maspsx/maspsx.py --no-macro-inc --expand-div ./out/one.s > ./out/one_m.s
 python3 ../../tools/maspsx/maspsx.py --no-macro-inc --expand-div ./out/two.s > ./out/two_m.s
 python3 ../../tools/maspsx/maspsx.py --no-macro-inc --expand-div ./out/three.s > ./out/three_m.s

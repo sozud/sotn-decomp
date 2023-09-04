@@ -13,5 +13,9 @@ SECTIONS {
         *(.text*)
     }
 
+    .bss : {
+        *(.bss*)
+    }
+
     end = .;
 }
