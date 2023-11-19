@@ -983,6 +983,8 @@ void InitSoundVars2(void) {
     D_8013B664 = 0;
 }
 
+s32 D_8013B69C;
+
 void InitSoundVars1(void) {
     InitSoundVars2();
     g_CdSoundCommand16 = 0;
