@@ -24,7 +24,7 @@ void _log(unsigned int level, const char* file, unsigned int line,
             WARNF("cannot write '%d' characters in '%s'", n, NAMEOF(buf));
         }
 
-        fprintf(stderr, "[%c][%s:%d][%s] %s\n", levels[level], file, line, func,
+        fprintf(stdout, "[%c][%s:%d][%s] %s\n", levels[level], file, line, func,
                 buf);
     }
     va_end(args);
