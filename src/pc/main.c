@@ -120,6 +120,8 @@ s32 g_CdCommandStatus;
 const char* D_80138784[487];
 s32 D_800C1ECC[];
 
+extern void ExecCd();
+
 int main() {
     bool init = false;
     int frame = 0;
@@ -128,11 +130,19 @@ int main() {
         DEBUGF("-------------------- frame %d --------------------", frame);
         if (!init) {
             SoundInit();
+            SetCdPos(0xB9B6);
             PlaySfx(MU_LOST_PAINTING);
             init = true;
         }
         func_801361F8();
         VSync(0);
+
+        ExecCd();
         frame++;
+
+        if(frame > 10)
+        {
+            exit(0);
+        }
     }
 }
