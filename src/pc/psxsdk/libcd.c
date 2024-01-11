@@ -88,6 +88,7 @@ int CdMix(CdlATV* vol) {
 
 void ExecCd() {
     if (reading) {
+        printf("reading!\n");
         uint8_t sector[SECTOR_SIZE];
         fread(sector, sizeof(uint8_t), SECTOR_SIZE, cd_fp);
         XA_ProcessSector(sector, &AudioBuffer);

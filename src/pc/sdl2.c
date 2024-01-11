@@ -305,6 +305,7 @@ int MyDrawSync(int mode) {
         switch (event.type) {
         case SDL_QUIT:
             g_IsQuitRequested = 1;
+            exit(0);
             break;
         }
     }

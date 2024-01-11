@@ -13,6 +13,8 @@ typedef enum {
 #define NAMEOF(var) #var
 #define NOT_IMPLEMENTED DEBUGF("not implemented")
 
+#define NO_LOGS
+
 #ifndef NO_LOGS
 
 #define DEBUGF(...) _log(LOG_LEVEL_D, __FILE__, __LINE__, __func__, __VA_ARGS__)

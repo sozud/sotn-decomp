@@ -242,7 +242,9 @@ static void InitRoomEntities(s32 objLayoutId) {
     }
 
     INFOF("Stage ID: %02X", g_StageId);
-    PlaySfx(MU_REQUIEM_FOR_THE_GODS);
+    // PlayIt();
+
+    // PlaySfx(0x601);
 }
 
 static void UpdateStageEntities(void) { NOT_IMPLEMENTED; }
