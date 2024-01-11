@@ -327,8 +327,11 @@ u32 func_80134714(s16 sfxId, s32 arg1, u16 arg2) {
 }
 
 void PlaySfx(s16 sfxId) {
+    printf("PlaySfx\n");
     if (g_SoundInitialized != 0) {
+        printf("init\n");
         if (sfxId > SFX_START && sfxId <= SFX_LAST) {
+            printf("wrote %d\n", sfxId);
             g_SfxRingBuffer[g_sfxRingBufferWritePos].sndId = sfxId - SFX_START;
             g_SfxRingBuffer[g_sfxRingBufferWritePos].unk02 = 0xFFFF;
             g_SfxRingBuffer[g_sfxRingBufferWritePos].unk04 = 0;

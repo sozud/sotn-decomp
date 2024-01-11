@@ -16,26 +16,39 @@ void OpenCd(char* filename) {
 }
 
 void MyAudioCallback(void* data, u8* buffer, int length) {
+    // printf("here!\n");
     int i = 0;
-    while (i * 4 < length) {
-        if (AudioBuffer.ReadPos < AudioBuffer.Size) {
-            // emit until we have to generate again
-            int32_t samples[2];
+    void my_audio_callback(void *userdata, u8 *stream, int len);
 
-            GetCDAudio(samples);
+    my_audio_callback(data, buffer, length);
 
-            buffer[i * 4 + 1] = samples[0] >> 8;
-            buffer[i * 4 + 0] = samples[0];
+    //  while (i * 4 < length) {
+    //     buffer[i * 4 + 0] = rand();
+    //     i++;
+    //  }
+    // while (i * 4 < length) {
+    //     // printf("i read size %d %d %d\n", i, AudioBuffer.ReadPos, AudioBuffer.Size);
+    //     if (AudioBuffer.ReadPos < AudioBuffer.Size) {
+    //         printf("filling\n");
+    //         // emit until we have to generate again
+    //         int32_t samples[2];
 
-            // right
-            buffer[i * 4 + 3] = samples[1] >> 8;
-            buffer[i * 4 + 2] = samples[1];
-            i += 1;
-        } else if (CdReading()) {
-            // generate more audio
-            ExecCd();
-        }
-    }
+    //         GetCDAudio(samples);
+
+    //         buffer[i * 4 + 1] = samples[0] >> 8;
+    //         buffer[i * 4 + 0] = samples[0];
+
+    //         // right
+    //         buffer[i * 4 + 3] = samples[1] >> 8;
+    //         buffer[i * 4 + 2] = samples[1];
+    //         i += 1;
+    //     } else if (CdReading()) {
+    //         // printf("exec cd\n");
+    //         // generate more audio
+    //         ExecCd();
+    //     }
+    // }
+    // printf("end of callback\n");
 }
 
 int MyFntPrint(const char* fmt, va_list arg) {

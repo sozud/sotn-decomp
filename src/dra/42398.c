@@ -592,6 +592,7 @@ void PrintGpuInfo(void) {
         b = g_Clut[g_DebugCurPal * COLORS_PER_PAL + g_DebugPalIdx] >> 10 & 0x1F;
         FntPrint("rgb:%02X,%02X,%02X\n", r, g, b);
     } else {
+     
         FntPrint("01:%04x,%04x\n", D_8006C384, D_8006C388);
         FntPrint("23:%04x,%04x\n", D_8006C38C, D_8006C390);
     }
@@ -611,6 +612,8 @@ void PrintHBlankInfo(void) {
 }
 
 void SsVabClose(short vab_id);
+
+#if 0
 #define LOAD_VAB(vab_id, name, addr, data, dataLen)                            \
     SsVabClose(vab_id);                                                        \
     while (SsVabTransCompleted(SS_IMEDIATE) != 1)                              \
@@ -623,7 +626,17 @@ void SsVabClose(short vab_id);
         return -1;                                                             \
     }                                                                          \
     while (SsVabTransCompleted(SS_IMEDIATE) != 1)
+#else
+long _SsVabSpuMallocLoader(unsigned int sizeInBytes, long /*mode*/, short vabId);
+extern u32 _spu_inTransfer ;
+#define LOAD_VAB(vab_id, name, addr, data, dataLen)  \
+    _SsVabOpenHeadWithMode(name, vab_id, _SsVabSpuMallocLoader, 0); \
+    _spu_inTransfer = 0;
+        
+        
 
+    // int _SsVabOpenHeadWithMode(unsigned char *pAddr, int vabId, VabAllocateCallBack pFn, long mode)
+#endif
 s32 LoadVabData(void) {
     LOAD_VAB(0, aPbav, g_VabAddrs[0], D_8013B6A0, vab0Len);
     LOAD_VAB(1, aPbav_0, g_VabAddrs[1], D_8017D350, vab1Len);
@@ -801,11 +814,14 @@ void MainGame(void) {
     SoundInit();
     while (LoadVabData() < 0)
         ;
+
     VSyncCallback(VSyncHandler);
     FntLoad(0x380, 0x100);
     SetDumpFnt(FntOpen(8, 0x30, 0x200, 0x100, 0, 0x200));
     SetDispMask(1);
     SetGameState(Game_Init);
+
+    PlaySfx(0x601);
 
     g_GpuMaxUsage.drawModes = 0;
     g_GpuMaxUsage.gt4 = 0;

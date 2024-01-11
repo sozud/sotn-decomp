@@ -27,6 +27,18 @@ set(SOURCE_FILES_PC
     src/pc/stage_dummy.c
 )
 
+set(SOURCE_FILES_SOUND_REV
+    ../sound_rev/mednafen/dma.cpp
+    ../sound_rev/mednafen/spu.cpp
+    ../sound_rev/psyq_rev/psyq_spu.cpp
+    ../sound_rev/psx_seq_player/lib_snd.cpp
+    ../sound_rev/psx_seq_player/lib_spu.cpp
+    ../sound_rev/psx_seq_player/vs_vt.c
+    ../sound_rev/psx_seq_player/vs_vtc.c
+    ../sound_rev/psx_seq_player/main.cpp
+    ../sound_rev/psx_seq_player/test.cpp
+)
+
 if(WIN32)
 list(APPEND SOURCE_FILES_PC src/pc/plat_win.c)
 else()
@@ -80,6 +92,7 @@ set(SOURCE_FILES_DRA
 )
 
 add_executable(${PROJECT_NAME} 
+    ${SOURCE_FILES_SOUND_REV}
     ${SOURCE_FILES_PC}
     ${SOURCE_FILES_PSX_SDK}
     ${SOURCE_FILES_MOCK_SDK}
@@ -105,3 +118,13 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
     DEMO_KEY_PTR=0
     _internal_version_us
     )
+
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+  set(CMAKE_BUILD_TYPE Debug)
+ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
+ set(CMAKE_LINKER_FLAGS "${CMAKE_LINKER_FLAGS} -fsanitize=address")
+endif()
+
+if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+    target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive -Wno-narrowing)
+endif()
