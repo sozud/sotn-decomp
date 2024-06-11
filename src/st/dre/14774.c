@@ -279,8 +279,3 @@ void func_801961DC(s16 arg0) {
         g_unkGraphicsStruct.unkC = arg0;
     }
 }
-
-INCLUDE_ASM("st/dre/nonmatchings/14774", EntityUnkId21);
-
-// appears to load from the CD and freeze the game
-INCLUDE_ASM("st/dre/nonmatchings/14774", EntityUnkId23);
