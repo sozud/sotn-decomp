@@ -50,6 +50,70 @@ endif()
 set(SOURCE_FILES_PSX_SDK
     src/main/psxsdk/libgpu/ext.c
     src/main/psxsdk/libgpu/prim.c
+
+    src/main/psxsdk/libsnd/ssinit_h.c
+    src/main/psxsdk/libsnd/ssinit.c
+    src/main/psxsdk/libsnd/vmanager.c
+    src/main/psxsdk/libsnd/vm_vsu.c
+    src/main/psxsdk/libsnd/sstick.c
+    src/main/psxsdk/libsnd/vs_mono.c
+    src/main/psxsdk/libsnd/vs_srv.c
+    src/main/psxsdk/libsnd/ssstart.c
+    src/main/psxsdk/libsnd/sstable.c
+    src/main/psxsdk/libsnd/ut_rev.c
+    src/main/psxsdk/libsnd/scsmvol.c
+    src/main/psxsdk/libsnd/scssattr.c
+    src/main/psxsdk/libsnd/scssvol.c
+    src/main/psxsdk/libsnd/ut_rdep.c
+    src/main/psxsdk/libsnd/vs_vab.c
+    src/main/psxsdk/libsnd/vs_vh.c
+    src/main/psxsdk/libsnd/vs_vtb.c
+    src/main/psxsdk/libsnd/vs_vtc.c
+    src/main/psxsdk/libsnd/vs_vtbp.c
+    
+    src/main/psxsdk/libspu/s_i.c
+    src/main/psxsdk/libspu/s_ini.c
+    src/main/psxsdk/libspu/s_dcb.c
+    src/main/psxsdk/libspu/s_m_init.c
+    src/main/psxsdk/libspu/s_it.c
+    src/main/psxsdk/libspu/s_snv.c
+    src/main/psxsdk/libspu/s_sav.c
+    src/main/psxsdk/libspu/s_sr.c
+    src/main/psxsdk/libspu/s_m_util.c
+    src/main/psxsdk/libsnd/ut_ron.c
+    src/main/psxsdk/libspu/s_m_f.c
+    src/main/psxsdk/libspu/s_stsa.c
+    src/main/psxsdk/libspu/s_w.c
+    src/main/psxsdk/libspu/spu.c
+    src/main/psxsdk/libspu/s_itc.c
+    src/main/psxsdk/libspu/s_wp.c
+    src/main/psxsdk/libspu/s_srmp.c
+    src/main/psxsdk/libspu/s_crwa.c
+    src/main/psxsdk/libspu/s_stm.c
+    src/main/psxsdk/libspu/s_sic.c
+    src/main/psxsdk/libspu/s_cb.c
+    src/main/psxsdk/libspu/s_sk.c
+    src/main/psxsdk/libsnd/sscall.c
+    src/main/psxsdk/libsnd/pause.c
+    src/main/psxsdk/libsnd/play.c
+    src/main/psxsdk/libsnd/replay.c
+    src/main/psxsdk/libsnd/tempo.c
+    src/main/psxsdk/libsnd/seqread.c
+    src/main/psxsdk/libsnd/ut_sva.c
+    src/main/psxsdk/libsnd/ut_rdel.c
+    src/main/psxsdk/libsnd/ut_rfb.c
+    src/main/psxsdk/libsnd/adsr.c
+    src/main/psxsdk/libsnd/ut_roff.c
+    src/main/psxsdk/libsnd/next.c
+    src/main/psxsdk/libsnd/ut_gva.c
+    src/main/psxsdk/libsnd/vm_doff.c
+    src/main/psxsdk/libsnd/ut_gpa.c
+    src/main/psxsdk/libsnd/vm_don.c
+    src/main/psxsdk/libsnd/stop.c
+
+    src/pc/psxsdk/mednafen/dma.cpp
+    src/pc/psxsdk/mednafen/spu.cpp
+    src/pc/psxsdk/mednafen/wrapper.cpp
 )
 
 set(SOURCE_FILES_MOCK_SDK

@@ -12,8 +12,10 @@ void SsSetTableSize(char* table, short s_max, short t_max) {
         _ss_score[i] = &pTypedTable[i * t_max];
     }
 
+    printf("i_max %d j_max %d\n", s_max, t_max);
     for (i = 0; i < _snd_seq_s_max; i++) {
         for (j = 0; _snd_seq_t_max > j; j++) {
+            printf("i %d j %d\n", i, j);
             _ss_score[i][j].unk90 = 0;
             _ss_score[i][j].unk3C = 0xFF;
             _ss_score[i][j].unk0 = 0;

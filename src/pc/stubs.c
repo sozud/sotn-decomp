@@ -233,10 +233,20 @@ u32 D_801362C8;
 s32 g_DebugIsRecordingVideo;
 s32 g_DebugWaitInfoTimer;
 s32 g_DebugRecordVideoFid;
-u8 D_8013B6A0[269488] = {0}; // VB file
-u8 D_8017D350[57744] = {0};  // VB file
-u8 D_8018B4E0[64496] = {0};  // VB file
-u8 D_801A9C80[108048] = {0}; // VB file
+#define vab0Len 269488
+#define SD_ALK_VB_LEN 57696
+#define SD_RIH_VB_LEN 57744
+#define SD_MAR_VB_LEN 52896
+#define SD_TUKA1_VB_LEN 63552
+#define SD_KOA1_VB_LEN 59392
+#define SD_MAK_VB_LEN 64496
+#define vab1Len SD_RIH_VB_LEN
+#define vab2Len SD_MAK_VB_LEN
+#define vab3Len 108048
+u8 D_8013B6A0[vab0Len] = {0}; // VB file
+u8 D_8017D350[vab1Len] = {0};  // VB file
+u8 D_8018B4E0[vab3Len] = {0};  // VB file
+u8 D_801A9C80[vab2Len] = {0}; // VB file
 u8 aPbav[0x3000] = {0};      // VH file
 u8 aPbav_0[0x2000] = {0};    // VH file
 u8 aPbav_1[0x2000] = {0};    // VH file
@@ -514,7 +524,7 @@ s16 g_CdSoundCommandQueue[MAX_SND_COUNT];
 u8 D_8013AEDC;
 s8 D_8013AEE8;
 u8 D_801390D8;
-char g_SeqTable[SS_SEQ_TABSIZ * SEQ_TABLE_S_MAX * SEQ_TABLE_T_MAX];
+char g_SeqTable[SS_SEQ_TABSIZ * SEQ_TABLE_S_MAX * SEQ_TABLE_T_MAX * 2];
 u8 D_801390A8;
 s32 D_8013B694;
 u8 g_MuteCd;
