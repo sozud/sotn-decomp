@@ -650,7 +650,7 @@ extern s32 D_80138438;
 extern s32 D_80138440;
 extern s32 D_80138444;
 extern s32 D_80138454;
-extern char g_SeqTable[SS_SEQ_TABSIZ * SEQ_TABLE_S_MAX * SEQ_TABLE_T_MAX];
+extern char g_SeqTable[SS_SEQ_TABSIZ * SEQ_TABLE_S_MAX * SEQ_TABLE_T_MAX * 2];
 extern const char* D_80138784[]; // 487?
 extern s32 g_CurCdPos;
 extern u8 g_CdMode[];
@@ -751,10 +751,20 @@ extern s16 D_8013B64E;
 extern s16 D_8013B650[4];
 extern s16 D_8013B678[];
 extern s16 D_8013B698;
-extern u8 D_8013B6A0[269488]; // VAB file
-extern u8 D_8017D350[57744];  // VAB file
-extern u8 D_8018B4E0[64496];  // VAB file
-extern u8 D_801A9C80[108048]; // VAB file
+#define vab0Len 269488
+#define SD_ALK_VB_LEN 57696
+#define SD_RIH_VB_LEN 57744
+#define SD_MAR_VB_LEN 52896
+#define SD_TUKA1_VB_LEN 63552
+#define SD_KOA1_VB_LEN 59392
+#define SD_MAK_VB_LEN 64496
+#define vab1Len SD_RIH_VB_LEN
+#define vab2Len SD_MAK_VB_LEN
+#define vab3Len 108048
+extern u8 D_8013B6A0[vab0Len]; // VAB file
+extern u8 D_8017D350[vab1Len];  // VAB file
+extern u8 D_8018B4E0[vab3Len];  // VAB file
+extern u8 D_801A9C80[vab2Len]; // VAB file
 extern u16 D_8013AEE0;
 extern s8 D_8013AEE8;
 extern u8 g_SoundInitialized;

@@ -10,16 +10,28 @@ void _SsInit(void) {
     u16* var_a2;
     int i, j;
 
+#ifdef VERSION_PC
+int pos = 0;
+#endif
+
     var_a2 = (u16*)0x1F801C00;
     for (i = 0; i < 24; i++) {
         for (j = 0; j < 8; j++) {
+#ifdef VERSION_PC
+            write_16(0x1F801C00 + pos++, D_80032EC0[j]);
+#else
             *var_a2++ = D_80032EC0[j];
+#endif
         }
     }
 
     var_a2 = (u16*)0x1F801D80;
     for (i = 0; i < 16; i++) {
+#ifdef VERSION_PC
+        write_16(0x1F801D80 + i, D_80032ED0[j]);
+#else
         *var_a2++ = D_80032ED0[i];
+#endif
     }
 
     SpuVmInit(24);

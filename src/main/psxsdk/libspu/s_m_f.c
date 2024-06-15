@@ -1,7 +1,7 @@
 #include "common.h"
 #include "libspu_internal.h"
 
-extern s32 D_8003355C;
+extern s32 _spu_AllocBlockNum;
 
 void SpuFree(unsigned long arg0) {
     s32 temp_v1;
@@ -12,10 +12,10 @@ void SpuFree(unsigned long arg0) {
     s32 block_num;
     u8 pad[2];
     cur_block_num = 0;
-    if (temp_v1 = D_8003355C > 0) {
+    if (temp_v1 = _spu_AllocBlockNum > 0) {
         mask4 = 0x40000000;
         temp = arg0 | 0x80000000;
-        block_num = D_8003355C;
+        block_num = _spu_AllocBlockNum;
         cur_mem = _spu_memList;
         while (true) {
             temp_v1 = cur_mem->addr;

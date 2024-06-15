@@ -18,8 +18,15 @@ void SpuSetKey(long on_off, unsigned long voice_bit) {
         _spu_RXX->rxx.key_on[1] = temp_a3;
         _spu_keystat = temp_a1 | _spu_keystat;
     } else {
+        #if 0
         _spu_RXX->rxx.key_off[0] = temp_a1;
         _spu_RXX->rxx.key_off[1] = temp_a3;
         _spu_keystat = (~temp_a1) & _spu_keystat;
+        #else
+        write_16(0x1ac, temp_a1);
+        write_16(0x1ac + 2, temp_a1);
+                _spu_keystat = (~temp_a1) & _spu_keystat;
+
+        #endif
     }
 }

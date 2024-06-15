@@ -31,7 +31,7 @@ void SpuInit();
 void _SsInit();
 void Snd_SetPlayMode(s16, s16, u8, s16);
 void SpuQuit();
-void _SsStart(s32);
+static void _SsStart(s32);
 extern void (*D_80032EF8)();
 extern void (*D_80032EFC)();
 extern s32 D_80032F04;

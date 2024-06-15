@@ -36,18 +36,39 @@ s32 _spu_init(s32 arg0) {
     s32 channel;
     s16 temp;
 
+#ifdef VERSION_PC
+    // s32 temp2 = read_32(0x1F8010F0); // DMAC_CTRL
+    // temp2 |= 0xB0000;
+    // write_32(0x1F8010F0, temp2);
+#else
     *D_80033514 |= 0xB0000;
+#endif
+#ifdef VERSION_PC
+    write_16(0x180 + 0, 0); 
+    write_16(0x180 + 2, 0); 
+    write_16(0x1AA + 0, 0); 
+#else
     _spu_RXX->rxx.main_vol.left = 0;
     _spu_RXX->rxx.main_vol.right = 0;
     _spu_RXX->rxx.spucnt = 0;
+#endif
     _spu_transMode = 0;
     _spu_addrMode = 0;
     _spu_tsa = 0;
     WASTE_TIME();
+#ifdef VERSION_PC
+    write_16(0x180 + 0, 0); 
+    write_16(0x180 + 2, 0); 
+#else
     _spu_RXX->rxx.main_vol.left = 0;
     _spu_RXX->rxx.main_vol.right = 0;
+#endif
     D_800334FC = 0;
+#ifdef VERSION_PC
+    if (read_16(0x1AA, __FILE__, __LINE__) & 0x7FF) {
+#else
     if (_spu_RXX->rxx.spustat & 0x7FF) {
+#endif
         do {
             wait_count = D_800334FC + 1;
             D_800334FC = wait_count;
@@ -61,6 +82,15 @@ s32 _spu_init(s32 arg0) {
     _spu_mem_mode_plus = 3;
     _spu_mem_mode_unit = 8;
     _spu_mem_mode_unitM = 7;
+#ifdef VERSION_PC
+    write_16(0x1AC, 4); 
+    write_16(0x184 + 0, 0); 
+    write_16(0x184 + 2, 0); 
+    write_16(0x18C + 0, 0); 
+    write_16(0x18C + 2, 0);
+    write_16(0x198 + 0, 0); 
+    write_16(0x198 + 2, 0); 
+#else
     _spu_RXX->rxx.data_trans = 4;
     _spu_RXX->rxx.rev_vol.left = 0;
     _spu_RXX->rxx.rev_vol.right = 0;
@@ -68,7 +98,18 @@ s32 _spu_init(s32 arg0) {
     _spu_RXX->rxx.key_off[1] = 0xFFFF;
     _spu_RXX->rxx.rev_mode[0] = 0;
     _spu_RXX->rxx.rev_mode[1] = 0;
+#endif
     if (arg0 == 0) {
+#ifdef VERSION_PC
+        write_16(0x190 + 0, 0); 
+        write_16(0x190 + 2, 0); 
+        write_16(0x194 + 0, 0); 
+        write_16(0x194 + 2, 0); 
+        write_16(0x1B0 + 0, 0); 
+        write_16(0x1B0 + 2, 0); 
+        write_16(0x1B4 + 0, 0); 
+        write_16(0x1B4 + 2, 0); 
+#else
         _spu_RXX->rxx.chan_fm[0] = 0;
         _spu_RXX->rxx.chan_fm[1] = 0;
         _spu_RXX->rxx.noise_mode[0] = 0;
@@ -77,39 +118,67 @@ s32 _spu_init(s32 arg0) {
         _spu_RXX->rxx.cd_vol.right = 0;
         _spu_RXX->rxx.ex_vol.left = 0;
         _spu_RXX->rxx.ex_vol.right = 0;
+#endif
         _spu_tsa = 0x200;
-        _spu_writeByIO((s32)&D_80033540, 0x10);
+        // _spu_writeByIO((s32)&D_80033540, 0x10);
         for (channel = 0; channel < NUM_SPU_CHANNELS; channel++) {
+#ifdef VERSION_PC
+             write_16(channel * 8 + 0, 0); 
+             write_16(channel * 8 + 1, 0); 
+             write_16(channel * 8 + 2, 0x3fff); 
+             write_16(channel * 8 + 3, 0x200); 
+             write_16(channel * 8 + 4, 0); 
+             write_16(channel * 8 + 5, 0); 
+#else
             _spu_RXX->raw[channel * 8 + 0] = 0;      /* left volume */
             _spu_RXX->raw[channel * 8 + 1] = 0;      /* right volume */
             _spu_RXX->raw[channel * 8 + 2] = 0x3fff; /* pitch */
             _spu_RXX->raw[channel * 8 + 3] = 0x200;  /* addr */
             _spu_RXX->raw[channel * 8 + 4] = 0;      /* adsr1 */
             _spu_RXX->raw[channel * 8 + 5] = 0;      /* adsr2 */
+#endif
         }
+#ifdef VERSION_PC
+        temp = read_16(0x188, __FILE__, __LINE__);
+        write_16(0x188 + 0, 0xFFFF);
+        s32 temp2 = read_16(0x188 + 2, __FILE__, __LINE__);
+        write_16(0x188 + 2, temp2 | 0xFF);
+#else
         temp = _spu_RXX->rxx.key_on[0];
         _spu_RXX->rxx.key_on[0] = 0xFFFF;
         _spu_RXX->rxx.key_on[1] |= 0xFF;
+#endif
         WASTE_TIME();
         WASTE_TIME();
         WASTE_TIME();
         WASTE_TIME();
+#ifdef VERSION_PC
+        temp = read_16(0x18C, __FILE__, __LINE__);
+        write_16(0x18C + 0, 0xFFFF);
+        temp2 = read_16(0x18C + 2, __FILE__, __LINE__);
+        write_16(0x18C + 2, temp2 | 0xFF);
+#else
         temp = _spu_RXX->rxx.key_off[0];
         _spu_RXX->rxx.key_off[0] = 0xFFFF;
         _spu_RXX->rxx.key_off[1] |= 0xFF;
+#endif
         WASTE_TIME();
         WASTE_TIME();
         WASTE_TIME();
         WASTE_TIME();
     }
     _spu_inTransfer = 1;
+#ifdef VERSION_PC
+    write_16(0x1aa, 0xC000);
+#else
     _spu_RXX->rxx.spucnt = 0xC000;
+#endif
     _spu_transferCallback = NULL;
     _spu_IRQCallback = NULL;
     return 0;
 }
 
-s32 _spu_writeByIO(s32 addr, s32 size) {
+s32 _spu_writeByIO(u8* addr, s32 size) {
     volatile s32 sp0;
     volatile s32 sp4;
     s32 spustat_prev;
@@ -127,8 +196,15 @@ s32 _spu_writeByIO(s32 addr, s32 size) {
 
     total_size = size;
     cur_pos = addr;
+    printf("_spu_writeByIO addr %p\n", addr);
+#ifdef VERSION_PC
+    u16 temp =  read_16(0x1ae, __FILE__, __LINE__) & 0x7FF;
+    write_16(0x1ae, temp);
+    write_16(0x1a6, _spu_tsa);
+#else
     spustat = _spu_RXX->rxx.spustat & 0x7FF;
     _spu_RXX->rxx.trans_addr = _spu_tsa;
+#endif
     WASTE_TIME();
     less_than_64 = total_size < 0x41;
     while (total_size != 0) {
@@ -141,16 +217,31 @@ s32 _spu_writeByIO(s32 addr, s32 size) {
             do {
                 data = *cur_pos++;
                 num_trans += 2;
+                #if 0
                 _spu_RXX->rxx.trans_fifo = data;
+                #else
+                write_16(0x1a8, data);
+                #endif
             } while (num_trans < num_to_trans);
         }
+        #if 0
         spucnt = _spu_RXX->rxx.spucnt;
         spucnt &= 0xffcf;
         spucnt |= 0x10;
         _spu_RXX->rxx.spucnt = spucnt;
+        #else
+        spucnt = read_16(0x1aa, __FILE__, __LINE__);
+        spucnt &= 0xffcf;
+        spucnt |= 0x10;
+        write_16(0x1aa, spucnt);     
+        #endif
         WASTE_TIME();
         D_800334FC = 0;
+#if 0
         if (_spu_RXX->rxx.spustat & 0x400) {
+#else
+        if(read_16(0x1ae, __FILE__, __LINE__)& 0x400) {
+#endif
             do {
                 wait_count = D_800334FC + 1;
                 D_800334FC = wait_count;
@@ -158,32 +249,50 @@ s32 _spu_writeByIO(s32 addr, s32 size) {
                     printf("SPU:T/O [%s]\n", "wait (wrdy H -> L)");
                     break;
                 }
+                #if 0
             } while (_spu_RXX->rxx.spustat & 0x400);
+            #else
+            } while(read_16(0x1ae, __FILE__, __LINE__)& 0x400);
+            #endif
         }
         WASTE_TIME();
         WASTE_TIME();
         total_size -= num_to_trans;
         less_than_64 = total_size < 0x41;
     }
+#if 0
     spucnt = _spu_RXX->rxx.spucnt;
     spucnt &= 0xffcf;
     _spu_RXX->rxx.spucnt = spucnt;
     spustat_prev = spustat & 0xFFFF;
     D_800334FC = 0;
     spustat_cur = _spu_RXX->rxx.spustat & 0x7FF;
+#else
+    spucnt = read_16(0x1aa, __FILE__, __LINE__);
+    spucnt &= 0xffcf;
+    write_16(0x1aa, spucnt);
+    spustat_prev = spustat & 0xFFFF;
+    D_800334FC = 0;
+    spustat_cur = read_16(0x1ae, __FILE__, __LINE__) & 0x7FF;
+#endif
     if (spustat_cur != spustat_prev) {
-        while (true) {
-            wait_count = D_800334FC + 1;
-            D_800334FC = wait_count;
-            if (wait_count > 5000) {
-                printf("SPU:T/O [%s]\n", "wait (dmaf clear/W)");
-                return;
-            }
-            spustat_cur = _spu_RXX->rxx.spustat & 0x7FF;
-            if (spustat_cur == spustat_prev) {
-                break;
-            }
-        }
+        // while (true) {
+        //     wait_count = D_800334FC + 1;
+        //     D_800334FC = wait_count;
+        //     if (wait_count > 5000) {
+        //         printf("SPU:T/O [%s]\n", "wait (dmaf clear/W)");
+        //         return;
+        //     }
+        //     #if 0
+        //     spustat_cur = _spu_RXX->rxx.spustat & 0x7FF;
+        //     #else
+        //         spustat_cur = read_16(0x1ae) & 0x7FF;
+
+        //     #endif
+        //     if (spustat_cur == spustat_prev) {
+        //         break;
+        //     }
+        // }
     }
     return spustat_cur;
 }
@@ -244,7 +353,7 @@ void _spu_r_(s32 arg0, u16 arg1, s32 arg2) {
 
 INCLUDE_ASM("main/nonmatchings/psxsdk/libspu/spu", _spu_t);
 
-s32 _spu_write(u32 arg0, u32 arg1) {
+s32 _spu_write(u8* arg0, u32 arg1) {
 
     if (_spu_transMode != 0) {
         _spu_writeByIO(arg0, arg1);
@@ -266,7 +375,11 @@ s32 _spu_read(s32 arg0, s32 arg1) {
 
 void _spu_FsetRXX(s32 arg0, u32 arg1, s32 arg2) {
     if (arg2 == 0) {
+#ifdef VERSION_PC
+        write_16(arg0 * 2, arg1);
+#else
         _spu_RXX->raw[arg0] = arg1;
+#endif
         return;
     }
 

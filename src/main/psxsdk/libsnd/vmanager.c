@@ -245,9 +245,14 @@ void SeAutoPan(s16 vc, s16 start_pan, s16 end_pan, s16 delta_time) {
 
 INCLUDE_ASM("main/nonmatchings/psxsdk/libsnd/vmanager", SetAutoPan);
 
+typedef struct tagSpuMalloc {
+    u32 addr;
+    u32 size;
+} SPU_MALLOC;
+
 struct _ss_spu_vm_rec_struct {
     u32 pad[2];
-    u32 D_8003BD50;
+    SPU_MALLOC D_8003BD50[364];
 };
 
 extern struct _ss_spu_vm_rec_struct _ss_spu_vm_rec;
@@ -269,7 +274,14 @@ void SpuVmInit(u8 arg0) {
     _spu_setInTransfer(0);
     _svm_vcf = 0;
     _svm_damper = 0;
+#ifdef VERSION_PC
+    _ss_spu_vm_rec.D_8003BD50[0].addr = 1;
+    _ss_spu_vm_rec.D_8003BD50[0].size = 2;
+    printf("_ss_spu_vm_rec.D_8003BD50 %p %d\n", _ss_spu_vm_rec.D_8003BD50, _ss_spu_vm_rec.D_8003BD50[0].addr);
+    SpuInitMalloc(0x20, &_ss_spu_vm_rec.D_8003BD50[0]);
+#else
     SpuInitMalloc(0x20, &_ss_spu_vm_rec.D_8003BD50);
+#endif
     for (var_a1 = 0; var_a1 < 8 * NUM_SPU_CHANNELS; var_a1++) {
         _svm_sreg_buf.raw[var_a1] = 0;
     }
@@ -312,6 +324,16 @@ void SpuVmInit(u8 arg0) {
         _svm_voice[var_a1].unk2e = 0;
         _svm_voice[var_a1].start_pan = 0;
         _svm_voice[var_a1].start_vol = 0;
+
+        // pointer to 0x1F801C00
+#ifdef VERSION_PC
+        write_16(0x1F801C00 + 6, 0x200);
+        write_16(0x1F801C00 + 4, 0x1000);
+        write_16(0x1F801C00 + 8, 0x80FF);
+        write_16(0x1F801C00 + 0, 0);
+        write_16(0x1F801C00 + 2, 0);
+        write_16(0x1F801C00 + 10, 0x4000);
+#else
         temp_a0 = &D_80032F10[temp];
         temp_a0[3] = 0x200;
         temp_a0[2] = 0x1000;
@@ -319,6 +341,7 @@ void SpuVmInit(u8 arg0) {
         temp_a0[0] = 0;
         temp_a0[1] = 0;
         temp_a0[5] = 0x4000;
+#endif
 
         _svm_cur.field_0x1a = var_a1;
         temp_v1 = get_field_0x1a();

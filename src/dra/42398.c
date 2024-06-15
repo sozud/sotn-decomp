@@ -601,7 +601,7 @@ void PrintHBlankInfo(void) {
         D_801362D0[0] = D_801362D0[1];
     }
 }
-
+#include <assert.h>
 void SsVabClose(short vab_id);
 #define LOAD_VAB(vab_id, name, addr, data, dataLen)                            \
     SsVabClose(vab_id);                                                        \
@@ -609,9 +609,15 @@ void SsVabClose(short vab_id);
         ;                                                                      \
                                                                                \
     if (SsVabOpenHeadSticky(name, vab_id, addr) < 0) {                         \
+    \
+    printf("SsVabOpenHeadSticky\n");\
+         assert(0);                                                            \
         return -1;                                                             \
     }                                                                          \
     if (SsVabTransBodyPartly(data, dataLen, vab_id) < 0) {                     \
+    \
+    printf("transferpartly\n");\
+    assert(0); \
         return -1;                                                             \
     }                                                                          \
     while (SsVabTransCompleted(SS_IMEDIATE) != 1)

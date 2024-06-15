@@ -15,7 +15,7 @@ extern s32 _spu_EVdma;
 extern s32 _spu_isCalled;
 extern s32 _spu_inTransfer;
 
-extern s32 D_8003355C;
+extern s32 _spu_AllocBlockNum;
 extern s32 D_80033560;
 extern s8* D_80033564;
 extern s32 _spu_mem_mode_plus;
@@ -35,12 +35,12 @@ extern void (* volatile _spu_IRQCallback)();
 s32 SpuSetAnyVoice(s32 on_off, u32 bits, s32 addr1, s32 addr2);
 
 s32 _spu_t(s32, ...);
-s32 _spu_writeByIO(s32, s32);
+s32 _spu_writeByIO(u8*, s32);
 extern s32 _spu_transMode;
 extern u16 _spu_tsa;
 
 u32 _spu_FsetRXXa(s32 arg0, u32 arg1);
-s32 _spu_write(u32, u32);
+s32 _spu_write(u8*, u32);
 extern s32 _spu_inTransfer;
 
 void _SpuSetVoiceAttr(SpuVoiceAttr* arg, s32, s32, s32);
