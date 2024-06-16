@@ -10,25 +10,24 @@ void _SsInit(void) {
     u16* var_a2;
     int i, j;
 
-#ifdef VERSION_PC
-int pos = 0;
-#endif
-
+    // short D_80032EC0[] = {0x0000, 0x0000,0x1000,0x3000, 0x00BF, 0x0000,0x0000, 0x0000};
     var_a2 = (u16*)0x1F801C00;
     for (i = 0; i < 24; i++) {
         for (j = 0; j < 8; j++) {
 #ifdef VERSION_PC
-            write_16(0x1F801C00 + pos++, D_80032EC0[j]);
+            write_16(0x1F801C00 + (i * 8 + j) * 2, D_80032EC0[j], __FILE__, __LINE__);
 #else
             *var_a2++ = D_80032EC0[j];
 #endif
         }
     }
 
+    printf("loop 2\n");
+
     var_a2 = (u16*)0x1F801D80;
     for (i = 0; i < 16; i++) {
 #ifdef VERSION_PC
-        write_16(0x1F801D80 + i, D_80032ED0[j]);
+        write_16(0x1F801D80 + i * 2, D_80032ED0[i], __FILE__, __LINE__);
 #else
         *var_a2++ = D_80032ED0[i];
 #endif

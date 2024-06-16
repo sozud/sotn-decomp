@@ -14,8 +14,13 @@ void SpuSetKey(long on_off, unsigned long voice_bit) {
         if (on_off != 1) {
             return;
         }
+        #if 0
         _spu_RXX->rxx.key_on[0] = new_var;
         _spu_RXX->rxx.key_on[1] = temp_a3;
+        #else
+        write_16(0x1F801D88, new_var, __FILE__, __LINE__);
+        write_16(0x1F801D8A, temp_a3, __FILE__, __LINE__);
+        #endif
         _spu_keystat = temp_a1 | _spu_keystat;
     } else {
         #if 0
@@ -23,10 +28,9 @@ void SpuSetKey(long on_off, unsigned long voice_bit) {
         _spu_RXX->rxx.key_off[1] = temp_a3;
         _spu_keystat = (~temp_a1) & _spu_keystat;
         #else
-        write_16(0x1ac, temp_a1);
-        write_16(0x1ac + 2, temp_a1);
-                _spu_keystat = (~temp_a1) & _spu_keystat;
-
+        write_16(0x1F801D8C, temp_a1, __FILE__, __LINE__);
+        write_16(0x1F801D8E, temp_a3, __FILE__, __LINE__);
+        _spu_keystat = (~temp_a1) & _spu_keystat;
         #endif
     }
 }

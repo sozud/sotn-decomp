@@ -263,6 +263,7 @@ extern s16 _svm_orev2;
 extern s8 _svm_auto_kof_mode;
 
 void SpuVmInit(u8 arg0) {
+    printf("SpuVmInit:%d\n", __LINE__);
     u16 temp_v1;
     u16 var_a1;
     s32 var_v1;
@@ -282,6 +283,8 @@ void SpuVmInit(u8 arg0) {
 #else
     SpuInitMalloc(0x20, &_ss_spu_vm_rec.D_8003BD50);
 #endif
+    printf("SpuVmInit:%d\n", __LINE__);
+
     for (var_a1 = 0; var_a1 < 8 * NUM_SPU_CHANNELS; var_a1++) {
         _svm_sreg_buf.raw[var_a1] = 0;
     }
@@ -326,13 +329,15 @@ void SpuVmInit(u8 arg0) {
         _svm_voice[var_a1].start_vol = 0;
 
         // pointer to 0x1F801C00
+        printf("SpuVmInit:%d\n", __LINE__);
+
 #ifdef VERSION_PC
-        write_16(0x1F801C00 + 6, 0x200);
-        write_16(0x1F801C00 + 4, 0x1000);
-        write_16(0x1F801C00 + 8, 0x80FF);
-        write_16(0x1F801C00 + 0, 0);
-        write_16(0x1F801C00 + 2, 0);
-        write_16(0x1F801C00 + 10, 0x4000);
+        write_16(0x1F801C00 + var_a1 * 0x10 + 6, 0x200, __FILE__, __LINE__);
+        write_16(0x1F801C00 + var_a1 * 0x10 + 4, 0x1000, __FILE__, __LINE__);
+        write_16(0x1F801C00 + var_a1 * 0x10 + 8, 0x80FF, __FILE__, __LINE__);
+        write_16(0x1F801C00 + var_a1 * 0x10 + 0, 0, __FILE__, __LINE__);
+        write_16(0x1F801C00 + var_a1 * 0x10 + 2, 0, __FILE__, __LINE__);
+        write_16(0x1F801C00 + var_a1 * 0x10 + 10, 0x4000, __FILE__, __LINE__);
 #else
         temp_a0 = &D_80032F10[temp];
         temp_a0[3] = 0x200;
@@ -375,6 +380,8 @@ void SpuVmInit(u8 arg0) {
     _svm_auto_kof_mode = 0;
     _svm_stereo_mono = 0;
     kMaxPrograms = 0x80;
+    printf("SpuVmInit:%d\n", __LINE__);
+
     SpuVmFlush();
 }
 
