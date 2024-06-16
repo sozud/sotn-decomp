@@ -208,10 +208,12 @@ void SetMonoStereo(u8 soundMode) {
         break;
     }
 }
-
+extern             MySsInitHot();
 void SoundInit(void) {
     g_SoundInitialized = 1;
     SsInitHot();
+            MySsInitHot();
+
     SsSetTickMode(SS_TICK60);
     SetMonoStereo(STEREO_SOUND);
     SsSetReservedVoice(0x10);

@@ -1121,17 +1121,28 @@ uint32 PS_SPU::ReadDMA(void)
 
    return(ret);
 }
+#include <string>
+#include <vector>
+struct WriteEntry {
+   uint32 A;
+   uint16 V;
+   std::string file;
+   int line = 0;
+};
 
-void PS_SPU::Write(int32_t timestamp, uint32 A, uint16 V)
+std::vector<WriteEntry> writes;
+
+void PS_SPU::Write(int32_t timestamp, uint32 A, uint16 V, char* file, int line)
 {
-   //if((A & 0x3FF) < 0x180)
-   // PSX_WARNING("[SPU] Write: %08x %04x", A, V);
+   // writes.push_back({A, V, std::string(file), line});
+   // if((A & 0x3FF)) //  < 0x180
+   printf("[SPU] Write: %08x %04x\n", A, V);
 
    A &= 0x3FF;
 
    if(A >= 0x200)
    {
-      //printf("Write: %08x %04x\n", A, V);
+      // printf("Write: %08x %04x\n", A, V);
       if(A < 0x260)
       {
          SPU_Voice *voice = &Voices[(A - 0x200) >> 2];

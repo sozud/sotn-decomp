@@ -107,7 +107,7 @@ class PS_SPU
       //int StateAction(StateMem *sm, int load, int data_only);
 
       void Power(void);
-      void Write(int32_t timestamp, uint32_t A, uint16_t V);
+      void Write(int32_t timestamp, uint32_t A, uint16_t V, char* file, int line);
       uint16_t Read(int32_t timestamp, uint32_t A);
 
       void WriteDMA(uint32_t V);

@@ -19,14 +19,15 @@ extern "C" void mednafen_init()
     SPU->Power();
 }
 
-extern "C" void write_16(u32 addr, u16 data)
+extern "C" void write_16(u32 addr, u16 data, char* file, int line)
 {
+    printf("write16 %08X %04X %s:%d\n", addr, data, file, line);
     if(!init)
     {
         mednafen_init();
         init = true;
     }
-    SPU->Write(0, addr, data);
+    SPU->Write(0, addr, data, file, line);
     // printf("[SPU] Write: %08x %04x\n", addr, data);
 }
 
@@ -48,8 +49,8 @@ extern "C" void write_32(u32 addr, u32 data)
         mednafen_init();
         init = true;
     }
-    SPU->Write(0, addr, data >> 16);
-    SPU->Write(0, addr + 2, data & 0xFFFF);
+    SPU->Write(0, addr, data >> 16, __FILE__, __LINE__);
+    SPU->Write(0, addr + 2, data & 0xFFFF, __FILE__, __LINE__);
 }
 
 extern "C" u32 read_32(u32 addr)
@@ -68,13 +69,17 @@ extern "C" u32 read_32(u32 addr)
 double accum = 0;
 extern "C" void SsSeqCalledTbyT(void);
 #include <string.h>
+#include <random>
 extern "C"
 void SoundRevCallback(void *userdata, u8 *stream, int len)
 {
     if(!ready)
     {
+        printf("not ready\n");
         return;
     }
+
+    printf("SoundRev\n");
     for(int i = 0; i < len / 4; i++)
     {
         // generate one sample
@@ -93,4 +98,173 @@ void SoundRevCallback(void *userdata, u8 *stream, int len)
     {
         IntermediateBufferPos = 0;
     }
+}
+#include <string>
+struct WriteEntry {
+   uint32 A;
+   uint16 V;
+   std::string file;
+   int line;
+};
+
+#include <vector>
+
+extern std::vector<WriteEntry> writes;
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+
+void CheckWrites(char* filename)
+{
+    std::ifstream infile(filename);
+    std::string line;
+
+    if (!infile) {
+        std::cerr << "Unable to open file";
+        exit(1);
+    }
+
+    std::vector<WriteEntry> expected;
+
+    while (std::getline(infile, line)) {
+        std::string addressStr, valueStr;
+
+        // Find the position of "Write: "
+        size_t pos = line.find("Write: ");
+        if (pos != std::string::npos) {
+            // Extract the substrings after "Write: "
+            std::istringstream iss(line.substr(pos + 7));
+            iss >> addressStr >> valueStr;
+
+            // Convert the extracted strings to integers
+            u32 address = std::stoul(addressStr, nullptr, 16);
+            u16 value = std::stoul(valueStr, nullptr, 16);
+
+            // Output the values
+            // std::cout << "Address: " << std::hex << address << " Value: " << std::hex << value << std::endl;
+
+            expected.push_back({address, value});
+        }
+    }
+
+    for(int i = 0; i < expected.size(); i++)
+    {
+        if(
+            expected[i].A != writes[i].A ||
+            expected[i].V != writes[i].V
+            )
+        {
+            printf("mismatch: %d expected %0X %04X != actual %0X %04X %s:%d\n", i, expected[i].A, expected[i].V,
+            
+             writes[i].A, writes[i].V, writes[i].file, writes[i].line);
+
+            exit(0);
+        }
+        else {
+            printf("match: %d %0X %04X\n", i, expected[i].A, expected[i].V);
+        }
+    }
+    infile.close();
+
+    writes.clear();
+}
+
+extern "C" void SpuVmInit(u8 arg0);
+extern "C" void _SsInit(void);
+
+extern "C" void SpuSetKey(long on_off, unsigned long voice_bit);
+
+extern "C" s32 SpuSetReverb(s32);
+extern "C" void _spu_init(s32 arg0);
+extern "C" void _spu_FsetRXX(s32 arg0, u32 arg1, s32 arg2);
+
+
+typedef struct {
+    short left;
+    short right;
+} SpuVolume;
+
+typedef struct {
+    SpuVolume volume; /* volume       */
+    long reverb;      /* reverb on/off */
+    long mix;         /* mixing on/off */
+} SpuExtAttr;
+
+typedef struct {
+    unsigned long mask; /* settings mask */
+
+    SpuVolume mvol;     /* master volume */
+    SpuVolume mvolmode; /* master volume mode */
+    SpuVolume mvolx;    /* current master volume */
+    SpuExtAttr cd;      /* CD input attributes */
+    SpuExtAttr ext;     /* external digital input attributes */
+} SpuCommonAttr;
+
+extern "C" void SpuSetCommonAttr(SpuCommonAttr* attr);
+
+extern "C" void med_run_tests()
+{
+    return;
+    SpuVmInit(24);
+    CheckWrites("./src/pc/psxsdk/expected/SpuVmInit.txt");
+
+    _SsInit();
+    CheckWrites("./src/pc/psxsdk/expected/_SsInit.txt");
+
+    SpuSetKey(1, 0xffffff);
+    CheckWrites("./src/pc/psxsdk/expected/SpuSetKey1.txt");
+
+    SpuSetKey(0, 0xffffff);
+    CheckWrites("./src/pc/psxsdk/expected/SpuSetKey0.txt");
+
+    SpuSetReverb(0);
+    CheckWrites("./src/pc/psxsdk/expected/SpuSetReverb0.txt");
+
+    // spuallocatearea stuff
+    // SpuSetReverb(1);
+    // CheckWrites("./src/pc/psxsdk/expected/SpuSetReverb1.txt");
+
+    _spu_init(0);
+    CheckWrites("./src/pc/psxsdk/expected/_spu_init.txt");
+
+    _spu_FsetRXX(0, 0, 0);
+    CheckWrites("./src/pc/psxsdk/expected/_spu_FsetRXX.txt");
+
+    SpuCommonAttr attr;
+
+    attr.mask = 0xffffffff;
+    attr.mvol.left = 1;
+    attr.mvol.right = 2;
+    attr.mvolmode.left = 1;
+    attr.mvolmode.right = 1;
+    attr.mvolx.left = 3;
+    attr.mvolx.right = 4;
+    attr.cd.volume.left = 1;
+    attr.cd.volume.right = 2;
+    attr.cd.reverb = 0;
+    attr.cd.mix = 0;
+    attr.ext.volume.left = 2;
+    attr.ext.volume.right = 3;
+    attr.ext.reverb = 0;
+    attr.ext.mix = 0;
+
+    write_16(0x1F801DAA, 0, __FILE__, __LINE__);
+    SpuSetCommonAttr(&attr); 
+
+    CheckWrites("./src/pc/psxsdk/expected/SpuSetCommonAttr0.txt");
+
+    attr.cd.reverb = 1;
+    attr.cd.mix = 1;
+    attr.ext.reverb = 1;
+    attr.ext.mix = 1;
+
+    write_16(0x1F801DAA, 0, __FILE__, __LINE__);
+    SpuSetCommonAttr(&attr);
+
+    CheckWrites("./src/pc/psxsdk/expected/SpuSetCommonAttr1.txt");
+
+    // exit(0);
 }

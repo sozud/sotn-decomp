@@ -451,6 +451,7 @@ s32 D_8003BD08 = 0;
 
 
 void SpuVmFlush(void) {
+    printf("SpuVmFlush\n");
     s32 var_s0;
     u32 env_mask;
     u16 _svm_okof2_temp;
@@ -556,7 +557,7 @@ void SpuVmFlush(void) {
         i2++;
     } while (sreg < &_svm_sreg_dirty[24]);
 
-    reg_ptr = D_80032F10;
+    reg_ptr = D_80032F10; // 0x1F801C00
     _svm_okof1_temp = _svm_okof1;
     _svm_okof2_temp = _svm_okof2;
     _svm_okon1_temp = _svm_okon1;
@@ -565,6 +566,8 @@ void SpuVmFlush(void) {
     _svm_okof2 = 0;
     _svm_okon1 = 0;
     _svm_okon2 = 0;
+
+    printf("hello\n");
 #if 0
     reg_ptr[0x18c/2] = _svm_okof1_temp;
     reg_ptr[0x18e/2] = _svm_okof2_temp;
@@ -573,12 +576,12 @@ void SpuVmFlush(void) {
     reg_ptr[0x198/2] = _svm_orev1;
     reg_ptr[0x19a/2] = _svm_orev2;
 #else
-    write_16(0x1F801C00 + 0x18c, _svm_okof1_temp);
-    write_16(0x1F801C00 + 0x18e, _svm_okof2_temp);
-    write_16(0x1F801C00 + 0x188, _svm_okon1_temp);
-    write_16(0x1F801C00 + 0x18a, _svm_okon2_temp);
-    write_16(0x1F801C00 + 0x198, _svm_orev1);
-    write_16(0x1F801C00 + 0x19a, _svm_orev2);
+    write_16(0x1F801C00 + 0x18c, _svm_okof1_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x18e, _svm_okof2_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x188, _svm_okon1_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x18a, _svm_okon2_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x198, _svm_orev1, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x19a, _svm_orev2, __FILE__, __LINE__);
 #endif
 }
 
@@ -951,7 +954,7 @@ void SpuSetCommonAttr(SpuCommonAttr* attr) {
 #if 0
         _spu_RXX->rxx.main_vol.left = main_vol_left.all | mvol_mode_left;
 #else
-        write_16(0x180, main_vol_left.all | mvol_mode_left);
+        write_16(0x1F801D80, main_vol_left.all | mvol_mode_left, __FILE__, __LINE__);
 #endif
     }
 
@@ -1006,61 +1009,77 @@ void SpuSetCommonAttr(SpuCommonAttr* attr) {
 #if 0
         _spu_RXX->rxx.main_vol.right = main_vol_right | mvol_mode_right;
 #else
-        write_16(0x182,  main_vol_right | mvol_mode_right);
+        write_16(0x1F801D82,  main_vol_right | mvol_mode_right, __FILE__, __LINE__);
 #endif
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x40)) {
 #if 0
         _spu_RXX->rxx.cd_vol.left = attr->cd.volume.left;
 #else
-        write_16(0x1B0, attr->cd.volume.left);
+        write_16(0x1F801DB0, attr->cd.volume.left, __FILE__, __LINE__);
 #endif
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x80)) {
 #if 0
         _spu_RXX->rxx.cd_vol.right = attr->cd.volume.right;
 #else
-        write_16(0x1B2, attr->cd.volume.right);
+        write_16(0x1F801DB2, attr->cd.volume.right, __FILE__, __LINE__);
 #endif
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x100)) {
         if (attr->cd.reverb == 0) {
-            _spu_RXX->rxx.spucnt &= 0xFFFB;
+            // _spu_RXX->rxx.spucnt &= 0xFFFB;
+            write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) & 0xFFFB, __FILE__, __LINE__);
         } else {
+            #if 0
             _spu_RXX->rxx.spucnt = _spu_RXX->rxx.spucnt | 4;
+            #else
+            write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) | 4, __FILE__, __LINE__);
+            #endif
         }
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x200)) {
         if (attr->cd.mix == 0) {
+            #if 0
             _spu_RXX->rxx.spucnt &= 0xFFFE;
+            #else
+            write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) & 0xFFFE, __FILE__, __LINE__);
+            #endif
         } else {
 #if 0
             _spu_RXX->rxx.spucnt |= 1;
 #else
-            u16 temp = read_16(0x1aa, __FILE__, __LINE__);
-            temp |= 1;
-            write_16(0x1aa, temp);
+            write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) | 1, __FILE__, __LINE__);
+
 #endif
         }
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x400)) {
-        _spu_RXX->rxx.ex_vol.left = attr->ext.volume.left;
+        // _spu_RXX->rxx.ex_vol.left = attr->ext.volume.left;
+        write_16(0x1F801DB4,  attr->ext.volume.left, __FILE__, __LINE__);
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x800)) {
-        _spu_RXX->rxx.ex_vol.right = attr->ext.volume.right;
+        // _spu_RXX->rxx.ex_vol.right = attr->ext.volume.right;
+        write_16(0x1F801DB6, attr->ext.volume.right, __FILE__, __LINE__);
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x1000)) {
         if (attr->ext.reverb == 0) {
-            _spu_RXX->rxx.spucnt &= 0xFFF7;
+            // _spu_RXX->rxx.spucnt &= 0xFFF7;
+            write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) & 0xFFF7, __FILE__, __LINE__);
         } else {
-            _spu_RXX->rxx.spucnt |= 8;
+                        write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) | 8, __FILE__, __LINE__);
+
+            // _spu_RXX->rxx.spucnt |= 8;
         }
     }
     if ((attr_mask_zero != 0) || (attr_mask & 0x2000)) {
         if (attr->ext.mix == 0) {
-            _spu_RXX->rxx.spucnt &= 0xFFFD;
+            // _spu_RXX->rxx.spucnt &= 0xFFFD;
+                        write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) & 0xFFFD, __FILE__, __LINE__);
+
         } else {
-            _spu_RXX->rxx.spucnt |= 2;
+            // _spu_RXX->rxx.spucnt |= 2;
+            write_16(0x1F801DAA, read_16(0x1F801DAA, __FILE__, __LINE__) | 2, __FILE__, __LINE__);
         }
     }
 }
@@ -1683,9 +1702,183 @@ s16 SsVabOpenHeadWithMode(u8* addr, s16 vabid, s16 arg2, u32 sbaddr) {
     }
 #endif
 
-void func_800286E0() {
-    // assert(0);
+// void func_800286E0() {
+//     // assert(0);
+// }
+
+
+void func_800286E0(void)
+{
+    int last_alloc_idx;           // $v0
+    int counter;                  // $t1
+    SPU_MALLOC *pMemList;         // $t0
+    int last_alloc_idx_;          // $t5
+    SPU_MALLOC *pMemList_Iter;    // $a3
+    int list_idx;                 // $a2
+    SPU_MALLOC *pCurBlock;        // $v1
+    bool bIsntMagicAddr;          // dc
+    SPU_MALLOC *pCurBlock_;       // $a1
+    int counter_;                 // $t1
+    SPU_MALLOC *pMemList__;       // $v1
+    int last_alloc_idx__;         // $v1
+    int counter__;                // $t1
+    SPU_MALLOC *pMemList___;      // $t5
+    SPU_MALLOC *pMemListIter_;    // $t2
+    int counter_next;             // $a2
+    int last_alloc_idx___;        // $t3
+    SPU_MALLOC *pNextBlock_;      // $a0
+    int mem_addr;                 // $a3
+    int mem_size;                 // $v1
+    int last_alloc_idx____;       // $a1
+    int idx;                      // $t1
+    SPU_MALLOC *pMemListIter;     // $a0
+    SPU_MALLOC *pCurBlock__;      // $v0
+    SPU_MALLOC *pPrevBlock;       // $a0
+
+    last_alloc_idx = _spu_AllocLastNum;
+    counter = 0;
+    if (_spu_AllocLastNum >= 0)
+    {
+        pMemList = _spu_memList;
+        last_alloc_idx_ = _spu_AllocLastNum;
+        pMemList_Iter = _spu_memList;
+        do
+        {
+            list_idx = counter + 1;
+            if ((pMemList_Iter->addr & 0x80000000) == 0)
+            {
+                goto next_item;
+            }
+
+            pCurBlock = &pMemList[list_idx];
+            while (1)
+            {
+                bIsntMagicAddr = pCurBlock->addr != 0x2FFFFFFF;
+                ++pCurBlock;
+                if (bIsntMagicAddr)
+                {
+                    break;
+                }
+                ++list_idx;
+            }
+            pCurBlock_ = &pMemList[list_idx];
+            if ((pCurBlock_->addr & 0x80000000) != 0 && (pCurBlock_->addr & 0xFFFFFFF) == (pMemList_Iter->addr & 0xFFFFFFF) + pMemList_Iter->size)
+            {
+                pCurBlock_->addr = 0x2FFFFFFF;
+                pMemList_Iter->size += pCurBlock_->size;
+            }
+            else
+            {
+            next_item:
+                ++pMemList_Iter;
+                ++counter;
+            }
+        } while (last_alloc_idx_ >= counter);
+        last_alloc_idx = _spu_AllocLastNum;
+    }
+
+    counter_ = 0;
+    if (last_alloc_idx >= 0)
+    {
+        pMemList__ = _spu_memList;
+        do
+        {
+            if (!pMemList__->size)
+            {
+                pMemList__->addr = 0x2FFFFFFF;
+            }
+            ++counter_;
+            ++pMemList__;
+        } while (last_alloc_idx >= counter_);
+    }
+
+    last_alloc_idx__ = _spu_AllocLastNum;
+    counter__ = 0;
+    if (_spu_AllocLastNum >= 0)
+    {
+        pMemList___ = _spu_memList;
+        pMemListIter_ = _spu_memList;
+        do
+        {
+            if ((pMemListIter_->addr & 0x40000000) != 0)
+            {
+                break;
+            }
+            counter_next = counter__ + 1;
+            if (last_alloc_idx__ >= counter__ + 1)
+            {
+                last_alloc_idx___ = _spu_AllocLastNum;
+                pNextBlock_ = &pMemList___[counter__ + 1];
+                do
+                {
+                    if ((pNextBlock_->addr & 0x40000000) != 0)
+                    {
+                        break;
+                    }
+
+                    mem_addr = pMemListIter_->addr;
+                    if ((pNextBlock_->addr & 0xFFFFFFFu) < (pMemListIter_->addr & 0xFFFFFFFu))
+                    {
+                        pMemListIter_->addr = pNextBlock_->addr;
+                        mem_size = pMemListIter_->size;
+                        pMemListIter_->size = pNextBlock_->size;
+                        pNextBlock_->addr = mem_addr;
+                        pNextBlock_->size = mem_size;
+                    }
+                    ++counter_next;
+                    ++pNextBlock_;
+                } while (last_alloc_idx___ >= counter_next);
+            }
+            last_alloc_idx__ = _spu_AllocLastNum;
+            ++counter__;
+            ++pMemListIter_;
+        } while (_spu_AllocLastNum >= counter__);
+    }
+
+    last_alloc_idx____ = _spu_AllocLastNum;
+    idx = 0;
+    if (_spu_AllocLastNum >= 0)
+    {
+        pMemListIter = _spu_memList;
+        while ((pMemListIter->addr & 0x40000000) == 0) // not last entry
+        {
+            if (pMemListIter->addr == 0x2FFFFFFF)
+            {
+                pCurBlock__ = &_spu_memList[last_alloc_idx____];
+                pMemListIter->addr = pCurBlock__->addr;
+                pMemListIter->size = pCurBlock__->size;
+                _spu_AllocLastNum = idx;
+                break;
+            }
+            last_alloc_idx____ = _spu_AllocLastNum;
+            ++idx;
+            ++pMemListIter;
+            if (_spu_AllocLastNum < idx)
+            {
+                break;
+            }
+        }
+    }
+
+    // Merged tail unused blocks
+    if (_spu_AllocLastNum - 1 >= 0)
+    {
+        pPrevBlock = &_spu_memList[_spu_AllocLastNum - 1];
+        do
+        {
+            if ((pPrevBlock->addr & 0x80000000) == 0)
+            {
+                break;
+            }
+            // Found unused block, merge it and set as last entry
+            pPrevBlock->addr = pPrevBlock->addr & 0xFFFFFFF | 0x40000000;
+            pPrevBlock->size += _spu_memList[_spu_AllocLastNum].size;
+            _spu_AllocLastNum--;
+            pPrevBlock--;
+        } while (_spu_AllocLastNum >= 0);
+    }
 }
+
 
 u16 _spu_tsa;
 void (* volatile _spu_transferCallback)();
@@ -1701,11 +1894,15 @@ s32* D_80033518;
 s32 D_80033550;
 s32 D_800334FC;
 s32* D_80033514;
-s32 D_80033540[] = {
-     0x07070707,
-     0x07070707,
-     0x07070707,
-     0x07070707
+u16 D_80033540[] = {
+     0x0707,
+     0x0707,
+     0x0707,
+     0x0707,
+     0x0707,
+     0x0707,
+     0x0707,
+     0x0707,
 };
  s32 _spu_addrMode;
 
@@ -1761,7 +1958,7 @@ int _spu_t(int count, ...)
 #if 0
         _spu_RXX->rxx.trans_addr = ck;
 #else
-        write_16(0x1a6, ck);
+        write_16(0x1a6, ck, __FILE__, __LINE__);
 #endif
         return 0;
 
@@ -1785,7 +1982,7 @@ int _spu_t(int count, ...)
 #else
         u16 temp = read_16(0x1AA, __FILE__, __LINE__);
         temp = (temp & ~0x30) | 0x20;
-        write_16(0x1aa, temp);
+        write_16(0x1aa, temp, __FILE__, __LINE__);
 #endif
         // SPU_RXX::Set(&_spu_RXX->spucnt, (SPU_RXX::GetU16(&_spu_RXX->spucnt) & ~0x30) | 0x20);
         break;
@@ -2045,3 +2242,12 @@ void _SsSndDecrescendo(s16, s16) {}
     }
 
 void _SsContDataEntry(s16, s16, u8) {}
+
+void run_tests()
+{
+    med_run_tests();
+    // printf("run_tests\n");
+    // SpuVmInit(24);
+    // // _SsInit();
+    // exit(0);
+}

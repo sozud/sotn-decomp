@@ -105,6 +105,7 @@ void MySsInitHot(void) {
         SDL_OpenAudioDevice(NULL, false, &specs, &g_SdlAudioSpecs, false);
     if (g_SdlAudioDevice == 0) {
         WARNF("SDL_OpenAudioDevice failed: %s", SDL_GetError());
+        exit(0);
         return;
     }
     INFOF("SDL audio device opened: %d", g_SdlAudioDevice);
@@ -718,6 +719,8 @@ void MyDrawOTag(OT_TYPE* p) {
 
 int main(int argc, char* argv[]) {
     const char* filename;
+
+    run_tests();
 
     if (argc < 2) {
         filename = "disks/sotn.us.bin";
