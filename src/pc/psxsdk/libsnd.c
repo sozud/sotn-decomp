@@ -290,7 +290,7 @@ u16 D_80032F14[];
 s32 _spu_AllocBlockNum;
 s32 D_80033560;
 s8* D_80033564;
-s32 _spu_mem_mode_plus;
+s32 _spu_mem_mode_plus = 3;
 // s8* _spu_memList;
 
 
@@ -1086,7 +1086,6 @@ void SpuSetCommonAttr(SpuCommonAttr* attr) {
 
 s32 _spu_AllocBlockNum;
 s32 _spu_AllocLastNum;
-s32 _spu_mem_mode_plus;
 s32 _spu_mem_mode_unitM;
 s32 _spu_rev_offsetaddr;
 s32 _spu_rev_reserve_wa;
@@ -2192,6 +2191,8 @@ void _SsSndDecrescendo(s16, s16) {}
                 v1 = (v1 * _svm_pg[program].mvol * vagAtr->vol) / 0x3f01;
 
                 const int vagPan = vagAtr->pan;
+
+                assert(0);
 
                 int left = 127;//(v1 * pSeq->voll) / 127;
                 int right = 127;//(v1 * pSeq->volr) / 127;
