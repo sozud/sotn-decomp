@@ -276,9 +276,6 @@ void SpuVmInit(u8 arg0) {
     _svm_vcf = 0;
     _svm_damper = 0;
 #ifdef VERSION_PC
-    _ss_spu_vm_rec.D_8003BD50[0].addr = 1;
-    _ss_spu_vm_rec.D_8003BD50[0].size = 2;
-    printf("_ss_spu_vm_rec.D_8003BD50 %p %d\n", _ss_spu_vm_rec.D_8003BD50, _ss_spu_vm_rec.D_8003BD50[0].addr);
     SpuInitMalloc(0x20, &_ss_spu_vm_rec.D_8003BD50[0]);
 #else
     SpuInitMalloc(0x20, &_ss_spu_vm_rec.D_8003BD50);

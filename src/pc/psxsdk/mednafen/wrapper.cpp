@@ -205,9 +205,79 @@ typedef struct {
 
 extern "C" void SpuSetCommonAttr(SpuCommonAttr* attr);
 
+s8 space[0x1000] = {0};
+
+ extern "C" s32 SpuInitMalloc(s32 num, s8* top);
+ extern "C" long SpuMallocWithStartAddr(unsigned long addr, long size);
+
+ 
+typedef struct tagSpuMalloc {
+    u32 addr;
+    u32 size;
+} SPU_MALLOC;
+
+extern SPU_MALLOC *_spu_memList;
+
+#define ASSERT_EQ(value1, value2)                                                           \
+    if ((value1) != (value2))                                                               \
+    {                                                                                       \
+        printf("%d != %d in %s %s:%d\n", value1, value2, __FUNCTION__, __FILE__, __LINE__); \
+        exit(1);                                                                   \
+    }
+
+#define ASSERT_EQ_HEX(value1, value2)                                                           \
+    if ((value1) != (value2))                                                               \
+    {                                                                                       \
+        printf("%08X != %08X in %s %s:%d\n", value1, value2, __FUNCTION__, __FILE__, __LINE__); \
+        exit(1);                                                                   \
+    }
+    extern "C" long SpuMalloc(long size);
+
+void test_spu_malloc()
+{
+    SPU_MALLOC* temp;
+    long result;
+    int i;
+
+    result = SpuInitMalloc(32, space);
+
+    printf("SpuInitMalloc result %d\n", result);
+
+    for(i = 0; i < 32; i++)
+    {
+        printf("temp[%d] addr %08X size %d\n", i, _spu_memList[i].addr, _spu_memList[i].size);
+    }
+    
+
+    ASSERT_EQ_HEX(_spu_memList[0].addr, 0x40001010);
+    ASSERT_EQ_HEX(_spu_memList[0].size, 520176)
+    ASSERT_EQ_HEX(_spu_memList[1].addr, 0);
+    ASSERT_EQ_HEX(_spu_memList[1].size, 0)
+    ASSERT_EQ_HEX(result, 32)
+
+
+    result = SpuMalloc(0x200);
+#if 1
+    for(i = 0; i < 32; i++)
+    {
+        printf("temp[%d] addr %08X size %d\n", i, _spu_memList[i].addr, _spu_memList[i].size);
+    }
+
+    ASSERT_EQ_HEX(_spu_memList[0].addr, 0x00001010);
+    ASSERT_EQ_HEX(_spu_memList[0].size, 512);
+    ASSERT_EQ_HEX(_spu_memList[1].addr, 0x40001210);
+    ASSERT_EQ_HEX(_spu_memList[1].size, 519664);
+    ASSERT_EQ_HEX(_spu_memList[2].addr, 0);
+    ASSERT_EQ_HEX(_spu_memList[2].size, 0);
+    ASSERT_EQ_HEX(result, 0x1010);
+
+#endif
+    printf("result %d\n", result);
+}
+
 extern "C" void med_run_tests()
 {
-    return;
+    #if 0
     SpuVmInit(24);
     CheckWrites("./src/pc/psxsdk/expected/SpuVmInit.txt");
 
@@ -265,6 +335,8 @@ extern "C" void med_run_tests()
     SpuSetCommonAttr(&attr);
 
     CheckWrites("./src/pc/psxsdk/expected/SpuSetCommonAttr1.txt");
+#endif
+    test_spu_malloc();
 
     // exit(0);
 }
