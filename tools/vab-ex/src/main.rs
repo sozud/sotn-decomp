@@ -274,19 +274,21 @@ fn read_data_from_file(in_vh: &str, in_vb: &str, out_dir: &str) -> Result<()> {
         Ok(file_data) => {
             let header = read_header(&file_data).unwrap();
 
-            let vag_offset_table_start = 0x20 + (32 * 16 * header.num_programs);
-            println!("vag_offset_table_start {}", vag_offset_table_start);
+            // let vag_offset_table_start = 0x20 + (32 * 16 * header.num_programs);
+            // println!("vag_offset_table_start {}", vag_offset_table_start);
 
             let off_progs = 0 + 0x20;
             let off_tone_attrs = off_progs + (16 * 128);
             let off_vag_offsets = off_tone_attrs + (32 * 16 * header.num_programs);
             let mut vag_offset = 0;
 
+            println!("off_vag_offsets {}", off_vag_offsets);
+
             for vag_num in 1..header.num_vags + 1 {
                 let off = off_vag_offsets + vag_num * 2;
                 let vag_size = (read_u16_at_offset(&file_data, off.into())?) as u32 * 8;
 
-                println!("vag offset {} size {}", vag_offset, vag_size);
+                println!("off {} vag offset {} size {}", off, vag_offset, vag_size);
 
                 write_vag(
                     in_vb.to_string(),
@@ -345,28 +347,28 @@ fn read_programs(file: &Vec<u8>, header: &HeaderStruct) -> Result<Vec<Program>> 
     for program_num in 0..128 {
         let offset = 0x20 + program_num * 16;
 
-        println!("----- Program {} -----", program_num);
+        // println!("----- Program {} -----", program_num);,
 
         let num_tones = read_u8_at_offset(file, (offset + 0).try_into().unwrap())?;
-        println!(" Number of Tones: {}", num_tones);
+        // println!(" Number of Tones: {}", num_tones);
 
         let volume = read_u8_at_offset(file, (offset + 1).try_into().unwrap())?;
-        println!(" Volume: {}", volume);
+        // println!(" Volume: {}", volume);
 
         let priority = read_u8_at_offset(file, (offset + 2).try_into().unwrap())?;
-        println!(" Priority: {}", priority);
+        // println!(" Priority: {}", priority);
 
         let mode = read_u8_at_offset(file, (offset + 3).try_into().unwrap())?;
-        println!(" Mode: {}", mode);
+        // println!(" Mode: {}", mode);
 
         let pan = read_u8_at_offset(file, (offset + 4).try_into().unwrap())?;
-        println!(" Pan: {}", pan);
+        // println!(" Pan: {}", pan);
 
         let attr = read_u8_at_offset(file, (offset + 5).try_into().unwrap())?;
-        println!(" Attr: {}", attr);
+        // println!(" Attr: {}", attr);
 
         let name = little_endian_ascii_to_str(file, (offset + 6).try_into().unwrap(), 10)?;
-        println!(" Name: {:?}", name);
+        // println!(" Name: {:?}", name);
 
         result.push(Program {
             num_tones,
@@ -425,76 +427,76 @@ fn read_tone_attrs(file: &Vec<u8>, header: &HeaderStruct) -> Result<Vec<Vec<Tone
                 tone_attrs_per_program_size * program_num + 
                 tone_attr_size * tone_attr_num;
 
-            println!(
-                "----- Program {} - ToneAttr {} -----",
-                program_num, tone_attr_num
-            );
+            // println!(
+            //     "----- Program {} - ToneAttr {} -----",
+            //     program_num, tone_attr_num
+            // );
 
             let prior = read_u8_at_offset(file, (off_current_tone_attr + 0).into())?;
-            println!(" prior: {}", prior);
+            // println!(" prior: {}", prior);
 
             let mode = read_u8_at_offset(file, (off_current_tone_attr + 1).into())?;
-            println!(" mode: {}", mode);
+            // println!(" mode: {}", mode);
 
             let volume = read_u8_at_offset(file, (off_current_tone_attr + 2).into())?;
-            println!(" volume: {}", volume);
+            // println!(" volume: {}", volume);
 
             let pan = read_u8_at_offset(file, (off_current_tone_attr + 3).into())?;
-            println!(" pan: {}", pan);
+            // println!(" pan: {}", pan);
 
             let center = read_u8_at_offset(file, (off_current_tone_attr + 4).into())?;
-            println!(" center: {}", center);
+            // println!(" center: {}", center);
 
             let shift = read_u8_at_offset(file, (off_current_tone_attr + 5).into())?;
-            println!(" shift: {}", shift);
+            // println!(" shift: {}", shift);
 
             let min = read_u8_at_offset(file, (off_current_tone_attr + 6).into())?;
-            println!(" min: {}", min);
+            // println!(" min: {}", min);
 
             let max = read_u8_at_offset(file, (off_current_tone_attr + 7).into())?;
-            println!(" max: {}", max);
+            // println!(" max: {}", max);
 
             let vib_w = read_u8_at_offset(file, (off_current_tone_attr + 8).into())?;
-            println!(" vib_w: {}", vib_w);
+            // println!(" vib_w: {}", vib_w);
 
             let vib_t = read_u8_at_offset(file, (off_current_tone_attr + 9).into())?;
-            println!(" vib_t: {}", vib_t);
+            // println!(" vib_t: {}", vib_t);
 
             let por_w = read_u8_at_offset(file, (off_current_tone_attr + 10).into())?;
-            println!(" por_w: {}", por_w);
+            // println!(" por_w: {}", por_w);
 
             let por_t = read_u8_at_offset(file, (off_current_tone_attr + 11).into())?;
-            println!(" por_t: {}", por_t);
+            // println!(" por_t: {}", por_t);
 
             let pb_min = read_u8_at_offset(file, (off_current_tone_attr + 12).into())?;
-            println!(" pb_min: {}", pb_min);
+            // println!(" pb_min: {}", pb_min);
 
             let pb_max = read_u8_at_offset(file, (off_current_tone_attr + 13).into())?;
-            println!(" pb_max: {}", pb_max);
+            // println!(" pb_max: {}", pb_max);
 
             let unk14 = read_u8_at_offset(file, (off_current_tone_attr + 14).into())?;
-            println!(" unk14: {}", unk14);
+            // println!(" unk14: {}", unk14);
 
             let unk15 = read_u8_at_offset(file, (off_current_tone_attr + 15).into())?;
-            println!(" unk15: {}", unk15);
+            // println!(" unk15: {}", unk15);
 
             let adsr_1 = read_u16_at_offset(file, (off_current_tone_attr + 16).into())?;
-            println!(" adsr_1: {}", adsr_1);
+            // println!(" adsr_1: {}", adsr_1);
 
             let adsr_2 = read_u16_at_offset(file, (off_current_tone_attr + 18).into())?;
-            println!(" adsr_2: {}", adsr_2);
+            // println!(" adsr_2: {}", adsr_2);
 
             // 1-based in editor?
             let prog = read_u8_at_offset(file, (off_current_tone_attr + 20).into())?;
-            println!(" prog: {}", prog);
+            // println!(" prog: {}", prog);
 
             // 1-based in editor?
             let vag = read_u8_at_offset(file, (off_current_tone_attr + 21).into())?;
-            println!(" vag: {}", vag);
+            // println!(" vag: {}", vag);
 
             let tone_name =
                 little_endian_ascii_to_str(file, (off_current_tone_attr + 22).into(), 10)?;
-            println!(" Tone Name: {:?}", tone_name);
+            // println!(" Tone Name: {:?}", tone_name);
 
             result[program_num as usize].push(ToneAttr {
                 prior,

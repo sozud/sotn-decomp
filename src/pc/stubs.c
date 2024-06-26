@@ -225,10 +225,15 @@ u32 D_801362C8;
 s32 g_DebugIsRecordingVideo;
 s32 g_DebugWaitInfoTimer;
 s32 g_DebugRecordVideoFid;
-u8 D_8013B6A0[269488] = {0}; // VB file
-u8 D_8017D350[57744] = {0};  // VB file
-u8 D_8018B4E0[64496] = {0};  // VB file
-u8 D_801A9C80[108048] = {0}; // VB file
+u8 D_8013B6A0[269488]; // VAB file
+u8 D_8017D350[57744];  // VAB file
+u8 D_8018B4E0[108048];  // VAB file
+u8 D_801A9C80[64496]; // VAB file
+
+// u8 D_8013B6A0[269488] = {0}; // VB file
+// u8 D_8017D350[57744] = {0};  // VB file
+// u8 D_8018B4E0[64496] = {0};  // VB file
+// u8 D_801A9C80[108048] = {0}; // VB file
 u8 aPbav[0x3000] = {0};      // VH file
 u8 aPbav_0[0x2000] = {0};    // VH file
 u8 aPbav_1[0x2000] = {0};    // VH file
