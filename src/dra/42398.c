@@ -617,10 +617,20 @@ void SsVabClose(short vab_id);
     while (SsVabTransCompleted(SS_IMEDIATE) != 1)
 
 s32 LoadVabData(void) {
+    // int i;
+    // for(i = 0; i < 10; i++)
+    // {
+    //     printf("aPbav %d\n", aPbav[i]);
+    // }
+    // for(i = 0; i < 128; i++)
+    // {
+    //     printf("D_8013B6A0 %d\n", D_8013B6A0[i]);
+    // }
+    // exit(1);
     LOAD_VAB(0, aPbav, g_VabAddrs[0], D_8013B6A0, vab0Len);
     LOAD_VAB(1, aPbav_0, g_VabAddrs[1], D_8017D350, vab1Len);
     LOAD_VAB(2, aPbav_1, g_VabAddrs[2], D_801A9C80, vab2Len);
-    LOAD_VAB(3, aPbav_2, g_VabAddrs[3], D_8018B4E0, vab3Len);
+    // LOAD_VAB(3, aPbav_2, g_VabAddrs[3], D_8018B4E0, vab3Len);
     func_80131EBC(aPqes, 0x618);
     func_80131EBC(aPqes_0, 0x201);
     func_80131EBC(aPqes_1, 0x205);

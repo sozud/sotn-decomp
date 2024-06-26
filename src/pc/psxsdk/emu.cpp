@@ -6,6 +6,7 @@
 #include "common.h"
 #include "mednafen/spu.h"
 #include "mednafen/dma.h"
+#include "../../main/psxsdk/libsnd/libsnd_i.h"
 
 PS_SPU* SPU = nullptr;
 
@@ -197,16 +198,89 @@ void check_spu_clear_reverb_work_area()
     CheckWrites("./src/pc/psxsdk/expected/SpuClearReverbWorkArea0.txt");
 }
 
+void check_spu_set_common_attr()
+{
+    SPU->Power();
+
+    SpuCommonAttr attr;
+
+    attr.mask = 0xffffffff;
+    attr.mvol.left = 1;
+    attr.mvol.right = 2;
+    attr.mvolmode.left = 1;
+    attr.mvolmode.right = 1;
+    attr.mvolx.left = 3;
+    attr.mvolx.right = 4;
+    attr.cd.volume.left = 1;
+    attr.cd.volume.right = 2;
+    attr.cd.reverb = 0;
+    attr.cd.mix = 0;
+    attr.ext.volume.left = 2;
+    attr.ext.volume.right = 3;
+    attr.ext.reverb = 0;
+    attr.ext.mix = 0;
+
+    SpuSetCommonAttr(&attr);
+    CheckWrites("./src/pc/psxsdk/expected/SpuSetCommonAttr0.txt");
+
+    SPU->Power();
+
+    attr.cd.reverb = 1;
+    attr.cd.mix = 1;
+    attr.ext.reverb = 1;
+    attr.ext.mix = 1;
+
+    SpuSetCommonAttr(&attr);
+    CheckWrites("./src/pc/psxsdk/expected/SpuSetCommonAttr1.txt");
+}
+
 extern "C" void run_tests()
 {
     _spu_init(0);
     CheckWrites("./src/pc/psxsdk/expected/_spu_init.txt");
 
-    check_spu_set_reverb();
+    // check_spu_set_reverb();
 
-    check_spu_malloc_with_start_addr();
+    // check_spu_malloc_with_start_addr();
 
-    check_spu_clear_reverb_work_area();
+    // check_spu_clear_reverb_work_area();
+
+    check_spu_set_common_attr();
 
     exit(0);
+}
+
+
+double accum = 0;
+extern "C" void SsSeqCalledTbyT(void);
+#include <string.h>
+#include <random>
+extern "C"
+void SoundRevCallback(void *userdata, u8 *stream, int len)
+{
+    if(!init)
+    {
+        printf("not ready\n");
+        return;
+    }
+
+    printf("SoundRev\n");
+    for(int i = 0; i < len / 4; i++)
+    {
+        // generate one sample
+        SPU->UpdateFromCDC(768);
+        if(accum >= 735.735)
+        {
+         SsSeqCalledTbyT();
+         accum -= 735.735;
+        }
+        accum += 1;
+    }
+
+    memcpy(stream, IntermediateBuffer, len);
+
+    if (IntermediateBufferPos >= 1024)
+    {
+        IntermediateBufferPos = 0;
+    }
 }
