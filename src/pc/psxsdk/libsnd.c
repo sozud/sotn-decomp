@@ -246,13 +246,175 @@ void SpuVmKeyOn(s16 a , s16 b , u8 c , s32 d , s32 e , s32 f) { assert(0); }
 s32 _svm_envx_hist[32];
 s32 D_8003BD08 = 0;
 
-void SpuVmFlush(void) {}
+// void SpuVmFlush(void) {assert(false);}
+
+void SpuVmFlush(void) {
+    printf("SpuVmFlush\n");
+    s32 var_s0;
+    u32 env_mask;
+    u16 _svm_okof2_temp;
+    u16 _svm_okon1_temp;
+    u16 _svm_okon2_temp;
+    u16 _svm_okof1_temp;
+    s32 i;
+    s32 i2;
+
+    s16 * temp;
+    s32 * hist;
+    s32 max;
+    s16 temp2;
+    s16* reg_ptr;
+    char* sreg;
+    max = spuVmMaxVoice;
+
+    hist = &_svm_envx_hist;
+    var_s0 = 0;
+    D_8003BD08 = (D_8003BD08 + 1) & 0xF;
+    hist[D_8003BD08] = 0;
+    #if 0
+    if ((s32) spuVmMaxVoice > 0) {
+        var_a0 = &_svm_voice_06;
+        var_a1 = D_80032F10;
+        do {
+            *var_a0 = var_a1[0xc/2];
+            var_a0 += 0x34;
+            if (*var_a0 == 0) {
+                *temp_v0_2 |= 1 << var_s0;
+            }
+            var_s0 += 1;
+            var_a1 += 0x10;
+        } while (var_s0 < (s32) spuVmMaxVoice);
+    }
+    #else
+    for(i = 0; i < max; i++)
+    {
+        temp = &_svm_voice[i].unk6;
+#if 0
+        temp2 = D_80032F10[i * 8 + 6];
+#else
+        temp2 = read_16(0x1F801C00 + i * 8 + 6, __FILE__, __LINE__);
+#endif
+        *temp = temp2;
+        if(temp2 == 0)
+        {
+            hist[i] |= 1 << i;
+        }
+    }
+    #endif
+    i = 0;
+    if (_svm_auto_kof_mode == 0) {
+        env_mask = 0xFFFFFFFF;
+        for(i = 0; i < 0xf; i++)
+        {
+            env_mask &= _svm_envx_hist[i];
+        }
+
+        for(i = 0; i < spuVmMaxVoice; i++)
+        {
+            if (env_mask & (1 << i)) {
+                if (_svm_voice[i].unk1b == 2) {
+                    SpuSetNoiseVoice(0, 0xFFFFFF);
+                }
+                _svm_voice[i].unk1b  = 0;
+            }                
+        }
+    }
+    
+    _svm_okon1 &= ~_svm_okof1;
+    _svm_okon2 &= ~_svm_okof2;
+    for(i = 0; i < 24; i++)
+    {
+        // if (_svm_voice[i].auto_vol  != 0) {
+        //     SetAutoVol(i);
+        // }
+        // if (_svm_voice[i].auto_pan != 0) {
+        //     SetAutoPan(i);
+        // }
+    }
+    
+    i2 = 0;
+    sreg = &_svm_sreg_dirty[0];
+    do {        
+        if (*sreg & 1) {
+            D_80032F10[i2 * 8 + 0] = _svm_sreg_buf.raw[i2 * 8 + 0];
+            D_80032F10[i2 * 8 + 1] = _svm_sreg_buf.raw[i2 * 8 + 1];
+
+        }
+        if (*sreg & 4) {
+            D_80032F10[i2 * 8 + 2] = _svm_sreg_buf.raw[i2 * 8 + 2];
+        }
+        if (*sreg & 8) {
+            D_80032F10[i2 * 8 + 3] =   _svm_sreg_buf.raw[i2 * 8 + 3];
+        }
+        if (*sreg & 0x10) {
+            D_80032F10[i2 * 8 + 4] = _svm_sreg_buf.raw[i2 * 8 + 4];
+            D_80032F10[i2 * 8 + 5] = _svm_sreg_buf.raw[i2 * 8 + 5];
+        }
+        *sreg = 0;
+        sreg++;
+        i2++;
+    } while (sreg < &_svm_sreg_dirty[24]);
+
+    reg_ptr = D_80032F10; // 0x1F801C00
+    _svm_okof1_temp = _svm_okof1;
+    _svm_okof2_temp = _svm_okof2;
+    _svm_okon1_temp = _svm_okon1;
+    _svm_okon2_temp = _svm_okon2;
+    _svm_okof1 = 0;
+    _svm_okof2 = 0;
+    _svm_okon1 = 0;
+    _svm_okon2 = 0;
+
+    printf("hello\n");
+#if 0
+    reg_ptr[0x18c/2] = _svm_okof1_temp;
+    reg_ptr[0x18e/2] = _svm_okof2_temp;
+    reg_ptr[0x188/2] = _svm_okon1_temp;
+    reg_ptr[0x18a/2] = _svm_okon2_temp;
+    reg_ptr[0x198/2] = _svm_orev1;
+    reg_ptr[0x19a/2] = _svm_orev2;
+#else
+    write_16(0x1F801C00 + 0x18c, _svm_okof1_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x18e, _svm_okof2_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x188, _svm_okon1_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x18a, _svm_okon2_temp, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x198, _svm_orev1, __FILE__, __LINE__);
+    write_16(0x1F801C00 + 0x19a, _svm_orev2, __FILE__, __LINE__);
+#endif
+}
+
 
 void SpuVmKeyOnNow(short vagCount, short pitch) { assert(0); }
 
 void vmNoiseOn(s32 arg0) { assert(0); }
 
-void SpuVmDoAllocate(void) { assert(0); }
+// void SpuVmDoAllocate(void) { assert(0); }
+
+void SpuVmDoAllocate(void) {
+    s32 hist_pos;
+    u16 var_v0;
+    s16 temp;
+    struct thing * svm;
+    
+    _svm_cur.unk1c.a = _svm_cur.field_0x1a * 8;
+    _svm_cur.unk1c.b =  _svm_cur.field_C_vag_idx + ( _svm_cur.field_7_fake_program * 0x10);
+    _svm_voice[ _svm_cur.field_0x1a].unk6 = 0x7FFF;
+
+    for(hist_pos = 0; hist_pos < 0x10; hist_pos++)
+    {
+        _svm_envx_hist[hist_pos]  &= ~(1 << _svm_cur.field_0x1a);
+    }
+    if (( _svm_cur.field_18_voice_idx & 1) > 0) {
+        _svm_sreg_buf.raw[_svm_cur.unk1c.a + 3] = _svm_pg[ (_svm_cur.field_18_voice_idx - 1) / 2].reserved2;
+    } else {
+        _svm_sreg_buf.raw[_svm_cur.unk1c.a + 3] = _svm_pg[(_svm_cur.field_18_voice_idx - 1) / 2].reserved3;
+    }
+    svm = &_svm_cur.unk1c;
+    _svm_sreg_dirty[_svm_cur.field_0x1a] |= 8;
+    _svm_sreg_buf.raw[svm->a + 4] = _svm_tn[(_svm_cur.field_7_fake_program * 0x10) +  _svm_cur.field_C_vag_idx].adsr1;
+    _svm_sreg_buf.raw[svm->a + 5] = _svm_tn[(_svm_cur.field_7_fake_program * 0x10) +  _svm_cur.field_C_vag_idx].adsr2 + _svm_damper;
+    _svm_sreg_dirty[_svm_cur.field_0x1a] = _svm_sreg_dirty[_svm_cur.field_0x1a] | 0x30;
+}
 
 struct rev_param_entry {
     u32 flags;

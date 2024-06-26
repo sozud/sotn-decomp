@@ -654,6 +654,8 @@ s32 SpuVmGetProgPan(s16 arg0, s16 arg1) {
 
 INCLUDE_ASM("main/nonmatchings/psxsdk/libsnd/vmanager", SpuVmSetVol);
 
+#include <assert.h>
+
 s16 SsUtKeyOn(
     s16 vabId, s16 prog, s16 tone, s16 note, s16 fine, s16 voll, s16 volr) {
     VagAtr* vagAtr;
@@ -662,6 +664,7 @@ s16 SsUtKeyOn(
     ProgAtr* progAtr;
     s32 program;
     s16 voice;
+    assert(false);
     if (_snd_ev_flag == 1) {
         return -1;
     }

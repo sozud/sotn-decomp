@@ -81,18 +81,22 @@ void CheckWrites(char* filename)
 }
 
 bool init = false;
+extern "C" void MySsInitHot(void);
 
 extern "C" void mednafen_init()
 {
     // MDFN_IEN_PSX::DMA_Init();
     // MDFN_IEN_PSX::DMA_Power();
+    MySsInitHot();
     SPU = new PS_SPU();
     SPU->Power();
 }
 
 extern "C" void write_16(u32 addr, u16 data, char* file, int line)
 {
+    #if 0
     writes.push_back({addr, data, file, line, 0});
+    #endif
     printf("write16 %08X %04X %s:%d\n", addr, data, file, line);
     if(!init)
     {
@@ -101,7 +105,6 @@ extern "C" void write_16(u32 addr, u16 data, char* file, int line)
     }
     SPU->Write(0, addr, data, file, line);
 }
-
 extern "C" u16 read_16(u32 addr, char* file, int line)
 {
     if(!init)
