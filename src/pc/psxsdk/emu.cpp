@@ -116,7 +116,7 @@ extern "C" u16 read_16(u32 addr, char* file, int line)
 extern "C" void write_dma(u32 data, char* file, int line)
 {
     printf("write_dma %08X %04X %s:%d\n", SPU->RWAddr, data, file, line);
-    writes.push_back({SPU->RWAddr, data, file, line, 1});
+    writes.push_back({SPU->RWAddr, (u16)data, file, line, 1});
     SPU->WriteDMA(data);
 }
 
