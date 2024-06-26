@@ -93,7 +93,7 @@ u16* D_80032F10;
 
 struct SpuVoice _svm_voice[NUM_SPU_CHANNELS];
 
-void WaitEvent(s32) {}
+void WaitEvent(s32 a ) {}
 
 union RegBuf _svm_sreg_buf;
 
@@ -241,7 +241,7 @@ struct _ss_spu_vm_rec_struct _ss_spu_vm_rec;
 s16 _svm_orev1;
 s16 _svm_orev2;
 
-void SpuVmKeyOn(s16, s16, u8, s32, s32, s32) { assert(0); }
+void SpuVmKeyOn(s16 a , s16 b , u8 c , s32 d , s32 e , s32 f) { assert(0); }
 
 s32 _svm_envx_hist[32];
 s32 D_8003BD08 = 0;
@@ -299,7 +299,7 @@ long SpuSetReverbModeParam(SpuReverbAttr* attr) {
 
 long ResetRCnt(long spec) { return 1; }
 
-void* InterruptCallback(u8, void (*)()) { return 0; }
+void* InterruptCallback(u8 a, void (*b)() ) { return 0; }
 
 long GetVideoMode(void) { return 0; }
 
@@ -309,10 +309,10 @@ s32 D_8003355C;
 
 typedef union {
     struct {
-        int16_t rest : 15;
-        int16_t msb : 1;
+        s16 rest : 15;
+        s16 msb : 1;
     } part;
-    int16_t all;
+    s16 all;
 } Bits;
 
 void SpuSetCommonAttr(SpuCommonAttr* attr) {
@@ -528,6 +528,8 @@ s32 _spu_rev_reserve_wa;
 //     return 0;
 // }
 
+void func_800286E0(void);
+
 #define _spu_AllocBlockNum D_8003355C
 
 void _spu_gcSPU() {
@@ -536,6 +538,8 @@ void _spu_gcSPU() {
 
     long SpuMalloc(long size)
     {
+        long pAllocated;
+
         printf("SpuMalloc size %d\n", size);
         unsigned int rev_size_zero = 0;
         if (_spu_rev_reserve_wa)
@@ -590,7 +594,7 @@ void _spu_gcSPU() {
         }
 
     out_of_blocks:
-        long pAllocated = -1;
+        pAllocated = -1;
 
         printf("found_block_idx %d\n", found_block_idx);
 
@@ -1051,7 +1055,7 @@ s32 _spu_addrMode;
 
 void (* volatile _spu_IRQCallback)();
 
-void DeliverEvent(unsigned long, unsigned long) {}
+void DeliverEvent(unsigned long a, unsigned long b) {}
 
 s32 D_800330F8[256] = {0};
 s32 D_80033558;
@@ -1099,14 +1103,14 @@ int _spu_t(int mode, ...) {
     return 0;
 }
 
-void _SsSndCrescendo(s16, s16) { assert(false); }
-void _SsSndDecrescendo(s16, s16) { assert(false); }
+void _SsSndCrescendo(s16 a , s16 b) { assert(false); }
+void _SsSndDecrescendo(s16 a , s16 b) { assert(false); }
 
 void SpuVmSetVol(
     short seq_sep_no, short vabId, short program, short voll, short volr) {
     assert(false);
 }
 
-void _SsContDataEntry(s16, s16, u8) { assert(false); }
+void _SsContDataEntry(s16 a, s16 b, u8 c) { assert(false); }
 
 #endif

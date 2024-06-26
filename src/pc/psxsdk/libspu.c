@@ -301,5 +301,5 @@ long SpuMallocWithStartAddr(unsigned long addr, long size) {
     return var_v0;
 }
 
-void _SpuSetVoiceAttr(SpuVoiceAttr* arg, s32, s32, s32) {}
+void _SpuSetVoiceAttr(SpuVoiceAttr* arg, s32 a , s32 b , s32 c) {}
 #endif

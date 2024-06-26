@@ -26,6 +26,8 @@ extern s32 _spu_keystat;
 
 extern s32 _spu_rev_startaddr[];
 
+void SpuStart(void);
+
 void _SpuInit(s32 arg0) {
     s32 i;
     ResetCallback();
