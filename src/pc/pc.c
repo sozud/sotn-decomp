@@ -23,12 +23,12 @@ void ExecCd();
 void SoundRevCallback(void *userdata, u8 *stream, int len);
 
 void MyAudioCallback(void* data, u8* buffer, int length) { 
-    // SoundRevCallback(data, buffer, length); 
-    int i = 0;
-    while (i * 4 < length) {
-        buffer[i * 4 + 1] = buffer[i * 4 + 0] = rand();
-        buffer[i * 4 + 3] = buffer[i * 4 + 2] = rand();
-    }
+    SoundRevCallback(data, buffer, length); 
+    // int i = 0;
+    // while (i * 4 < length) {
+    //     buffer[i * 4 + 1] = buffer[i * 4 + 0] = rand();
+    //     buffer[i * 4 + 3] = buffer[i * 4 + 2] = rand();
+    // }
     // int i = 0;
     // while (i * 4 < length) {
     //     if (AudioBuffer.ReadPos < AudioBuffer.Size) {

@@ -1,5 +1,5 @@
 #include "libsnd_i.h"
-
+#include <assert.h>
 u32 SpuVmVSetUp(s16 arg0, s16 arg1) {
     ProgAtr* temp_a0;
     u32 var_v0;
