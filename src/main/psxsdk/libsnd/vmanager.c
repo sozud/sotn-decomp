@@ -664,7 +664,6 @@ s16 SsUtKeyOn(
     ProgAtr* progAtr;
     s32 program;
     s16 voice;
-    assert(false);
     if (_snd_ev_flag == 1) {
         return -1;
     }
@@ -792,6 +791,7 @@ s16 SsUtKeyOnV(s16 voice, s16 vabId, s16 prog, s16 tone, s16 note, s16 fine,
     ProgAtr* progAtr;
     s32 program;
     if (_snd_ev_flag == 1) {
+        assert(false);
         return -1;
     }
     _snd_ev_flag = 1;
@@ -828,11 +828,13 @@ s16 SsUtKeyOnV(s16 voice, s16 vabId, s16 prog, s16 tone, s16 note, s16 fine,
         _svm_cur.field_0x13 = vagAtr->max;
     } else {
         _snd_ev_flag = 0;
+        assert(false);
         return -1;
     }
 
     if (vag == 0) {
         _snd_ev_flag = 0;
+        assert(false);
         return -1;
     }
 
