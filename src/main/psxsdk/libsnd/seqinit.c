@@ -101,7 +101,7 @@ s16 _SsInitSoundSeq(s16 arg0, s16 vab_id, u8* addr) {
     return 0;
 }
 
-s16 SsSeqOpen(u32 addr, s16 vab_id) {
+s16 SsSeqOpen(u8* addr, s16 vab_id) {
     s32 open_bits;
     s16 seq_sep_no;
     u32 bit_pos;

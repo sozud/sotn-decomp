@@ -113,9 +113,20 @@ extern Overlay g_StageSel;
 
 s32 LoadFileSim(s32 fileId, s32 type);
 
+extern u8 lib_seq[7859];
+	static char stab[SS_SEQ_TABSIZ*4*5*2]; 
+
+
 static bool g_WereStringsInitialised = false;
 void InitStageSel(Overlay* o) {
     memcpy(o, &g_StageSel, sizeof(Overlay));
+
+    SsSetTableSize(stab, 4, 5); 
+    int g_SeqAccessNum = SsSeqOpen(lib_seq, 0);
+	SsSetMVol(127, 127);				/* set main volume */
+	SsSeqSetVol(g_SeqAccessNum, 64, 64);
+    SsSeqPlay(g_SeqAccessNum, 1, 1);
+
     if (!g_WereStringsInitialised) {
         g_WereStringsInitialised = true;
         for (int i = 0; i < LEN(D_80180128); i++) {
