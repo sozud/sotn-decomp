@@ -551,6 +551,80 @@ extern "C" void run_tests()
 double accum = 0;
 extern "C" void SsSeqCalledTbyT(void);
 #include <string.h>
+
+
+struct CD_Audio_Buffer {
+    int16_t Samples[2][0x1000]; // [0][...] = l, [1][...] = r
+    uint32_t Size;
+    uint32_t Freq;
+    uint32_t ReadPos;
+};
+
+
+extern struct CD_Audio_Buffer AudioBuffer;
+
+
+extern "C" int CdReading();
+extern "C" void ExecCd();
+
+        // if (AudioBuffer.ReadPos < AudioBuffer.Size) {
+        //     // emit until we have to generate again
+        //     int32_t samples[2];
+
+        //     GetCDAudio(samples);
+
+        //     buffer[i * 4 + 1] = samples[0] >> 8;
+        //     buffer[i * 4 + 0] = samples[0];
+
+        //     // right
+        //     buffer[i * 4 + 3] = samples[1] >> 8;
+        //     buffer[i * 4 + 2] = samples[1];
+        //     i += 1;
+        // } else if (CdReading()) {
+        //     // generate more audio
+        //     ExecCd();
+        // }
+// asdf
+// extern "C"
+// void SoundRevCallback(void *userdata, u8 *stream, int len)
+// {
+//     if(!ready)
+//     {
+//         printf("not ready\n");
+//         return;
+//     }
+
+//     printf("SoundRev\n");
+//     for(int i = 0; i < len / 4; i++)
+//     {
+//         if (AudioBuffer.ReadPos < AudioBuffer.Size) {
+//             // ok
+//         }
+//         else {
+//             // generate cd audio
+//             if((CdReading())
+//             {
+//                 ExecCd();
+//             }
+//         }
+//         // generate one sample
+//         SPU->UpdateFromCDC(768);
+//         if(accum >= 735.735)
+//         {
+//          SsSeqCalledTbyT();
+//          accum -= 735.735;
+//         }
+//         accum += 1;
+//     }
+
+//     memcpy(stream, IntermediateBuffer, len);
+
+//     if (IntermediateBufferPos >= 1024)
+//     {
+//         IntermediateBufferPos = 0;
+//     }
+// }
+
 extern "C" void SoundRevCallback(void *userdata, u8 *stream, int len)
 {
     if(!init)
@@ -561,6 +635,16 @@ extern "C" void SoundRevCallback(void *userdata, u8 *stream, int len)
 
     for(int i = 0; i < len / 4; i++)
     {
+        if (AudioBuffer.ReadPos < AudioBuffer.Size) {
+            // ok
+        }
+        else {
+            // generate cd audio
+            if(CdReading())
+            {
+                ExecCd();
+            }
+        }
         // generate one sample
         SPU->UpdateFromCDC(768);
         if(accum >= 735.735)
