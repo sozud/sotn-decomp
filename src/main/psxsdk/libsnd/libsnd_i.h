@@ -379,7 +379,7 @@ extern s32 VBLANK_MINUS;
 extern s16 _svm_damper;
 
 extern VagAtr* _svm_vab_tn[16];
-extern ProgAtr* _svm_vab_pg[16];
+extern ProgAtr* _svm_vab_pg[32];
 extern VabHdr* _svm_vab_vh[16];
 extern ProgAtr* _svm_pg;
 extern VabHdr* _svm_vh;

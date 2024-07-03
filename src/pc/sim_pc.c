@@ -21,9 +21,24 @@ SimFile D_800A024C[] = {
     {"sim:c:\\bin\\c_edf.bin", 16},    {"sim:c:\\bin\\c_edb.bin", 17},
 };
 
-static const char* D_800A036C[] = {
-    "VAB/SD_ALK.VH", "VAB/SD_ALK.VB", "VAB/SD_RIH.VH",
-    "VAB/SD_RIH.VB", "VAB/SD_MAR.VH", "VAB/SD_MAR.VB",
+// static const char* D_800A036C[] = {
+//     "VAB/SD_ALK.VH", "VAB/SD_ALK.VB", "VAB/SD_RIH.VH",
+//     "VAB/SD_RIH.VB", "VAB/SD_MAR.VH", "VAB/SD_MAR.VB",
+// };
+
+SimFile D_800A036C[] = {
+    {
+        "VAB/SD_ALK.VH",
+        aPbav_0,
+        4128,
+        SIM_VH,
+    },
+    {
+        "VAB/SD_ALK.VB",
+        D_8017D350,
+        57696,
+        SIM_VB,
+    }
 };
 
 const char* D_800A04AC[] = {
@@ -197,7 +212,7 @@ s32 LoadFileSimToMem(SimKind kind) {
         }
         break;
     case SIM_VB:
-        if (SsVabTransBodyPartly(SIM_PTR, g_SimFile->size, g_SimVabId) == -1) {
+        if (SsVabTransBodyPartly(g_SimFile->addr, g_SimFile->size, g_SimVabId) == -1) {
             return -1;
         }
         while (SsVabTransCompleted(SS_IMEDIATE) != 1) {
@@ -237,6 +252,8 @@ s32 LoadFileSimToMem(SimKind kind) {
 
 bool LoadFilePc(FileLoad* file, SimFile* sim) {
     sim->addr = file->content;
+     sim->addr = file->content;
+    sim->size = file->length;
     switch (sim->kind) { // slowly replacing the original func
     case SIM_1:
         LoadStageTileset(sim->addr, file->length, 0x100);
@@ -309,9 +326,9 @@ s32 LoadFileSim(s32 fileId, SimFileType type) {
         break;
     case SimFileType_StagePrg:
         switch (g_StageId) {
-        case STAGE_SEL:
-            InitStageSel(&g_api.o);
-            break;
+        // case STAGE_SEL:
+        //     InitStageSel(&g_api.o);
+        //     break;
         case STAGE_WRP:
             InitStageWrp(&g_api.o);
             break;
@@ -327,10 +344,12 @@ s32 LoadFileSim(s32 fileId, SimFileType type) {
             u16 actualFileId = fileId & 0x7FFF;
             if (actualFileId >= LEN(D_800A036C)) {
                 WARNF("not implemented for VH ID %04X", fileId);
+                exit(0);
                 return -1;
             }
-            sim.path = D_800A036C[actualFileId];
-            sim.size = -1;
+            sim.size = D_800A036C[actualFileId].size;
+            sim.addr = D_800A036C[actualFileId].addr;
+            sim.path = D_800A036C[actualFileId].path;
             sim.kind = SIM_VH;
         } else {
             sim.path = smolbuf;
@@ -362,10 +381,12 @@ s32 LoadFileSim(s32 fileId, SimFileType type) {
             u16 actualFileId = fileId & 0x7FFF;
             if (actualFileId >= LEN(D_800A036C)) {
                 WARNF("not implemented for VH ID %04X", fileId);
+                exit(1);
                 return -1;
             }
-            sim.path = D_800A036C[actualFileId];
-            sim.size = -1;
+            sim.size = D_800A036C[actualFileId].size;
+            sim.addr = D_800A036C[actualFileId].addr;
+            sim.path = D_800A036C[actualFileId].path;
             sim.kind = SIM_VB;
         } else {
             sim.path = smolbuf;

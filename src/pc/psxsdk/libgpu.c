@@ -77,7 +77,7 @@ OT_TYPE* ClearOTag(OT_TYPE* ot, int n) {
     return ot;
 }
 
-void SetDrawEnv(DR_ENV* dr_env, DRAWENV* env) { NOT_IMPLEMENTED; }
+void SetDrawEnv(DR_ENV* dr_env, DRAWENV* env) {  }
 
 int GetGraphType(void) {
     // always 0 in SOTN

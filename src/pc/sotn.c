@@ -93,7 +93,6 @@ void DebugInputWait(const char* msg);
 
 int g_Frame = 0;
 void MyDrawSyncCallback(int mode) {
-    DEBUGF("state: %d, game step: %d", g_GameState, g_GameStep);
 
     // force loaded map to always be visible
     if (g_Tilemap.tileDef) {
@@ -329,7 +328,7 @@ bool FileUseContent(
     file.length = bytesread;
     bool r = cb(&file, param);
 
-    free(content);
+    // free(content);
     fclose(f);
     return r;
 }
@@ -393,7 +392,7 @@ int MyClearImage(RECT* rect, u_char r, u_char g, u_char b) {
 }
 
 int MyLoadImage(RECT* rect, u_long* p) {
-    DEBUGF("(%X, %X, %X, %X): %p", rect->x, rect->y, rect->w, rect->h, p);
+    // DEBUGF("(%X, %X, %X, %X): %p", rect->x, rect->y, rect->w, rect->h, p);
     u16* mem = (u16*)p;
     u16* vram = g_RawVram;
     vram += rect->x + rect->y * VRAM_W;

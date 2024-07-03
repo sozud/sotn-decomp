@@ -4,7 +4,8 @@ import (
 	"encoding/binary"
 	"encoding/json"
 	"os"
-	"slices"
+
+	"golang.org/x/exp/slices"
 )
 
 type layer struct {

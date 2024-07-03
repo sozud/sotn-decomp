@@ -15,6 +15,7 @@ u32 SpuVmVSetUp(s16 arg0, s16 arg1) {
     _svm_cur.field_1_vabId = arg0;
     _svm_cur.field_6_program = arg1;
     _svm_pg = temp_a0;
+    printf("arg0 %d arg1 %d\n", arg0, arg1);
     _svm_cur.field_7_fake_program = _svm_pg[arg1].reserved1;
     return 0;
 }
