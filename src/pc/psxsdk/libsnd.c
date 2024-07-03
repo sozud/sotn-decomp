@@ -116,7 +116,7 @@ s16 _svm_damper;             /* number: 18 */
 s16 _svm_vcf;                /* number: 19 */
 u8 _svm_auto_kof_mode;       /* number: 20 */
 VabHdr* _svm_vab_vh[16];     /* number: 21 */
-ProgAtr* _svm_vab_pg[16];    /* number: 22 */
+ProgAtr* _svm_vab_pg[32];    /* number: 22 */
 VagAtr* _svm_vab_tn[16];     /* number: 23 */
 s32 _svm_vab_start[16];      /* number: 24 */
 s32 _svm_vab_total[16];      /* number: 25 */

@@ -51,8 +51,12 @@ void SpuGetAllKeysStatus(char* status) {
     s32 max;
     max = NUM_SPU_CHANNELS;
     for (voice = 0; voice < max; voice++) {
+        #if 0
         new_var = &_spu_RXX->rxx.voice[voice].volumex;
         volumex = *new_var;
+        #else
+        volumex = read_16(voice * 0x10 + 0xC);
+        #endif
         if ((1 << voice) & _spu_keystat) {
             if (volumex != 0) {
                 status[voice] = 1;

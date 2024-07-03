@@ -82,6 +82,7 @@ s16 SsVabOpenHeadWithMode(u8* addr, s16 vabid, s16 arg2, u32 sbaddr) {
     }
     if (vab_hdr_2->ps <= kMaxPrograms) {
         _svm_vab_pg[vabId_2] = var_a2;
+        printf("_svm_vab_pg set for %d\n", vabId_2);
         pProgTable = var_a2;
         var_a2 = var_a2 + (kMaxPrograms * 0x10);
         var_s0 = 0;

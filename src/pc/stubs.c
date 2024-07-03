@@ -494,7 +494,7 @@ u8 g_CdMode[3];
 
 struct XaMusicConfig g_XaMusicConfigs[563] = {0};
 
-s8 D_80138F64[20];
+s8 D_80138F64[24];
 u8 D_801390C4;
 s16 D_8013AE8A[1];
 s16 D_8013AEA6;
@@ -562,11 +562,11 @@ u_long* D_80139A7C;
 
 // sound stubs
 
-void SpuGetAllKeysStatus(char* status) { NOT_IMPLEMENTED; }
+// void SpuGetAllKeysStatus(char* status) { NOT_IMPLEMENTED; }
 
 void func_801073C0(void) { NOT_IMPLEMENTED; }
 
-void UpdateCd(void) { NOT_IMPLEMENTED; }
+void UpdateCd(void) { }
 
 int CdInit(void) {
     NOT_IMPLEMENTED;
@@ -584,7 +584,6 @@ void func_ptr_8017000C(Entity* self) { NOT_IMPLEMENTED; }
 s32 func_ptr_80170010(Entity* self) { NOT_IMPLEMENTED; }
 s32 func_ptr_80170014(Entity* self) { NOT_IMPLEMENTED; }
 int GetWeaponId(void) {
-    NOT_IMPLEMENTED;
     return 0;
 }
 void LoadWeaponPalette(s32 clutIndex) { NOT_IMPLEMENTED; }

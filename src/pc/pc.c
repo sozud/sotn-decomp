@@ -45,7 +45,6 @@ void MyAudioCallback(void* data, u8* buffer, int length) {
 int MyFntPrint(const char* fmt, va_list arg) {
     char buf[256];
     vsnprintf(buf, sizeof(buf), fmt, arg);
-    INFOF(buf);
 }
 
 u_long* MyFntFlush(int id) {

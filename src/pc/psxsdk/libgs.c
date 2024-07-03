@@ -2,7 +2,7 @@
 #include <psxsdk/libgs.h>
 #include <log.h>
 
-void GsClearVcount(void) { NOT_IMPLEMENTED; }
+void GsClearVcount(void) {  }
 
 long GsGetVcount() { return 1; }
 
