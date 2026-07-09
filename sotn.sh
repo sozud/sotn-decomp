@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-go run ./tools/sotn-assets "$@"
+/usr/local/go/bin/go run ./tools/sotn-assets "$@"

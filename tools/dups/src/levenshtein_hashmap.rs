@@ -77,7 +77,7 @@ impl LevenshteinHashMap {
 
             let similarity = levenshtein_similarity(key, k, &mut self.cache);
 
-            if  similarity >= self.threshold && similarity > closest_similarity {
+            if similarity >= self.threshold && similarity > closest_similarity {
                 closest_key = Some(k);
                 closest_similarity = similarity;
             }
@@ -102,7 +102,7 @@ impl LevenshteinHashMap {
 
             let similarity = levenshtein_similarity(&key, k, &mut self.cache);
 
-            if  similarity >= self.threshold && similarity > closest_similarity {
+            if similarity >= self.threshold && similarity > closest_similarity {
                 closest_key = Some(k.clone());
                 closest_similarity = similarity;
             }

@@ -122,6 +122,17 @@ func (h *handler) Build(e assets.BuildArgs) error {
 			return fmt.Errorf("script %q does not have a command", args[0])
 		}
 		sb.WriteString(args[0])
+		if op == "SCRIPT_SWITCH" {
+			sb.WriteString("(")
+			sb.WriteString(args[1])
+			sb.WriteString("),\n")
+			for _, arg := range args[2:] {
+				sb.WriteString("    SCRIPT_CASE(")
+				sb.WriteString(arg)
+				sb.WriteString("),\n")
+			}
+			continue
+		}
 		sb.WriteString("(")
 		if cmd.params != len(args)-1 {
 			return fmt.Errorf("command %q at line %d expects %d arguments but got %d",
