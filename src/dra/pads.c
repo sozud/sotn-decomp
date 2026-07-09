@@ -80,6 +80,29 @@ void ReadPads(void) {
         }
 
         pad->tapped = (pad->pressed ^ pad->previous) & pad->pressed;
+
+        static int pos = 0;
+
+        static Point16 WarpRoomCoords[] = {
+            {0x0F, 0x26}, // Entrance
+            {0x23, 0x2C}, // Abandoned pit to the Catacomb
+            {0x3B, 0x11}, // Outer Wall
+            {0x28, 0x0C}, // Castle Keep
+            {0x25, 0x15}, // Olrox's Quarters
+        };
+        if (pad->tapped & PAD_UP) {
+            s32 moveX = WarpRoomCoords->x - g_Tilemap.left;
+            s32 moveY = WarpRoomCoords->y - g_Tilemap.top;
+            // FntPrint("move_room%x\n", DestinationWarpRoom);
+            // FntPrint("for_x:%x y%x\n", warpCoords->x, warpCoords->y);
+            // FntPrint("move_x:%x y%x\n", moveX, moveY);
+            PLAYER.posX.i.hi += moveX << 8;
+            PLAYER.posY.i.hi += moveY << 8;
+            pos++;
+            if (pos > 4) {
+                pos = 0;
+            }
+        }
     }
     UpdatePadsRepeat();
 }
