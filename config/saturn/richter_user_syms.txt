@@ -1,6 +1,7 @@
 _g_Player = 0x0605C140;
 _g_CurrentEntity = 0x0605C6E0;
 _g_Entities = 0x060997F8;
+_g_PrimBuf = 0x060867F8;
 _g_Timer = 0x0605CD7C;
 _GetTeleportToOtherCastle = 0x060A5060;
 _func_80156DE4 = 0x060A5154;
@@ -162,6 +163,8 @@ _D_80174FB4 = 0x060ced31;
 _D_80174FB8 = 0x060ced32;
 
 _ric_anim_walk = 0x060bfd1c;
+_D_80155750 = 0x060BFFE4;
+_func_06011278 = 0x06011278;
 
 _memset = 0x06032EA8;
 _memcpy = 0x06033024;

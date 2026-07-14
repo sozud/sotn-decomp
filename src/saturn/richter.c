@@ -274,7 +274,18 @@ INCLUDE_ASM("asm/saturn/richter/f_nonmat", f60A97B0, func_060A97B0);
 void RicSetDeadPrologue() { RicSetStep(PL_S_DEAD_PROLOGUE); }
 
 // RicSetSlide
-INCLUDE_ASM("asm/saturn/richter/f_nonmat", f60A9A74, func_060A9A74);
+extern AnimationFrame D_80155750[];
+void RicSetSlide(void) {
+    RicCheckFacing();
+    RicSetStep(PL_S_SLIDE);
+    RicSetAnimation(D_80155750);
+    g_CurrentEntity->velocityY = 0;
+    RicSetSpeedX(0x6A000);
+    func_8015CC28();
+    RicCreateEntFactoryFromEntity(g_CurrentEntity, BP_25, 0);
+    func_06011278(0x71A);
+    g_Player.timers[PL_T_12] = 4;
+}
 
 // RicSetSlideKick
 INCLUDE_ASM("asm/saturn/richter/f_nonmat", f60A9AFC, func_060A9AFC);
@@ -375,7 +386,30 @@ void RicSetInvincibilityFrames(s32 kind, s16 invincibilityFrames) {
 }
 
 // DisableAfterImage
-INCLUDE_ASM("asm/saturn/richter/f_nonmat", f60AA438, func_060AA438);
+void DisableAfterImage(s32 resetAnims, s32 arg1) {
+    Primitive* prim;
+    Entity* entity;
+    s32 i;
+
+    if (resetAnims) {
+        g_Entities[E_AFTERIMAGE_1].ext.afterImage.resetFlag = 1;
+        entity = &g_Entities[E_AFTERIMAGE_1];
+        for (i = 0; i < 3; i++, entity++) {
+            entity->animCurFrame = 0;
+            entity->unk0->unk0 = 0;
+        }
+        prim = &g_PrimBuf[g_Entities[E_AFTERIMAGE_1].primIndex];
+        while (prim) {
+            prim->x1 = 0;
+            prim = *(Primitive**)((u8*)prim + 0x20);
+        }
+    }
+    g_Entities[E_AFTERIMAGE_1].ext.afterImage.disableFlag = 1;
+    g_Entities[E_AFTERIMAGE_1].ext.afterImage.index = 10;
+    if (arg1) {
+        g_Player.timers[PL_T_AFTERIMAGE_DISABLE] = 4;
+    }
+}
 
 void func_8015CC28(void) {
     g_Entities[E_AFTERIMAGE_1].ext.afterImage.disableFlag =
