@@ -2,6 +2,7 @@
 # python3 ./tools/builds/build.py && ninja
 
 import ninja_syntax
+import re
 import os
 import shutil
 
@@ -63,8 +64,13 @@ ninja.rule('link_multi',
                     $in $objs',
            description='Linking $out from $in')
 
+# -MD/-MF makes cpp record which headers it actually read, and depfile lets
+# ninja act on that, so editing a header rebuilds the sources that include it
+# without having to touch them by hand. -MT forces the target name to match
+# $out, otherwise cpp names it after the input and ninja rejects the depfile.
 ninja.rule('cpp',
-           command='cpp $FLAGS $in > $out',
+           command='cpp $FLAGS -MD -MT $out -MF $out.d $in > $out',
+           depfile='$out.d',
            description='Running preprocessor on $out from $in')
 
 ninja.rule('sotn_str',
@@ -77,6 +83,33 @@ ninja.rule('iconv_sjis',
 
 ninja.rule('as',
            'sh-elf-as -no-pad-sections -I./src/saturn $in -o $out')
+
+INCLUDE_ASM_RE = re.compile(
+    r'INCLUDE_ASM(?:_NO_ALIGN)?\(\s*"([^"]+)"\s*,\s*([A-Za-z0-9_]+)\s*,')
+
+
+def included_asm(src):
+    """Asm files a source pulls in via INCLUDE_ASM, plus the shared macros.
+
+    Only files that already exist are returned. The splitter generates them
+    outside ninja, and naming one that is absent makes ninja fail outright
+    rather than build. This runs after every split, so the list stays current.
+    """
+    deps = []
+    macro = 'src/saturn/macro.inc'
+    if os.path.exists(macro):
+        deps.append(macro)
+    try:
+        with open(src, errors='replace') as f:
+            text = f.read()
+    except OSError:
+        return deps
+    for folder, name in INCLUDE_ASM_RE.findall(text):
+        path = f'{folder}/{name}.s'
+        if os.path.exists(path):
+            deps.append(path)
+    return sorted(set(deps))
+
 
 def add_srcs(srcs, output_dir, args):
     for src in srcs:
@@ -116,10 +149,15 @@ def add_srcs(srcs, output_dir, args):
                 'args': args
             })
         
+        # INCLUDE_ASM expands to `.include "FOLDER/NAME.s"`, which the
+        # assembler resolves. Ninja cannot see through that, so a regenerated
+        # or resized .s left the stale object in place and the link silently
+        # used old bytes. Declare them so the object tracks its asm.
         ninja.build(
             obj_name,
             'as',
-            inputs=[asm_name])
+            inputs=[asm_name],
+            implicit=included_asm(src))
 
 snd_srcs = [
     'src/saturn/alucard.c',
@@ -151,6 +189,7 @@ snd_srcs = [
     'src/saturn/zero/stgspr14.c',
     'src/saturn/zero/fontmap.c',
     'src/saturn/zero/sysflag.c',
+    'src/saturn/zero/sys_bss.c',
     'src/saturn/lib/spr/spr_data.c',
     'src/saturn/game_0.c',
     'src/saturn/game_1.c',
@@ -402,6 +441,7 @@ lib_srcs = [
     'src/saturn/lib/spr/spr_2c.c',
     'src/saturn/lib/spr/spr_slv.c',
     'src/saturn/lib/sys.c',
+    'src/saturn/lib/sys_bss.c',
     'src/saturn/lib/sys_tail.c',
 ]
 
@@ -724,6 +764,7 @@ multi_objs = {
         'build/saturn/lib/spr/spr_2c.o',
         'build/saturn/lib/spr/spr_slv.o',
         'build/saturn/lib/sys.o',
+        'build/saturn/lib/sys_bss.o',
         'build/saturn/zero/snddata.o',
         'build/saturn/zero/adpcm.o',
         'build/saturn/zero/sndlut.o',
