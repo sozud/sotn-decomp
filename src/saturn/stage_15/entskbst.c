@@ -35,10 +35,7 @@ u8 g_Stage15SkeletonBeastLandAnim[12] = {
 };
 u16 g_Stage15SkeletonBeastAnimationsPadding = 0;
 u8* g_Stage15SkeletonBeastAnimations[] = {
-    g_Stage15SkeletonBeastIdleAnim,
-    g_Stage15SkeletonBeastWalkAnim,
-    g_Stage15SkeletonBeastWalkBackAnim,
-    g_Stage15SkeletonBeastAttackAnim,
-    g_Stage15SkeletonBeastJumpAnim,
-    g_Stage15SkeletonBeastLandAnim,
+    g_Stage15SkeletonBeastIdleAnim,     g_Stage15SkeletonBeastWalkAnim,
+    g_Stage15SkeletonBeastWalkBackAnim, g_Stage15SkeletonBeastAttackAnim,
+    g_Stage15SkeletonBeastJumpAnim,     g_Stage15SkeletonBeastLandAnim,
 };

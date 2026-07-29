@@ -9,13 +9,10 @@ void func_060E56DC(Entity* self);
 void func_060E5CB0(Entity* self);
 void func_060E5E70(Entity* self);
 
-EntityEntry g_RStage16EntityWight = {
-    &g_RStage16SpriteBank20, func_060E4EDC};
+EntityEntry g_RStage16EntityWight = {&g_RStage16SpriteBank20, func_060E4EDC};
 s16 g_RStage16WightInitOffset[2] = {0, 23};
-EntityEntry g_RStage16EntityEntry28 = {
-    &g_RStage16SpriteBank20, func_060E56DC};
-EntityEntry g_RStage16EntityEntry29 = {
-    &g_RStage16SpriteBank20, func_060E5CB0};
+EntityEntry g_RStage16EntityEntry28 = {&g_RStage16SpriteBank20, func_060E56DC};
+EntityEntry g_RStage16EntityEntry29 = {&g_RStage16SpriteBank20, func_060E5CB0};
 
 s16 g_RStage16WightBoneInitOffset[2] = {0, 0};
 s16 g_RStage16WightBoneCollisionSensors[2][2] = {
@@ -23,13 +20,12 @@ s16 g_RStage16WightBoneCollisionSensors[2][2] = {
     {255, 0},
 };
 u8 g_RStage16WightBoneSpinAnim[36] = {
-    4, 0x14, 4, 0x15, 4, 0x14, 4, 0x15, 4, 0x16, 4, 0x17,
-    4, 0x18, 4, 0x19, 4, 0x18, 4, 0x17, 4, 0x16, 4, 0x17,
-    4, 0x16, 4, 0x15, 4, 0x14, 4, 0x15, 0xFF, 0, 0, 0,
+    4, 0x14, 4, 0x15, 4, 0x14, 4, 0x15, 4,    0x16, 4, 0x17,
+    4, 0x18, 4, 0x19, 4, 0x18, 4, 0x17, 4,    0x16, 4, 0x17,
+    4, 0x16, 4, 0x15, 4, 0x14, 4, 0x15, 0xFF, 0,    0, 0,
 };
 
-EntityEntry g_RStage16EntityEntry30 = {
-    &g_RStage16SpriteBank20, func_060E5E70};
+EntityEntry g_RStage16EntityEntry30 = {&g_RStage16SpriteBank20, func_060E5E70};
 s16 g_RStage16WightEffectInitOffset[2] = {0, 0};
 
 u8 g_RStage16WightAnimation0[10] = {
@@ -57,12 +53,8 @@ u8 g_RStage16WightAnimation7[14] = {
     2, 0x14, 2, 0x15, 2, 0x16, 2, 0x17, 2, 0x18, 2, 0x19, 0xFF, 0xFF,
 };
 u8* g_RStage16WightAnimations[] = {
-    g_RStage16WightAnimation0,
-    g_RStage16WightAnimation1,
-    g_RStage16WightAnimation2,
-    g_RStage16WightAnimation3,
-    g_RStage16WightAnimation4,
-    g_RStage16WightAnimation5,
-    g_RStage16WightAnimation6,
-    g_RStage16WightAnimation7,
+    g_RStage16WightAnimation0, g_RStage16WightAnimation1,
+    g_RStage16WightAnimation2, g_RStage16WightAnimation3,
+    g_RStage16WightAnimation4, g_RStage16WightAnimation5,
+    g_RStage16WightAnimation6, g_RStage16WightAnimation7,
 };

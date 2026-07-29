@@ -8,9 +8,6 @@ void func_060E69A4(Entity* self);
 void func_060E70A0(Entity* self);
 void func_060E6F38(Entity* self);
 
-EntityEntry g_RStage16EntityEntry34 = {
-    &g_RStage16SpriteBank22, func_060E69A4};
-EntityEntry g_RStage16EntityEntry36 = {
-    &g_RStage16SpriteBank22, func_060E70A0};
-EntityEntry g_RStage16EntityEntry35 = {
-    &g_RStage16SpriteBank22, func_060E6F38};
+EntityEntry g_RStage16EntityEntry34 = {&g_RStage16SpriteBank22, func_060E69A4};
+EntityEntry g_RStage16EntityEntry36 = {&g_RStage16SpriteBank22, func_060E70A0};
+EntityEntry g_RStage16EntityEntry35 = {&g_RStage16SpriteBank22, func_060E6F38};

@@ -23,17 +23,9 @@ EntityEntry g_Stage16EntityEntry37 = {NULL, func_060E73FC};
 EntityEntry g_Stage16EntityEntry38 = {NULL, func_060E7C60};
 
 Stage16SkeletonBreederHitbox g_Stage16SkeletonBreederHitboxes[11] = {
-    {16, 3, 0, -16},
-    {16, 3, 0, -16},
-    {16, 3, 0, -16},
-    {16, 3, 0, -16},
-    {16, 3, 0, -16},
-    {16, 3, 0, -16},
-    {16, 3, 0, -16},
-    {16, 2, 0, -16},
-    {12, 12, -44, 2},
-    {20, 8, -48, 22},
-    {16, 2, -52, 28},
+    {16, 3, 0, -16},  {16, 3, 0, -16},  {16, 3, 0, -16},  {16, 3, 0, -16},
+    {16, 3, 0, -16},  {16, 3, 0, -16},  {16, 3, 0, -16},  {16, 2, 0, -16},
+    {12, 12, -44, 2}, {20, 8, -48, 22}, {16, 2, -52, 28},
 };
 
 s16 g_Stage16SkeletonBreederAttackSensors[2][2] = {
