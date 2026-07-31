@@ -157,7 +157,244 @@ void func_psp_0892667C(s32 paletteID, u16* paletteData) {
     LoadImage(&rect, (u_long*)paletteData);
 }
 
-void PlaySfx(int sfx) {}
+// replace ric sound effects with maria's
+#define MARIA_SFX_FIRST SFX_VO_MAR_8E6
+#define MARIA_SFX_LAST SFX_VO_MAR_DEATH
+#define MARIA_PSX_SFX_FIRST SFX_VO_RIC_ATTACK_A
+#define SFX_DATA_FIRST 0x600
+extern Unkstruct_800BF554 g_SfxData[];
+
+#ifdef MARIA_SFX_DEBUG
+#define MARIA_SFX_COUNT 16
+#define MARIA_SFX_MENU_PRIMS 176
+#define MARIA_SFX_MENU_X 8
+#define MARIA_SFX_MENU_Y 48
+
+static bool s_MariaSfxMenuActive;
+static s32 s_MariaSfxIndex;
+static s16 s_MariaSfxMenuPrimIndex = -1;
+
+static const char* const s_MariaSfxEnumNames[MARIA_SFX_COUNT] = {
+    "SFX_VO_MAR_8E6",    "SFX_VO_MAR_ATTACK_C", "SFX_VO_MAR_8E8",
+    "SFX_VO_MAR_8E9",    "SFX_VO_MAR_8EA",      "SFX_VO_MAR_8EB",
+    "SFX_VO_MAR_8EC",    "SFX_VO_MAR_8ED",      "SFX_VO_MAR_8EE",
+    "SFX_VO_MAR_8EF",    "SFX_VO_MAR_8F0",      "SFX_VO_MAR_8F1",
+    "SFX_VO_MAR_PAIN_B", "SFX_VO_MAR_PAIN_C",   "SFX_VO_MAR_PAIN_D",
+    "SFX_VO_MAR_DEATH",
+};
+
+static const char* const s_MariaSfxSampleNames[MARIA_SFX_COUNT] = {
+    "MARY2A", "MARY2B", "MARY2C", "MARY2D", "MARY2E", "MARY2F",
+    "MARY2G", "MARY2Q", "MARY2P", "MARY2N", "MARY2O", "MARY2M",
+    "MARY2R", "MARY2T", "MARY2V", "MARY2W",
+};
+#endif
+
+static void PatchMariaSfxData(void) {
+    Unkstruct_800BF554* dst = &g_SfxData[MARIA_PSX_SFX_FIRST - 0x600];
+    s32 i;
+
+    for (i = 0; i < 16; i++) {
+        dst[i].vabid = 1;
+        dst[i].prog = 1 + i / 8;
+        dst[i].note = 60;
+        dst[i].volume = i == 15 ? 124 : 127;
+        dst[i].mode = 0;
+        dst[i].tone = (i % 8) * 2;
+        dst[i].unk6 = i == 15 ? 90 : 80;
+    }
+}
+
+void PlaySfx(s32 sfx) { g_api.PlaySfx(sfx); }
+
+void MarPlaySfx(s32 sfx) {
+    if (sfx >= MARIA_SFX_FIRST && sfx <= MARIA_SFX_LAST) {
+        sfx += MARIA_PSX_SFX_FIRST - MARIA_SFX_FIRST;
+    }
+    PlaySfx(sfx);
+}
+
+#ifdef MARIA_SFX_DEBUG
+static Primitive* DrawMariaSfxChar(Primitive* prim, s32* x, s32 y, char ch) {
+    u8 glyph;
+
+    if (ch == ' ') {
+        *x += FONT_W;
+        return prim;
+    }
+    if (prim == NULL) {
+        return NULL;
+    }
+
+    glyph = ch - 0x20;
+    prim->type = PRIM_SPRT;
+    prim->tpage = 0x1E;
+    prim->clut = PAL_UNK_196;
+    prim->u0 = (glyph & 0xF) * FONT_W;
+    prim->v0 = (glyph & 0xF0) >> 1;
+    prim->u1 = FONT_W;
+    prim->v1 = FONT_H;
+    prim->x0 = *x;
+    prim->y0 = y;
+    prim->priority = 0x1F1;
+    prim->drawMode = DRAW_DEFAULT;
+    *x += FONT_W;
+    return prim->next;
+}
+
+static Primitive* DrawMariaSfxString(
+    Primitive* prim, s32* x, s32 y, const char* text) {
+    while (*text != '\0') {
+        prim = DrawMariaSfxChar(prim, x, y, *text++);
+    }
+    return prim;
+}
+
+static Primitive* DrawMariaSfxHex(Primitive* prim, s32* x, s32 y, u32 value) {
+    static const char digits[] = "0123456789ABCDEF";
+    s32 shift;
+
+    for (shift = 12; shift >= 0; shift -= 4) {
+        prim = DrawMariaSfxChar(prim, x, y, digits[(value >> shift) & 0xF]);
+    }
+    return prim;
+}
+
+static Primitive* DrawMariaSfxDec2(Primitive* prim, s32* x, s32 y, u32 value) {
+    prim = DrawMariaSfxChar(prim, x, y, '0' + value / 10);
+    return DrawMariaSfxChar(prim, x, y, '0' + value % 10);
+}
+
+static Primitive* DrawMariaSfxDec3(Primitive* prim, s32* x, s32 y, u32 value) {
+    prim = DrawMariaSfxChar(prim, x, y, value >= 100 ? '0' + value / 100 : ' ');
+    prim =
+        DrawMariaSfxChar(prim, x, y, value >= 10 ? '0' + value / 10 % 10 : ' ');
+    return DrawMariaSfxChar(prim, x, y, '0' + value % 10);
+}
+
+static void DrawMariaSfxMenu(
+    s32 mariaSfx, s32 psxSfx, Unkstruct_800BF554* metadata) {
+    Primitive* prim = &g_PrimBuf[s_MariaSfxMenuPrimIndex];
+    s32 x;
+    s32 y = MARIA_SFX_MENU_Y;
+
+    prim->type = PRIM_TILE;
+    prim->r0 = prim->g0 = prim->b0 = 0x10;
+    prim->x0 = 4;
+    prim->y0 = y - 4;
+    prim->u0 = 248;
+    prim->v0 = 84;
+    prim->priority = 0x1F0;
+    prim->drawMode = DRAW_DEFAULT;
+    prim = prim->next;
+
+    x = MARIA_SFX_MENU_X;
+    prim = DrawMariaSfxString(prim, &x, y, "MARIA SFX ");
+    prim = DrawMariaSfxDec2(prim, &x, y, s_MariaSfxIndex + 1);
+    prim = DrawMariaSfxString(prim, &x, y, "/16");
+
+    x = MARIA_SFX_MENU_X;
+    y += 10;
+    prim = DrawMariaSfxString(prim, &x, y, "Sfx ");
+    prim =
+        DrawMariaSfxString(prim, &x, y, s_MariaSfxEnumNames[s_MariaSfxIndex]);
+
+    x = MARIA_SFX_MENU_X;
+    y += 10;
+    prim = DrawMariaSfxString(prim, &x, y, "ID ");
+    prim = DrawMariaSfxHex(prim, &x, y, mariaSfx);
+    prim = DrawMariaSfxString(prim, &x, y, " -> PSX ");
+    prim = DrawMariaSfxHex(prim, &x, y, psxSfx);
+
+    x = MARIA_SFX_MENU_X;
+    y += 10;
+    prim = DrawMariaSfxString(prim, &x, y, "WAV ");
+    prim =
+        DrawMariaSfxString(prim, &x, y, s_MariaSfxSampleNames[s_MariaSfxIndex]);
+
+    x = MARIA_SFX_MENU_X;
+    y += 10;
+    prim = DrawMariaSfxString(prim, &x, y, "VAB ");
+    prim = DrawMariaSfxDec3(prim, &x, y, metadata->vabid);
+    prim = DrawMariaSfxString(prim, &x, y, " PROG ");
+    prim = DrawMariaSfxDec3(prim, &x, y, metadata->prog);
+    prim = DrawMariaSfxString(prim, &x, y, " NOTE ");
+    prim = DrawMariaSfxDec3(prim, &x, y, metadata->note);
+
+    x = MARIA_SFX_MENU_X;
+    y += 10;
+    prim = DrawMariaSfxString(prim, &x, y, "VOL ");
+    prim = DrawMariaSfxDec3(prim, &x, y, metadata->volume);
+    prim = DrawMariaSfxString(prim, &x, y, " MODE ");
+    prim = DrawMariaSfxDec3(prim, &x, y, metadata->mode);
+    prim = DrawMariaSfxString(prim, &x, y, " TONE ");
+    prim = DrawMariaSfxDec3(prim, &x, y, metadata->tone);
+
+    x = MARIA_SFX_MENU_X;
+    y += 10;
+    prim = DrawMariaSfxString(prim, &x, y, "UNK6 ");
+    prim = DrawMariaSfxDec3(prim, &x, y, metadata->unk6);
+
+    x = MARIA_SFX_MENU_X;
+    y += 10;
+    prim = DrawMariaSfxString(prim, &x, y, "UP/DOWN SELECT X PLAY START EXIT");
+
+    while (prim != NULL) {
+        prim->drawMode = DRAW_HIDE;
+        prim = prim->next;
+    }
+}
+
+static bool OpenMariaSfxMenu(void) {
+    s_MariaSfxMenuPrimIndex =
+        g_api.AllocPrimitives(PRIM_SPRT, MARIA_SFX_MENU_PRIMS);
+    if (s_MariaSfxMenuPrimIndex < 0) {
+        return false;
+    }
+    s_MariaSfxMenuActive = true;
+    return true;
+}
+
+static void CloseMariaSfxMenu(void) {
+    g_api.FreePrimitives(s_MariaSfxMenuPrimIndex);
+    s_MariaSfxMenuPrimIndex = -1;
+    s_MariaSfxMenuActive = false;
+}
+
+static void UpdateMariaSfxMenu(void) {
+    s32 mariaSfx;
+    s32 psxSfx;
+    Unkstruct_800BF554* metadata;
+    u16 tapped = g_pads[0].tapped;
+
+    if (tapped & PAD_START) {
+        CloseMariaSfxMenu();
+        g_pads[0].tapped &= ~PAD_START;
+        return;
+    }
+    if (tapped & PAD_UP) {
+        s_MariaSfxIndex--;
+        if (s_MariaSfxIndex < 0) {
+            s_MariaSfxIndex = MARIA_SFX_COUNT - 1;
+        }
+    }
+    if (tapped & PAD_DOWN) {
+        s_MariaSfxIndex++;
+        if (s_MariaSfxIndex >= MARIA_SFX_COUNT) {
+            s_MariaSfxIndex = 0;
+        }
+    }
+
+    mariaSfx = MARIA_SFX_FIRST + s_MariaSfxIndex;
+    psxSfx = MARIA_PSX_SFX_FIRST + s_MariaSfxIndex;
+    metadata = &g_SfxData[psxSfx - SFX_DATA_FIRST];
+
+    if (tapped & PAD_CROSS) {
+        MarPlaySfx(mariaSfx);
+    }
+    DrawMariaSfxMenu(mariaSfx, psxSfx, metadata);
+}
+#endif
 
 void func_psp_089285A0(s32 angle, MATRIX* out) {
     short c = (short)rcos(angle);
@@ -182,15 +419,35 @@ s16 AllocPrimitives(PrimitiveType kind, s32 count) {
 
 void MARIA_Load();
 void MarInit(s16 initParam);
+
+#ifdef MARIA_SFX_DEBUG
+static void (*s_MarStageUpdate)(void);
+static void MarPsxStageUpdate(void) {
+    if (!s_MariaSfxMenuActive) {
+        s_MarStageUpdate();
+    }
+}
+#endif
+
 static void MarPsxInit(u16 initParam) {
     static int isInitialized = 0;
     if (!isInitialized) {
         MARIA_Load();
         PatchHudSubweaponUV();
+        PatchMariaSfxData();
         g_api.CalcDealDamageMaria = g_api.func_800FD664;
         g_api.CalcPlayerDamageMaria = g_api.CalcPlayerDamage;
         isInitialized = true;
     }
+
+#ifdef MARIA_SFX_DEBUG
+    s_MariaSfxMenuActive = false;
+    s_MariaSfxMenuPrimIndex = -1;
+    if (g_api.o.Update != MarPsxStageUpdate) {
+        s_MarStageUpdate = g_api.o.Update;
+        g_api.o.Update = MarPsxStageUpdate;
+    }
+#endif
 
     // Call the actual init function
     MarInit(initParam);
@@ -198,6 +455,19 @@ static void MarPsxInit(u16 initParam) {
 
 void MarMain(void);
 static void MarPsxMain() {
+#ifdef MARIA_SFX_DEBUG
+    if (s_MariaSfxMenuActive) {
+        UpdateMariaSfxMenu();
+        return;
+    }
+    if (g_pads[0].tapped & PAD_START) {
+        if (OpenMariaSfxMenu()) {
+            g_pads[0].tapped &= ~PAD_START;
+            UpdateMariaSfxMenu();
+            return;
+        }
+    }
+#endif
     ConvertSubweaponRicToMaria();
     MarMain();
     ConvertSubweaponMariaToRic();
