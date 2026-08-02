@@ -209,9 +209,6 @@ void MarInit(s16 initParam) {
     if (g_HudImage[3]) {
         func_psp_091040A0(g_HudImage);
     }
-#ifdef MARIA_SFX_DEBUG
-    D_pspeu_092E5F20 = g_api.AllocPrimitives(PRIM_SPRT, 128);
-#endif
 #endif
     func_psp_090E4C68();
 }
@@ -450,21 +447,10 @@ static u16 mar_80154574[] = {
 #define MARIA_PSP_SFX_FIRST 0x601
 #define MARIA_PSP_SFX_LAST 0x90B
 #define MARIA_PSP_SFX_DATA ((Unkstruct_800BF554*)0x0918E070)
-#define MARIA_PSP_NOP_1 asm("nop");
-#define MARIA_PSP_NOP_2 MARIA_PSP_NOP_1 MARIA_PSP_NOP_1
-#define MARIA_PSP_NOP_4 MARIA_PSP_NOP_2 MARIA_PSP_NOP_2
-#define MARIA_PSP_NOP_8 MARIA_PSP_NOP_4 MARIA_PSP_NOP_4
-#define MARIA_PSP_NOP_16 MARIA_PSP_NOP_8 MARIA_PSP_NOP_8
-#define MARIA_PSP_NOP_32 MARIA_PSP_NOP_16 MARIA_PSP_NOP_16
-#define MARIA_PSP_NOP_64 MARIA_PSP_NOP_32 MARIA_PSP_NOP_32
-#define MARIA_PSP_NOP_128 MARIA_PSP_NOP_64 MARIA_PSP_NOP_64
-#define MARIA_PSP_NOP_256 MARIA_PSP_NOP_128 MARIA_PSP_NOP_128
-#define MARIA_PSP_NOP_512 MARIA_PSP_NOP_256 MARIA_PSP_NOP_256
-#define MARIA_PSP_NOP_1024 MARIA_PSP_NOP_512 MARIA_PSP_NOP_512
-#define MARIA_PSP_NOP_2048 MARIA_PSP_NOP_1024 MARIA_PSP_NOP_1024
-#define MARIA_PSP_NOP_4096 MARIA_PSP_NOP_2048 MARIA_PSP_NOP_2048
-#define MARIA_PSP_NOP_8192 MARIA_PSP_NOP_4096 MARIA_PSP_NOP_4096
+#define MARIA_PSP_MENU_PRIMS 128
 
+static s16 s_MariaPspSfxPrimIndex = -1;
+static s32 s_MariaPspSfxId = SFX_VO_MAR_8E6;
 static char* MarPspAppendDec(char* out, s32 value) {
     if (value < 0) {
         *out++ = '-';
@@ -523,10 +509,10 @@ static void MarPspDrawMenu(char* text) {
     s32 x = 8;
     s32 y = 8;
 
-    if (D_pspeu_092E5F20 < 0) {
+    if (s_MariaPspSfxPrimIndex < 0) {
         return;
     }
-    prim = &g_PrimBuf[D_pspeu_092E5F20];
+    prim = &g_PrimBuf[s_MariaPspSfxPrimIndex];
     prim->type = PRIM_TILE;
     prim->r0 = prim->g0 = prim->b0 = 0x10;
     prim->x0 = 4;
@@ -552,40 +538,43 @@ static void MarPspDrawMenu(char* text) {
     }
 }
 
-static void MarPspSoundTest(void) {
+void MarSoundTest(void) {
     char* out = (char*)mar_80175958;
     Unkstruct_800BF554* metadata;
     u16 repeat = g_pads[0].repeat;
     u16 tapped = g_pads[0].tapped;
-    s32* sfxId = &D_pspeu_092E5F28;
 
-    if (*sfxId < MARIA_PSP_SFX_FIRST || *sfxId > MARIA_PSP_SFX_LAST) {
-        *sfxId = SFX_VO_MAR_8E6;
+    if (s_MariaPspSfxPrimIndex < 0) {
+        s_MariaPspSfxPrimIndex =
+            g_api.AllocPrimitives(PRIM_SPRT, MARIA_PSP_MENU_PRIMS);
+        if (s_MariaPspSfxPrimIndex < 0) {
+            return;
+        }
     }
 
     if (repeat & PAD_UP) {
-        (*sfxId)++;
+        s_MariaPspSfxId++;
     }
     if (repeat & PAD_DOWN) {
-        (*sfxId)--;
+        s_MariaPspSfxId--;
     }
     if (tapped & PAD_RIGHT) {
-        *sfxId += 0x10;
+        s_MariaPspSfxId += 0x10;
     }
     if (tapped & PAD_LEFT) {
-        *sfxId -= 0x10;
+        s_MariaPspSfxId -= 0x10;
     }
-    if (*sfxId > MARIA_PSP_SFX_LAST) {
-        *sfxId = MARIA_PSP_SFX_FIRST;
+    if (s_MariaPspSfxId > MARIA_PSP_SFX_LAST) {
+        s_MariaPspSfxId = MARIA_PSP_SFX_FIRST;
     }
-    if (*sfxId < MARIA_PSP_SFX_FIRST) {
-        *sfxId = MARIA_PSP_SFX_LAST;
+    if (s_MariaPspSfxId < MARIA_PSP_SFX_FIRST) {
+        s_MariaPspSfxId = MARIA_PSP_SFX_LAST;
     }
     if (tapped & PAD_CROSS) {
-        g_api.PlaySfx(*sfxId);
+        g_api.PlaySfx(s_MariaPspSfxId);
     }
 
-    metadata = &MARIA_PSP_SFX_DATA[*sfxId - 0x600];
+    metadata = &MARIA_PSP_SFX_DATA[s_MariaPspSfxId - 0x600];
 #define PUT(c) *out++ = (c)
     PUT('P');
     PUT('S');
@@ -639,7 +628,7 @@ static void MarPspSoundTest(void) {
     PUT(':');
     PUT('0');
     PUT('x');
-    out = MarPspAppendHex3(out, *sfxId);
+    out = MarPspAppendHex3(out, s_MariaPspSfxId);
     PUT('}');
     PUT('\n');
     PUT('V');
@@ -1075,21 +1064,6 @@ void MarMain(void) {
         g_Status.D_80097C40 = temp;
     }
     D_pspeu_092E5F28 = PadReadPSP();
-}
-
-#else
-
-void MarMain(void) {
-    MarPspSoundTest();
-    MARIA_PSP_NOP_8192
-    MARIA_PSP_NOP_512
-    MARIA_PSP_NOP_256
-    MARIA_PSP_NOP_128
-    MARIA_PSP_NOP_64
-    MARIA_PSP_NOP_8
-    MARIA_PSP_NOP_4
-    MARIA_PSP_NOP_2
-    MARIA_PSP_NOP_1
 }
 
 #endif
