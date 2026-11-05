@@ -7,3 +7,5 @@ int sotn_rand(void) {
 }
 
 void func_06032E88(unsigned int value) { seed = value; }
+
+unsigned int sotn_rand_state(void) { return seed; }
