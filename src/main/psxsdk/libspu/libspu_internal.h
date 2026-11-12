@@ -10,7 +10,7 @@ void* InterruptCallback(int, void (*)());
 void _SpuInit(s32);
 void _spu_FiDMA();
 
-extern s32 D_80033098;
+extern s32 _spu_fd;
 extern s32 _spu_EVdma;
 extern s32 _spu_isCalled;
 extern s32 _spu_inTransfer;
@@ -23,10 +23,8 @@ extern s32 _spu_rev_offsetaddr;
 extern s32 _spu_rev_startaddr[];
 extern s32 _spu_trans_mode;
 
-extern s32 D_80033550;
-extern s32 D_8003355C;
-extern s32 D_80033560;
-extern s8* D_80033564;
+extern s32 _spu_AllocBlockNum;
+extern s32 _spu_AllocLastNum;
 extern s32 _spu_mem_mode_plus;
 extern s32 _spu_mem_mode_unitM;
 extern u16 _spu_voice_centerNote[];

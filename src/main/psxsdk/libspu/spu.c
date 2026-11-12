@@ -4,6 +4,30 @@
 #include <psxsdk/kernel.h>
 #include <psxsdk/stdarg.h>
 
+static s32 D_800334FC = 0;
+u16 _spu_tsa = 0;
+union SpuUnion* _spu_RXX = (union SpuUnion*)0x1F801C00;
+static s32* D_80033508 = (s32*)0x1F8010C0;
+static s32* D_8003350C = (s32*)0x1F8010C4;
+static s32* D_80033510 = (s32*)0x1F8010C8;
+static s32* D_80033514 = (s32*)0x1F8010F0;
+static s32* D_80033518 = (s32*)0x1F801014;
+s32 _spu_transMode = 0;
+s32 _spu_addrMode = 0;
+s32 _spu_mem_mode = 2;
+s32 _spu_mem_mode_plus = 3;
+s32 _spu_mem_mode_unit = 8;
+s32 _spu_mem_mode_unitM = 7;
+s32 _spu_inTransfer = 1;
+void (* volatile _spu_transferCallback)() = NULL;
+void (* volatile _spu_IRQCallback)() = NULL;
+static u16 D_80033540[] = {
+    0x0707, 0x0707, 0x0707, 0x0707, 0x0707, 0x0707, 0x0707, 0x0707,
+};
+static s32 D_80033550 = 0;
+static s32 D_80033554 = 0;
+static s32 D_80033558 = 0;
+
 #define WASTE_TIME()                                                           \
     sp4 = 0xD;                                                                 \
     for (sp0 = 0; sp0 < 0xF0; sp0++) {                                         \
@@ -23,12 +47,6 @@ s32 _spu_reset(void) {
     return 0;
 }
 
-extern s32 D_800334FC;
-extern s32* D_80033514;
-extern u16 D_80033540[];
-extern s32 _spu_addrMode;
-extern s32 _spu_mem_mode;
-extern s32 _spu_mem_mode_unit;
 
 s32 _spu_init(s32 arg0) {
     volatile s32 sp0;
@@ -279,13 +297,6 @@ void _spu_FiDMA(void) {
     DeliverEvent(HwSPU, EvSpCOMP);
 }
 
-extern s32* D_80033508;
-extern s32* D_8003350C;
-extern s32* D_80033510;
-extern s32* D_80033518;
-extern s32 D_80033550;
-extern s32 D_80033554;
-extern s32 D_80033558;
 
 static inline void _spu_FsetDelayW(void) {
     *D_80033518 = (*D_80033518 & 0xF0FFFFFF) | 0x20000000;

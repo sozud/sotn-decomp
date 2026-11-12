@@ -17,6 +17,7 @@ static s32 D_8003BD08;
 static s32 _svm_envx_hist[0x10];
 STATIC_PAD_BSS(4);
 static u32 _ss_spu_vm_rec[0x20];
+STATIC_PAD_BSS(8);
 #endif
 
 static u16* D_80032F10 = (u16*)0x1F801C00;

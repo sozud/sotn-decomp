@@ -3,7 +3,21 @@
 #include "libspu_internal.h"
 #include <psxsdk/kernel.h>
 
-extern s32 _spu_fd;
+s32 _spu_fd = 0;
+s32 _spu_trans_mode = 0;
+s32 _spu_rev_flag = 0;
+s32 _spu_rev_reserve_wa = 0;
+s32 _spu_rev_offsetaddr = 0;
+struct SpuRevAttr _spu_rev_attr = {0};
+u16 _spu_voice_centerNote[NUM_SPU_CHANNELS] = {
+    0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000,
+    0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000,
+    0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000, 0xC000,
+};
+s32 _spu_EVdma = 0;
+s32 _spu_keystat = 0;
+s32 _spu_zerobuf[0x100] = {0};
+s32 _spu_isCalled = 0;
 
 void SpuStart(void);
 
@@ -35,7 +49,7 @@ void SpuStart(void) {
     if (_spu_isCalled == 0) {
         _spu_isCalled = 1;
         EnterCriticalSection();
-        D_80033098 = 0;
+        _spu_fd = 0;
         _SpuDataCallback(_spu_FiDMA);
         _spu_EVdma = OpenEvent(HwSPU, EvSpCOMP, EvMdNOINTR, NULL);
         EnableEvent(_spu_EVdma);

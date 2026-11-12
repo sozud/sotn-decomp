@@ -26,7 +26,7 @@ long SpuMalloc(long size) {
     } else {
         _spu_gcSPU();
 
-        for (; i < D_8003355C; i++) {
+        for (; i < _spu_AllocBlockNum; i++) {
             if (_spu_memList[i].addr & 0x40000000 ||
                 (_spu_memList[i].addr & 0x80000000 &&
                  _spu_memList[i].size >= size)) {
@@ -40,7 +40,7 @@ long SpuMalloc(long size) {
         return -1;
 
     if (_spu_memList[var_s2].addr & 0x40000000) {
-        if (var_s2 < D_8003355C && _spu_memList[var_s2].size - var_s3 >= size) {
+        if (var_s2 < _spu_AllocBlockNum && _spu_memList[var_s2].size - var_s3 >= size) {
             s32 next = var_s2 + 1;
 
             // Why the volatile?
@@ -53,26 +53,26 @@ long SpuMalloc(long size) {
             _spu_memList[var_s2].addr &= 0x0FFFFFFF;
             _spu_memList[var_s2].size = size;
 
-            D_80033560 = next;
+            _spu_AllocLastNum = next;
             _spu_gcSPU();
 
             return _spu_memList[var_s2].addr;
         }
     } else {
-        if (size < _spu_memList[var_s2].size && D_80033560 < D_8003355C) {
+        if (size < _spu_memList[var_s2].size && _spu_AllocLastNum < _spu_AllocBlockNum) {
             u32 _addr = _spu_memList[var_s2].addr + size;
             u32 _size = _spu_memList[var_s2].size - size;
 
-            u32 swapAddr = _spu_memList[D_80033560].addr;
-            u32 swapSize = _spu_memList[D_80033560].size;
+            u32 swapAddr = _spu_memList[_spu_AllocLastNum].addr;
+            u32 swapSize = _spu_memList[_spu_AllocLastNum].size;
 
-            _spu_memList[D_80033560].addr = _addr | 0x80000000;
-            _spu_memList[D_80033560].size = _size;
+            _spu_memList[_spu_AllocLastNum].addr = _addr | 0x80000000;
+            _spu_memList[_spu_AllocLastNum].size = _size;
 
-            _spu_memList[D_80033560 + 1].addr = swapAddr;
-            _spu_memList[D_80033560 + 1].size = swapSize;
+            _spu_memList[_spu_AllocLastNum + 1].addr = swapAddr;
+            _spu_memList[_spu_AllocLastNum + 1].size = swapSize;
 
-            D_80033560++;
+            _spu_AllocLastNum++;
         }
 
         _spu_memList[var_s2].size = size;
@@ -84,70 +84,3 @@ long SpuMalloc(long size) {
     return -1;
 }
 #endif
-
-void _spu_gcSPU(void) {
-    s32 i, j;
-
-    for (i = 0; i <= D_80033560;) {
-        if (_spu_memList[i].addr & 0x80000000) {
-            for (j = i + 1; true; j++) {
-                if (_spu_memList[j].addr != 0x2FFFFFFF) {
-                    break;
-                }
-            }
-            if ((_spu_memList[j].addr & 0x80000000) &&
-                ((_spu_memList[j].addr & 0x0FFFFFFF) ==
-                 ((_spu_memList[i].addr & 0x0FFFFFFF) +
-                  _spu_memList[i].size))) {
-                _spu_memList[j].addr = 0x2FFFFFFF;
-                _spu_memList[i].size += _spu_memList[j].size;
-                continue;
-            }
-        }
-        i++;
-    }
-    for (i = 0; i <= D_80033560; i++) {
-        if (_spu_memList[i].size == 0) {
-            _spu_memList[i].addr = 0x2FFFFFFF;
-        }
-    }
-    for (i = 0; i <= D_80033560; i++) {
-        if (_spu_memList[i].addr & 0x40000000) {
-            break;
-        }
-        for (j = i + 1; j <= D_80033560; j++) {
-            if (_spu_memList[j].addr & 0x40000000) {
-                break;
-            }
-            if ((_spu_memList[j].addr & 0x0FFFFFFF) <
-                (_spu_memList[i].addr & 0x0FFFFFFF)) {
-                u32 swapAddr = _spu_memList[i].addr;
-                u32 swapSize = _spu_memList[i].size;
-                _spu_memList[i].addr = _spu_memList[j].addr;
-                _spu_memList[i].size = _spu_memList[j].size;
-                _spu_memList[j].addr = swapAddr;
-                _spu_memList[j].size = swapSize;
-            }
-        }
-    }
-    for (i = 0; i <= D_80033560; i++) {
-        if (_spu_memList[i].addr & 0x40000000) {
-            break;
-        }
-        if (_spu_memList[i].addr == 0x2FFFFFFF) {
-            _spu_memList[i].addr = _spu_memList[D_80033560].addr;
-            _spu_memList[i].size = _spu_memList[D_80033560].size;
-            D_80033560 = i;
-            break;
-        }
-    }
-    for (i = D_80033560 - 1; i >= 0; i--) {
-        if (!(_spu_memList[i].addr & 0x80000000)) {
-            break;
-        }
-        _spu_memList[i].addr &= 0x0FFFFFFF;
-        _spu_memList[i].addr |= 0x40000000;
-        _spu_memList[i].size += _spu_memList[D_80033560].size;
-        D_80033560 = i;
-    }
-}

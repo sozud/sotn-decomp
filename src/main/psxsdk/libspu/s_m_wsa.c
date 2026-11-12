@@ -33,81 +33,81 @@ s32 _SpuMallocSeparateTo3(s32 arg0, u32 addr, s32 size) {
 
     if (temp_t3 & 0x40000000) {
         if (temp_t1 > 0) {
-            if ((D_8003355C - 2) < D_80033560) {
+            if ((_spu_AllocBlockNum - 2) < _spu_AllocLastNum) {
                 return -1;
             }
-            _spu_memList[D_80033560].size = temp_t1;
-            _spu_memList[D_80033560].addr &= 0x0FFFFFFF;
-            _spu_memList[D_80033560].addr |= 0x80000000;
-            D_80033560++;
-            _spu_memList[D_80033560].addr = a1;
-            _spu_memList[D_80033560].size = size;
+            _spu_memList[_spu_AllocLastNum].size = temp_t1;
+            _spu_memList[_spu_AllocLastNum].addr &= 0x0FFFFFFF;
+            _spu_memList[_spu_AllocLastNum].addr |= 0x80000000;
+            _spu_AllocLastNum++;
+            _spu_memList[_spu_AllocLastNum].addr = a1;
+            _spu_memList[_spu_AllocLastNum].size = size;
         } else {
-            if ((D_8003355C - 1) < D_80033560) {
+            if ((_spu_AllocBlockNum - 1) < _spu_AllocLastNum) {
                 return -1;
             }
-            _spu_memList[D_80033560].size = size;
-            _spu_memList[D_80033560].addr &= 0x0FFFFFFF;
+            _spu_memList[_spu_AllocLastNum].size = size;
+            _spu_memList[_spu_AllocLastNum].addr &= 0x0FFFFFFF;
         }
 
-        D_80033560++;
-        _spu_memList[D_80033560].addr = (temp_t3 & 0x0FFFFFFF) + temp_t1 + size;
-        _spu_memList[D_80033560].addr |= 0x40000000;
-        _spu_memList[D_80033560].size = (temp_t4 - temp_t1) - size;
+        _spu_AllocLastNum++;
+        _spu_memList[_spu_AllocLastNum].addr = (temp_t3 & 0x0FFFFFFF) + temp_t1 + size;
+        _spu_memList[_spu_AllocLastNum].addr |= 0x40000000;
+        _spu_memList[_spu_AllocLastNum].size = (temp_t4 - temp_t1) - size;
         _spu_gcSPU();
         return a1;
     }
     if (temp_t1 > 0) {
         if (var_a3 == size) {
-            if ((D_8003355C - 2) < D_80033560) {
+            if ((_spu_AllocBlockNum - 2) < _spu_AllocLastNum) {
                 return -1;
             }
         } else {
-            if ((D_8003355C - 1) < D_80033560) {
+            if ((_spu_AllocBlockNum - 1) < _spu_AllocLastNum) {
                 return -1;
             }
         }
         _spu_memList[arg0].size = temp_t1;
         {
-            int temp_v1_3 = _spu_memList[D_80033560].addr;
-            int var_a0 = _spu_memList[D_80033560].size;
-            _spu_memList[D_80033560].addr = a1;
-            _spu_memList[D_80033560].size = size;
-            _spu_memList[D_80033560 + 1].addr = temp_v1_3;
-            _spu_memList[D_80033560 + 1].size = var_a0;
-            D_80033560++;
+            int temp_v1_3 = _spu_memList[_spu_AllocLastNum].addr;
+            int var_a0 = _spu_memList[_spu_AllocLastNum].size;
+            _spu_memList[_spu_AllocLastNum].addr = a1;
+            _spu_memList[_spu_AllocLastNum].size = size;
+            _spu_memList[_spu_AllocLastNum + 1].addr = temp_v1_3;
+            _spu_memList[_spu_AllocLastNum + 1].size = var_a0;
+            _spu_AllocLastNum++;
             if (var_a3 >= size) {
-                u32 swapAddr = _spu_memList[D_80033560].addr;
-                u32 swapSize = _spu_memList[D_80033560].size;
-                _spu_memList[D_80033560].addr =
+                u32 swapAddr = _spu_memList[_spu_AllocLastNum].addr;
+                u32 swapSize = _spu_memList[_spu_AllocLastNum].size;
+                _spu_memList[_spu_AllocLastNum].addr =
                     (temp_t3 & 0x0FFFFFFF) + temp_t1 + size;
-                _spu_memList[D_80033560].addr |= 0x80000000;
-                _spu_memList[D_80033560].size = var_a3 - size;
-                _spu_memList[D_80033560 + 1].addr = swapAddr;
-                _spu_memList[D_80033560 + 1].size = swapSize;
-                D_80033560++;
+                _spu_memList[_spu_AllocLastNum].addr |= 0x80000000;
+                _spu_memList[_spu_AllocLastNum].size = var_a3 - size;
+                _spu_memList[_spu_AllocLastNum + 1].addr = swapAddr;
+                _spu_memList[_spu_AllocLastNum + 1].size = swapSize;
+                _spu_AllocLastNum++;
             }
 
             _spu_gcSPU();
             return a1;
         }
     } else {
-        if ((size < var_a3) && ((D_8003355C - 1) < D_80033560)) {
+        if ((size < var_a3) && ((_spu_AllocBlockNum - 1) < _spu_AllocLastNum)) {
             return -1;
         }
 
         _spu_memList[arg0].size = size;
         _spu_memList[arg0].addr &= 0x0FFFFFFF;
         if (size < var_a3) {
-            u32 swapAddr = _spu_memList[D_80033560].addr;
-            u32 swapSize = _spu_memList[D_80033560].size;
+            u32 swapAddr = _spu_memList[_spu_AllocLastNum].addr;
+            u32 swapSize = _spu_memList[_spu_AllocLastNum].size;
 
-            _spu_memList[D_80033560].addr = (temp_t3 & 0x0FFFFFFF) + size;
-            _spu_memList[D_80033560].addr |= 0x80000000;
-            _spu_memList[D_80033560].size = var_a3 - size;
-            _spu_memList[D_80033560 + 1].addr = swapAddr;
-            _spu_memList[D_80033560 + 1].size = swapSize;
-            D_80033560++;
+            _spu_memList[_spu_AllocLastNum].addr = (temp_t3 & 0x0FFFFFFF) + size;
+            _spu_memList[_spu_AllocLastNum].addr |= 0x80000000;
+            _spu_memList[_spu_AllocLastNum].size = var_a3 - size;
+            _spu_memList[_spu_AllocLastNum + 1].addr = swapAddr;
+            _spu_memList[_spu_AllocLastNum + 1].size = swapSize;
+            _spu_AllocLastNum++;
         }
 
         _spu_gcSPU();
@@ -151,7 +151,7 @@ long SpuMallocWithStartAddr(unsigned long _addr, long size) {
     if (_spu_memList[0].addr & 0x40000000) {
         temp_a2 = _spu_memList[0].size - (addr - 0x1010) - size;
         if ((addr - 0x1010) > 0) {
-            if ((D_8003355C - 2) < D_80033560) {
+            if ((_spu_AllocBlockNum - 2) < _spu_AllocLastNum) {
                 return -1;
             }
             _spu_memList[0].addr = 0x80001010;
@@ -163,9 +163,9 @@ long SpuMallocWithStartAddr(unsigned long _addr, long size) {
             _spu_memList[2].addr = (addr + size) | 0x40000000;
             _spu_memList[2].size = temp_a2;
 
-            D_80033560 = 2;
+            _spu_AllocLastNum = 2;
         } else {
-            if ((D_8003355C - 1) < D_80033560) {
+            if ((_spu_AllocBlockNum - 1) < _spu_AllocLastNum) {
                 return -1;
             }
             _spu_memList[0].addr = addr;
@@ -174,7 +174,7 @@ long SpuMallocWithStartAddr(unsigned long _addr, long size) {
             _spu_memList[1].addr = (addr + size) | 0x40000000;
             _spu_memList[1].size = temp_a2;
 
-            D_80033560 = 1;
+            _spu_AllocLastNum = 1;
         }
         _spu_gcSPU();
         return addr;

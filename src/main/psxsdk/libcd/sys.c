@@ -2,8 +2,6 @@
 #include "libcd_internal.h"
 #include <common.h>
 
-#include "registers.h"
-
 extern CdlCB CD_cbready;
 extern CdlCB CD_cbsync;
 extern int CD_status;

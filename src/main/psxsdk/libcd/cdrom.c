@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: MIT
 #include "common.h"
 #include <psxsdk/libcd.h>
+#include "registers.h"
 
-extern StHEADER* D_800987C8;
-extern u_long D_80098894;
+extern StHEADER* StRingAddr;
+extern u_long StRingSize;
 
 void StSetRing(u_long* ring_addr, u_long ring_size) {
-    D_800987C8 = (StHEADER*)ring_addr;
-    D_80098894 = ring_size;
+    StRingAddr = (StHEADER*)ring_addr;
+    StRingSize = ring_size;
     StClearRing();
 }

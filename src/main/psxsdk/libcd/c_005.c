@@ -2,24 +2,24 @@
 #include "common.h"
 #include "registers.h"
 
-extern s32 D_8003C0FC;
-extern s16 D_8003C75C;
-extern s32 D_8003C764;
-extern void (*D_8003C8BC)();
-extern void (*D_8003C8C0)();
-extern s32 D_8006BAF0;
-extern s32 D_80072BCC;
-extern s32 D_800987A8;
+extern s32 Stframe_no;
+extern s16 Stsector_offset;
+extern s32 StRgb24;
+extern void (*StFunc1)();
+extern void (*StFunc2)();
+extern s32 StCHANNEL;
+extern s32 CChannel;
+extern s32 StEmu_Addr;
 
 void StSetStream(u_long mode, u_long start_frame, u_long end_frame,
                  void (*func1)(), void (*func2)()) {
     StSetMask(1U, start_frame, end_frame);
-    D_800987A8 = 0;
-    D_8003C8BC = func1;
-    D_8003C764 = mode & 1;
-    D_80072BCC = 0;
-    D_8006BAF0 = 0;
-    D_8003C75C = 0;
-    D_8003C0FC = 0;
-    D_8003C8C0 = func2;
+    StEmu_Addr = 0;
+    StFunc1 = func1;
+    StRgb24 = mode & 1;
+    CChannel = 0;
+    StCHANNEL = 0;
+    Stsector_offset = 0;
+    Stframe_no = 0;
+    StFunc2 = func2;
 }

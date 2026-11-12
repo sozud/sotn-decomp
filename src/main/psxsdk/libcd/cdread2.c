@@ -3,7 +3,7 @@
 #include "psxsdk/libcd.h"
 
 void data_ready_callback();
-extern s32 D_8003C768;
+extern s32 StMode;
 
 static inline void StCdInterrupt2(u_char intr, u_char* result) {
     StCdInterrupt();
@@ -14,9 +14,9 @@ int CdRead2(long mode) {
     CdControl(CdlSetmode, &param, NULL);
     if (mode & CdlModeStream) {
         if (mode & CdlModeSize1) {
-            D_8003C768 = 0;
+            StMode = 0;
         } else {
-            D_8003C768 = 1;
+            StMode = 1;
         }
         CdDataCallback(data_ready_callback);
         CdReadyCallback(StCdInterrupt2);

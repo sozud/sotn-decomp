@@ -4,7 +4,7 @@
 
 void WaitEvent(s32);
 s32 _SpuIsInAllocateArea_(u32);
-extern s32 D_800330F8[];
+extern s32 _spu_zerobuf[];
 
 s32 SpuClearReverbWorkArea(u32 rev_mode) {
     volatile s32 callback;
@@ -48,7 +48,7 @@ s32 SpuClearReverbWorkArea(u32 rev_mode) {
 
         _spu_t(2, var_s2);
         _spu_t(1);
-        _spu_t(3, &D_800330F8[0], var_s0);
+        _spu_t(3, &_spu_zerobuf[0], var_s0);
         WaitEvent(_spu_EVdma);
         var_s1 -= 0x400;
         var_s2 += 0x400;

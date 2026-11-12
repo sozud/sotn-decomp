@@ -2191,7 +2191,7 @@ extern Vram g_Vram;
 extern GameApi g_api;
 extern bool g_PauseAllowed;
 extern u32 g_GameTimer; // Increases when unpaused
-extern bool D_8003C908;
+extern bool StCdIntrFlag;
 extern s32 g_EquippedWeaponIds[2];
 extern u32 g_Timer; // Increases continuously
 extern s16* D_92641C8[];
@@ -2329,9 +2329,9 @@ extern s32 D_80097C40[];
 extern PlayerDraw g_PlayerDraw[0x10];
 extern bool g_InvincibleFlag;
 extern s32 D_800987B4;
-extern StHEADER* D_800987C8;
+extern StHEADER* StRingAddr;
 extern s32 g_DebugPlayer;
-extern s32 D_80098894;
+extern s32 StRingSize;
 
 #include <game_psp.h>
 

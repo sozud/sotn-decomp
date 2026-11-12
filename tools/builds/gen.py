@@ -34,6 +34,37 @@ if sotn_progress_report:
         "AAAAAQAAAAMAAAAAAAAAAAAAADQAAAAhAAAAAAAAAAAAAAABAAAAAAAAAA=="
     )  # minimal stripped object file generated from an empty assembly file
 
+psyq_sdk = os.getenv("PSYQ_SDK", "")
+PSYQ_OBJ_PARSER = "build/psyq_link/psyq-obj-parser"
+psyq_link_maps = dict()
+
+
+def find_psyq_lib(sdk_ver: str, lib: str) -> str:
+    for sub in ["PSX/LIB", "LIB", "lib", ""]:
+        path = os.path.join(psyq_sdk, sdk_ver, sub, lib)
+        if os.path.isfile(path):
+            return path
+    raise FileNotFoundError(f"PSYQ_SDK: {lib} for Psy-Q {sdk_ver} not found")
+
+
+def get_psyq_link_map(ver: str) -> dict:
+    if not psyq_sdk or sotn_progress_report:
+        return {}
+    if ver in psyq_link_maps:
+        return psyq_link_maps[ver]
+    entries_map = dict()
+    map_path = f"config/psyq_link.{ver}.txt"
+    if os.path.exists(map_path):
+        with open(map_path) as f:
+            for line in f:
+                fields = line.split("#")[0].split()
+                if not fields:
+                    continue
+                obj, sdk_ver, lib, member = fields
+                entries_map[f"src/{obj}.c"] = (find_psyq_lib(sdk_ver, lib), member)
+    psyq_link_maps[ver] = entries_map
+    return entries_map
+
 
 def is_psp(ver: str) -> bool:
     return ver.startswith("psp")
@@ -194,6 +225,17 @@ def add_c_psx(
     if output in entries:
         return output
     entries[output] = {}
+    psyq_obj = get_psyq_link_map(ver).get(file_name)
+    if psyq_obj:
+        lib, member = psyq_obj
+        nw.build(
+            rule="psyq-link",
+            outputs=output,
+            inputs=lib,
+            implicit=[PSYQ_OBJ_PARSER, "tools/psyq_link/psyq_link.py"],
+            variables={"member": member},
+        )
+        return output
     c_params = get_compiler_params(file_name)
     nw.build(
         rule="psx-cc",
@@ -877,6 +919,22 @@ with open(build_ninja, "w") as f:
         outputs=CMASPSX,
         inputs="tools/builds/cmaspsx.c",
     )
+    if psyq_sdk:
+        nw.rule(
+            "psyq-obj-parser",
+            command="sh tools/psyq_link/build_psyq_obj_parser.sh $out",
+            description="build psyq-obj-parser",
+        )
+        nw.build(
+            rule="psyq-obj-parser",
+            outputs=PSYQ_OBJ_PARSER,
+            implicit="tools/psyq_link/build_psyq_obj_parser.sh",
+        )
+        nw.rule(
+            "psyq-link",
+            command=f".venv/bin/python3 tools/psyq_link/psyq_link.py {PSYQ_OBJ_PARSER} mipsel-linux-gnu-objcopy $in $member $out",
+            description="psyq lib $member",
+        )
     nw.rule(
         "splat",
         # 'touch' circumnavigates a bug where splat would not update the

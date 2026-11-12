@@ -3,23 +3,23 @@
 #include "registers.h"
 #include <psxsdk/libcd.h>
 
-extern s32 D_80097960;
-extern s32 D_800987B8;
-extern StHEADER* D_800987C8;
-extern volatile s32 D_80098894;
+extern s32 StRingIdx3;
+extern s32 StEndFrame;
+extern StHEADER* StRingAddr;
+extern volatile s32 StRingSize;
 
 u_long StGetNext(u_long** addr, u_long** header) {
-    volatile StHEADER* ptr = &D_800987C8[D_80097960];
+    volatile StHEADER* ptr = &StRingAddr[StRingIdx3];
     if (ptr->id == 1) {
-        D_80097960 = 0;
-        if (D_800987B8 != 0) {
+        StRingIdx3 = 0;
+        if (StEndFrame != 0) {
             ptr->id = 0;
         }
-        ptr = &D_800987C8[D_80097960];
+        ptr = &StRingAddr[StRingIdx3];
     }
     if (ptr->id == 2) {
         ptr->id = 4;
-        *addr = &D_800987C8[D_80098894] + (D_80097960 * 0x3F);
+        *addr = &StRingAddr[StRingSize] + (StRingIdx3 * 0x3F);
         *header = ptr;
         return 0;
     } else {
