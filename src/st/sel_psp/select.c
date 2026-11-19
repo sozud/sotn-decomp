@@ -2,7 +2,7 @@
 #include "../sel/sel.h"
 
 extern u8* D_8018C404;
-extern char g_AsciiSet[];
+extern u8 g_AsciiSet[];
 extern char** g_SaveAreaNamesSecondPart;
 extern char** g_SaveAreaNames;
 extern char* D_psp_091CE200;
@@ -25,7 +25,7 @@ static s32 D_801BC3EC;
 static s32 D_801D6B04;
 static s32 g_MemCardSelectorX;
 static s32 g_MemCardSelectorY;
-static char g_InputSaveName[0x10];
+static u8 g_InputSaveName[0x10];
 static s32 D_801BAFC0;
 static s32 MainMenuMaskPrimIndex;
 static char** D_801803A8;
@@ -522,7 +522,7 @@ void func_801ACFBC(s32 port, s32 slot, s32 textId) {
 
     playerName[0] = '\0';
     for (i = 0; i < 8; i++) {
-        s32 charIndex = func_801B2984(g_SaveSummary[port].name[slot][i]);
+        s32 charIndex = func_801B2984(((u8*)g_SaveSummary[port].name[slot])[i]);
         strcat(playerName, D_801803D0[charIndex]);
     }
     func_801B263C(playerName, textId);
@@ -546,7 +546,7 @@ void func_psp_09239530(SaveData* save) {
 
     playerName[0] = '\0';
     for (i = 0; i < 8; i++) {
-        s32 charIndex = func_801B2984(save->info.name[i]);
+        s32 charIndex = func_801B2984(*(u8*)&save->info.name[i]);
         strcat(playerName, D_801803D0[charIndex]);
     }
     func_psp_0923FF70(playerName, id);
@@ -728,7 +728,7 @@ void func_801AD66C(void) {
     // check if the name is Richter
     strPtr = (s8*)D_80180468;
     for (i = 0; i < 8; i++) {
-        if (g_Status.saveName[i] != *strPtr++) {
+        if (*(u8*)&g_Status.saveName[i] != *strPtr++) {
             break;
         }
     }
@@ -747,7 +747,7 @@ void func_801AD66C(void) {
     if (g_PlayableCharacter == PLAYER_ALUCARD) {
         strPtr = (s8*)D_psp_092840B0;
         for (i = 0; i < 8; i++) {
-            if (g_Status.saveName[i] != *strPtr++) {
+            if (*(u8*)&g_Status.saveName[i] != *strPtr++) {
                 break;
             }
         }
@@ -779,7 +779,7 @@ void func_801AD78C(void) {
     } else {
         func_801ACBE4(GFX_UNK_8, 8);
     }
-    DrawString16x16(g_InputSaveName, 0x80, 0x48, 1);
+    DrawString16x16((char*)g_InputSaveName, 0x80, 0x48, 1);
 }
 
 void UpdateNameEntry(void) {
@@ -1280,7 +1280,7 @@ void Update(void) {
         }
         break;
     case Upd_Eng_0x10:
-        strcpy(g_InputSaveName, "        ");
+        strcpy((char*)g_InputSaveName, "        ");
         func_801AEA8C(0);
         g_GameEngineStep++;
         /* fallthrough */
@@ -1558,7 +1558,7 @@ void Update(void) {
         }
         break;
     case Upd_Eng_148:
-        strcpy(g_InputSaveName, "        ");
+        strcpy((char*)g_InputSaveName, "        ");
         func_801AEA8C(1);
         g_GameEngineStep++;
         /* fallthrough */

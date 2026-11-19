@@ -205,7 +205,7 @@ void GetSaveIcon(u8* dst, s32 iconIdx) {
     }
 }
 
-char g_AsciiSet[] = {
+u8 g_AsciiSet[] = {
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i',  'j', 'k',
     'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',  'u', 'v',
     'w', 'x', 'y', 'z', '&', '!', '-', '.', '\'', ' ', ' ',
@@ -226,7 +226,7 @@ void StoreSaveData(SaveData* save, s32 block, s32 cardIcon) {
     MenuNavigation* dstNav;
     GameSettings* dstSettings;
 
-    char saveTitle[64];
+    u8 saveTitle[64];
     u32* saveRaw;
     SaveData* dst;
     s32 saveNameLen;
@@ -257,26 +257,26 @@ void StoreSaveData(SaveData* save, s32 block, s32 cardIcon) {
 
     // writes slot number
     if (block > 8) {
-        strcpy(saveTitle, "００");
+        strcpy((char*)saveTitle, "００");
         saveTitle[1] += (block + 1) / 10;
         saveTitle[3] += (block + 1) % 10;
-        strcat(h.Title, saveTitle);
+        strcat(h.Title, (char*)saveTitle);
     } else {
-        strcpy(saveTitle, "０");
+        strcpy((char*)saveTitle, "０");
         saveTitle[1] += block + 1;
-        strcat(h.Title, saveTitle);
+        strcat(h.Title, (char*)saveTitle);
     }
 
     strcat(h.Title, "　");
     for (saveNameLen = 7; saveNameLen > 0; saveNameLen--) {
-        if (g_Status.saveName[saveNameLen] != 0x20) {
+        if (*(u8*)&g_Status.saveName[saveNameLen] != 0x20) {
             break;
         }
     }
 
     // writes save name
     for (i = 0; i < saveNameLen + 1; i++) {
-        char ch = g_Status.saveName[i];
+        u8 ch = *(u8*)&g_Status.saveName[i];
         for (j = 0; j < 0x20; j++) {
             // Converts ASCII into Shift-JIS
             if (ch == g_AsciiSet[j]) {
@@ -298,20 +298,20 @@ void StoreSaveData(SaveData* save, s32 block, s32 cardIcon) {
     strcat(h.Title, "　");
     i = g_RoomCount * 100 / RoomCount;
     if (i >= 100) {
-        strcpy(saveTitle, "０００");
+        strcpy((char*)saveTitle, "０００");
         saveTitle[1] += i / 100;
         saveTitle[3] += (i / 10) % 10;
         saveTitle[5] += i % 10;
-        strcat(h.Title, saveTitle);
+        strcat(h.Title, (char*)saveTitle);
     } else if (i > 9) {
-        strcpy(saveTitle, "００");
+        strcpy((char*)saveTitle, "００");
         saveTitle[1] += i / 10;
         saveTitle[3] += i % 10;
-        strcat(h.Title, saveTitle);
+        strcat(h.Title, (char*)saveTitle);
     } else {
-        strcpy(saveTitle, "０");
+        strcpy((char*)saveTitle, "０");
         saveTitle[1] += i;
-        strcat(h.Title, saveTitle);
+        strcat(h.Title, (char*)saveTitle);
     }
     strcat(h.Title, "％");
 
@@ -326,7 +326,7 @@ void StoreSaveData(SaveData* save, s32 block, s32 cardIcon) {
 
     *dstHeader = h;
     for (i = 0; i < 10; i++) {
-        dst->info.name[i] = g_Status.saveName[i];
+        dst->info.name[i] = *(u8*)&g_Status.saveName[i];
     }
 
     dst->info.level = g_Status.level;
@@ -408,6 +408,6 @@ s32 ApplySaveData(SaveData* save) {
 
 void MakeMemcardPath(char* dstSaveName, s32 block) {
     strcpy(dstSaveName, MEMCARD_ID);
-    dstSaveName[0x10] += block / 10;
-    dstSaveName[0x11] += block % 10;
+    ((u8*)dstSaveName)[0x10] += block / 10;
+    ((u8*)dstSaveName)[0x11] += block % 10;
 }

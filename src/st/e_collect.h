@@ -1245,7 +1245,7 @@ void EntityRelicOrb(Entity* self) {
         vramX = 0;
         msg = g_api.relicDefs[relicId].name;
         while (true) {
-            ch = *msg++;
+            ch = *(u8*)msg++;
             if (ch == 0) {
                 if (isObtainedTextStored) {
                     break;
@@ -1253,7 +1253,7 @@ void EntityRelicOrb(Entity* self) {
                 isObtainedTextStored = true;
                 msg = g_RelicOrbTexts[0];
             } else {
-                ch = (ch << 8) | *msg++;
+                ch = (ch << 8) | *(u8*)msg++;
                 chPixSrc = g_api.func_80106A28(ch, 1);
                 if (chPixSrc != NULL) {
                     chPixDst = &msgBoxTpage[msgLen * 0x30];
@@ -1583,8 +1583,8 @@ void EntityMessageBox(Entity* self) {
         }
 
         str = self->ext.messageBox.label;
-        self->ext.messageBox.width = *str++;
-        self->ext.messageBox.height = *str++;
+        self->ext.messageBox.width = *(u8*)str++;
+        self->ext.messageBox.height = *(u8*)str++;
         self->ext.messageBox.label += 2;
         break;
     case 1:

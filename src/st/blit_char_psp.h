@@ -60,10 +60,10 @@ const char* BlitChar(const char* str, s32 xOffset, s32 posX, s32 posY) {
 
     xOffset = func_psp_0923C2F8(xOffset);
 
-    while (*str) {
+    while (*(u8*)str) {
         chSize = 0;
         ch16 = g_api.func_psp_0913F960(str, &sp3f);
-        ch = *str++;
+        ch = *(u8*)str++;
         if (ch == 1) {
             break;
         }

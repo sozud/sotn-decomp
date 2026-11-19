@@ -451,7 +451,7 @@ void func_801B1FD8(const char* str, s32 y) {
 
     y = func_801B1EF4(y);
     x = 0;
-    while (*str) {
+    while (*(u8*)str) {
         if (D_801BAFD0 >= g_Pix[4]) {
             break;
         }
@@ -558,7 +558,7 @@ void DrawString12x16(u8* str, s32 x, s32 y, s32 tge) {
     }
 }
 
-s32 func_801B2984(char ch) {
+s32 func_801B2984(u8 ch) {
     s32 i;
 
     for (i = 0; i < 0x22; i++) {
@@ -572,11 +572,11 @@ s32 func_801B2984(char ch) {
 void DrawString16x16(char* str, s32 x, s32 y, s32 tge) {
     const s32 W = 16;
     const s32 H = 16;
-    char ch;
+    u8 ch;
     s32 uvIndex;
 
     while (true) {
-        ch = *str++;
+        ch = *(u8*)str++;
         if (!ch) {
             break;
         }
@@ -592,11 +592,11 @@ void DrawString16x16(char* str, s32 x, s32 y, s32 tge) {
 void func_psp_09240618(char* str, s32 x, s32 y, s32 tge, s32 c) {
     const s32 W = 16;
     const s32 H = 16;
-    char ch;
+    u8 ch;
     s32 uvIndex;
 
     while (true) {
-        ch = *str++;
+        ch = *(u8*)str++;
         if (!ch) {
             break;
         }

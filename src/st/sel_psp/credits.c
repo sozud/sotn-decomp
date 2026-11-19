@@ -66,7 +66,7 @@ void func_801B786C(s16 nextCharY) {
     ClearImage(&rect, 0, 0, 0);
 }
 
-u16* func_801B78BC(char ch) {
+u16* func_801B78BC(u8 ch) {
     u16 jCh;
 
     if (ch >= 'a') {

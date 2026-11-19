@@ -50,7 +50,7 @@ void ClearContexts(void);
 void ClearContext(DispListContext*);
 void RestoreDispList(s32);
 void SaveCurrDispList(void);
-void PutAmbient(char, char, char, char);
+void PutAmbient(u8, u8, u8, u8);
 
 void ClearDispLists(void) {
     func_psp_08910088();
@@ -328,7 +328,7 @@ void PutOffset(int x, int y) {
 
 void PutTexFilter(int min, int mag) { *pktList++ = GE_SET_TFILTER(min, mag); }
 
-void PutAmbient(char a, char r, char b, char g) {
+void PutAmbient(u8 a, u8 r, u8 b, u8 g) {
     *globalParamPktList++ = GE_SET_AC(r, g, b);
     *globalParamPktList++ = GE_SET_AA(a);
 }

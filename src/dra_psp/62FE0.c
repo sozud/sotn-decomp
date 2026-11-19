@@ -7,17 +7,17 @@ extern u8 g_CustomGlyphs[10][30];
 extern u16 D_800AC934[];
 extern u16 g_CharBuffer[];
 
-static char D_psp_09187068[] =
+static u8 D_psp_09187068[] =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     "abcdefghijklmnopqrstuvwxyz"
     "0123456789\" .+-=_'?/![]\":;,()";
-static char D_psp_091870C0[] =
+static u8 D_psp_091870C0[] =
     "ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ"
     "ａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ"
     "０１２３４５６７８９”　．＋−＝＿’？／！［］”：；，（）";
-static char* D_psp_09187168 = D_psp_091870C0;
-static char* D_psp_09187170 = D_psp_09187068;
-static char D_psp_09187178[] =
+static u8* D_psp_09187168 = D_psp_091870C0;
+static u8* D_psp_09187170 = D_psp_09187068;
+static u8 D_psp_09187178[] =
     "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝｧｨｩｪｫｬｭｮ";
 static u16 D_psp_091871B0[] = {
     0x8146, 0x8634, 0x8635, 0x858A, 0x858B, 0x858D, 0x858C, 0x8597,
@@ -31,12 +31,12 @@ static u16 D_psp_091871B0[] = {
 u16 func_psp_0913F960(const char* str, u8* type) {
     u32 i;
     u16 ret;
-    char* ptr;
+    u8* ptr;
 
     ptr = D_psp_09187170;
     for (i = 0; i < 0x52; i++) {
-        if (str[0] == *ptr) {
-            char* ch = &D_psp_09187168[i * 2];
+        if (((u8*)str)[0] == *ptr) {
+            u8* ch = &D_psp_09187168[i * 2];
             ret = ch[0] << 8;
             ret |= ch[1];
             *type = 1;
@@ -46,15 +46,15 @@ u16 func_psp_0913F960(const char* str, u8* type) {
     }
     ptr = D_psp_09187178;
     for (i = 0; i < LEN(D_psp_091871B0); i++) {
-        if (str[0] == *ptr) {
+        if (((u8*)str)[0] == *ptr) {
             ret = D_psp_091871B0[i];
             *type = 1;
             return ret;
         }
         ptr++;
     }
-    ret = str[0] << 8;
-    ret |= str[1];
+    ret = ((u8*)str)[0] << 8;
+    ret |= ((u8*)str)[1];
     *type = 2;
     return ret;
 }

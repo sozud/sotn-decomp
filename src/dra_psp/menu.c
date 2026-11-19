@@ -1005,7 +1005,7 @@ void func_800F66BC(
     MenuDrawStr(str, x, y, ctx);
 }
 
-void MenuDrawChar(char ch, s32 x, s32 y, MenuContext* ctx) {
+void MenuDrawChar(u8 ch, s32 x, s32 y, MenuContext* ctx) {
     MenuDrawImg(
         ctx, x, y, 8, 8, (ch & 0xF) * 8, (ch & 0xF0) >> 1, 0x196, 0x1E, 1, 0);
 }
@@ -1016,7 +1016,7 @@ void MenuDrawStr(const char* str, s32 x, s32 y, MenuContext* ctx) {
     s32 temp;
     s32 xcopy;
     s32 ycopy;
-    char ch;
+    u8 ch;
 
 #if VERSION == VER_US || TARGET == TARGET_PSP
     temp = D_8013784C;
@@ -1026,9 +1026,9 @@ void MenuDrawStr(const char* str, s32 x, s32 y, MenuContext* ctx) {
     while (true) {
         xcopy = x;
         ycopy = y;
-        ch = *str++;
+        ch = *(u8*)str++;
 #if VERSION == VER_US || TARGET == TARGET_PSP
-        if (str[0] == 0xC0 && str[1] == 0xD2) {
+        if (((u8*)str)[0] == 0xC0 && ((u8*)str)[1] == 0xD2) {
             D_8013784C = 2;
             str += 2;
         } else {
@@ -1037,7 +1037,7 @@ void MenuDrawStr(const char* str, s32 x, s32 y, MenuContext* ctx) {
 #endif
 
         if (ch == 0xFF) {
-            ch = *str++;
+            ch = *(u8*)str++;
             if (ch == 0) {
                 break;
             }
@@ -1326,7 +1326,7 @@ void func_psp_090EDA78(MenuContext* ctx) {
 }
 #endif
 
-char StatChangeArrow(u16 arg0, u16 arg1) {
+u8 StatChangeArrow(u16 arg0, u16 arg1) {
     if (arg0 == arg1) {
         return 0xE4; // Right arrow
     } else if (arg0 < arg1) {
@@ -1354,7 +1354,7 @@ void MenuStatChangesDraw(void) {
     s32 ycoord;
     s32 i;
     MenuContext* ctx;
-    char arrow;
+    u8 arrow;
 
     if (!g_Menus[MENU_DG_EQUIP_SELECTOR].unk1C && D_80137948) {
         ctx = &g_Menus[MENU_DG_EQUIP_OVERVIEW];
@@ -1566,9 +1566,9 @@ void MenuSpellsDraw(MenuContext* ctx) {
         charNum = 0;
         yCoord = i * 0x10 + 0x40;
         // Count up how many characters are in the combo
-        for (v1 = 0; (s8)g_SpellDefs[spell].combo[v1] != 0; v1++) {
-            if (g_SpellDefs[spell].combo[v1] == 0xC0 &&
-                g_SpellDefs[spell].combo[v1 + 1] == 0xD2) {
+        for (v1 = 0; g_SpellDefs[spell].combo[v1] != 0; v1++) {
+            if (((u8*)g_SpellDefs[spell].combo)[v1] == 0xC0 &&
+                ((u8*)g_SpellDefs[spell].combo)[v1 + 1] == 0xD2) {
                 charNum--;
             } else {
                 charNum++;
@@ -2057,11 +2057,7 @@ void DrawConsumableCount(s32 itemId, s32 hand, MenuContext* ctx) {
     }
     // Finish off with a ) and string terminator
     *ptr++ = CH(')');
-#if TARGET == TARGET_PSP
-    *((s8*)&(*ptr++)) = 0xFF;
-#else
     *ptr++ = 0xFF;
-#endif
     *ptr++ = '\0';
     // Draw it after the item name. X=224, Y = 30 + 13*hand
     MenuDrawStr(buf, 224, 30 + (hand * 13), ctx);
@@ -2392,7 +2388,7 @@ void func_800F98AC(const char* str, u32 y) {
         x = 0x40;
     }
     y = func_800F548C(y);
-    while (*str != 0) {
+    while (*(u8*)str != 0) {
         // Loads a big-endian u16 from str.
         // This is connected to shift-jis.
         ch16 = func_psp_0913F960(str, &type);
@@ -2448,7 +2444,7 @@ void func_800F99B8(const char* str, u32 y, bool arg2) {
         y &= ~0x200;
     }
     y = func_800F548C(y);
-    while (*str != 0) {
+    while (*(u8*)str != 0) {
         var_s2 = 0;
         ch16 = func_psp_0913F960(str, &type);
         ch = *str++;
@@ -2558,10 +2554,10 @@ void func_800F9DD0(const char* src, char* dst) {
     s32 i;
 
     for (i = 0; i < 16; i++) {
-        if (*src == 0)
+        if (*(u8*)src == 0)
             break;
-        *dst++ = *src++;
-        *dst++ = *src++;
+        *dst++ = *(u8*)src++;
+        *dst++ = *(u8*)src++;
     }
 }
 
