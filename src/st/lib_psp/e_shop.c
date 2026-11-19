@@ -2840,7 +2840,7 @@ void func_us_801B12D0(Entity* self, u16 arg1) {
     }
 }
 
-void func_us_801B0FBC(const char* str, u16 x, u16 y);
+void func_us_801B0FBC(const u8* str, u16 x, u16 y);
 
 void func_us_801B15C0(Entity* self) {
     Entity* tempEntity;
@@ -2850,7 +2850,7 @@ void func_us_801B15C0(Entity* self) {
     s16 tempVar;
     s32 i;
     u16 tempVar2;
-    char* ptr;
+    u8* ptr;
     s16 pad;
 
     switch (self->step) {
@@ -2870,9 +2870,9 @@ void func_us_801B15C0(Entity* self) {
                 self->params = 1;
             }
             ptr = D_us_80181340[self->params];
-            self->ext.et_801B15C0.unk84 = *(u8*)ptr++;
+            self->ext.et_801B15C0.unk84 = *ptr++;
             for (i = 0; i < self->ext.et_801B15C0.unk84; i++) {
-                self->ext.et_801B15C0.unk88[i] = *(u8*)ptr++;
+                self->ext.et_801B15C0.unk88[i] = *ptr++;
             }
             self->ext.et_801B15C0.unk86 = (self->ext.et_801B15C0.unk84 * 8) + 4;
             i = 0;
@@ -2936,7 +2936,7 @@ void func_us_801B15C0(Entity* self) {
     case 1:
         for (i = 0; i < self->ext.et_801B15C0.unk84; i++) {
             ptr = D_us_80181310[self->ext.et_801B15C0.unk88[i]];
-            tempVar = *(u8*)ptr++;
+            tempVar = *ptr++;
             func_us_801B0FBC(ptr, tempVar, 0x108 + i * 16);
         }
         self->step++;
@@ -4108,17 +4108,17 @@ Primitive* func_us_801B3EC8(Primitive* prim, u32 number, u16 maxDigits) {
 }
 
 Primitive* func_us_801B3FB4(
-    Primitive* prim, const char* str, u16 length, s32 arg3) {
+    Primitive* prim, const u8* str, u16 length, s32 arg3) {
     u8 ch;
     s32 i;
     u32 max;
-    const char* chPtr;
+    const u8* chPtr;
 
     chPtr = str;
     max = 0;
     for (i = 0; i < length; i++) {
 #if TARGET == TARGET_PSP
-        if (*(u8*)chPtr == 0xFF) {
+        if (*chPtr == 0xFF) {
             break;
         }
         chPtr++;
@@ -4126,7 +4126,7 @@ Primitive* func_us_801B3FB4(
     }
     for (i = 0; i < max; i++) {
 #endif
-        ch = *(u8*)str++;
+        ch = *str++;
         prim->u0 = (ch & 0x0F) << 3;
         prim->v0 = (ch & 0xF0) >> 1;
         if (arg3 != 0) {
@@ -4704,7 +4704,7 @@ void func_us_801B4830(Entity* self) {
 
 void func_psp_09264E08(void) { D_psp_092A5D38 = g_Pix[1]; }
 
-void* func_us_801B0C40(u8* pix, const char* str, s32 x, s32 y, s32 size) {
+void* func_us_801B0C40(u8* pix, const u8* str, s32 x, s32 y, s32 size) {
     const u16 DOUBLE_SPACE = 0x8140;
     const u16 RIGHT_DOUBLE_QUOTATION_MARK = 0x8168;
 
@@ -4729,12 +4729,12 @@ void* func_us_801B0C40(u8* pix, const char* str, s32 x, s32 y, s32 size) {
     }
     while (true) {
         pos = 0;
-        while (*(u8*)str >= 8) {
+        while (*str >= 8) {
             s_8 = 0;
 #if TARGET == TARGET_PSP
             ch = g_api.func_psp_0913F960(str, &sp3f);
 #else
-            ch = *(u8*)str;
+            ch = *str;
 #endif
             str++;
             if (ch == '@') {
@@ -4755,7 +4755,7 @@ void* func_us_801B0C40(u8* pix, const char* str, s32 x, s32 y, s32 size) {
             }
             chPix = (u8*)g_api.func_psp_0913FA28(ch, 1);
 #else
-                ch = *(u8*)str++ | (ch << 8);
+                ch = *str++ | (ch << 8);
                 if (ch == DOUBLE_SPACE) {
                     s_8 = 2;
                 }
@@ -4822,12 +4822,12 @@ void* func_us_801B0C40(u8* pix, const char* str, s32 x, s32 y, s32 size) {
         }
         LoadTPage(
             (u_long*)&pix[s_6 * FontHeight * size], 0, 0, x, y, size * 2, 0x10);
-        if (!*(u8*)str) {
+        if (!*str) {
             break;
         }
         s_6++;
         y += FontHeight;
-        if (*(u8*)str < 8) {
+        if (*str < 8) {
             str++;
         }
     }
@@ -5105,12 +5105,12 @@ void func_us_801B5068(Entity* self) {
     }
 }
 
-void func_us_801B0FBC(const char* str, u16 x, u16 y) {
+void func_us_801B0FBC(const u8* str, u16 x, u16 y) {
     RECT rect;
     u8 ch;
 
 loop:
-    ch = *(u8*)str++;
+    ch = *str++;
     if (ch) {
         if (ch == ' ') {
             x++;
@@ -5131,7 +5131,7 @@ loop:
 }
 
 Primitive* func_us_801B1064(
-    Primitive* prim, s16 x, s16 y, const char* str, u16 clut) {
+    Primitive* prim, s16 x, s16 y, const u8* str, u16 clut) {
     u8 buffer[64];
     u16 length;
     s32 i;
@@ -5145,9 +5145,9 @@ Primitive* func_us_801B1064(
     }
     chPtr = buffer;
     while (true) {
-        ch = *(u8*)str++;
+        ch = *str++;
         if (ch == 0xFF) {
-            ch = *(u8*)str++;
+            ch = *str++;
             if (ch == 0) {
                 break;
             }
@@ -5155,10 +5155,10 @@ Primitive* func_us_801B1064(
         *chPtr++ = ch;
         length++;
 #if TARGET == TARGET_PSP
-        ch = *(u8*)str;
+        ch = *str;
         if (ch == 0xFF) {
             str++;
-            ch = *(u8*)str++;
+            ch = *str++;
             if (ch == 0) {
                 break;
             }
@@ -6545,17 +6545,17 @@ void func_us_801B7DF8(Primitive* prim, Entity* arg1, s16 enemyId) {
     }
 }
 
-u8* func_psp_09269FF0(char* str, u8* pix, s16 x, s16 y) {
+u8* func_psp_09269FF0(u8* str, u8* pix, s16 x, s16 y) {
     u16 ch;
     s32 i;
     u16* chPix;
     u16* dst;
 
 loop:
-    ch = *(u8*)str++;
+    ch = *str++;
     if (ch) {
         ch <<= 8;
-        ch |= *(u8*)str++;
+        ch |= *str++;
         chPix = g_api.func_80106A28(ch, 1);
         if (chPix != NULL) {
             dst = (u16*)pix;

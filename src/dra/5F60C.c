@@ -409,7 +409,7 @@ void InitStatsAndGear(bool isDeathTakingItems) {
         // Luck mode code check! This is X-X!V''Q
         fileName = (s8*)g_LuckCode;
         for (i = 0; i < 8; i++) {
-            if (*(u8*)&g_Status.saveName[i] != *fileName++) {
+            if (g_Status.saveName[i] != *fileName++) {
                 break;
             }
         }
@@ -431,7 +431,7 @@ void InitStatsAndGear(bool isDeathTakingItems) {
         if (g_GameClearFlag) {
             fileName = (s8*)g_AxeArmorCode;
             for (i = 0; i < 8; i++) {
-                if (*(u8*)&g_Status.saveName[i] != *fileName++) {
+                if (g_Status.saveName[i] != *fileName++) {
                     break;
                 }
             }

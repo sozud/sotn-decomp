@@ -945,7 +945,7 @@ with open(build_ninja, "w") as f:
             " --mwcc-path bin/mwccpsp.exe --use-wibo --wibo-path bin/wibo --as-path tools/pspas/target/release/pspas"
             " --asm-dir asm/pspeu --macro-inc-path include/macro.inc "
             " -gccdep -MD"  # for metrowerks, "system" headers seem to be anything included with angle brackets
-            f" -gccinc -I$src_dir -Iinclude -Iinclude/pspsdk -Iinclude/psxsdk -D_internal_version_$version -DSOTN_STR {extra_cpp_defs} $cpp_flags -c -lang c -sdatathreshold 0 -char signed -fl divbyzerocheck"
+            f" -gccinc -I$src_dir -Iinclude -Iinclude/pspsdk -Iinclude/psxsdk -D_internal_version_$version -DSOTN_STR {extra_cpp_defs} $cpp_flags -c -lang c -sdatathreshold 0 -char signed -relax_pointers -fl divbyzerocheck"
             " $opt_level -opt nointrinsics"
             " -"
         ),

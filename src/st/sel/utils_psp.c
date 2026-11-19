@@ -439,7 +439,7 @@ void func_801B1F4C(s32 arg0) {
     LoadTPage((u_long*)pix, 0, 0, 0x180, arg0, 0x100, 0x10);
 }
 
-void func_801B1FD8(const char* str, s32 y) {
+void func_801B1FD8(const u8* str, s32 y) {
     const int W = 12;
     const int H = 16;
     const int LEN = W * H / 2;
@@ -451,7 +451,7 @@ void func_801B1FD8(const char* str, s32 y) {
 
     y = func_801B1EF4(y);
     x = 0;
-    while (*(u8*)str) {
+    while (*str) {
         if (D_801BAFD0 >= g_Pix[4]) {
             break;
         }
@@ -569,14 +569,14 @@ s32 func_801B2984(u8 ch) {
     return 0x20;
 }
 
-void DrawString16x16(char* str, s32 x, s32 y, s32 tge) {
+void DrawString16x16(u8* str, s32 x, s32 y, s32 tge) {
     const s32 W = 16;
     const s32 H = 16;
     u8 ch;
     s32 uvIndex;
 
     while (true) {
-        ch = *(u8*)str++;
+        ch = *str++;
         if (!ch) {
             break;
         }
@@ -589,14 +589,14 @@ void DrawString16x16(char* str, s32 x, s32 y, s32 tge) {
     }
 }
 
-void func_psp_09240618(char* str, s32 x, s32 y, s32 tge, s32 c) {
+void func_psp_09240618(u8* str, s32 x, s32 y, s32 tge, s32 c) {
     const s32 W = 16;
     const s32 H = 16;
     u8 ch;
     s32 uvIndex;
 
     while (true) {
-        ch = *(u8*)str++;
+        ch = *str++;
         if (!ch) {
             break;
         }

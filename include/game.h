@@ -1178,7 +1178,7 @@ typedef struct {
     /* 80097A33 */ u8 equipBodyCount[NUM_BODY_ITEMS];
     /* 80097A8D */ u8 equipHandOrder[NUM_HAND_ITEMS];
     /* 80097B36 */ u8 equipBodyOrder[NUM_BODY_ITEMS];
-    /* 80097B90 */ char saveName[12];
+    /* 80097B90 */ u8 saveName[12];
     /* 80097B9C */ u32 spellsLearnt;
     /* 80097BA0 */ s32 hp;
     /* 80097BA4 */ s32 hpMax;
@@ -1273,7 +1273,7 @@ typedef struct {
 #endif
 
 typedef struct {
-    /* 0x00 */ char name[12];
+    /* 0x00 */ u8 name[12];
     /* 0x0C */ s32 level;
     /* 0x10 */ s32 gold;
     /* 0x14 */ s32 playHours;
@@ -1314,7 +1314,7 @@ typedef struct {
     /* 801BCB38 */ u32 playMinutes[BLOCK_PER_CARD];
     /* 801BCB74 */ u32 kind[BLOCK_PER_CARD]; // 0: play, 1: clear, 2: replay
     /* 801BCBB0 */ u32 character[BLOCK_PER_CARD];
-    /* 801BCBEC */ char name[BLOCK_PER_CARD][10];
+    /* 801BCBEC */ u8 name[BLOCK_PER_CARD][10];
     s32 padding; // not really padding, it's a memory card status
 } SaveSummary;   // size=0x3A8
 
@@ -1616,7 +1616,7 @@ typedef struct {
 
 typedef struct {
     /* 0x00 */ const char* name;
-    /* 0x04 */ const char* combo;
+    /* 0x04 */ const u8* combo;
     /* 0x08 */ char* description;
     /* 0x0C */ u8 mpUsage;
     /* 0x0D */ u8 nFramesInvincibility;

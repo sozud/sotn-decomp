@@ -20,7 +20,7 @@ static void func_psp_0923C390(s32 posX, s32 posY) {
     frameBufferY = posY;
 }
 
-const char* BlitChar(const char* str, s32 xOffset, s32 posX, s32 posY) {
+const char* BlitChar(const u8* str, s32 xOffset, s32 posX, s32 posY) {
     const u16 DOUBLE_SPACE = 0x8140;
 
     const int FontWidth = 12;
@@ -60,10 +60,10 @@ const char* BlitChar(const char* str, s32 xOffset, s32 posX, s32 posY) {
 
     xOffset = func_psp_0923C2F8(xOffset);
 
-    while (*(u8*)str) {
+    while (*str) {
         chSize = 0;
         ch16 = g_api.func_psp_0913F960(str, &sp3f);
-        ch = *(u8*)str++;
+        ch = *str++;
         if (ch == 1) {
             break;
         }

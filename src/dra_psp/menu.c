@@ -7,7 +7,7 @@
 
 #define ShowText(str, y) func_800F99B8(str, y, false);
 
-void MenuDrawStr(const char* str, s32 x, s32 y, MenuContext* ctx);
+void MenuDrawStr(const u8* str, s32 x, s32 y, MenuContext* ctx);
 
 extern s32 D_8013AEE4;
 extern s32 g_StatBuffTimers[16];
@@ -1010,7 +1010,7 @@ void MenuDrawChar(u8 ch, s32 x, s32 y, MenuContext* ctx) {
         ctx, x, y, 8, 8, (ch & 0xF) * 8, (ch & 0xF0) >> 1, 0x196, 0x1E, 1, 0);
 }
 
-void MenuDrawStr(const char* str, s32 x, s32 y, MenuContext* ctx) {
+void MenuDrawStr(const u8* str, s32 x, s32 y, MenuContext* ctx) {
     const s32 ChWidth = 8;
     const s32 ChHeight = 8;
     s32 temp;
@@ -1026,9 +1026,9 @@ void MenuDrawStr(const char* str, s32 x, s32 y, MenuContext* ctx) {
     while (true) {
         xcopy = x;
         ycopy = y;
-        ch = *(u8*)str++;
+        ch = *str++;
 #if VERSION == VER_US || TARGET == TARGET_PSP
-        if (((u8*)str)[0] == 0xC0 && ((u8*)str)[1] == 0xD2) {
+        if (str[0] == 0xC0 && str[1] == 0xD2) {
             D_8013784C = 2;
             str += 2;
         } else {
@@ -1037,7 +1037,7 @@ void MenuDrawStr(const char* str, s32 x, s32 y, MenuContext* ctx) {
 #endif
 
         if (ch == 0xFF) {
-            ch = *(u8*)str++;
+            ch = *str++;
             if (ch == 0) {
                 break;
             }
@@ -1566,9 +1566,9 @@ void MenuSpellsDraw(MenuContext* ctx) {
         charNum = 0;
         yCoord = i * 0x10 + 0x40;
         // Count up how many characters are in the combo
-        for (v1 = 0; g_SpellDefs[spell].combo[v1] != 0; v1++) {
-            if (((u8*)g_SpellDefs[spell].combo)[v1] == 0xC0 &&
-                ((u8*)g_SpellDefs[spell].combo)[v1 + 1] == 0xD2) {
+        for (v1 = 0; (s8)g_SpellDefs[spell].combo[v1] != 0; v1++) {
+            if (g_SpellDefs[spell].combo[v1] == 0xC0 &&
+                g_SpellDefs[spell].combo[v1 + 1] == 0xD2) {
                 charNum--;
             } else {
                 charNum++;
@@ -2376,7 +2376,7 @@ void func_800F9808(u32 y) {
     LoadTPage(oldPos, 0, 0, 0x180, y, w + 0x100, 16);
 }
 
-void func_800F98AC(const char* str, u32 y) {
+void func_800F98AC(const u8* str, u32 y) {
     u8 type;
     s32 x;
     s32 i;
@@ -2388,7 +2388,7 @@ void func_800F98AC(const char* str, u32 y) {
         x = 0x40;
     }
     y = func_800F548C(y);
-    while (*(u8*)str != 0) {
+    while (*str != 0) {
         // Loads a big-endian u16 from str.
         // This is connected to shift-jis.
         ch16 = func_psp_0913F960(str, &type);
@@ -2407,7 +2407,7 @@ void func_800F98AC(const char* str, u32 y) {
 }
 
 #if VERSION == VER_US || TARGET == TARGET_PSP
-void func_800F99B8(const char* str, u32 y, bool arg2) {
+void func_800F99B8(const u8* str, u32 y, bool arg2) {
     // See src/st/blit_char.h
     const u16 DOUBLE_SPACE = 0x8140;
     const u16 RIGHT_DOUBLE_QUOTATION_MARK = 0x8168;
@@ -2444,7 +2444,7 @@ void func_800F99B8(const char* str, u32 y, bool arg2) {
         y &= ~0x200;
     }
     y = func_800F548C(y);
-    while (*(u8*)str != 0) {
+    while (*str != 0) {
         var_s2 = 0;
         ch16 = func_psp_0913F960(str, &type);
         ch = *str++;
@@ -2550,14 +2550,14 @@ void func_800F9D88(const char* str, u32 y, bool arg2) {
 }
 #endif
 
-void func_800F9DD0(const char* src, char* dst) {
+void func_800F9DD0(const u8* src, char* dst) {
     s32 i;
 
     for (i = 0; i < 16; i++) {
-        if (*(u8*)src == 0)
+        if (*src == 0)
             break;
-        *dst++ = *(u8*)src++;
-        *dst++ = *(u8*)src++;
+        *dst++ = *src++;
+        *dst++ = *src++;
     }
 }
 

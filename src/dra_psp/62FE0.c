@@ -28,14 +28,14 @@ static u16 D_psp_091871B0[] = {
     0x860F, 0x860E, 0x8611, 0x8610, 0x8620, 0x861F, 0x8622, 0x8621,
     0x8577, 0x8586, 0x814E, 0x8636, 0x8147, 0x8621, 0x0000};
 
-u16 func_psp_0913F960(const char* str, u8* type) {
+u16 func_psp_0913F960(const u8* str, u8* type) {
     u32 i;
     u16 ret;
     u8* ptr;
 
     ptr = D_psp_09187170;
     for (i = 0; i < 0x52; i++) {
-        if (((u8*)str)[0] == *ptr) {
+        if (str[0] == *ptr) {
             u8* ch = &D_psp_09187168[i * 2];
             ret = ch[0] << 8;
             ret |= ch[1];
@@ -46,15 +46,15 @@ u16 func_psp_0913F960(const char* str, u8* type) {
     }
     ptr = D_psp_09187178;
     for (i = 0; i < LEN(D_psp_091871B0); i++) {
-        if (((u8*)str)[0] == *ptr) {
+        if (str[0] == *ptr) {
             ret = D_psp_091871B0[i];
             *type = 1;
             return ret;
         }
         ptr++;
     }
-    ret = ((u8*)str)[0] << 8;
-    ret |= ((u8*)str)[1];
+    ret = str[0] << 8;
+    ret |= str[1];
     *type = 2;
     return ret;
 }
